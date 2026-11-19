@@ -1,0 +1,22 @@
+﻿table;colonne;lignes;vides;part_vide;statut;explication
+pai;code_erreur;64491;60193;0,9333550417887767;INFO;Rempli seulement pour les paiements échoués
+pai;delai_reversement_j;64491;36435;0,5649625529143601;INFO;Concerne seulement le paiement à la livraison (argent reversé par le transporteur)
+avis;commentaire;9314;3233;0,3471118745973803;INFO;Commentaire facultatif dans un avis
+rmb;etat_article;8815;1815;0,20589903573454338;INFO;Sans objet pour les annulations et gestes commerciaux (pas d'article retourné)
+rmb;quantite;8815;1507;0,1709585933068633;INFO;Sans objet pour les annulations et gestes commerciaux
+cmd;delai_livraison_j;66268;7492;0,11305607533047625;INFO;Commande ou colis non livré
+cmd;est_livree_a_temps;66268;7492;0,11305607533047625;INFO;Commande non livrée
+cmd;cout_transport_ht;66268;4475;0,06752882235769904;INFO;Commande jamais expédiée (annulée, échec de paiement)
+rmb;delai_traitement_j;8815;569;0,06454906409529211;INFO;Demande en cours ou refusée (+ 15 remboursements sans délai, écart connu de la recette des cubes)
+liv;retard_j;61793;3017;0,048824300487110193;INFO;Colis non livré (échec, en transit, en préparation)
+liv;delai_livraison_j;61793;3017;0,048824300487110193;INFO;Commande ou colis non livré
+ach;retard_appro_j;11793;254;0,021538200627490886;INFO;Bon fournisseur pas encore reçu
+ach;delai_appro_reel_j;11793;254;0,021538200627490886;INFO;Bon fournisseur pas encore reçu
+ach;quantite_recue;11793;254;0,021538200627490886;INFO;Bon fournisseur pas encore reçu
+mkt;impressions;3427;15;0,004377006127808579;INFO;Jours de campagne sans impressions renseignées par la plateforme
+liv;nb_tentatives;61793;261;0,004223779392487822;INFO;Colis pas encore remis au transporteur
+avis;note;9314;10;0,001073652566029633;INFO;Avis sans note
+avis;sentiment;9314;10;0,001073652566029633;INFO;Avis sans note (le sentiment est déduit de la note)
+liv;delai_preparation_h;61793;50;0,0008091531403233376;INFO;Colis pas encore préparé
+liv;annee;61793;50;0,0008091531403233376;INFO;Colis pas encore expédié (pas de date d'expédition)
+liv;semestre;61793;50;0,0008091531403233376;INFO;Colis pas encore expédié (pas de date d'expédition)

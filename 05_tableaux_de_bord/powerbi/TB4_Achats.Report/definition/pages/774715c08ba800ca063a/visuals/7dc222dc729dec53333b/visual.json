@@ -1,0 +1,134 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "7dc222dc729dec53333b",
+  "position": {
+    "x": 925.3,
+    "y": 236,
+    "z": 4002,
+    "height": 474,
+    "width": 342.7,
+    "tabOrder": 4002
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fournisseur"
+                        }
+                      },
+                      "Hierarchy": "Origines"
+                    }
+                  },
+                  "Level": "Origine"
+                }
+              },
+              "queryRef": "Fournisseur.Origines.Origine",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fournisseur"
+                        }
+                      },
+                      "Hierarchy": "Origines"
+                    }
+                  },
+                  "Level": "Pays"
+                }
+              },
+              "queryRef": "Fournisseur.Origines.Pays",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Achats"
+                    }
+                  },
+                  "Property": "Montant Achat HT"
+                }
+              },
+              "queryRef": "Achats.Montant Achat HT",
+              "nativeQueryRef": "Montant Achat HT"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Achats"
+                  }
+                },
+                "Property": "Montant Achat HT"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Achats HT par origine puis pays'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

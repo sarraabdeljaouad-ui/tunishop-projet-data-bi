@@ -1,0 +1,116 @@
+﻿/* =====================================================================
+   11b_Calculs_Cube_Stock.mdx — TuniShop — script de calcul du cube [Stock]
+   ---------------------------------------------------------------------
+   Cube 2 — Stock : niveaux de fin de mois, ruptures, entrées et sorties.
+   Où le coller : Visual Studio → cube Stock → onglet « Calculs »
+   → « Affichage du script » → Ctrl+A → coller → Ctrl+S → Déployer.
+   Mesures de base attendues dans ce cube : groupes Stock mensuel (Stock Fin Mois, Valeur Stock HT en LastNonEmpty ; Nb Inventaires, Nb Ruptures) et Mouvements stock (Quantite Mouvement, Valeur Mouvement HT, Quantite Vendue Stock, Cout Des Ventes HT) ; dimension Type Mouvement
+   Règles : Dictionnaire_KPI.xlsx (partie 4). Divisions protégées (NULL si dénominateur vide).
+   ===================================================================== */
+CALCULATE;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Rupture Stock] AS
+    IIF([Measures].[Nb Inventaires] = 0, NULL, [Measures].[Nb Ruptures] / [Measures].[Nb Inventaires]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Operations', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Entrees Stock] AS
+    ([Measures].[Quantite Mouvement], [Type Mouvement].[Famille Mouvement].&[Entrée]),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'KPI\Stock', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Sorties Stock] AS
+    -([Measures].[Quantite Mouvement], [Type Mouvement].[Famille Mouvement].&[Sortie]),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'KPI\Stock', VISIBLE = 1;
+
+/* =====================================================================
+   v2 (29/10/2026) — comparaison à l'année précédente et feux de tendance (même règle que le cube Direction)
+   A-1 : même KPI sur la période parallèle de l'année précédente (hiérarchie Calendrier).
+   Evolution : variation relative ; Ecart : différence en points de pourcentage (taux).
+   Statut : 1 favorable, 0 stable (|évolution| < 2 % ou |écart| < 0,5 point), -1 défavorable ; NULL sans année précédente.
+   Couleur : #1E7B4F, #5B6B7C, #B42318. Pas de feu pour les KPI sans sens favorable (volumes, parts, remises, valeur du stock).
+   ===================================================================== */
+
+/* ---------- Année précédente ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Valeur Stock HT A-1] AS
+    ([Measures].[Valeur Stock HT],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Rupture Stock A-1] AS
+    ([Measures].[Taux Rupture Stock],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Entrees Stock A-1] AS
+    ([Measures].[Entrees Stock],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Sorties Stock A-1] AS
+    ([Measures].[Sorties Stock],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Stock Fin Mois A-1] AS
+    ([Measures].[Stock Fin Mois],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Quantite En Commande A-1] AS
+    ([Measures].[Quantite En Commande],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Nb Ruptures A-1] AS
+    ([Measures].[Nb Ruptures],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Cout Des Ventes HT A-1] AS
+    ([Measures].[Cout Des Ventes HT],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+
+/* ---------- Évolutions et écarts ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Valeur Stock] AS
+    IIF(IsEmpty([Measures].[Valeur Stock HT]) OR IsEmpty([Measures].[Valeur Stock HT A-1]) OR [Measures].[Valeur Stock HT A-1] = 0, NULL,
+        ([Measures].[Valeur Stock HT] - [Measures].[Valeur Stock HT A-1]) / [Measures].[Valeur Stock HT A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Rupture Stock] AS
+    IIF(IsEmpty([Measures].[Taux Rupture Stock]) OR IsEmpty([Measures].[Taux Rupture Stock A-1]), NULL,
+        ([Measures].[Taux Rupture Stock] - [Measures].[Taux Rupture Stock A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Entrees Stock] AS
+    IIF(IsEmpty([Measures].[Entrees Stock]) OR IsEmpty([Measures].[Entrees Stock A-1]) OR [Measures].[Entrees Stock A-1] = 0, NULL,
+        ([Measures].[Entrees Stock] - [Measures].[Entrees Stock A-1]) / [Measures].[Entrees Stock A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Sorties Stock] AS
+    IIF(IsEmpty([Measures].[Sorties Stock]) OR IsEmpty([Measures].[Sorties Stock A-1]) OR [Measures].[Sorties Stock A-1] = 0, NULL,
+        ([Measures].[Sorties Stock] - [Measures].[Sorties Stock A-1]) / [Measures].[Sorties Stock A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Stock Fin Mois] AS
+    IIF(IsEmpty([Measures].[Stock Fin Mois]) OR IsEmpty([Measures].[Stock Fin Mois A-1]) OR [Measures].[Stock Fin Mois A-1] = 0, NULL,
+        ([Measures].[Stock Fin Mois] - [Measures].[Stock Fin Mois A-1]) / [Measures].[Stock Fin Mois A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Quantite En Commande] AS
+    IIF(IsEmpty([Measures].[Quantite En Commande]) OR IsEmpty([Measures].[Quantite En Commande A-1]) OR [Measures].[Quantite En Commande A-1] = 0, NULL,
+        ([Measures].[Quantite En Commande] - [Measures].[Quantite En Commande A-1]) / [Measures].[Quantite En Commande A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Nb Ruptures] AS
+    IIF(IsEmpty([Measures].[Nb Ruptures]) OR IsEmpty([Measures].[Nb Ruptures A-1]) OR [Measures].[Nb Ruptures A-1] = 0, NULL,
+        ([Measures].[Nb Ruptures] - [Measures].[Nb Ruptures A-1]) / [Measures].[Nb Ruptures A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Cout Des Ventes HT] AS
+    IIF(IsEmpty([Measures].[Cout Des Ventes HT]) OR IsEmpty([Measures].[Cout Des Ventes HT A-1]) OR [Measures].[Cout Des Ventes HT A-1] = 0, NULL,
+        ([Measures].[Cout Des Ventes HT] - [Measures].[Cout Des Ventes HT A-1]) / [Measures].[Cout Des Ventes HT A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+
+/* ---------- Feux de tendance ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Rupture Stock] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Rupture Stock]), NULL,
+        IIF([Measures].[Ecart Taux Rupture Stock] > 0.5, -1, IIF([Measures].[Ecart Taux Rupture Stock] < -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Nb Ruptures] AS
+    IIF(IsEmpty([Measures].[Evolution Nb Ruptures]), NULL,
+        IIF([Measures].[Evolution Nb Ruptures] > 0.02, -1, IIF([Measures].[Evolution Nb Ruptures] < -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Rupture Stock] AS
+    IIF(IsEmpty([Measures].[Statut Taux Rupture Stock]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Rupture Stock] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Rupture Stock] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Nb Ruptures] AS
+    IIF(IsEmpty([Measures].[Statut Nb Ruptures]), "#5B6B7C",
+        IIF([Measures].[Statut Nb Ruptures] = 1, "#1E7B4F", IIF([Measures].[Statut Nb Ruptures] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;

@@ -1,0 +1,54 @@
+﻿/* =====================================================================
+   12b_Recette_Cube_Stock.mdx — TuniShop — recette du cube [Stock]
+   ---------------------------------------------------------------------
+   SSMS → Se connecter → Analysis Services → localhost\DEV → clic droit sur
+   TuniShop_OLAP → Nouvelle requête → MDX → coller → sélectionner UNE requête → F5.
+   Valeurs attendues : calcul Python des KPI sur le DWH (kpi_reference.xlsx).
+   Écart toléré : arrondi d'affichage.
+
+   Mesure                           Total              2023              2024              2025
+   Taux Rupture Stock             2,716 %           2,303 %           2,615 %           3,129 %
+   Valeur Stock HT          2 093 374,696     1 346 821,147     1 652 137,207     2 093 374,696
+   ===================================================================== */
+
+-- Requête 1 : les KPI du cube par année (la ligne « All » = Total)
+SELECT
+    { [Measures].[Taux Rupture Stock],
+        [Measures].[Valeur Stock HT] } ON COLUMNS,
+    NON EMPTY { [Date].[Calendrier].[All], [Date].[Calendrier].[Année].MEMBERS } ON ROWS
+FROM [Stock];
+
+-- Requête 2 : valeur du stock au 31/12/2025 par catégorie (LastNonEmpty)
+SELECT
+    { [Measures].[Valeur Stock HT], [Measures].[Taux Rupture Stock] } ON COLUMNS,
+    NON EMPTY [Produit].[Catégorie].[Catégorie].MEMBERS ON ROWS
+FROM [Stock]
+WHERE [Date].[Calendrier].[Année].&[2025];
+
+-- Requête 3 : entrées et sorties par famille de mouvement
+SELECT
+    { [Measures].[Entrees Stock], [Measures].[Sorties Stock] } ON COLUMNS,
+    NON EMPTY [Date].[Calendrier].[Année].MEMBERS ON ROWS
+FROM [Stock];
+
+-- Requête comparaison (v2, 29/10/2026) : évolutions et feux par année
+-- Attendu (calcul sur les valeurs de référence des requêtes ci-dessus) :   2024   ·   2025
+--   Evolution Valeur Stock               +22,7 %  statut  —      +26,7 %  statut  —
+--   Ecart Taux Rupture Stock            +0,31 pt  statut  0     +0,51 pt  statut -1 (≈ seuil)
+--   Evolution Entrees Stock              +14,7 %  statut  —      +45,5 %  statut  —
+--   Evolution Sorties Stock              +42,1 %  statut  —      +46,1 %  statut  —
+-- Ligne 2023 : vide (pas d'année 2022). Les KPI absents de la liste n'ont pas de valeur de référence annuelle : contrôle visuel.
+-- Écart d'arrondi possible pour les KPI à écart E1 à E3.
+SELECT
+    { [Measures].[Evolution Valeur Stock],
+      [Measures].[Ecart Taux Rupture Stock],
+      [Measures].[Statut Taux Rupture Stock],
+      [Measures].[Evolution Entrees Stock],
+      [Measures].[Evolution Sorties Stock],
+      [Measures].[Evolution Stock Fin Mois],
+      [Measures].[Evolution Quantite En Commande],
+      [Measures].[Evolution Nb Ruptures],
+      [Measures].[Statut Nb Ruptures],
+      [Measures].[Evolution Cout Des Ventes HT] } ON COLUMNS,
+    NON EMPTY [Date].[Calendrier].[Année].MEMBERS ON ROWS
+FROM [Stock];

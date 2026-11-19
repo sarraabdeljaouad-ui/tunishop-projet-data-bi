@@ -1,0 +1,17 @@
+﻿fait;cle;dimension;lignes;orphelines;statut
+v_fact_ventes;produit_sk;v_dim_produit;115903;0;OK
+v_fact_ventes;date_commande_sk;v_dim_date;115903;0;OK
+v_fact_commandes;client_sk;v_dim_client;66268;0;OK
+v_fact_commandes;canal_sk;v_dim_canal;66268;0;OK
+v_fact_commandes;statut_commande_sk;v_dim_statut_commande;66268;0;OK
+v_fact_commandes;coupon_sk;v_dim_coupon;66268;0;OK
+v_fact_paiements;mode_paiement_sk;v_dim_mode_paiement;64491;0;OK
+v_fact_livraisons;transporteur_sk;v_dim_transporteur;61793;0;OK
+v_fact_livraisons;geographie_sk;v_dim_geographie;61793;0;OK
+v_fact_livraisons;entrepot_sk;v_dim_entrepot;61793;0;OK
+v_fact_remboursements;motif_retour_sk;v_dim_motif_retour;8815;0;OK
+v_fact_avis;produit_sk;v_dim_produit;9314;0;OK
+v_fact_marketing_quotidien;campagne_sk;v_dim_campagne;3427;0;OK
+v_fact_achats_fournisseur;fournisseur_sk;v_dim_fournisseur;11793;0;OK
+v_fact_mouvements_stock;produit_sk;v_dim_produit;140184;0;OK
+v_fact_stock_mensuel;entrepot_sk;v_dim_entrepot;56562;0;OK

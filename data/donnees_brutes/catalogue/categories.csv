@@ -1,0 +1,20 @@
+categorie_id,categorie,sous_categorie,taux_tva,taux_retour_cible,marge_brute_cible
+CAT01,Électronique & High-Tech,Smartphones,19,0.06,0.14
+CAT02,Électronique & High-Tech,Accessoires téléphone,19,0.07,0.5
+CAT03,Électronique & High-Tech,Informatique,19,0.05,0.13
+CAT04,Électronique & High-Tech,Audio & Casques,19,0.08,0.35
+CAT05,Électronique & High-Tech,TV & Vidéo,19,0.04,0.15
+CAT06,Électroménager,Petit électroménager,19,0.05,0.3
+CAT07,Électroménager,Gros électroménager,19,0.03,0.16
+CAT08,Électroménager,Climatisation & Chauffage,19,0.03,0.18
+CAT09,Mode,Mode Femme,19,0.17,0.55
+CAT10,Mode,Mode Homme,19,0.14,0.55
+CAT11,Mode,Chaussures,19,0.15,0.5
+CAT12,Beauté & Santé,Parfums & Cosmétiques,19,0.03,0.45
+CAT13,Beauté & Santé,Parapharmacie,13,0.02,0.35
+CAT14,Maison & Cuisine,Cuisine & Arts de la table,19,0.05,0.45
+CAT15,Maison & Cuisine,Décoration & Linge,19,0.06,0.5
+CAT16,Épicerie fine,Produits du terroir,7,0.01,0.3
+CAT17,Bébé & Enfants,Puériculture & Jouets,19,0.06,0.4
+CAT18,Sport & Loisirs,Sport & Plein air,19,0.07,0.38
+CAT19,Fournitures & Livres,Fournitures scolaires & Livres,7,0.02,0.32

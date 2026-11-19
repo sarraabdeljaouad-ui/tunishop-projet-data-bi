@@ -1,0 +1,112 @@
+﻿/* =====================================================================
+   12a_Recette_Cube_Ventes.mdx — TuniShop — recette du cube [Ventes]
+   ---------------------------------------------------------------------
+   SSMS → Se connecter → Analysis Services → localhost\DEV → clic droit sur
+   TuniShop_OLAP → Nouvelle requête → MDX → coller → sélectionner UNE requête → F5.
+   Valeurs attendues : calcul Python des KPI sur le DWH (kpi_reference.xlsx).
+   Écart toléré : arrondi d'affichage.
+
+   Mesure                                     Total              2023              2024              2025
+   CA Commande TTC                   18 301 310,240     4 048 898,725     5 887 757,775     8 364 653,740
+   Commandes Passees                         66 268            15 063            21 170            30 035
+   CA Reconnu TTC                    15 541 665,655     3 384 688,310     5 022 224,580     7 134 752,765
+   Commandes Reconnues                       58 776            13 335            18 898            26 543
+   Rembourse TTC                        906 767,753       179 071,498       313 398,977       414 297,278
+   CA Net TTC                        14 634 897,902     3 205 616,812     4 708 825,603     6 720 455,487
+   CA HT Reconnu                     13 020 169,868     2 838 712,999     4 200 375,635     5 981 081,234
+   Marge Brute Reconnue HT            4 058 357,252       873 618,436     1 313 952,410     1 870 786,406
+   Taux Marge Brute                        31,170 %          30,775 %          31,282 %          31,278 %
+   Panier Moyen TTC                         264,422           253,820           265,754           268,800
+   Articles Par Commande                      2,579             2,517             2,547             2,633
+   Taux Remise Produit                      1,748 %           1,601 %           1,744 %           1,820 %
+   Part Application Mobile                 40,819 %          32,417 %          39,178 %          46,189 %
+   Part Paiement A La Livraison            49,084 %          53,044 %          49,740 %          46,636 %
+   Taux Annulation                          4,781 %           5,152 %           4,818 %           4,568 %
+   Taux Echec Paiement                      6,667 %           6,352 %           6,300 %           7,078 %
+   Taux Refus Colis                         4,479 %           4,893 %           4,338 %           4,370 %
+   ===================================================================== */
+
+-- Requête 1 : les KPI du cube par année (la ligne « All » = Total)
+SELECT
+    { [Measures].[CA Commande TTC],
+        [Measures].[Commandes Passees],
+        [Measures].[CA Reconnu TTC],
+        [Measures].[Commandes Reconnues],
+        [Measures].[Rembourse TTC],
+        [Measures].[CA Net TTC],
+        [Measures].[CA HT Reconnu],
+        [Measures].[Marge Brute Reconnue HT],
+        [Measures].[Taux Marge Brute],
+        [Measures].[Panier Moyen TTC],
+        [Measures].[Articles Par Commande],
+        [Measures].[Taux Remise Produit],
+        [Measures].[Part Application Mobile],
+        [Measures].[Part Paiement A La Livraison],
+        [Measures].[Taux Annulation],
+        [Measures].[Taux Echec Paiement],
+        [Measures].[Taux Refus Colis] } ON COLUMNS,
+    NON EMPTY { [Date].[Calendrier].[All], [Date].[Calendrier].[Année].MEMBERS } ON ROWS
+FROM [Ventes];
+
+-- Requête 2 : CA reconnu par catégorie en 2025
+SELECT
+    { [Measures].[CA HT Reconnu], [Measures].[Marge Brute Reconnue HT], [Measures].[Taux Marge Brute] } ON COLUMNS,
+    NON EMPTY [Produit].[Catégorie].[Catégorie].MEMBERS ON ROWS
+FROM [Ventes]
+WHERE [Date].[Calendrier].[Année].&[2025];
+
+-- Requête 3 : évolution sur un an — attendu : 2024 = +48,4 % · 2025 = +42,1 %
+SELECT
+    { [Measures].[CA Reconnu TTC], [Measures].[CA Reconnu A-1], [Measures].[Evolution CA Reconnu] } ON COLUMNS,
+    NON EMPTY [Date].[Calendrier].[Année].MEMBERS ON ROWS
+FROM [Ventes];
+
+-- Requête comparaison (v2, 29/10/2026) : évolutions et feux par année
+-- Attendu (calcul sur les valeurs de référence des requêtes ci-dessus) :   2024   ·   2025
+--   Evolution CA Commande TTC            +45,4 %  statut  1      +42,1 %  statut  1
+--   Evolution CA Reconnu                 +48,4 %  statut  1      +42,1 %  statut  1
+--   Evolution CA Net TTC                 +46,9 %  statut  1      +42,7 %  statut  1
+--   Evolution Commandes Reconnues        +41,7 %  statut  1      +40,5 %  statut  1
+--   Evolution Panier Moyen                +4,7 %  statut  1       +1,1 %  statut  0
+--   Evolution Articles Par Commande       +1,2 %  statut  0       +3,4 %  statut  1
+--   Evolution CA HT Reconnu              +48,0 %  statut  1      +42,4 %  statut  1
+--   Evolution Marge Brute Reconnue HT    +50,4 %  statut  1      +42,4 %  statut  1
+--   Ecart Taux Marge Brute              +0,51 pt  statut  1 (≈ seuil)     -0,00 pt  statut  0
+--   Ecart Taux Remise Produit           +0,14 pt  statut  —     +0,08 pt  statut  —
+--   Ecart Taux Annulation               -0,33 pt  statut  0     -0,25 pt  statut  0
+--   Ecart Taux Refus Colis              -0,55 pt  statut  1     +0,03 pt  statut  0
+--   Ecart Taux Echec Paiement           -0,05 pt  statut  0     +0,78 pt  statut -1
+--   Ecart Part Paiement A La Livraison  -3,30 pt  statut  —     -3,10 pt  statut  —
+--   Ecart Part Application Mobile       +6,76 pt  statut  —     +7,01 pt  statut  —
+-- Ligne 2023 : vide (pas d'année 2022). Les KPI absents de la liste n'ont pas de valeur de référence annuelle : contrôle visuel.
+-- Écart d'arrondi possible pour les KPI à écart E1 à E3.
+SELECT
+    { [Measures].[Evolution CA Commande TTC],
+      [Measures].[Statut CA Commande TTC],
+      [Measures].[Evolution CA Reconnu],
+      [Measures].[Statut CA Reconnu],
+      [Measures].[Evolution CA Net TTC],
+      [Measures].[Statut CA Net TTC],
+      [Measures].[Evolution Commandes Reconnues],
+      [Measures].[Statut Commandes Reconnues],
+      [Measures].[Evolution Panier Moyen],
+      [Measures].[Statut Panier Moyen],
+      [Measures].[Evolution Articles Par Commande],
+      [Measures].[Statut Articles Par Commande],
+      [Measures].[Evolution CA HT Reconnu],
+      [Measures].[Statut CA HT Reconnu],
+      [Measures].[Evolution Marge Brute Reconnue HT],
+      [Measures].[Statut Marge Brute Reconnue HT],
+      [Measures].[Ecart Taux Marge Brute],
+      [Measures].[Statut Taux Marge Brute],
+      [Measures].[Ecart Taux Remise Produit],
+      [Measures].[Ecart Taux Annulation],
+      [Measures].[Statut Taux Annulation],
+      [Measures].[Ecart Taux Refus Colis],
+      [Measures].[Statut Taux Refus Colis],
+      [Measures].[Ecart Taux Echec Paiement],
+      [Measures].[Statut Taux Echec Paiement],
+      [Measures].[Ecart Part Paiement A La Livraison],
+      [Measures].[Ecart Part Application Mobile] } ON COLUMNS,
+    NON EMPTY [Date].[Calendrier].[Année].MEMBERS ON ROWS
+FROM [Ventes];

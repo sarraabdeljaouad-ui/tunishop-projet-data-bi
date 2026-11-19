@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="1a155584-0bf7-420f-9682-baf9473751ff">
+  <ID>Geographie</ID>
+  <Name>Géographie</Name>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b004149b-3c5c-4334-a3bf-698bd2a78a83">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="0b49d627-dc19-4ccc-a2b6-63f301ee4bcf">
+      <ID>Gouvernorat</ID>
+      <Name>Gouvernorat</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="10f43a5c-09be-4f9d-9b21-88dd4fcdfd9f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1a4aecd0-7c43-4c4f-94ad-68695c4b73dc">
+            <TableID>olap_v_dim_geographie</TableID>
+            <ColumnID>geographie_sk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e91b0242-eaa7-43d1-88af-dc7bcefa45af">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7625cad5-0a10-4ed3-9cfb-34f96e71add8">
+          <TableID>olap_v_dim_geographie</TableID>
+          <ColumnID>gouvernorat</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="fbad2962-3bbd-44b0-acfa-34f5ac9f99cc">
+          <AttributeID>Region</AttributeID>
+          <Name>Région</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d1ab82b3-906d-4357-b1e1-5b0803b68dd6">
+          <AttributeID>Zone Livraison</AttributeID>
+          <Name>Zone livraison</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="8f19c249-4d9d-4663-9d36-1ef23c920696">
+      <ID>Region</ID>
+      <Name>Région</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f5f8dcbf-d58c-45a9-9fcf-d61c1c005129">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d7d8f269-b50d-4982-87d6-ecf62f4554d8">
+            <TableID>olap_v_dim_geographie</TableID>
+            <ColumnID>region</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="19ef2f17-fcc9-42de-9c4b-47a23a172e9b">
+      <ID>Zone Livraison</ID>
+      <Name>Zone livraison</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a020c143-40e5-44fc-97ce-cb85e5723ddf">
+          <DataType>WChar</DataType>
+          <DataSize>5</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b3aae22d-f8d5-496b-9b8f-1fd3357542b2">
+            <TableID>olap_v_dim_geographie</TableID>
+            <ColumnID>zone_livraison</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="ae30ec4b-abe3-4711-b775-a0c72ea251ad">
+      <ID>Regions</ID>
+      <Name>Régions</Name>
+      <Levels>
+        <Level dwd:design-time-name="f1bb2853-a69e-404e-821a-d9604ab75e37">
+          <ID>Region</ID>
+          <Name>Région</Name>
+          <SourceAttributeID>Region</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="f9eae25a-cae2-4eda-827a-7420eae9ea85">
+          <ID>Gouvernorat</ID>
+          <Name>Gouvernorat</Name>
+          <SourceAttributeID>Gouvernorat</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

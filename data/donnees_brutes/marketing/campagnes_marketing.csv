@@ -1,0 +1,153 @@
+campagne_id;nom_campagne;canal;objectif;theme;categorie_ciblee_id;code_coupon;date_debut;date_fin;budget_ht
+CMP0001;Ramadan Karim 2023 - Instagram Ads;instagram_ads;acquisition;ramadan;;;2023-03-25;2023-04-21;12632,678
+CMP0002;Ramadan Karim 2023 - Emailing;emailing;conversion;ramadan;;RAMADAN23EM;2023-03-24;2023-04-22;3313,773
+CMP0003;Ramadan Karim 2023 - Tiktok Ads;tiktok_ads;conversion;ramadan;;RAMADAN23TI;2023-03-25;2023-04-23;19743,18
+CMP0004;Ramadan Karim 2023 - Google Ads;google_ads;acquisition;ramadan;;;2023-03-23;2023-04-18;24513,387
+CMP0005;Ramadan Karim 2023 - Influence;influence;conversion;ramadan;CAT16;;2023-03-25;2023-04-21;63315,474
+CMP0006;Spécial Aïd 2023 - Emailing;emailing;fidelisation;pre_fitr;CAT10;;2023-04-13;2023-04-21;359,552
+CMP0007;Spécial Aïd 2023 - Tiktok Ads;tiktok_ads;conversion;pre_fitr;;;2023-04-12;2023-04-23;12319,587
+CMP0008;Spécial Aïd 2023 - Sms;sms;conversion;pre_fitr;;AID23SM;2023-04-09;2023-04-19;2135,185
+CMP0009;Soldes 2023 - Tiktok Ads;tiktok_ads;acquisition;soldes;CAT09;SOLDES23TI;2023-01-29;2023-03-04;14027,386
+CMP0010;Soldes 2023 - Instagram Ads;instagram_ads;conversion;soldes;CAT11;SOLDES23IN;2023-01-29;2023-03-05;10451,127
+CMP0011;Soldes 2023 - Facebook Ads;facebook_ads;acquisition;soldes;CAT10;;2023-01-29;2023-03-06;27060,15
+CMP0012;Soldes 2023 - Sms;sms;fidelisation;soldes;CAT11;SOLDES23SM;2023-02-01;2023-03-08;2047,123
+CMP0013;Soldes 2023 - Influence;influence;acquisition;soldes;;;2023-01-31;2023-03-07;19522,689
+CMP0014;Soldes 2023 - Tiktok Ads;tiktok_ads;acquisition;soldes;CAT10;SOLDES23TI2;2023-07-31;2023-09-05;8477,681
+CMP0015;Soldes 2023 - Google Ads;google_ads;fidelisation;soldes;;SOLDES23GO;2023-08-02;2023-09-08;18731,72
+CMP0016;Soldes 2023 - Emailing;emailing;fidelisation;soldes;;SOLDES23EM;2023-08-01;2023-09-06;2015,615
+CMP0017;Soldes 2023 - Facebook Ads;facebook_ads;acquisition;soldes;CAT11;SOLDES23FA;2023-08-03;2023-09-03;19544,886
+CMP0018;Rentrée scolaire 2023 - Facebook Ads;facebook_ads;fidelisation;rentree;CAT19;;2023-08-23;2023-09-22;13268,088
+CMP0019;Rentrée scolaire 2023 - Sms;sms;conversion;rentree;CAT19;;2023-08-22;2023-09-23;3076,237
+CMP0020;Rentrée scolaire 2023 - Google Ads;google_ads;conversion;rentree;CAT19;RENTREE23GO;2023-08-24;2023-09-23;5252,325
+CMP0021;Black Friday 2023 - Instagram Ads;instagram_ads;conversion;bf;CAT06;;2023-11-15;2023-11-27;14748,605
+CMP0022;Black Friday 2023 - Tiktok Ads;tiktok_ads;conversion;bf;;BF23TI;2023-11-19;2023-11-27;9254,51
+CMP0023;Black Friday 2023 - Sms;sms;conversion;bf;;;2023-11-20;2023-11-29;964,214
+CMP0024;Black Friday 2023 - Emailing;emailing;conversion;bf;CAT01;BF23EM;2023-11-19;2023-11-28;881,59
+CMP0025;Fêtes de fin d'année 2023 - Instagram Ads;instagram_ads;acquisition;fin_annee;;;2023-12-12;2023-12-29;13661,427
+CMP0026;Fêtes de fin d'année 2023 - Google Ads;google_ads;acquisition;fin_annee;;;2023-12-13;2024-01-03;5909,585
+CMP0027;Fêtes de fin d'année 2023 - Facebook Ads;facebook_ads;conversion;fin_annee;;;2023-12-13;2023-12-30;14051,272
+CMP0028;Fêtes de fin d'année 2023 - Sms;sms;conversion;fin_annee;;;2023-12-13;2024-01-02;2205,548
+CMP0029;Fêtes de fin d'année 2023 - Emailing;emailing;conversion;fin_annee;;FETES23EM;2023-12-10;2023-12-29;1098,853
+CMP0030;Été 2023 - Sms;sms;fidelisation;ete;;ETE23SM;2023-06-18;2023-07-27;1641,633
+CMP0031;Été 2023 - Facebook Ads;facebook_ads;conversion;ete;;;2023-06-19;2023-07-28;25901,999
+CMP0032;Été 2023 - Tiktok Ads;tiktok_ads;conversion;ete;;;2023-06-19;2023-07-29;12605,876
+CMP0033;Toujours actif 2023 - Facebook Ads #33;facebook_ads;acquisition;permanent;;;2023-09-29;2023-10-22;20601,682
+CMP0034;Toujours actif 2023 - Emailing #34;emailing;fidelisation;permanent;;PROMO23EM;2023-10-12;2023-10-25;901,651
+CMP0035;Toujours actif 2023 - Google Ads #35;google_ads;acquisition;permanent;;;2023-03-31;2023-04-24;13592,901
+CMP0036;Toujours actif 2023 - Google Ads #36;google_ads;conversion;permanent;;PROMO23GO;2023-11-09;2023-11-27;3214,455
+CMP0037;Toujours actif 2023 - Google Ads #37;google_ads;fidelisation;permanent;;PROMO23GO2;2023-04-20;2023-05-16;13817,359
+CMP0038;Toujours actif 2023 - Facebook Ads #38;facebook_ads;conversion;permanent;;PROMO23FA;2023-10-23;2023-10-30;6294,671
+CMP0039;Toujours actif 2023 - Emailing #39;emailing;fidelisation;permanent;;;2023-07-28;2023-08-14;794,427
+CMP0040;Toujours actif 2023 - Facebook Ads #40;facebook_ads;conversion;permanent;;;2023-09-07;2023-09-15;4579,348
+CMP0041;Toujours actif 2023 - Google Ads #41;google_ads;conversion;permanent;;PROMO23GO3;2023-03-07;2023-03-29;8576,47
+CMP0042;Toujours actif 2023 - Facebook Ads #42;facebook_ads;acquisition;permanent;;;2023-07-11;2023-07-30;8842,18
+CMP0043;Toujours actif 2023 - Instagram Ads #43;instagram_ads;acquisition;permanent;;PROMO23IN;2023-07-01;2023-07-10;4368,409
+CMP0044;Toujours actif 2023 - Facebook Ads #44;facebook_ads;acquisition;permanent;;PROMO23FA2;2023-04-06;2023-04-28;10763,559
+CMP0045;Toujours actif 2023 - Facebook Ads #45;facebook_ads;fidelisation;permanent;;PROMO23FA3;2023-07-30;2023-08-25;19585,069
+CMP0046;Toujours actif 2023 - Facebook Ads #46;facebook_ads;acquisition;permanent;;;2023-09-17;2023-10-05;5677,834
+CMP0047;Ramadan Karim 2024 - Instagram Ads;instagram_ads;conversion;ramadan;CAT14;RAMADAN24IN;2024-03-11;2024-04-06;9109,124
+CMP0048;Ramadan Karim 2024 - Google Ads;google_ads;acquisition;ramadan;CAT16;;2024-03-11;2024-04-10;22118,205
+CMP0049;Ramadan Karim 2024 - Sms;sms;conversion;ramadan;CAT14;RAMADAN24SM;2024-03-09;2024-04-04;7416,757
+CMP0050;Spécial Aïd 2024 - Influence;influence;acquisition;pre_fitr;;;2024-04-01;2024-04-10;28114,957
+CMP0051;Spécial Aïd 2024 - Facebook Ads;facebook_ads;acquisition;pre_fitr;;AID24FA;2024-03-30;2024-04-07;8987,425
+CMP0052;Spécial Aïd 2024 - Tiktok Ads;tiktok_ads;fidelisation;pre_fitr;CAT09;AID24TI;2024-03-31;2024-04-07;7183,733
+CMP0053;Spécial Aïd 2024 - Google Ads;google_ads;acquisition;pre_fitr;;;2024-03-30;2024-04-09;12001,276
+CMP0054;Soldes 2024 - Emailing;emailing;conversion;soldes;;;2024-01-31;2024-03-03;2179,406
+CMP0055;Soldes 2024 - Instagram Ads;instagram_ads;conversion;soldes;;SOLDES24IN;2024-02-01;2024-03-05;18477,672
+CMP0056;Soldes 2024 - Influence;influence;conversion;soldes;CAT09;;2024-02-02;2024-03-06;60588,234
+CMP0057;Soldes 2024 - Tiktok Ads;tiktok_ads;conversion;soldes;;;2024-08-01;2024-09-04;25179,395
+CMP0058;Soldes 2024 - Influence;influence;acquisition;soldes;;;2024-07-31;2024-08-31;32981,2
+CMP0059;Soldes 2024 - Emailing;emailing;conversion;soldes;CAT09;;2024-08-02;2024-09-02;923,302
+CMP0060;Soldes 2024 - Instagram Ads;instagram_ads;conversion;soldes;;;2024-07-30;2024-08-31;10643,954
+CMP0061;Soldes 2024 - Sms;sms;fidelisation;soldes;;SOLDES24SM;2024-08-01;2024-09-05;5117,27
+CMP0062;Rentrée scolaire 2024 - Instagram Ads;instagram_ads;fidelisation;rentree;CAT19;;2024-08-24;2024-09-19;15001,713
+CMP0063;Rentrée scolaire 2024 - Emailing;emailing;fidelisation;rentree;CAT19;;2024-08-27;2024-09-23;1643,423
+CMP0064;Rentrée scolaire 2024 - Influence;influence;acquisition;rentree;CAT19;;2024-08-23;2024-09-22;15788,663
+CMP0065;Rentrée scolaire 2024 - Tiktok Ads;tiktok_ads;acquisition;rentree;CAT19;;2024-08-24;2024-09-25;18112,866
+CMP0066;Rentrée scolaire 2024 - Google Ads;google_ads;conversion;rentree;CAT19;RENTREE24GO;2024-08-26;2024-09-21;19336,939
+CMP0067;Black Friday 2024 - Tiktok Ads;tiktok_ads;conversion;bf;;;2024-11-24;2024-12-02;3257,456
+CMP0068;Black Friday 2024 - Facebook Ads;facebook_ads;acquisition;bf;CAT01;;2024-11-22;2024-12-01;15264,699
+CMP0069;Black Friday 2024 - Instagram Ads;instagram_ads;conversion;bf;;;2024-11-24;2024-11-30;4321,012
+CMP0070;Black Friday 2024 - Emailing;emailing;conversion;bf;CAT03;;2024-11-20;2024-12-02;1770,573
+CMP0071;Black Friday 2024 - Sms;sms;fidelisation;bf;CAT03;;2024-11-22;2024-12-04;3733,333
+CMP0072;Fêtes de fin d'année 2024 - Facebook Ads;facebook_ads;conversion;fin_annee;;;2024-12-13;2024-12-29;7170,9
+CMP0073;Fêtes de fin d'année 2024 - Influence;influence;acquisition;fin_annee;;FETES24IN;2024-12-13;2025-01-03;34177,458
+CMP0074;Fêtes de fin d'année 2024 - Emailing;emailing;fidelisation;fin_annee;;;2024-12-09;2024-12-25;1342,97
+CMP0075;Fêtes de fin d'année 2024 - Google Ads;google_ads;conversion;fin_annee;;;2024-12-11;2024-12-28;10266,098
+CMP0076;Fêtes de fin d'année 2024 - Tiktok Ads;tiktok_ads;conversion;fin_annee;;;2024-12-13;2025-01-03;7667,33
+CMP0077;Été 2024 - Tiktok Ads;tiktok_ads;acquisition;ete;;ETE24TI;2024-06-17;2024-07-27;5589,271
+CMP0078;Été 2024 - Sms;sms;conversion;ete;;ETE24SM;2024-06-21;2024-07-31;3247,38
+CMP0079;Été 2024 - Influence;influence;acquisition;ete;;;2024-06-22;2024-08-02;57599,987
+CMP0080;Toujours actif 2024 - Instagram Ads #80;instagram_ads;conversion;permanent;;;2024-03-04;2024-03-14;6096,703
+CMP0081;Toujours actif 2024 - Tiktok Ads #81;tiktok_ads;conversion;permanent;;;2024-08-13;2024-08-30;8541,529
+CMP0082;Toujours actif 2024 - Instagram Ads #82;instagram_ads;acquisition;permanent;;PROMO24IN;2024-09-19;2024-09-26;6632,726
+CMP0083;Toujours actif 2024 - Influence #83;influence;conversion;permanent;;;2024-04-13;2024-05-01;32133,147
+CMP0084;Toujours actif 2024 - Google Ads #84;google_ads;conversion;permanent;;PROMO24GO;2024-02-11;2024-02-18;2404,436
+CMP0085;Toujours actif 2024 - Tiktok Ads #85;tiktok_ads;conversion;permanent;;;2024-07-22;2024-08-16;14501,653
+CMP0086;Toujours actif 2024 - Tiktok Ads #86;tiktok_ads;acquisition;permanent;;PROMO24TI;2024-12-12;2025-01-06;11891,151
+CMP0087;Toujours actif 2024 - Tiktok Ads #87;tiktok_ads;acquisition;permanent;;PROMO24TI2;2024-11-03;2024-11-29;22751,118
+CMP0088;Toujours actif 2024 - Facebook Ads #88;facebook_ads;conversion;permanent;;PROMO24FA;2024-03-30;2024-04-11;5699,395
+CMP0089;Toujours actif 2024 - Tiktok Ads #89;tiktok_ads;conversion;permanent;;PROMO24TI3;2024-12-05;2024-12-30;15613,102
+CMP0090;Toujours actif 2024 - Instagram Ads #90;instagram_ads;acquisition;permanent;;;2024-03-15;2024-03-25;8411,095
+CMP0091;Toujours actif 2024 - Google Ads #91;google_ads;acquisition;permanent;;PROMO24GO2;2024-10-05;2024-10-16;3635,038
+CMP0092;Toujours actif 2024 - Emailing #92;emailing;conversion;permanent;;;2024-04-02;2024-04-12;732,398
+CMP0093;Toujours actif 2024 - Instagram Ads #93;instagram_ads;conversion;permanent;;;2024-03-21;2024-04-01;10532,073
+CMP0094;Toujours actif 2024 - Instagram Ads #94;instagram_ads;conversion;permanent;;PROMO24IN2;2024-02-23;2024-03-05;11015,4
+CMP0095;Toujours actif 2024 - Tiktok Ads #95;tiktok_ads;conversion;permanent;;;2024-10-05;2024-10-27;10937,486
+CMP0096;Toujours actif 2024 - Facebook Ads #96;facebook_ads;acquisition;permanent;;;2024-10-20;2024-11-15;10453,242
+CMP0097;Toujours actif 2024 - Facebook Ads #97;facebook_ads;conversion;permanent;;PROMO24FA2;2024-06-13;2024-06-21;4514,822
+CMP0098;Ramadan Karim 2025 - Google Ads;google_ads;fidelisation;ramadan;CAT14;RAMADAN25GO;2025-02-26;2025-03-29;45597,498
+CMP0099;Ramadan Karim 2025 - Sms;sms;fidelisation;ramadan;CAT16;;2025-03-01;2025-03-27;8016,924
+CMP0100;Ramadan Karim 2025 - Instagram Ads;instagram_ads;acquisition;ramadan;;RAMADAN25IN;2025-02-28;2025-03-26;47457,927
+CMP0101;Spécial Aïd 2025 - Instagram Ads;instagram_ads;fidelisation;pre_fitr;;;2025-03-21;2025-03-30;11556,155
+CMP0102;Spécial Aïd 2025 - Influence;influence;acquisition;pre_fitr;CAT09;;2025-03-22;2025-03-30;28708,499
+CMP0103;Spécial Aïd 2025 - Emailing;emailing;conversion;pre_fitr;CAT11;;2025-03-21;2025-03-27;1156,629
+CMP0104;Spécial Aïd 2025 - Facebook Ads;facebook_ads;fidelisation;pre_fitr;CAT10;AID25FA;2025-03-20;2025-04-01;15290,435
+CMP0105;Spécial Aïd 2025 - Google Ads;google_ads;fidelisation;pre_fitr;;;2025-03-19;2025-03-27;14146,315
+CMP0106;Soldes 2025 - Instagram Ads;instagram_ads;acquisition;soldes;;SOLDES25IN;2025-02-01;2025-03-04;25898,332
+CMP0107;Soldes 2025 - Sms;sms;fidelisation;soldes;CAT09;SOLDES25SM;2025-01-29;2025-03-07;4896,317
+CMP0108;Soldes 2025 - Tiktok Ads;tiktok_ads;acquisition;soldes;;;2025-01-31;2025-03-04;11746,339
+CMP0109;Soldes 2025 - Facebook Ads;facebook_ads;acquisition;soldes;;SOLDES25FA;2025-08-02;2025-09-04;33683,914
+CMP0110;Soldes 2025 - Emailing;emailing;conversion;soldes;;;2025-07-30;2025-09-04;1203,172
+CMP0111;Soldes 2025 - Google Ads;google_ads;acquisition;soldes;;;2025-08-03;2025-09-05;34695,498
+CMP0112;Rentrée scolaire 2025 - Instagram Ads;instagram_ads;conversion;rentree;CAT19;;2025-08-25;2025-09-23;15536,063
+CMP0113;Rentrée scolaire 2025 - Influence;influence;fidelisation;rentree;CAT19;RENTREE25IN;2025-08-27;2025-09-26;48303,811
+CMP0114;Rentrée scolaire 2025 - Sms;sms;fidelisation;rentree;CAT19;;2025-08-24;2025-09-25;3715,068
+CMP0115;Rentrée scolaire 2025 - Google Ads;google_ads;fidelisation;rentree;CAT19;RENTREE25GO;2025-08-27;2025-09-23;12421,416
+CMP0116;Rentrée scolaire 2025 - Tiktok Ads;tiktok_ads;acquisition;rentree;CAT19;RENTREE25TI;2025-08-23;2025-09-22;20201,335
+CMP0117;Black Friday 2025 - Sms;sms;fidelisation;bf;CAT06;BF25SM;2025-11-22;2025-12-04;4651,883
+CMP0118;Black Friday 2025 - Facebook Ads;facebook_ads;conversion;bf;;BF25FA;2025-11-24;2025-12-06;19667,874
+CMP0119;Black Friday 2025 - Tiktok Ads;tiktok_ads;fidelisation;bf;;;2025-11-23;2025-12-05;18533,915
+CMP0120;Black Friday 2025 - Influence;influence;fidelisation;bf;;BF25IN;2025-11-22;2025-11-28;17966,865
+CMP0121;Black Friday 2025 - Instagram Ads;instagram_ads;acquisition;bf;CAT06;BF25IN2;2025-11-24;2025-12-01;14824,517
+CMP0122;Fêtes de fin d'année 2025 - Emailing;emailing;fidelisation;fin_annee;;;2025-12-13;2025-12-31;1876,133
+CMP0123;Fêtes de fin d'année 2025 - Influence;influence;acquisition;fin_annee;;;2025-12-13;2025-12-29;11201,695
+CMP0124;Fêtes de fin d'année 2025 - Facebook Ads;facebook_ads;conversion;fin_annee;;FETES25FA;2025-12-13;2025-12-31;7926,259
+CMP0125;Fêtes de fin d'année 2025 - Tiktok Ads;tiktok_ads;acquisition;fin_annee;;FETES25TI;2025-12-13;2025-12-30;4010,251
+CMP0126;Fêtes de fin d'année 2025 - Instagram Ads;instagram_ads;conversion;fin_annee;;FETES25IN;2025-12-14;2025-12-31;8078,873
+CMP0127;Été 2025 - Emailing;emailing;fidelisation;ete;;ETE25EM;2025-06-18;2025-07-29;2067,29
+CMP0128;Été 2025 - Sms;sms;fidelisation;ete;;;2025-06-18;2025-07-29;3259,857
+CMP0129;Été 2025 - Tiktok Ads;tiktok_ads;acquisition;ete;;ETE25TI;2025-06-21;2025-08-01;24589,117
+CMP0130;Été 2025 - Influence;influence;conversion;ete;;;2025-06-18;2025-07-24;38740,741
+CMP0131;Toujours actif 2025 - Instagram Ads #131;instagram_ads;acquisition;permanent;;;2025-09-22;2025-10-17;19937,581
+CMP0132;Toujours actif 2025 - Instagram Ads #132;instagram_ads;acquisition;permanent;;;2025-12-05;2025-12-14;6843,244
+CMP0133;Toujours actif 2025 - Facebook Ads #133;facebook_ads;acquisition;permanent;;;2025-01-22;2025-01-31;3985,467
+CMP0134;Toujours actif 2025 - Facebook Ads #134;facebook_ads;acquisition;permanent;;;2025-09-07;2025-10-02;13359,879
+CMP0135;Toujours actif 2025 - Facebook Ads #135;facebook_ads;acquisition;permanent;;;2025-04-25;2025-05-13;20300,548
+CMP0136;Toujours actif 2025 - Google Ads #136;google_ads;acquisition;permanent;;PROMO25GO;2025-10-21;2025-10-28;5965,414
+CMP0137;Toujours actif 2025 - Influence #137;influence;acquisition;permanent;;;2025-09-20;2025-10-13;53448,716
+CMP0138;Toujours actif 2025 - Emailing #138;emailing;fidelisation;permanent;;PROMO25EM;2025-09-02;2025-09-12;906,027
+CMP0139;Toujours actif 2025 - Google Ads #139;google_ads;acquisition;permanent;;;2025-02-28;2025-03-21;5277,425
+CMP0140;Toujours actif 2025 - Instagram Ads #140;instagram_ads;conversion;permanent;;;2025-11-24;2025-12-02;6618,932
+CMP0141;Toujours actif 2025 - Google Ads #141;google_ads;acquisition;permanent;;;2025-03-03;2025-03-20;10027,223
+CMP0142;Toujours actif 2025 - Facebook Ads #142;facebook_ads;acquisition;permanent;;;2025-11-21;2025-12-04;14324,594
+CMP0143;Toujours actif 2025 - Sms #143;sms;conversion;permanent;;;2025-09-16;2025-10-11;4647,587
+CMP0144;Toujours actif 2025 - Instagram Ads #144;instagram_ads;acquisition;permanent;;;2025-10-20;2025-11-11;15406,28
+CMP0145;Toujours actif 2025 - Sms #145;sms;fidelisation;permanent;;PROMO25SM;2025-12-09;2025-12-26;2047,426
+CMP0146;Toujours actif 2025 - Tiktok Ads #146;tiktok_ads;fidelisation;permanent;;;2025-02-23;2025-03-15;12135,963
+CMP0147;Toujours actif 2025 - Instagram Ads #147;instagram_ads;conversion;permanent;;PROMO25IN;2025-04-25;2025-05-14;17298,373
+CMP0148;Toujours actif 2025 - Facebook Ads #148;facebook_ads;acquisition;permanent;;;2025-04-15;2025-04-24;3005,075
+CMP0149;Toujours actif 2025 - Instagram Ads #149;instagram_ads;conversion;permanent;;PROMO25IN2;2025-09-09;2025-10-01;6591,241
+CMP0150;Toujours actif 2025 - Tiktok Ads #150;tiktok_ads;conversion;permanent;;PROMO25TI;2025-06-24;2025-07-10;6672,96
+CMP0151;Toujours actif 2025 - Facebook Ads #151;facebook_ads;acquisition;permanent;;;2025-04-03;2025-04-29;21707,058
+CMP0152;Toujours actif 2025 - Instagram Ads #152;instagram_ads;conversion;permanent;;PROMO25IN3;2025-08-24;2025-09-03;8259,172

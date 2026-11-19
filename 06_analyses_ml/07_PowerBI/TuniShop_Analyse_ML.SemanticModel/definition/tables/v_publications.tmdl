@@ -1,0 +1,66 @@
+/// Dernière publication de chaque table de TuniShop_ANALYTICS
+table v_publications
+	lineageTag: a8c36d4c-a577-4258-9a5e-b67556a5fd1b
+
+	column table_sql
+		dataType: string
+		lineageTag: bfb8e2ea-912d-4501-980e-6af69dfcd236
+		summarizeBy: none
+		sourceColumn: table_sql
+
+	column phase
+		dataType: string
+		lineageTag: 228340f0-d372-47cc-a00b-f8b81f7e6900
+		summarizeBy: none
+		sourceColumn: phase
+
+	column notebook
+		dataType: string
+		lineageTag: 9ff46b05-322e-4210-a544-44ccb2b760ce
+		summarizeBy: none
+		sourceColumn: notebook
+
+	column partage
+		dataType: string
+		formatString: 0.000
+		lineageTag: 4f05263f-e496-4aa5-adbd-3a82c8830914
+		summarizeBy: none
+		sourceColumn: partage
+
+	column lignes
+		dataType: int64
+		formatString: #,0
+		lineageTag: 07b7f038-2315-4c21-8cc7-078dfc564a39
+		summarizeBy: none
+		sourceColumn: lignes
+
+	column mode_source
+		dataType: string
+		lineageTag: 633c7bf9-5a50-48e9-9e7f-aca018838095
+		summarizeBy: none
+		sourceColumn: mode_source
+
+	column publie_le
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 7a818c1f-351f-402e-9c71-5f8d5c5f1067
+		summarizeBy: none
+		sourceColumn: publie_le
+
+	column publie_par
+		dataType: string
+		lineageTag: 237eaa34-d54f-4d1a-aad0-e0a385536247
+		summarizeBy: none
+		sourceColumn: publie_par
+
+	partition v_publications = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_publications"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"table_sql", "phase", "notebook", "partage", "lignes", "mode_source", "publie_le", "publie_par"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"table_sql", type text}, {"phase", type text}, {"notebook", type text}, {"partage", type text}, {"lignes", Int64.Type}, {"mode_source", type text}, {"publie_le", type datetime}, {"publie_par", type text}})
+				in
+				    Types
+

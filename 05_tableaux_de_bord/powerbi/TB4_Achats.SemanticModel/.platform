@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "TB4_Achats"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "15a32435-ada5-598f-937d-f21517a1643d"
+  }
+}

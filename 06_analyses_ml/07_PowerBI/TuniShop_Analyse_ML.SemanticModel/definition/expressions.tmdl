@@ -1,0 +1,10 @@
+expression Serveur = "localhost" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 22451a59-351f-447d-9c15-30a20f3f56e8
+
+	annotation PBI_ResultType = Text
+
+expression Base = "TuniShop_ANALYTICS" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 15847d31-e68a-4fc0-bee4-49d45b277ed1
+
+	annotation PBI_ResultType = Text
+

@@ -1,0 +1,4 @@
+entrepot_id,nom_entrepot,ville,gouvernorat_id,date_ouverture,surface_m2
+ENT01,Entrepôt Grand Tunis,Ben Arous,G03,2019-03-01,4200
+ENT02,Entrepôt Sahel,Sousse,G12,2021-09-15,2500
+ENT03,Entrepôt Sud,Sfax,G15,2022-05-02,2200

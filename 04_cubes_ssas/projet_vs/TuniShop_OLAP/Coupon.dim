@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="a10e2e65-3979-4d49-bdce-745243ab76ae">
+  <ID>Coupon</ID>
+  <Name>Coupon</Name>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="74bcc517-525d-41d7-9be2-6e121986eb6d">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="de26ce19-db3c-4eab-84d8-ea9a32ceb579">
+      <ID>Coupon</ID>
+      <Name>Coupon</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c005519e-c0c4-4ef2-a816-7c2fecd39f1a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4217fc2d-ca9d-4b76-9ab6-57f90870add3">
+            <TableID>olap_v_dim_coupon</TableID>
+            <ColumnID>coupon_sk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="5617f04f-b524-4a52-8a8b-7655e5e14f61">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="873ba41e-28ee-4bdf-852a-6a9733138908">
+          <TableID>olap_v_dim_coupon</TableID>
+          <ColumnID>code_coupon</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d053128b-a2fd-49a0-9928-422a668ea069">
+          <AttributeID>Type Remise</AttributeID>
+          <Name>Type remise</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="4eb346ca-0fa5-47c9-a05f-a75581b09f20">
+      <ID>Type Remise</ID>
+      <Name>Type remise</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cb55fc05-59b6-49e1-b842-e96af83c00ba">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8ef0ab16-1b36-4174-b877-31b1ecbe2d91">
+            <TableID>olap_v_dim_coupon</TableID>
+            <ColumnID>type_remise</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+  </Attributes>
+</Dimension>

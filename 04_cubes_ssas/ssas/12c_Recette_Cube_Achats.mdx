@@ -1,0 +1,57 @@
+﻿/* =====================================================================
+   12c_Recette_Cube_Achats.mdx — TuniShop — recette du cube [Achats]
+   ---------------------------------------------------------------------
+   SSMS → Se connecter → Analysis Services → localhost\DEV → clic droit sur
+   TuniShop_OLAP → Nouvelle requête → MDX → coller → sélectionner UNE requête → F5.
+   Valeurs attendues : calcul Python des KPI sur le DWH (kpi_reference.xlsx).
+   Écart toléré : arrondi d'affichage. Délai et retard d'appro : écart possible de quelques
+   centièmes (8 dates de réception corrigées au staging, règle QR48).
+
+   Mesure                                 Total              2023              2024              2025
+   Montant Achat HT               8 999 975,580     1 874 945,057     2 943 552,147     4 181 478,376
+   Taux Rupture Fournisseur             6,604 %           6,517 %           6,973 %           6,350 %
+   Taux Service Fournisseur            97,905 %          97,817 %          97,603 %          98,167 %
+   Delai Moyen Appro J                   16,388            18,304            16,741            14,858
+   Retard Moyen Appro J                   2,136             2,109             2,499             1,849
+   ===================================================================== */
+
+-- Requête 1 : les KPI du cube par année (la ligne « All » = Total)
+SELECT
+    { [Measures].[Montant Achat HT],
+        [Measures].[Taux Rupture Fournisseur],
+        [Measures].[Taux Service Fournisseur],
+        [Measures].[Delai Moyen Appro J],
+        [Measures].[Retard Moyen Appro J] } ON COLUMNS,
+    NON EMPTY { [Date].[Calendrier].[All], [Date].[Calendrier].[Année].MEMBERS } ON ROWS
+FROM [Achats];
+
+-- Requête 2 : le fournisseur FRN025 (Shenzhen Bright Tech) au 2e trimestre 2024
+-- Attendu : retard moyen d'environ 34 jours sur les bons émis au T2 2024 (scénario du jeu de données)
+SELECT
+    { [Measures].[Montant Achat HT], [Measures].[Retard Moyen Appro J], [Measures].[Taux Rupture Fournisseur] } ON COLUMNS,
+    NON EMPTY [Date].[Calendrier].[Trimestre].MEMBERS ON ROWS
+FROM [Achats]
+WHERE [Fournisseur].[Fournisseur].[Shenzhen Bright Tech];
+
+-- Requête comparaison (v2, 29/10/2026) : évolutions et feux par année
+-- Attendu (calcul sur les valeurs de référence des requêtes ci-dessus) :   2024   ·   2025
+--   Evolution Montant Achat              +57,0 %  statut  —      +42,1 %  statut  —
+--   Ecart Taux Service Fournisseur      -0,21 pt  statut  0     +0,56 pt  statut  1
+--   Evolution Delai Moyen Appro J         -8,5 %  statut  1      -11,2 %  statut  1
+--   Evolution Retard Moyen Appro J       +18,5 %  statut -1      -26,0 %  statut  1
+--   Ecart Taux Rupture Fournisseur      +0,46 pt  statut  0 (≈ seuil)     -0,62 pt  statut  1
+-- Ligne 2023 : vide (pas d'année 2022). Les KPI absents de la liste n'ont pas de valeur de référence annuelle : contrôle visuel.
+-- Écart d'arrondi possible pour les KPI à écart E1 à E3.
+SELECT
+    { [Measures].[Evolution Montant Achat],
+      [Measures].[Evolution Quantite Commandee],
+      [Measures].[Ecart Taux Service Fournisseur],
+      [Measures].[Statut Taux Service Fournisseur],
+      [Measures].[Evolution Delai Moyen Appro J],
+      [Measures].[Statut Delai Moyen Appro J],
+      [Measures].[Evolution Retard Moyen Appro J],
+      [Measures].[Statut Retard Moyen Appro J],
+      [Measures].[Ecart Taux Rupture Fournisseur],
+      [Measures].[Statut Taux Rupture Fournisseur] } ON COLUMNS,
+    NON EMPTY [Date].[Calendrier].[Année].MEMBERS ON ROWS
+FROM [Achats];

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="a0a290ec-5703-44e7-859c-bed2a77fa1ec">
+  <ID>Entrepot</ID>
+  <Name>Entrepôt</Name>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="2ad52a16-f7c9-4687-8ed6-e018ff65d744">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="8d47bf86-32c5-448f-9c03-3adbd1a8f0aa">
+      <ID>Entrepot</ID>
+      <Name>Entrepôt</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="45e11609-b731-4e18-9a9e-8125ec1ca2c3">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f49b0b5a-7c3f-4ded-9415-9a5fd086a0db">
+            <TableID>olap_v_dim_entrepot</TableID>
+            <ColumnID>entrepot_sk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="09c0def5-14af-43ad-8481-a1fbbd1faa1b">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="cd63104f-9b62-4933-80ab-0b6564f7f254">
+          <TableID>olap_v_dim_entrepot</TableID>
+          <ColumnID>nom_entrepot</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="73202178-d31e-48d3-afd9-30648bc1ae54">
+          <AttributeID>Region</AttributeID>
+          <Name>Région</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="7b1f5f6d-bcf8-470d-b621-ae74c24a574e">
+      <ID>Region</ID>
+      <Name>Région</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9a2efd82-ee72-4f03-bcf6-cd26290dd0cd">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="682749f8-7647-4ec2-8d58-ac2c2d8adc21">
+            <TableID>olap_v_dim_entrepot</TableID>
+            <ColumnID>region</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+  </Attributes>
+</Dimension>

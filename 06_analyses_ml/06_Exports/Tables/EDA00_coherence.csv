@@ -1,0 +1,6 @@
+﻿controle;indicateur;valide_pv;sql_vues_bi;python_pandas;statut
+C03;Lignes de vente;115903,0;115903,0;115903,0;OK
+C04;Commandes;66268,0;66268,0;66268,0;OK
+C05;Livraisons;61793,0;61793,0;61793,0;OK
+C06;CA reconnu TTC (DT);15541665,655;15541665,655;15541665,655;OK
+C07;Clients ayant commandé (hors membre inconnu);12472,0;12472,0;12472,0;OK

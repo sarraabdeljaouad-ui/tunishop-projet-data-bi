@@ -1,0 +1,609 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/20/2026 9:00:00 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TUNISHOP"
+  DTS:CreatorName="TuniShop"
+  DTS:Description="TuniShop — chargement des 13 dimensions du DWH (dim_date, 10 SCD1 en parallèle, puis dim_client SCD2 et dim_produit)"
+  DTS:DTSID="{93C1BB07-EE2C-4B68-A49A-F96F975104BD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="DWH_01_Chargement_Dimensions"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{37D01DE2-7007-4EF3-8CE0-9B2C9E58C222}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CM_ADMIN]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+      DTS:ObjectName="CM_ADMIN">
+      <DTS:PropertyExpression
+        DTS:Name="ServerName">@[$Package::ServeurSQL]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=TuniShop_ADMIN;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=TuniShop_SSIS;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:Description="Lot (id_chargement) à charger ; 0 = dernier lot de TuniShop_ADMIN.audit.execution_lot"
+      DTS:DTSID="{615B2698-D7A6-4410-9B55-0A082863B2B1}"
+      DTS:ObjectName="IdChargement">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:Description="Instance SQL Server (ex. localhost, .\SQLEXPRESS)"
+      DTS:DTSID="{A7618484-2530-4727-8B41-292F54FF66DC}"
+      DTS:ObjectName="ServeurSQL">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">localhost</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:Description="Lot effectivement traité (résolu par la première tâche)"
+      DTS:DTSID="{0999A113-7DA4-4DD8-81ED-6F0403E7BF79}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Lot">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SEQ - Dimensions historisees"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Conteneur de séquences (tâches exécutées en parallèle)"
+      DTS:DTSID="{34191444-0A44-4BE1-A44F-9D55CE3A2853}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SEQ - Dimensions historisees">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions historisees\SQL - dim_client"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Clients — SCD2 (segment, gouvernorat, ville)"
+          DTS:DTSID="{6151FE20-E61E-4E25-AF80-FD14D995B53D}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_client"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_client @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions historisees\SQL - dim_produit"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Produits — une version par période de prix"
+          DTS:DTSID="{C8DC8CF1-E774-4EF5-A254-5666BACE82E9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_produit"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_produit @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SEQ - Dimensions SCD1"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Conteneur de séquences (tâches exécutées en parallèle)"
+      DTS:DTSID="{AE365519-141D-42CE-84E3-A286DE062922}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SEQ - Dimensions SCD1">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions SCD1\SQL - dim_campagne"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Campagnes marketing — SCD1"
+          DTS:DTSID="{77DA6AFB-8338-4418-8A0C-081A883490CE}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_campagne"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_campagne @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions SCD1\SQL - dim_canal"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Canal de vente × appareil (dimension junk) — SCD1"
+          DTS:DTSID="{F76F82A3-4E3F-4049-BF7E-F3FDC9DAF0DF}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_canal"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_canal @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions SCD1\SQL - dim_coupon"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Coupons — SCD1"
+          DTS:DTSID="{84646A9A-29ED-4B0D-AF91-B0E2C52B522E}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_coupon"
+          DTS:ThreadHint="2">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_coupon @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions SCD1\SQL - dim_entrepot"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Entrepôts — SCD1"
+          DTS:DTSID="{8E53A958-FEE9-4E53-9E08-C8697E468F48}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_entrepot"
+          DTS:ThreadHint="3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_entrepot @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions SCD1\SQL - dim_fournisseur"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Fournisseurs — SCD1"
+          DTS:DTSID="{95FEF352-B83B-43BB-A71E-753001C881DE}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_fournisseur"
+          DTS:ThreadHint="4">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_fournisseur @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions SCD1\SQL - dim_geographie"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Gouvernorats — SCD1"
+          DTS:DTSID="{4048598C-5253-43B2-B8A2-AF9E48A37A2D}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_geographie"
+          DTS:ThreadHint="5">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_geographie @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions SCD1\SQL - dim_mode_paiement"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Modes de paiement — SCD1"
+          DTS:DTSID="{EDA9298D-B6D8-4EFF-A670-1D64ABC76E52}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_mode_paiement"
+          DTS:ThreadHint="6">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_mode_paiement @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions SCD1\SQL - dim_motif_retour"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Type et motif de remboursement — SCD1"
+          DTS:DTSID="{2015F6C1-AA5B-4204-B450-73742B9675E7}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_motif_retour"
+          DTS:ThreadHint="7">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_motif_retour @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions SCD1\SQL - dim_statut_commande"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Statuts de commande — SCD1"
+          DTS:DTSID="{43AC7C1A-8382-402B-B811-EB91102DB3C6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_statut_commande"
+          DTS:ThreadHint="8">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_statut_commande @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ - Dimensions SCD1\SQL - dim_transporteur"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Transporteurs — SCD1"
+          DTS:DTSID="{9036F8DA-D532-4960-AB88-30A6E34DB89F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL - dim_transporteur"
+          DTS:ThreadHint="9">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+              SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_transporteur @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Lot"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - dim_date"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Calendrier 2023-2026 (doit précéder les autres dimensions)"
+      DTS:DTSID="{5AF5AD2B-DA88-4B8F-909E-753E6D527E68}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - dim_date"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+          SQLTask:SqlStatementSource="EXEC [TuniShop_DWH].dw.usp_charger_dim_date @id_chargement = ?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::Lot"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - Resoudre le lot"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Lot à charger : paramètre IdChargement, ou dernier lot si 0"
+      DTS:DTSID="{06F3DCC4-05F6-46DE-B73B-6FB0D5B89136}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - Resoudre le lot"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CD762A3B-8D10-4039-8233-E6EAE33779C7}"
+          SQLTask:SqlStatementSource="DECLARE @p INT = ?;&#xA;SELECT COALESCE(NULLIF(@p, 0), (SELECT MAX(id_chargement) FROM audit.execution_lot)) AS id_chargement;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::Lot" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="$Package::IdChargement"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{25E43B8E-5AF6-4E7C-83F4-35409FCA460B}"
+      DTS:From="Package\SQL - Resoudre le lot"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 1"
+      DTS:To="Package\SQL - dim_date" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{6C6C4960-5468-4443-9335-69D708FCB9DB}"
+      DTS:From="Package\SQL - dim_date"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 2"
+      DTS:To="Package\SEQ - Dimensions SCD1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{1B35DA51-D857-404E-8658-B87FFA08111A}"
+      DTS:From="Package\SEQ - Dimensions SCD1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte 3"
+      DTS:To="Package\SEQ - Dimensions historisees" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\SEQ - Dimensions historisees\SQL - dim_client"
+          TopLeft="27.9489799741406,16.4243699011092" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\SEQ - Dimensions historisees\SQL - dim_produit"
+          TopLeft="200.051020025859,12.0546219406656" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="392,73.6"
+          Size="392,116.8"
+          Id="Package\SEQ - Dimensions historisees"
+          TopLeft="518.833323853352,507.834314251895" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\SEQ - Dimensions SCD1\SQL - dim_campagne"
+          TopLeft="78.3571440978926,15.5504203090206" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\SEQ - Dimensions SCD1\SQL - dim_canal"
+          TopLeft="96.214283171965,70.6092446106116" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\SEQ - Dimensions SCD1\SQL - dim_coupon"
+          TopLeft="680.271432293677,71.3739505036893" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\SEQ - Dimensions SCD1\SQL - dim_entrepot"
+          TopLeft="269.042850026792,12.49159673671" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\SEQ - Dimensions SCD1\SQL - dim_fournisseur"
+          TopLeft="264.234682752509,72.6848748918222" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\SEQ - Dimensions SCD1\SQL - dim_geographie"
+          TopLeft="667.9285630231,17.079832095176" />
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\SEQ - Dimensions SCD1\SQL - dim_mode_paiement"
+          TopLeft="452.042840915796,12.3823530376989" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\SEQ - Dimensions SCD1\SQL - dim_motif_retour"
+          TopLeft="867.810190381251,67.0042025432454" />
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\SEQ - Dimensions SCD1\SQL - dim_statut_commande"
+          TopLeft="860.357124768956,13.802521124843" />
+        <NodeLayout
+          Size="188.8,41.6"
+          Id="Package\SEQ - Dimensions SCD1\SQL - dim_transporteur"
+          TopLeft="470.128541991175,69.8445387175337" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="1131.2,180"
+          Size="1131.2,223.2"
+          Id="Package\SEQ - Dimensions SCD1"
+          TopLeft="145.804803830751,261.146079166909" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\SQL - dim_date"
+          TopLeft="638.44862983982,183.142718153305" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\SQL - Resoudre le lot"
+          TopLeft="625.403732012704,121.635155690376" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 1]"
+          TopLeft="803.803732012704,142.435155690376">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14.155102172884,61.5075624629289"
+              Start="0,0"
+              End="-6.65510217288397,61.5075624629289">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,57.5075624629289" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,57.5075624629289"
+                    Point2="22.5,61.5075624629289"
+                    Point3="18.5,61.5075624629289" />
+                  <mssgle:LineSegment
+                    End="-6.65510217288397,61.5075624629289" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 2]"
+          TopLeft="712.726716835286,224.742718153305">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.4033610136038"
+              Start="0,0"
+              End="0,28.9033610136038">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.9033610136038" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte 3]"
+          TopLeft="713.119063842052,484.346079166909">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.4882350849858"
+              Start="0,0"
+              End="0,15.9882350849858">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.9882350849858" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

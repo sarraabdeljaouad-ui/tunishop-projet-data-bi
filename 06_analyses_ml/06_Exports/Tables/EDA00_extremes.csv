@@ -1,0 +1,8 @@
+﻿table;variable;libelle;valeurs;mediane;q3;seuil_haut;maximum;nb_extremes;part_extremes;statut
+cmd;montant_total_ttc;Montant d'une commande (DT);66268;114,9;242,8;815,5;10126,3;4617;0,06967163638558581;INFO
+cmd;nb_articles;Articles par commande;66268;2,0;3,0;9,0;101,0;2011;0,030346471901973805;INFO
+liv;delai_livraison_j;Délai de livraison (j);58776;3,21;4,22;9,59;13,13;99;0,0016843609636586362;INFO
+liv;delai_preparation_h;Préparation (h);61743;17,97;23,97;66,03;170,47;927;0,01501384772362859;INFO
+liv;poids_kg;Poids du colis (kg);61793;2,13;5,87;21,02;354,27;3041;0,049212693994465394;INFO
+rmb;montant_demande_ttc;Montant demandé en remboursement (DT);8815;73,9;144,9;462,9;7001,2;518;0,05876347135564379;INFO
+ach;retard_appro_j;Retard fournisseur (j);11539;0,0;2,0;8,0;79,0;910;0,07886298639396828;INFO

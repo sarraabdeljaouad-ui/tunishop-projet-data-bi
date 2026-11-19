@@ -1,0 +1,86 @@
+/// Scores de retard des colis en transit (v1.2)
+table v_ml_scores_retard
+	lineageTag: fbc244c0-edcd-40ba-a18b-a3bcb108420a
+
+	column livraison_id
+		dataType: string
+		isHidden
+		lineageTag: 92acbe1b-835a-4114-88e3-5ce3c81847c7
+		summarizeBy: none
+		sourceColumn: livraison_id
+
+	column commande_id
+		dataType: string
+		lineageTag: 175ff94c-2913-4c2b-9c9b-9fd90b63793d
+		summarizeBy: none
+		sourceColumn: commande_id
+
+	column date_expedition
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 4865804b-bff1-47d7-90eb-1cfa5233f09a
+		summarizeBy: none
+		sourceColumn: date_expedition
+
+	column transporteur
+		dataType: string
+		lineageTag: 2e670aeb-3dcd-453d-a286-f0db450a1683
+		summarizeBy: none
+		sourceColumn: transporteur
+
+	column region
+		dataType: string
+		lineageTag: 6eb5d701-cb9a-4266-8ea3-01ab01f40cd0
+		summarizeBy: none
+		sourceColumn: region
+
+	column zone_livraison
+		dataType: string
+		lineageTag: 7d70c6bb-2bb9-4d58-9045-31016a143044
+		summarizeBy: none
+		sourceColumn: zone_livraison
+
+	column entrepot
+		dataType: string
+		lineageTag: 4a6b9fdf-62df-4244-a513-ade182bfcb6f
+		summarizeBy: none
+		sourceColumn: entrepot
+
+	column proba_retard
+		dataType: double
+		formatString: 0.000
+		lineageTag: 0e1f1c1c-a45e-4718-95de-2af9660a4707
+		summarizeBy: none
+		sourceColumn: proba_retard
+
+	column alerte_retard
+		dataType: int64
+		formatString: 0
+		lineageTag: f981392f-ee4b-441a-85f4-6affa3cd6e50
+		summarizeBy: none
+		sourceColumn: alerte_retard
+
+	column date_scoring
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 63c52c73-edd2-43e7-b260-fee80ef2ac87
+		summarizeBy: none
+		sourceColumn: date_scoring
+
+	column version_modele
+		dataType: string
+		lineageTag: 2078cf63-8f33-4bf3-b30e-368af4ee7ad5
+		summarizeBy: none
+		sourceColumn: version_modele
+
+	partition v_ml_scores_retard = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_ml_scores_retard"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"livraison_id", "commande_id", "date_expedition", "transporteur", "region", "zone_livraison", "entrepot", "proba_retard", "alerte_retard", "date_scoring", "version_modele"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"livraison_id", type text}, {"commande_id", type text}, {"date_expedition", type datetime}, {"transporteur", type text}, {"region", type text}, {"zone_livraison", type text}, {"entrepot", type text}, {"proba_retard", type number}, {"alerte_retard", Int64.Type}, {"date_scoring", type datetime}, {"version_modele", type text}})
+				in
+				    Types
+

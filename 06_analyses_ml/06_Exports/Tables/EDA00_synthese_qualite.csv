@@ -1,0 +1,8 @@
+﻿controle;libelle;verifications;ok;ecart;info;statut
+C01-C02;Connexion et 23 vues complètes;23;23;0;0;OK
+C03-C07;5 totaux validés : PV = SQL = Python;5;5;0;0;OK
+C08;Intégrité référentielle (relations fait -> dimension);16;16;0;0;OK
+C09;Unicité des clés de faits;6;6;0;0;OK
+C10;Membres techniques -1 rares;8;8;0;0;OK
+C11;Valeurs manquantes (toutes expliquées par le métier);21;0;0;21;INFO
+—;Valeurs extrêmes (règle de Tukey, 3 × écart interquartile);7;0;0;7;INFO

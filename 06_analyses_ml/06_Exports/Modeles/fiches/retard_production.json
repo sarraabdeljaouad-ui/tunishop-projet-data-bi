@@ -1,0 +1,43 @@
+{
+ "nom": "retard_production",
+ "cas": "retard",
+ "role": "production",
+ "version": "2026.11.13.2348",
+ "appris_le": "2026-11-13 23:48:06",
+ "periode_apprentissage": "expéditions du 2023-01-02 au 2025-12-30 (tout l'historique)",
+ "lignes_apprentissage": 58776,
+ "taux_cible": 0.1453144140465496,
+ "empreinte_donnees": "44207687bf8a23e6",
+ "variables": [
+  "poids_kg",
+  "delai_preparation_h",
+  "montant_total_ttc",
+  "nb_articles",
+  "jour_semaine",
+  "mois",
+  "est_weekend",
+  "est_ramadan",
+  "transporteur",
+  "region",
+  "zone_livraison",
+  "entrepot",
+  "mode_paiement",
+  "canal",
+  "periode_commerciale"
+ ],
+ "nb_variables": 15,
+ "reglages": "LogisticRegression(C=1.0, dual=False, fit_intercept=True, intercept_scaling=1, l1_ratio=0.0, max_iter=3000, penalty=deprecated, solver=lbfgs, tol=0.0001, verbose=0, warm_start=False)",
+ "seuil": 0.13,
+ "mesures": {
+  "AUC_test_2025": 0.8108152912865466,
+  "capture_top_20_test_2025": 0.5163809937079626
+ },
+ "versions": {
+  "python": "3.13.1",
+  "scikit-learn": "1.9.1",
+  "pandas": "3.1.0"
+ },
+ "source": "TuniShop_DWH",
+ "fichier": "06_Exports/Modeles/retard_production.joblib",
+ "notes": "modèle évalué : Régression logistique (tout l'historique) ; à réapprendre et recalibrer chaque mois"
+}

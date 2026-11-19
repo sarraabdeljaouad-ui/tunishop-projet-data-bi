@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.37131.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TuniShop_DWH_SSIS", "TuniShop_DWH_SSIS\TuniShop_DWH_SSIS.dtproj", "{CF8FEB75-CECE-4A9B-98C8-D2CEE945CC50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF8FEB75-CECE-4A9B-98C8-D2CEE945CC50}.Development|Default.ActiveCfg = Development
+		{CF8FEB75-CECE-4A9B-98C8-D2CEE945CC50}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13451EC2-B318-4F62-BE70-177A7CF51EA3}
+	EndGlobalSection
+EndGlobal

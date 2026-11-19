@@ -1,0 +1,102 @@
+/// Scores de retard de livraison 2025
+table v_ml_retard
+	lineageTag: ef79bcd5-7574-429f-aab4-e06755ae57a4
+
+	column livraison_id
+		dataType: string
+		isHidden
+		lineageTag: f93ed456-0f5e-4e88-a4c8-52cc98381c48
+		summarizeBy: none
+		sourceColumn: livraison_id
+
+	column date_expedition
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 519872af-edb1-4393-849f-a13c2a2dee7a
+		summarizeBy: none
+		sourceColumn: date_expedition
+
+	column mois
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: b6877edd-46fc-483f-8672-8d251ed8d363
+		summarizeBy: none
+		sourceColumn: mois
+
+	column transporteur
+		dataType: string
+		lineageTag: 024cbcba-13e7-47d8-9033-1dd13adda91b
+		summarizeBy: none
+		sourceColumn: transporteur
+
+	column retard_reel
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e1accef-5b1b-4b85-8b8d-d8359a21cfd6
+		summarizeBy: none
+		sourceColumn: retard_reel
+
+	column proba_retard
+		dataType: double
+		formatString: 0.000
+		lineageTag: 4e77621c-7575-445f-808d-850d89ec78b7
+		summarizeBy: none
+		sourceColumn: proba_retard
+
+	column quintile_risque
+		dataType: int64
+		formatString: 0
+		lineageTag: 4590a611-04dc-4fd8-8052-81aa29766512
+		summarizeBy: none
+		sourceColumn: quintile_risque
+
+	column client_sk
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 99bd1660-44c0-4511-ab49-2d410200bdd7
+		summarizeBy: none
+		sourceColumn: client_sk
+
+	column nom_entrepot
+		dataType: string
+		lineageTag: 0e1259de-e1ff-4a2f-9a26-c14fb0948a29
+		summarizeBy: none
+		sourceColumn: nom_entrepot
+
+	column region
+		dataType: string
+		lineageTag: 01e0d613-a1d0-46b7-b146-8406a49bbc34
+		summarizeBy: none
+		sourceColumn: region
+
+	column zone_livraison
+		dataType: string
+		lineageTag: 0c0b3aef-de56-4bf2-a922-942dff88b9c3
+		summarizeBy: none
+		sourceColumn: zone_livraison
+
+	column retard_j
+		dataType: double
+		formatString: #,0.00
+		lineageTag: f940c7d5-c40e-4366-87b3-15b7c0357449
+		summarizeBy: none
+		sourceColumn: retard_j
+
+	column statut_livraison
+		dataType: string
+		lineageTag: e48e0448-6517-4277-8ed7-160df7d9a29c
+		summarizeBy: none
+		sourceColumn: statut_livraison
+
+	partition v_ml_retard = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_ml_retard"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"livraison_id", "date_expedition", "mois", "transporteur", "retard_reel", "proba_retard", "quintile_risque", "client_sk", "nom_entrepot", "region", "zone_livraison", "retard_j", "statut_livraison"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"livraison_id", type text}, {"date_expedition", type datetime}, {"mois", type datetime}, {"transporteur", type text}, {"retard_reel", Int64.Type}, {"proba_retard", type number}, {"quintile_risque", Int64.Type}, {"client_sk", Int64.Type}, {"nom_entrepot", type text}, {"region", type text}, {"zone_livraison", type text}, {"retard_j", type number}, {"statut_livraison", type text}})
+				in
+				    Types
+

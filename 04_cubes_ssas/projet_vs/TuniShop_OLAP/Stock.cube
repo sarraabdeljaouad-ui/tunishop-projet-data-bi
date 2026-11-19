@@ -1,0 +1,788 @@
+<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7aa8cf0e-9e21-49a3-a7b4-b95cd7d4ed37" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Stock</ID>
+  <Name>Stock</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5969" scrolltop="-9" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="85" x="24130" y="16531" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_produit" left="11905" top="13906" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3704" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000780e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_produit" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_date" left="11789" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3937" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000610f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_date" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_fact_stock_mensuel" left="11609" top="7400" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="4297" height="4106" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000c91000000a100000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_fact_stock_mensuel" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_fact_mouvements_stock" left="20" top="7040" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3789" height="4826" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000cd0e0000da120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_fact_mouvements_stock" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_type_mouvement" left="94" top="14266" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3641" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000390e000034060000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_type_mouvement" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_entrepot" left="6209" top="8119" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_entrepot" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3509" top="10803" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="8696" height="6003" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_mouvements_stock_produit_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="22" destattachpoint="29" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11905" y="16406" />
+              <point x="7857" y="16406" />
+              <point x="7857" y="11103" />
+              <point x="3809" y="11103" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13358" top="11206" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_stock_mensuel_produit_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="6" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13757" y="13906" />
+              <point x="13757" y="11506" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3509" top="2101" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="8580" height="6002" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_mouvements_stock_date_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="4" sourceattachpoint="22" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11789" y="2500" />
+              <point x="7799" y="2500" />
+              <point x="7799" y="7803" />
+              <point x="3809" y="7803" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13358" top="4501" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_stock_mensuel_date_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13757" y="5000" />
+              <point x="13757" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8909" top="9053" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_stock_mensuel_entrepot_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="3" sourceattachpoint="15" destattachpoint="20" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9209" y="9452" />
+              <point x="10409" y="9452" />
+              <point x="10409" y="9453" />
+              <point x="11609" y="9453" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3509" top="9053" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_mouvements_stock_entrepot_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="4" sourceattachpoint="14" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6209" y="9452" />
+              <point x="5009" y="9452" />
+              <point x="5009" y="9453" />
+              <point x="3809" y="9453" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1515" top="11566" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_mouvements_stock_type_mouvement]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="4" sourceattachpoint="6" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1914" y="14266" />
+              <point x="1914" y="11866" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-5969</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-9</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>85</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension dwd:design-time-name="7c257e03-ed95-43cf-8888-f0f0ae24e350">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="823bd080-d27f-495b-8ff7-fcf4696124ca">
+          <AttributeID>Jour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2d2e04ef-0e64-45df-acdf-d3f470dae665">
+          <AttributeID>Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="325d6fc5-808e-4fef-b11e-63cdde664fe8">
+          <AttributeID>Trimestre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="da9c2b8a-89c7-4273-91e9-bcff0cc4f70e">
+          <AttributeID>Semestre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="34673ef0-04ea-4282-a4a0-40be5dd823cf">
+          <AttributeID>Annee</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="88f3672f-1de2-4a71-96f3-00c2eb26449e">
+          <AttributeID>Jour Semaine</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e9622ad-382f-4c72-99b0-b379cc6220e1">
+          <AttributeID>Periode Commerciale</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d3437695-f619-4ab7-8d71-59c4b38cd2a1">
+          <AttributeID>Ramadan</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ee4dff9b-6ccd-4ee4-82d6-5491fac53bf9">
+          <AttributeID>Jour Ferie</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="a3c0f840-8c9d-4df3-896a-a7f115b5fc8d">
+          <HierarchyID>Calendrier</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="74a4eba6-d1ff-4445-b8f9-137970b5b20b">
+      <ID>Produit</ID>
+      <Name>Produit</Name>
+      <DimensionID>Produit</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="576c00c0-50a3-4ee3-85bc-c00ba5003fb9">
+          <AttributeID>Produit</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8fadd9ae-af2c-4988-953c-835630cfabd6">
+          <AttributeID>Sous Categorie</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c274e746-6d88-4a71-ae54-27efc15f26a8">
+          <AttributeID>Categorie</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="599f6b7a-e224-46b0-8ef6-90fdff890319">
+          <AttributeID>Marque</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="739d46cd-db0e-40c8-b3c7-d7542f50ac39">
+          <AttributeID>Gamme Prix</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="adb92f82-e293-46c7-80f6-6c6f9f2c7f4d">
+          <AttributeID>Statut Produit</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bc800d14-b962-4fb5-bf1c-382d032fe257">
+          <AttributeID>Code Produit</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="de2c9241-1d9e-42ae-8f38-3211867b48c7">
+          <HierarchyID>Categories</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="bc18a87d-2237-4b56-a8d5-a45f4f24e96a">
+      <ID>Entrepot</ID>
+      <Name>Entrepôt</Name>
+      <DimensionID>Entrepot</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5b4881be-688c-4a11-9fef-58d41744d147">
+          <AttributeID>Entrepot</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9d443197-b406-4976-b026-9811170aaed8">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="964b4064-97ce-49bd-9c3a-a18074fc6708">
+      <ID>Type Mouvement</ID>
+      <Name>Type Mouvement</Name>
+      <DimensionID>Type Mouvement</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="fe5732bb-b937-4693-a608-ef2889b41bef">
+          <AttributeID>Type Mouvement</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="291a898f-41fd-469d-843a-82087d19058e">
+          <AttributeID>Famille Mouvement</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="b42d4739-5af6-4bad-b861-159217309498">
+          <HierarchyID>Familles Mouvement</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="05d4c92a-8627-42b8-9d20-b616f54edf5b">
+      <ID>Stock mensuel</ID>
+      <Name>Stock mensuel</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="06f077a2-48dd-4e2a-a7c2-0366fd83c462">
+          <ID>Nb Inventaires</ID>
+          <Name>Nb Inventaires</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="40582ebf-faad-4142-b3b5-a894d6f85ec1">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f1334c56-3f69-45c4-a6af-02c8fd2bf280">
+              <TableID>olap_v_fact_stock_mensuel</TableID>
+              <ColumnID>nb_inventaires</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="cce212b1-e77d-45c9-8881-4bc54ec6d050">
+          <ID>Nb Ruptures</ID>
+          <Name>Nb Ruptures</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="f5ef8b6b-8ed5-48ae-939b-6c52d72ee198">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7fe42745-4ee8-4526-bbb4-47d1e1e97563">
+              <TableID>olap_v_fact_stock_mensuel</TableID>
+              <ColumnID>nb_ruptures</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="97271924-3bd4-4001-a33a-e1860c6903ca">
+          <ID>Stock Fin Mois</ID>
+          <Name>Stock Fin Mois</Name>
+          <AggregateFunction>LastNonEmpty</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="95b9ea8e-539e-452f-ae92-880994dc4991">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4371ffc0-d495-40f1-93bd-cb0b50835586">
+              <TableID>olap_v_fact_stock_mensuel</TableID>
+              <ColumnID>stock_fin_mois</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="8503af18-8908-4464-a254-f1aa354acd7e">
+          <ID>Quantite En Commande</ID>
+          <Name>Quantite En Commande</Name>
+          <AggregateFunction>LastNonEmpty</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="b6c96713-5d4a-42b3-a4d1-9df28fb36021">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="dcb1cb0e-b683-4839-a2cf-fcd103d878f4">
+              <TableID>olap_v_fact_stock_mensuel</TableID>
+              <ColumnID>quantite_en_commande</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="9f02b7e1-76a4-4721-a0ff-6c695cae60ab">
+          <ID>Valeur Stock HT</ID>
+          <Name>Valeur Stock HT</Name>
+          <AggregateFunction>LastNonEmpty</AggregateFunction>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="0a8e4ba3-376d-481f-8fcb-bdfadda24d46">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cf2f1a48-8ce0-4626-a094-a9665d79ff4c">
+              <TableID>olap_v_fact_stock_mensuel</TableID>
+              <ColumnID>valeur_stock_ht</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0.000</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d20aacd3-04de-4460-9329-3e169482e901">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a1d9ab4b-0a15-4cae-9033-c2b266cb7a9a">
+              <AttributeID>Jour</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="90e513e3-a079-4cda-9468-5e02f9f0b994">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="931114be-cece-4cbc-bcd8-497b142a01c5">
+                    <TableID>olap_v_fact_stock_mensuel</TableID>
+                    <ColumnID>date_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="52138ecc-66f9-4fff-9a0e-b18c5a2b09de">
+          <CubeDimensionID>Produit</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d473fe56-f693-4666-8922-838d9a7ef2bb">
+              <AttributeID>Produit</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cb9f0318-7fc9-4cca-a282-fa6ecf0f917e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d17549b1-6d14-434e-9354-9ce6a74aaf2d">
+                    <TableID>olap_v_fact_stock_mensuel</TableID>
+                    <ColumnID>produit_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="12572f4b-c0e1-41a2-acc2-87a6ff1402b4">
+          <CubeDimensionID>Entrepot</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="566f337a-b849-43b0-99dd-0228112956b4">
+              <AttributeID>Entrepot</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4a43dda1-ac03-4f17-b8fc-0a624bdea8cd">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c4fe9d73-c4ae-4932-9f47-20086d2bf8ff">
+                    <TableID>olap_v_fact_stock_mensuel</TableID>
+                    <ColumnID>entrepot_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="20d59c89-2748-4a45-b805-aab1d0a615ce">
+      <ID>Mouvements stock</ID>
+      <Name>Mouvements stock</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="83d96599-856e-478f-aff1-af6e4030b91f">
+          <ID>Nb Mouvements</ID>
+          <Name>Nb Mouvements</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="49921150-364f-4b5b-8992-b67fecc5bfd8">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c6b2be3a-637f-46f2-88e7-731fafe49d21">
+              <TableID>olap_v_fact_mouvements_stock</TableID>
+              <ColumnID>nb_mouvements</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="9200f585-473a-45c2-9c83-e4d73af0ab94">
+          <ID>Quantite Mouvement</ID>
+          <Name>Quantite Mouvement</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="01898c97-04ed-4cc0-a488-cee1c145255d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9c3bad4e-6c67-43c7-baf5-9fe0c6b9d89f">
+              <TableID>olap_v_fact_mouvements_stock</TableID>
+              <ColumnID>quantite</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="40f2d102-d098-4edb-a143-cb79b0d864db">
+          <ID>Valeur Mouvement HT</ID>
+          <Name>Valeur Mouvement HT</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="5acb5ca0-9724-469f-9a8a-006d90b93f0c">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="68a78ec4-7035-492c-9d43-bf60e6fc2dea">
+              <TableID>olap_v_fact_mouvements_stock</TableID>
+              <ColumnID>valeur_ht</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0.000</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="820f9108-9aa8-49e7-9fa2-a6a3bae10596">
+          <ID>Quantite Vendue Stock</ID>
+          <Name>Quantite Vendue Stock</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="04bc6f6e-e806-4ca4-8162-36d345b1b7e3">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="dd8521c7-bcd3-4499-a0d9-c688d827e016">
+              <TableID>olap_v_fact_mouvements_stock</TableID>
+              <ColumnID>quantite_vendue</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="25c523b1-8f3d-4a30-a989-4e998d0191ad">
+          <ID>Cout Des Ventes HT</ID>
+          <Name>Cout Des Ventes HT</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="deee7238-ac92-48c4-a759-2d76360df646">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1da6a7e5-2b79-4772-b166-272f43bfac23">
+              <TableID>olap_v_fact_mouvements_stock</TableID>
+              <ColumnID>cout_des_ventes_ht</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0.000</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="84bf1e0d-43df-4458-ae2e-4752e3aa61d0">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="40df980d-5585-4591-b9f0-2ab3116f9652">
+              <AttributeID>Jour</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="77f7f39a-d830-47e1-a48c-3dc4fe611e3a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="11c49bc7-b0ff-4f61-a3b7-b840a681e1c3">
+                    <TableID>olap_v_fact_mouvements_stock</TableID>
+                    <ColumnID>date_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c7803f9a-f7f2-4ace-b2f1-58b431f33a99">
+          <CubeDimensionID>Produit</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1884cd25-f3af-4869-be28-60bb624e8570">
+              <AttributeID>Produit</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="949c65fc-94f0-4295-b1fa-ad8176b49c9b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4f34d77c-1f53-4bff-9ec5-e63b598f2a23">
+                    <TableID>olap_v_fact_mouvements_stock</TableID>
+                    <ColumnID>produit_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9e5e641e-e22a-4b79-90f5-71c770b5451e">
+          <CubeDimensionID>Entrepot</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2e08c1b7-f736-4fd1-aaf1-d6cc16900c3c">
+              <AttributeID>Entrepot</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f7cd7d21-1308-425e-9ccd-cd5f2b7201fe">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4f707057-bad3-47bf-ab6c-4f20a2f29f69">
+                    <TableID>olap_v_fact_mouvements_stock</TableID>
+                    <ColumnID>entrepot_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6cd006c7-8c21-4844-aa66-527f823b7f11">
+          <CubeDimensionID>Type Mouvement</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="76635a40-c53d-4ade-9353-9b518045af62">
+              <AttributeID>Type Mouvement</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a32b340a-b322-45a6-a916-2df41d700133">
+                  <DataType>WChar</DataType>
+                  <DataSize>30</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0a4ffb13-06dc-4ee3-8ede-9b36b0eefd0d">
+                    <TableID>olap_v_fact_mouvements_stock</TableID>
+                    <ColumnID>type_mouvement</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="770a986e-9835-4e8a-a76d-4eaac8122394">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="b11f447b-2ae0-4f7e-8895-b95775e9579e">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/* =====================================================================
+   11b_Calculs_Cube_Stock.mdx — TuniShop — script de calcul du cube [Stock]
+   ---------------------------------------------------------------------
+   Cube 2 — Stock : niveaux de fin de mois, ruptures, entrées et sorties.
+   Où le coller : Visual Studio → cube Stock → onglet « Calculs »
+   → « Affichage du script » → Ctrl+A → coller → Ctrl+S → Déployer.
+   Mesures de base attendues dans ce cube : groupes Stock mensuel (Stock Fin Mois, Valeur Stock HT en LastNonEmpty ; Nb Inventaires, Nb Ruptures) et Mouvements stock (Quantite Mouvement, Valeur Mouvement HT, Quantite Vendue Stock, Cout Des Ventes HT) ; dimension Type Mouvement
+   Règles : Dictionnaire_KPI.xlsx (partie 4). Divisions protégées (NULL si dénominateur vide).
+   ===================================================================== */
+CALCULATE;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Rupture Stock] AS
+    IIF([Measures].[Nb Inventaires] = 0, NULL, [Measures].[Nb Ruptures] / [Measures].[Nb Inventaires]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Operations', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Entrees Stock] AS
+    ([Measures].[Quantite Mouvement], [Type Mouvement].[Famille Mouvement].&amp;[Entrée]),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'KPI\Stock', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Sorties Stock] AS
+    -([Measures].[Quantite Mouvement], [Type Mouvement].[Famille Mouvement].&amp;[Sortie]),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'KPI\Stock', VISIBLE = 1;
+/* =====================================================================
+   v2 (29/10/2026) — comparaison à l'année précédente et feux de tendance (même règle que le cube Direction)
+   A-1 : même KPI sur la période parallèle de l'année précédente (hiérarchie Calendrier).
+   Evolution : variation relative ; Ecart : différence en points de pourcentage (taux).
+   Statut : 1 favorable, 0 stable (|évolution| &lt; 2 % ou |écart| &lt; 0,5 point), -1 défavorable ; NULL sans année précédente.
+   Couleur : #1E7B4F, #5B6B7C, #B42318. Pas de feu pour les KPI sans sens favorable (volumes, parts, remises, valeur du stock).
+   ===================================================================== */
+
+/* ---------- Année précédente ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Valeur Stock HT A-1] AS
+    ([Measures].[Valeur Stock HT],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Rupture Stock A-1] AS
+    ([Measures].[Taux Rupture Stock],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Entrees Stock A-1] AS
+    ([Measures].[Entrees Stock],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Sorties Stock A-1] AS
+    ([Measures].[Sorties Stock],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Stock Fin Mois A-1] AS
+    ([Measures].[Stock Fin Mois],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Quantite En Commande A-1] AS
+    ([Measures].[Quantite En Commande],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Nb Ruptures A-1] AS
+    ([Measures].[Nb Ruptures],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Cout Des Ventes HT A-1] AS
+    ([Measures].[Cout Des Ventes HT],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+
+/* ---------- Évolutions et écarts ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Valeur Stock] AS
+    IIF(IsEmpty([Measures].[Valeur Stock HT]) OR IsEmpty([Measures].[Valeur Stock HT A-1]) OR [Measures].[Valeur Stock HT A-1] = 0, NULL,
+        ([Measures].[Valeur Stock HT] - [Measures].[Valeur Stock HT A-1]) / [Measures].[Valeur Stock HT A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Rupture Stock] AS
+    IIF(IsEmpty([Measures].[Taux Rupture Stock]) OR IsEmpty([Measures].[Taux Rupture Stock A-1]), NULL,
+        ([Measures].[Taux Rupture Stock] - [Measures].[Taux Rupture Stock A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Entrees Stock] AS
+    IIF(IsEmpty([Measures].[Entrees Stock]) OR IsEmpty([Measures].[Entrees Stock A-1]) OR [Measures].[Entrees Stock A-1] = 0, NULL,
+        ([Measures].[Entrees Stock] - [Measures].[Entrees Stock A-1]) / [Measures].[Entrees Stock A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Sorties Stock] AS
+    IIF(IsEmpty([Measures].[Sorties Stock]) OR IsEmpty([Measures].[Sorties Stock A-1]) OR [Measures].[Sorties Stock A-1] = 0, NULL,
+        ([Measures].[Sorties Stock] - [Measures].[Sorties Stock A-1]) / [Measures].[Sorties Stock A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Stock Fin Mois] AS
+    IIF(IsEmpty([Measures].[Stock Fin Mois]) OR IsEmpty([Measures].[Stock Fin Mois A-1]) OR [Measures].[Stock Fin Mois A-1] = 0, NULL,
+        ([Measures].[Stock Fin Mois] - [Measures].[Stock Fin Mois A-1]) / [Measures].[Stock Fin Mois A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Quantite En Commande] AS
+    IIF(IsEmpty([Measures].[Quantite En Commande]) OR IsEmpty([Measures].[Quantite En Commande A-1]) OR [Measures].[Quantite En Commande A-1] = 0, NULL,
+        ([Measures].[Quantite En Commande] - [Measures].[Quantite En Commande A-1]) / [Measures].[Quantite En Commande A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Nb Ruptures] AS
+    IIF(IsEmpty([Measures].[Nb Ruptures]) OR IsEmpty([Measures].[Nb Ruptures A-1]) OR [Measures].[Nb Ruptures A-1] = 0, NULL,
+        ([Measures].[Nb Ruptures] - [Measures].[Nb Ruptures A-1]) / [Measures].[Nb Ruptures A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Cout Des Ventes HT] AS
+    IIF(IsEmpty([Measures].[Cout Des Ventes HT]) OR IsEmpty([Measures].[Cout Des Ventes HT A-1]) OR [Measures].[Cout Des Ventes HT A-1] = 0, NULL,
+        ([Measures].[Cout Des Ventes HT] - [Measures].[Cout Des Ventes HT A-1]) / [Measures].[Cout Des Ventes HT A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+
+/* ---------- Feux de tendance ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Rupture Stock] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Rupture Stock]), NULL,
+        IIF([Measures].[Ecart Taux Rupture Stock] &gt; 0.5, -1, IIF([Measures].[Ecart Taux Rupture Stock] &lt; -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Nb Ruptures] AS
+    IIF(IsEmpty([Measures].[Evolution Nb Ruptures]), NULL,
+        IIF([Measures].[Evolution Nb Ruptures] &gt; 0.02, -1, IIF([Measures].[Evolution Nb Ruptures] &lt; -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Rupture Stock] AS
+    IIF(IsEmpty([Measures].[Statut Taux Rupture Stock]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Rupture Stock] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Rupture Stock] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Nb Ruptures] AS
+    IIF(IsEmpty([Measures].[Statut Nb Ruptures]), "#5B6B7C",
+        IIF([Measures].[Statut Nb Ruptures] = 1, "#1E7B4F", IIF([Measures].[Statut Nb Ruptures] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+
+</Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

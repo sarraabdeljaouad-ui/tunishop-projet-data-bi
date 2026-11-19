@@ -1,0 +1,82 @@
+/// Demande prévue par produit et par mois pour l'année suivante, stock de départ et rupture (v1.3)
+table v_ml_scores_demande
+	lineageTag: 8ac4c4ee-73ec-4d04-89bb-b26ba9c83213
+
+	column produit_id
+		dataType: string
+		isHidden
+		lineageTag: 8aa09710-0edf-46b0-a9f2-edacce22536b
+		summarizeBy: none
+		sourceColumn: produit_id
+
+	column nom_produit
+		dataType: string
+		lineageTag: dc6a40a6-65cb-494c-8b01-df90477612b4
+		summarizeBy: none
+		sourceColumn: nom_produit
+
+	column categorie
+		dataType: string
+		lineageTag: 386e8006-21fa-407d-b61c-2f008f377d40
+		summarizeBy: none
+		sourceColumn: categorie
+
+	column mois
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: ef05469f-9027-46e6-94bb-57a23a46d75c
+		summarizeBy: none
+		sourceColumn: mois
+
+	column quantite_prevue
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 045f6377-1459-4566-b45a-3c29fa6e9c0a
+		summarizeBy: none
+		sourceColumn: quantite_prevue
+
+	column stock_depart
+		dataType: double
+		formatString: #,0
+		lineageTag: 1890880e-8ba2-450e-98a7-005dab881f2f
+		summarizeBy: none
+		sourceColumn: stock_depart
+
+	column demande_cumulee
+		dataType: double
+		formatString: #,0.0
+		lineageTag: b1c2b221-93ba-4beb-adc7-28ef004230ac
+		summarizeBy: none
+		sourceColumn: demande_cumulee
+
+	column rupture_sans_reappro
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a2a5d10-d1d4-47c0-bcc7-0df59d1d2835
+		summarizeBy: none
+		sourceColumn: rupture_sans_reappro
+
+	column date_scoring
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 2a634a7a-22ca-400a-9f75-da857d1c0c84
+		summarizeBy: none
+		sourceColumn: date_scoring
+
+	column version_modele
+		dataType: string
+		lineageTag: d88e9dd7-94de-4954-818e-31db763edfed
+		summarizeBy: none
+		sourceColumn: version_modele
+
+	partition v_ml_scores_demande = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_ml_scores_demande"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"produit_id", "nom_produit", "categorie", "mois", "quantite_prevue", "stock_depart", "demande_cumulee", "rupture_sans_reappro", "date_scoring", "version_modele"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"produit_id", type text}, {"nom_produit", type text}, {"categorie", type text}, {"mois", type datetime}, {"quantite_prevue", type number}, {"stock_depart", type number}, {"demande_cumulee", type number}, {"rupture_sans_reappro", Int64.Type}, {"date_scoring", type datetime}, {"version_modele", type text}})
+				in
+				    Types
+

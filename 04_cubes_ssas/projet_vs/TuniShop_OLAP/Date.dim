@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="2f8f0210-7966-42fd-8294-2f4789dba5b2">
+  <ID>Date</ID>
+  <Name>Date</Name>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6e81591e-2aad-4b35-8eb5-f07afac20cf9">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="2b485564-360a-48ee-a2a8-ef5ff9e25814">
+      <ID>Jour</ID>
+      <Name>Jour</Name>
+      <Usage>Key</Usage>
+      <Type>Days</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c88926c5-b2fe-4ec4-a43a-55232677f9c5">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e7253908-e933-41e4-885d-89a45557ddc6">
+            <TableID>olap_v_dim_date</TableID>
+            <ColumnID>date_sk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="1c1118f3-8f96-4654-abac-bc021e5062aa">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ea1cff4f-1bd8-4d72-af43-f127c78dbdef">
+          <TableID>olap_v_dim_date</TableID>
+          <ColumnID>libelle_jour</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="dd6bc776-2956-4db9-ae54-17fd1331efd2">
+          <AttributeID>Mois</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Mois</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3716038f-daaf-4176-b8be-77a35ddd8fae">
+          <AttributeID>Jour Semaine</AttributeID>
+          <Name>Jour de la semaine</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7f960ecf-ee28-4c30-9321-ddeb979c3171">
+          <AttributeID>Periode Commerciale</AttributeID>
+          <Name>Période commerciale</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="46d07cab-141f-45f4-8976-be8e062c5c04">
+          <AttributeID>Ramadan</AttributeID>
+          <Name>Ramadan</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d344b8e7-3455-48fd-ac3d-b56fd0c0ec1d">
+          <AttributeID>Jour Ferie</AttributeID>
+          <Name>Jour férié</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="920490a2-e0c3-448c-8282-a7275475af0e">
+      <ID>Mois</ID>
+      <Name>Mois</Name>
+      <Type>Months</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15338483-4cc4-4bd8-9fef-6a4e0f904f7e">
+          <DataType>WChar</DataType>
+          <DataSize>7</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="73945d45-ecf6-4ab7-a883-697ee33db78d">
+            <TableID>olap_v_dim_date</TableID>
+            <ColumnID>annee_mois</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d3ec2cb4-280a-4c08-ac9b-768974cb9a8d">
+        <DataType>WChar</DataType>
+        <DataSize>40</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="312aedc9-3417-4818-8669-aeb1fe897acf">
+          <TableID>olap_v_dim_date</TableID>
+          <ColumnID>libelle_mois</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="7e078257-6c0c-4be1-8a52-7e687aba27b4">
+          <AttributeID>Trimestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Trimestre</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="70d9d6be-bb44-476d-af7c-ec38c3401111">
+      <ID>Trimestre</ID>
+      <Name>Trimestre</Name>
+      <Type>Quarters</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ad439cf7-a89d-445a-b3e9-28457c74dc91">
+          <DataType>WChar</DataType>
+          <DataSize>7</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ece2b782-db55-40bb-80fd-c236286a30b4">
+            <TableID>olap_v_dim_date</TableID>
+            <ColumnID>libelle_trimestre</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1c88ad89-5baa-4895-8788-1bc3f792a8c1">
+          <AttributeID>Semestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Semestre</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="cd7f7b30-fd1d-4211-baa4-aad7595ade29">
+      <ID>Semestre</ID>
+      <Name>Semestre</Name>
+      <Type>HalfYears</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f8f6056d-517a-4594-a2b4-55b2a5d1d9d4">
+          <DataType>WChar</DataType>
+          <DataSize>40</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f5c66f96-4b0a-4aa7-93a3-9d3238db1fef">
+            <TableID>olap_v_dim_date</TableID>
+            <ColumnID>libelle_semestre</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="00427c1d-b59c-4fb8-8c3b-f88364baa42f">
+          <AttributeID>Annee</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Année</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="e029b600-4370-468f-8e01-8e99d939835f">
+      <ID>Annee</ID>
+      <Name>Année</Name>
+      <Type>Years</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8ab84d13-7e50-4413-9215-826c67ae2390">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c7675d2c-2cb2-45d0-87e3-3fd11c801d7c">
+            <TableID>olap_v_dim_date</TableID>
+            <ColumnID>annee</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="f8d3ad3b-b30b-4f82-a8c6-bdff68737bb5">
+      <ID>Jour Semaine</ID>
+      <Name>Jour de la semaine</Name>
+      <Type>DayOfWeek</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="80bf6a9e-7f99-426b-ad3b-684576049057">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7b269065-cd20-42e3-b87d-f66aed62d0cc">
+            <TableID>olap_v_dim_date</TableID>
+            <ColumnID>jour_semaine</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0908cea8-7e46-4a68-b094-8e571d088519">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="1554f929-4377-4d3d-8ce8-4e7f0693286f">
+          <TableID>olap_v_dim_date</TableID>
+          <ColumnID>nom_jour</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="d75b4e34-d95e-4fcf-8489-13c03c025121">
+      <ID>Periode Commerciale</ID>
+      <Name>Période commerciale</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ead90001-3810-4ad7-9e28-d2d2ddca4bbe">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2e51f3a2-dd85-4886-943f-5c533629d2a1">
+            <TableID>olap_v_dim_date</TableID>
+            <ColumnID>periode_commerciale</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="5120660b-aa99-446e-a4e7-e49f88351610">
+      <ID>Ramadan</ID>
+      <Name>Ramadan</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="17eec1ce-a7d2-4cb7-afe0-707b8378974c">
+          <DataType>WChar</DataType>
+          <DataSize>12</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c2ff20d0-b069-4dcf-a4a4-746e7e630811">
+            <TableID>olap_v_dim_date</TableID>
+            <ColumnID>periode_ramadan</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="807946d5-1c2f-4d5b-8a38-9ce3ce9fe48a">
+      <ID>Jour Ferie</ID>
+      <Name>Jour férié</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4f4a4856-5fc9-48cc-bfc7-fa983a9c61d1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4dbe2990-a3c9-48e6-ade5-dd9b5d495ece">
+            <TableID>olap_v_dim_date</TableID>
+            <ColumnID>nom_jour_ferie</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="b83d226c-5379-4db1-91e5-45f7f2ae8a79">
+      <ID>Calendrier</ID>
+      <Name>Calendrier</Name>
+      <Levels>
+        <Level dwd:design-time-name="88b5a65e-3a5b-41fc-a999-06543a866357">
+          <ID>Annee</ID>
+          <Name>Année</Name>
+          <SourceAttributeID>Annee</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="1d326846-dc80-4ed1-918e-820bde315cdf">
+          <ID>Semestre</ID>
+          <Name>Semestre</Name>
+          <SourceAttributeID>Semestre</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="e07aa236-bc86-4d19-a33e-5f6084c86bc6">
+          <ID>Trimestre</ID>
+          <Name>Trimestre</Name>
+          <SourceAttributeID>Trimestre</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="a5c919a0-ec5d-4c1b-80ba-fbdc672e6ca5">
+          <ID>Mois</ID>
+          <Name>Mois</Name>
+          <SourceAttributeID>Mois</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="325cf443-adf2-4ac4-a1c4-31a003c5af74">
+          <ID>Jour</ID>
+          <Name>Jour</Name>
+          <SourceAttributeID>Jour</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

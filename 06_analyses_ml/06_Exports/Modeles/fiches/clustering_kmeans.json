@@ -1,0 +1,33 @@
+{
+ "nom": "clustering_kmeans",
+ "cas": "segmentation",
+ "role": "production",
+ "version": "2026.11.13.2348",
+ "appris_le": "2026-11-13 23:48:07",
+ "periode_apprentissage": "photo du 2024-09-30",
+ "lignes_apprentissage": null,
+ "taux_cible": null,
+ "empreinte_donnees": null,
+ "variables": [
+  "log_recence",
+  "log_frequence",
+  "log_montant",
+  "log_panier",
+  "part_mobile",
+  "part_coupon",
+  "nb_categories",
+  "part_retard"
+ ],
+ "nb_variables": 8,
+ "reglages": "KMeans(n_clusters=4)",
+ "seuil": null,
+ "mesures": {},
+ "versions": {
+  "python": "3.13.1",
+  "scikit-learn": "1.9.1",
+  "pandas": "3.1.0"
+ },
+ "source": "TuniShop_DWH",
+ "fichier": "",
+ "notes": "groupes : Grands clients, Chasseurs de coupons, Réguliers, Acheteurs uniques"
+}

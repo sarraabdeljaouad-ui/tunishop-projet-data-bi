@@ -1,0 +1,4 @@
+﻿question;theme;question_metier;hypothese;verdict;constat
+Q1;Ventes et produits;Comment évoluent les ventes entre 2023 et 2025 ?;La croissance vient surtout du nombre de commandes plutôt que du panier moyen.;Confirmée;le nombre de commandes progresse de 42 % puis 40 %, le panier moyen de 6 % seulement.
+Q2;Ventes et produits;Y a-t-il une saisonnalité ? Quel est l'effet du Ramadan et des périodes commerciales ?;"Pics au Black Friday et autour du Ramadan et de l'Aïd ; ces dates lunaires avancent chaque année.";Confirmée;Black Friday ×2,8 par jour, Ramadan +42 %, et les dates lunaires avancent d'environ 11 jours par an.
+Q9;Canaux et paiements;Par quels canaux et modes de paiement les clients achètent-ils ?;L'application mobile progresse et le paiement à la livraison recule (contrôles CC07 à CC10).;Confirmée;mobile de 29 % à 48 % des commandes, paiement à la livraison de 53 % à 47 %.

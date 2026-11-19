@@ -1,0 +1,81 @@
+/// Segment RFM et groupe k-means par client et date d'observation
+table v_dm_clients
+	lineageTag: 591ef10b-4b3d-4ae1-a766-6299cb6d8e79
+
+	column client_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: eb4e9c01-5397-4c03-9623-6808636f00db
+		summarizeBy: none
+		sourceColumn: client_sk
+
+	column date_observation
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 2ec4104f-d51a-403f-8c59-fc52fa4cc2b9
+		summarizeBy: none
+		sourceColumn: date_observation
+
+	column periode
+		dataType: string
+		lineageTag: 20835984-c254-4eb8-b72f-6796f198d983
+		summarizeBy: none
+		sourceColumn: periode
+
+	column score_r
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a4aede3-24b6-4ca0-9f26-78a0b9eb2dc6
+		summarizeBy: none
+		sourceColumn: score_r
+
+	column score_f
+		dataType: int64
+		formatString: 0
+		lineageTag: c8032a03-7538-4d85-a74a-fcc449fd148d
+		summarizeBy: none
+		sourceColumn: score_f
+
+	column score_m
+		dataType: int64
+		formatString: 0
+		lineageTag: e15ccbc9-cce5-468f-8101-648e46d439c2
+		summarizeBy: none
+		sourceColumn: score_m
+
+	column code_rfm
+		dataType: string
+		lineageTag: 83963ecf-6ade-4c3d-811c-5010106d0d37
+		summarizeBy: none
+		sourceColumn: code_rfm
+
+	column segment_rfm
+		dataType: string
+		lineageTag: a6321aee-079d-492d-8a23-41e2895670f6
+		summarizeBy: none
+		sourceColumn: segment_rfm
+
+	column cluster
+		dataType: string
+		lineageTag: fcf0056c-e428-4904-b77e-8514333fea95
+		summarizeBy: none
+		sourceColumn: cluster
+
+	column est_derniere_observation
+		dataType: int64
+		formatString: 0
+		lineageTag: b01ee600-eb44-40a5-8cfe-d9ac0847a287
+		summarizeBy: none
+		sourceColumn: est_derniere_observation
+
+	partition v_dm_clients = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_dm_clients"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"client_sk", "date_observation", "periode", "score_r", "score_f", "score_m", "code_rfm", "segment_rfm", "cluster", "est_derniere_observation"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"client_sk", Int64.Type}, {"date_observation", type datetime}, {"periode", type text}, {"score_r", Int64.Type}, {"score_f", Int64.Type}, {"score_m", Int64.Type}, {"code_rfm", type text}, {"segment_rfm", type text}, {"cluster", type text}, {"est_derniere_observation", Int64.Type}})
+				in
+				    Types
+

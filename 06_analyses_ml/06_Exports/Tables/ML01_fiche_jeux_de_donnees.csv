@@ -1,0 +1,5 @@
+﻿cas;titre;type;grain;cible;lignes apprentissage;lignes test;variables numériques;variables catégorielles
+ventes;Prévision des ventes (CA TTC mensuel par catégorie);régression (série temporelle);1 catégorie x 1 mois;ca_ttc;216;108;9;1
+churn;Prédiction du churn à 90 jours;classification binaire;1 client actif x 1 fin de trimestre;churn;24074;19414;23;7
+demande;Prédiction de la demande (quantité mensuelle par produit);régression (comptage);1 produit x 1 mois;quantite;6223;6992;17;2
+retard;Prédiction du retard de livraison;classification binaire;1 expédition livrée;en_retard;32186;26590;8;7

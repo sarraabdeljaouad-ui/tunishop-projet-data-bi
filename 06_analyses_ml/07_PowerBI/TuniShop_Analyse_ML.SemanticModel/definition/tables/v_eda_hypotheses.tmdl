@@ -1,0 +1,65 @@
+/// 21 hypothèses de l'EDA et leur verdict
+table v_eda_hypotheses
+	lineageTag: e4e6122e-79b2-46e9-8e9a-a7aae64bdb08
+
+	column question
+		dataType: string
+		lineageTag: 97e9e748-1475-4412-ab9b-57b31957e6b3
+		summarizeBy: none
+		sourceColumn: question
+		sortByColumn: ordre
+
+	column ordre
+		dataType: int64
+		formatString: 0
+		lineageTag: 7afbad86-35fe-46c4-9bf1-b719c3621b69
+		summarizeBy: none
+		sourceColumn: ordre
+
+	column theme
+		dataType: string
+		lineageTag: a595b1a5-3cd9-45fb-93a7-404c69fa9035
+		summarizeBy: none
+		sourceColumn: theme
+
+	column question_metier
+		dataType: string
+		lineageTag: 39db7086-7631-42e4-a8e7-fcf595abe96f
+		summarizeBy: none
+		sourceColumn: question_metier
+
+	column hypothese
+		dataType: string
+		lineageTag: dc6dce35-2695-4645-b545-14360b268178
+		summarizeBy: none
+		sourceColumn: hypothese
+
+	column verdict
+		dataType: string
+		lineageTag: 321e7626-c395-4dc7-813e-4b803ce839b4
+		summarizeBy: none
+		sourceColumn: verdict
+
+	column constat
+		dataType: string
+		lineageTag: 636006d9-fbea-45d2-908c-da01096ac457
+		summarizeBy: none
+		sourceColumn: constat
+
+	column notebook
+		dataType: string
+		lineageTag: ee2fcef4-c7dc-4e7b-8c86-afddd2844d3b
+		summarizeBy: none
+		sourceColumn: notebook
+
+	partition v_eda_hypotheses = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_eda_hypotheses"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"question", "ordre", "theme", "question_metier", "hypothese", "verdict", "constat", "notebook"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"question", type text}, {"ordre", Int64.Type}, {"theme", type text}, {"question_metier", type text}, {"hypothese", type text}, {"verdict", type text}, {"constat", type text}, {"notebook", type text}})
+				in
+				    Types
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TB3_Stock"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f23e2311-6f85-5e26-8b53-200b19297877"
+  }
+}

@@ -1,0 +1,120 @@
+/// Scores de churn du jour : clients actifs à la date de scoring (v1.2)
+table v_ml_scores_churn
+	lineageTag: 6d636ac3-ad4c-43a0-adff-c63dee564efa
+
+	column client_sk
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 86aff47a-9a7a-464e-adb6-dee869f697e1
+		summarizeBy: none
+		sourceColumn: client_sk
+
+	column date_scoring
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 8b70dad0-0485-4ddf-94cb-89cd6ac73f6c
+		summarizeBy: none
+		sourceColumn: date_scoring
+
+	column segment_rfm
+		dataType: string
+		lineageTag: 59d55f6f-8804-4049-9676-2c042270fba4
+		summarizeBy: none
+		sourceColumn: segment_rfm
+
+	column cluster
+		dataType: string
+		lineageTag: 37222fb4-4cd5-4940-b610-91498cb0cf8c
+		summarizeBy: none
+		sourceColumn: cluster
+
+	column recence_j
+		dataType: int64
+		formatString: 0
+		lineageTag: 738848d2-04cb-46d8-a0bc-37c7c96a3779
+		summarizeBy: none
+		sourceColumn: recence_j
+
+	column frequence
+		dataType: int64
+		formatString: 0
+		lineageTag: 2bb09baa-d8bd-40d5-8ae3-7fe999871b80
+		summarizeBy: none
+		sourceColumn: frequence
+
+	column montant_reconnu_ttc
+		dataType: double
+		formatString: #,0
+		lineageTag: 77d07685-2480-469b-bab7-046c85410f45
+		summarizeBy: none
+		sourceColumn: montant_reconnu_ttc
+
+	column proba_churn
+		dataType: double
+		formatString: 0.000
+		lineageTag: bc86dce1-e4c2-4b35-8e0f-bae73de94688
+		summarizeBy: none
+		sourceColumn: proba_churn
+
+	column alerte_churn
+		dataType: int64
+		formatString: 0
+		lineageTag: 87464b0d-3920-41e0-b3d2-258c6212c9da
+		summarizeBy: none
+		sourceColumn: alerte_churn
+
+	column decile_risque
+		dataType: int64
+		formatString: 0
+		lineageTag: 58666357-a12e-4d73-93b0-15d171f13870
+		summarizeBy: none
+		sourceColumn: decile_risque
+
+	column version_modele
+		dataType: string
+		lineageTag: d56590f9-901c-40d0-a433-108daef30a02
+		summarizeBy: none
+		sourceColumn: version_modele
+
+	column client_id
+		dataType: string
+		lineageTag: 330ad5c7-f8f8-42b7-b9ec-7ff15793c81a
+		summarizeBy: none
+		sourceColumn: client_id
+
+	column type_client
+		dataType: string
+		lineageTag: d0588d8d-6472-447e-b073-c171ed828c2b
+		summarizeBy: none
+		sourceColumn: type_client
+
+	column region
+		dataType: string
+		lineageTag: 26c2b6d1-22f2-47d3-93a7-9547bd934c03
+		summarizeBy: none
+		sourceColumn: region
+
+	column ville
+		dataType: string
+		lineageTag: 2c09aecb-a705-414b-bb79-2be0b9c4f0db
+		summarizeBy: none
+		sourceColumn: ville
+
+	column canal_inscription
+		dataType: string
+		lineageTag: 649757b3-43cd-47d6-a61e-5fa92db9357c
+		summarizeBy: none
+		sourceColumn: canal_inscription
+
+	partition v_ml_scores_churn = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_ml_scores_churn"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"client_sk", "date_scoring", "segment_rfm", "cluster", "recence_j", "frequence", "montant_reconnu_ttc", "proba_churn", "alerte_churn", "decile_risque", "version_modele", "client_id", "type_client", "region", "ville", "canal_inscription"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"client_sk", Int64.Type}, {"date_scoring", type datetime}, {"segment_rfm", type text}, {"cluster", type text}, {"recence_j", Int64.Type}, {"frequence", Int64.Type}, {"montant_reconnu_ttc", type number}, {"proba_churn", type number}, {"alerte_churn", Int64.Type}, {"decile_risque", Int64.Type}, {"version_modele", type text}, {"client_id", type text}, {"type_client", type text}, {"region", type text}, {"ville", type text}, {"canal_inscription", type text}})
+				in
+				    Types
+

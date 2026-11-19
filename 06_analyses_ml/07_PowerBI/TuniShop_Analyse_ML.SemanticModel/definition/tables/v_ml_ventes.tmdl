@@ -1,0 +1,62 @@
+/// CA réel / prévu par catégorie et par mois (test 2025, prévision 2026)
+table v_ml_ventes
+	lineageTag: d6839e57-324c-425a-9c0c-2d2da16f8ead
+
+	column mois
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 191ef10f-89ec-4503-96e6-a7b776dbe3d9
+		summarizeBy: none
+		sourceColumn: mois
+
+	column categorie
+		dataType: string
+		lineageTag: f086b5fe-66a7-4a1e-baaf-07e99409d5cb
+		summarizeBy: none
+		sourceColumn: categorie
+
+	column periode
+		dataType: string
+		lineageTag: 887e5254-0ae8-4b2b-815a-35055569c1d8
+		summarizeBy: none
+		sourceColumn: periode
+
+	column ca_reel_ttc
+		dataType: double
+		formatString: #,0.00
+		lineageTag: eb7293f7-14bc-46eb-8f72-6f9ba00c9ca9
+		summarizeBy: none
+		sourceColumn: ca_reel_ttc
+
+	column ca_prevu_ttc
+		dataType: double
+		formatString: #,0.00
+		lineageTag: acc681bd-fe68-4727-b4d5-4fbe56d8a621
+		summarizeBy: none
+		sourceColumn: ca_prevu_ttc
+
+	column ca_reference_ttc
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 36ab8175-feb0-4912-81c6-a66f28e66f57
+		summarizeBy: none
+		sourceColumn: ca_reference_ttc
+
+	column ecart_ttc
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 90e9e981-ae1a-440e-9885-4227042db8d0
+		summarizeBy: none
+		sourceColumn: ecart_ttc
+
+	partition v_ml_ventes = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_ml_ventes"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"mois", "categorie", "periode", "ca_reel_ttc", "ca_prevu_ttc", "ca_reference_ttc", "ecart_ttc"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"mois", type datetime}, {"categorie", type text}, {"periode", type text}, {"ca_reel_ttc", type number}, {"ca_prevu_ttc", type number}, {"ca_reference_ttc", type number}, {"ecart_ttc", type number}})
+				in
+				    Types
+

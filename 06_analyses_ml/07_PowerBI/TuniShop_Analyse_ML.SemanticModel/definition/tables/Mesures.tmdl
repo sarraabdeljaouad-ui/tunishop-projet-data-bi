@@ -1,0 +1,348 @@
+/// Toutes les mesures DAX du tableau de bord
+table Mesures
+	lineageTag: 816aefb5-67eb-4675-ad6b-7b149c8ef81d
+
+	measure 'Contrôles qualité' = COUNTROWS ( 'v_eda_qualite' )
+		formatString: 0
+		displayFolder: 1 EDA
+		lineageTag: 832c59f0-b44c-4b18-a437-752738cdebbb
+
+	measure 'Contrôles sans écart' = CALCULATE ( COUNTROWS ( 'v_eda_qualite' ), 'v_eda_qualite'[statut] <> "ÉCART" )
+		formatString: 0
+		displayFolder: 1 EDA
+		lineageTag: 0a317efb-55d8-41b2-9c12-c9d5ba5430b0
+
+	measure Hypothèses = COUNTROWS ( 'v_eda_hypotheses' )
+		formatString: 0
+		displayFolder: 1 EDA
+		lineageTag: 354d3d76-9654-4a33-85d1-111ebc32d972
+
+	measure 'Hypothèses confirmées' = CALCULATE ( [Hypothèses], 'v_eda_hypotheses'[verdict] = "Confirmée" )
+		formatString: 0
+		displayFolder: 1 EDA
+		lineageTag: cbeb9d81-c700-475c-b972-e3c7867399ad
+
+	measure 'CA reconnu TTC' = SUM ( 'v_eda_vue_ensemble'[ca_reconnu_ttc] )
+		formatString: #,0
+		displayFolder: 1 EDA
+		lineageTag: 554ecc9d-4a59-44a7-89fe-1d1e3745fd2a
+
+	measure 'CA reconnu 2025' = CALCULATE ( [CA reconnu TTC], 'v_eda_vue_ensemble'[annee] = 2025 )
+		formatString: #,0
+		displayFolder: 1 EDA
+		lineageTag: 825736db-9d9d-40ae-b10c-f29364e4e139
+
+	measure 'Croissance du CA 2023-2025' = DIVIDE ( CALCULATE ( [CA reconnu TTC], 'v_eda_vue_ensemble'[annee] = 2025 ), CALCULATE ( [CA reconnu TTC], 'v_eda_vue_ensemble'[annee] = 2023 ) ) - 1
+		formatString: 0.0%
+		displayFolder: 1 EDA
+		lineageTag: 710e13c5-4efa-44eb-9e43-b96f19ce1119
+
+	measure 'Taux de retard (EDA)' = AVERAGE ( 'v_eda_vue_ensemble'[taux_retard] )
+		formatString: 0.0%
+		displayFolder: 1 EDA
+		lineageTag: 3312669d-74b4-48c5-ba60-eb7f1bf5c124
+
+	measure 'Taux de retard 2025 (EDA)' = CALCULATE ( [Taux de retard (EDA)], 'v_eda_vue_ensemble'[annee] = 2025 )
+		formatString: 0.0%
+		displayFolder: 1 EDA
+		lineageTag: ba4b8469-a215-4fe6-9ac4-c8022cfe23b7
+
+	measure 'Commandes reconnues' = SUM ( 'v_eda_vue_ensemble'[commandes_reconnues] )
+		formatString: #,0
+		displayFolder: 1 EDA
+		lineageTag: 876f77c3-71f4-4669-9dc3-898b29bbeb33
+
+	measure 'Clients (dernière observation)' = CALCULATE ( COUNTROWS ( 'v_dm_clients' ), 'v_dm_clients'[est_derniere_observation] = 1 )
+		formatString: #,0
+		displayFolder: 2 Data mining
+		lineageTag: bc153867-9dce-4320-8656-499bc058d3c3
+
+	measure 'Part des Champions' = DIVIDE ( CALCULATE ( [Clients (dernière observation)], 'v_dm_clients'[segment_rfm] = "Champions" ), CALCULATE ( [Clients (dernière observation)], REMOVEFILTERS ( 'v_dm_clients'[segment_rfm] ) ) )
+		formatString: 0.0%
+		displayFolder: 2 Data mining
+		lineageTag: e4cf2385-3193-4a21-b8be-c6cc3b231bec
+
+	measure 'Règles stables' = CALCULATE ( COUNTROWS ( 'v_dm_regles' ), 'v_dm_regles'[stable] = TRUE () )
+		formatString: 0
+		displayFolder: 2 Data mining
+		lineageTag: 3f775f5a-00d7-4e0b-b870-065eea1748f7
+
+	measure 'Clients scorés' = COUNTROWS ( 'v_ml_churn' )
+		formatString: #,0
+		displayFolder: 3 Churn
+		lineageTag: a1fb1eea-9d36-4a93-bb5e-aac81204af8d
+
+	measure 'Taux de churn réel' = AVERAGE ( 'v_ml_churn'[churn_reel] )
+		formatString: 0.0%
+		displayFolder: 3 Churn
+		lineageTag: 9426a407-388a-436e-a18a-d7b6b6e45e4b
+
+	measure 'Probabilité de churn moyenne' = AVERAGE ( 'v_ml_churn'[proba_churn] )
+		formatString: 0.0%
+		displayFolder: 3 Churn
+		lineageTag: 4896744a-c595-4630-b934-380cc16e7b16
+
+	measure 'Clients en alerte' = SUM ( 'v_ml_churn'[alerte_churn] )
+		formatString: #,0
+		displayFolder: 3 Churn
+		lineageTag: 9b5cf4d9-c493-44aa-9c9d-bc16442697db
+
+	measure 'Rappel churn' = DIVIDE ( CALCULATE ( COUNTROWS ( 'v_ml_churn' ), 'v_ml_churn'[alerte_churn] = 1, 'v_ml_churn'[churn_reel] = 1 ), CALCULATE ( COUNTROWS ( 'v_ml_churn' ), 'v_ml_churn'[churn_reel] = 1 ) )
+		formatString: 0.0%
+		displayFolder: 3 Churn
+		lineageTag: aefe1128-42f8-4a5d-9225-68edeb5de0fe
+
+	measure 'Précision churn' = DIVIDE ( CALCULATE ( COUNTROWS ( 'v_ml_churn' ), 'v_ml_churn'[alerte_churn] = 1, 'v_ml_churn'[churn_reel] = 1 ), CALCULATE ( COUNTROWS ( 'v_ml_churn' ), 'v_ml_churn'[alerte_churn] = 1 ) )
+		formatString: 0.0%
+		displayFolder: 3 Churn
+		lineageTag: 0718b5af-2773-428d-92ec-8e6c3041c09b
+
+	measure 'AUC churn (test 2025)' = CALCULATE ( MAX ( 'v_ml_modeles'[valeur_test] ), 'v_ml_modeles'[cas] = "Churn", 'v_ml_modeles'[retenu] = TRUE () )
+		formatString: 0.000
+		displayFolder: 3 Churn
+		lineageTag: ae1be7dc-bcce-4b17-9315-95265a00c270
+
+	measure 'CA réel (ML)' = SUM ( 'v_ml_ventes'[ca_reel_ttc] )
+		formatString: #,0
+		displayFolder: 4 Ventes et demande
+		lineageTag: 5ce7761e-1e87-4d0e-9845-1350e4e072f2
+
+	measure 'CA prévu (ML)' = SUM ( 'v_ml_ventes'[ca_prevu_ttc] )
+		formatString: #,0
+		displayFolder: 4 Ventes et demande
+		lineageTag: 52d23854-8a9f-4bf8-8d75-a14f8032689e
+
+	measure 'CA référence (Holt-Winters)' = SUM ( 'v_ml_ventes'[ca_reference_ttc] )
+		formatString: #,0
+		displayFolder: 4 Ventes et demande
+		lineageTag: 482f1ca2-de63-4b82-aa2f-8a82703d5451
+
+	measure 'CA prévu 2025' = CALCULATE ( [CA prévu (ML)], 'v_ml_ventes'[periode] = "Test 2025" )
+		formatString: #,0
+		displayFolder: 4 Ventes et demande
+		lineageTag: 6edbb690-1f5a-42b2-ba57-b5bab8caf33c
+
+	measure 'CA prévu 2026' = CALCULATE ( [CA prévu (ML)], 'v_ml_ventes'[periode] = "Prévision 2026" )
+		formatString: #,0
+		displayFolder: 4 Ventes et demande
+		lineageTag: 107d12f2-1e26-442e-a325-d30af5193820
+
+	measure 'Écart prévision / réel 2025' = DIVIDE ( [CA prévu 2025] - [CA réel (ML)], [CA réel (ML)] )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 4 Ventes et demande
+		lineageTag: 0461abf6-304b-4885-9c4e-642b71593e04
+
+	measure 'MAPE ventes (test 2025)' = CALCULATE ( MAX ( 'v_ml_modeles'[valeur_test] ), 'v_ml_modeles'[cas] = "Prévision des ventes", 'v_ml_modeles'[retenu] = TRUE () )
+		formatString: 0.0%
+		displayFolder: 4 Ventes et demande
+		lineageTag: 9afeb608-dc7b-4466-bda3-2617dda22c93
+
+	measure 'Quantité réelle' = SUM ( 'v_ml_demande'[quantite_reelle] )
+		formatString: #,0
+		displayFolder: 4 Ventes et demande
+		lineageTag: 18788e72-4cbc-4daa-a10a-7911450a34fb
+
+	measure 'Quantité prévue' = SUM ( 'v_ml_demande'[quantite_prevue] )
+		formatString: #,0
+		displayFolder: 4 Ventes et demande
+		lineageTag: fd138bb3-fddc-412f-9497-76970a9024c4
+
+	measure 'WAPE demande' = DIVIDE ( SUM ( 'v_ml_demande'[erreur_absolue] ), [Quantité réelle] )
+		formatString: 0.0%
+		displayFolder: 4 Ventes et demande
+		lineageTag: ca634161-65e9-4a80-990a-6598820576ff
+
+	measure 'Expéditions scorées' = COUNTROWS ( 'v_ml_retard' )
+		formatString: #,0
+		displayFolder: 5 Retard
+		lineageTag: 3380449d-5ae4-49c5-8f8d-361a51fb37dd
+
+	measure 'Taux de retard réel' = AVERAGE ( 'v_ml_retard'[retard_reel] )
+		formatString: 0.0%
+		displayFolder: 5 Retard
+		lineageTag: 5d38bed0-11b7-4933-b4dd-9123ccb25aa7
+
+	measure 'Taux de retard prévu' = AVERAGE ( 'v_ml_retard'[proba_retard] )
+		formatString: 0.0%
+		displayFolder: 5 Retard
+		lineageTag: 148fc94f-2b89-4498-915e-2783dd020189
+
+	measure 'Part des retards captés (top 20 %)' = DIVIDE ( CALCULATE ( SUM ( 'v_ml_retard'[retard_reel] ), 'v_ml_retard'[quintile_risque] = 1 ), CALCULATE ( SUM ( 'v_ml_retard'[retard_reel] ), REMOVEFILTERS ( 'v_ml_retard'[quintile_risque] ) ) )
+		formatString: 0.0%
+		displayFolder: 5 Retard
+		lineageTag: f510fc6f-f4fc-4dd7-9569-f555abfb4581
+
+	measure 'AUC retard (test 2025)' = CALCULATE ( MAX ( 'v_ml_modeles'[valeur_test] ), 'v_ml_modeles'[cas] = "Retard de livraison", 'v_ml_modeles'[retenu] = TRUE () )
+		formatString: 0.000
+		displayFolder: 5 Retard
+		lineageTag: b570e324-5df8-4450-99cf-ff3a99231e33
+
+	measure 'Décision de la phase analyse' = "VALIDÉ SANS RÉSERVE"
+		displayFolder: 6 Clôture
+		lineageTag: bac62323-4699-4574-96e1-611439ab5fb4
+
+	measure 'Modèles retenus' = CALCULATE ( COUNTROWS ( 'v_ml_modeles' ), 'v_ml_modeles'[retenu] = TRUE () )
+		formatString: 0
+		displayFolder: 6 Clôture
+		lineageTag: 36876189-b54f-4737-b203-4914f8399709
+
+	measure 'Tables publiées' = DISTINCTCOUNT ( 'v_publications'[table_sql] )
+		formatString: 0
+		displayFolder: 6 Clôture
+		lineageTag: eb8c93bf-3420-4f66-b098-fac152af7e94
+
+	measure 'Dernière publication' = MAX ( 'v_publications'[publie_le] )
+		formatString: dd/mm/yyyy hh:nn
+		displayFolder: 6 Clôture
+		lineageTag: 2faa3fb1-537f-40a2-ab50-19055f170735
+
+	measure 'Quantité référence' = SUM ( 'v_ml_demande'[quantite_reference] )
+		formatString: #,0
+		displayFolder: 4 Ventes et demande
+		lineageTag: a375721a-925d-4b07-89d0-100d4ee0330b
+
+	measure 'Date de scoring' = MAX ( 'v_ml_scores_churn'[date_scoring] )
+		formatString: dd/mm/yyyy
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: b1e80a85-2cda-4e3a-ac82-1bb305744788
+
+	measure 'Clients actifs scorés' = COUNTROWS ( 'v_ml_scores_churn' )
+		formatString: #,0
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: 93d4d48a-56f4-4037-91fa-28c4471382cd
+
+	measure 'Clients en alerte (jour)' = SUM ( 'v_ml_scores_churn'[alerte_churn] )
+		formatString: #,0
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: 06b12e39-cd72-4424-ad5f-03aa238c5a90
+
+	measure 'Part des clients en alerte (jour)' = DIVIDE ( [Clients en alerte (jour)], [Clients actifs scorés] )
+		formatString: 0.0%
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: d77d238f-7151-44d8-b4db-1ff97c3c05cc
+
+	measure 'Probabilité de churn moyenne (jour)' = AVERAGE ( 'v_ml_scores_churn'[proba_churn] )
+		formatString: 0.0%
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: 6de690b9-ede9-49ad-b1db-0e517feb9f69
+
+	measure 'Clients à cibler (déciles 4 à 7)' = CALCULATE ( [Clients actifs scorés], 'v_ml_scores_churn'[decile_risque] >= 4, 'v_ml_scores_churn'[decile_risque] <= 7 )
+		formatString: #,0
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: ef871fc3-945e-4a1a-917e-707b1efa2e98
+
+	measure 'CA cumulé des clients à cibler' = CALCULATE ( SUM ( 'v_ml_scores_churn'[montant_reconnu_ttc] ), 'v_ml_scores_churn'[decile_risque] >= 4, 'v_ml_scores_churn'[decile_risque] <= 7 )
+		formatString: #,0
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: 3c850a7a-4a57-4bb7-b11d-7d44293c8409
+
+	measure 'Colis en transit' = COUNTROWS ( 'v_ml_scores_retard' )
+		formatString: #,0
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: 151a8b9b-42e9-4b4d-a91b-c4c1e799c278
+
+	measure 'Colis en alerte' = SUM ( 'v_ml_scores_retard'[alerte_retard] )
+		formatString: #,0
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: e9a3c86d-5bfe-4cf8-b5d3-f1a942d45102
+
+	measure 'Probabilité de retard moyenne (transit)' = AVERAGE ( 'v_ml_scores_retard'[proba_retard] )
+		formatString: 0.0%
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: 7a7852ce-0678-44d6-bf62-d7ddbacb5454
+
+	measure 'Indicateurs suivis' = COUNTROWS ( 'v_ml_suivi' )
+		formatString: #,0
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: 78f0cfe6-e4f0-4ce0-97e8-c024c082c492
+
+	measure 'Alertes du suivi' = CALCULATE ( COUNTROWS ( 'v_ml_suivi' ), 'v_ml_suivi'[statut] = "ALERTE" )
+		formatString: #,0
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: 44521840-6c1e-4038-ad22-6afc69fec099
+
+	measure 'Modèles au registre' = COUNTROWS ( 'v_ml_registre' )
+		formatString: 0
+		displayFolder: 7 Scores du jour et suivi
+		lineageTag: b567599d-f857-49a6-af1a-d44cbc611dd4
+
+	measure 'Produits prévus' = DISTINCTCOUNT ( 'v_ml_scores_demande'[produit_id] )
+		formatString: #,0
+		displayFolder: 8 Demande prévue
+		lineageTag: 15211431-a350-419c-a6bc-4448a0b2cc75
+
+	measure 'Quantité prévue (année suivante)' = SUM ( 'v_ml_scores_demande'[quantite_prevue] )
+		formatString: #,0
+		displayFolder: 8 Demande prévue
+		lineageTag: 7aef85f9-2a29-4c5f-b839-2079a79da65b
+
+	measure 'Évolution prévue vs réel 2025' = VAR prevu = [Quantité prévue (année suivante)] VAR reel = [Quantité réelle] RETURN IF ( reel > 0 && NOT ISBLANK ( prevu ), DIVIDE ( prevu, reel ) - 1 )
+		formatString: 0.0%
+		displayFolder: 8 Demande prévue
+		lineageTag: 8ee4215f-48f9-4622-894c-ae450630ba3e
+
+	measure 'Produits avec stock connu' = CALCULATE ( DISTINCTCOUNT ( 'v_ml_scores_demande'[produit_id] ), KEEPFILTERS ( NOT ISBLANK ( 'v_ml_scores_demande'[stock_depart] ) ) )
+		formatString: #,0
+		displayFolder: 8 Demande prévue
+		lineageTag: 2b504092-a10e-490a-96b5-e3a4281a206c
+
+	measure 'Produits épuisés sur l''année' = CALCULATE ( DISTINCTCOUNT ( 'v_ml_scores_demande'[produit_id] ), KEEPFILTERS ( 'v_ml_scores_demande'[rupture_sans_reappro] = 1 ) )
+		formatString: #,0
+		displayFolder: 8 Demande prévue
+		lineageTag: 2afdc4ae-cbfe-4327-b02a-ad31b6e3d39c
+
+	measure 'Produits épuisés au 1er trimestre' = VAR fin_t1 = DATE ( YEAR ( MAX ( 'v_ml_scores_demande'[date_scoring] ) ) + 1, 3, 1 ) RETURN CALCULATE ( DISTINCTCOUNT ( 'v_ml_scores_demande'[produit_id] ), KEEPFILTERS ( 'v_ml_scores_demande'[rupture_sans_reappro] = 1 ), KEEPFILTERS ( 'v_ml_scores_demande'[mois] <= fin_t1 ) ) + 0
+		formatString: #,0
+		displayFolder: 8 Demande prévue
+		lineageTag: 11a6696b-faf3-4317-be89-69e236a4785a
+
+	measure 'Part des produits épuisés sur l''année' = DIVIDE ( [Produits épuisés sur l'année], [Produits avec stock connu] )
+		formatString: 0.0%
+		displayFolder: 8 Demande prévue
+		lineageTag: 1848376d-d157-40e5-b79e-4da67382a5ad
+
+	measure 'Stock de départ' = SUMX ( VALUES ( 'v_ml_scores_demande'[produit_id] ), CALCULATE ( MAX ( 'v_ml_scores_demande'[stock_depart] ) ) )
+		formatString: #,0
+		displayFolder: 8 Demande prévue
+		lineageTag: 90fba034-c331-46ab-bc26-418e56132de7
+
+	measure 'Premier mois de rupture' = CALCULATE ( MIN ( 'v_ml_scores_demande'[mois] ), KEEPFILTERS ( 'v_ml_scores_demande'[rupture_sans_reappro] = 1 ) )
+		formatString: mmm yyyy
+		displayFolder: 8 Demande prévue
+		lineageTag: ec908f2f-8bae-460f-911b-e1c001ae27e4
+
+	measure 'Stock de départ (produit épuisé)' = IF ( NOT ISBLANK ( [Premier mois de rupture] ), [Stock de départ] )
+		formatString: #,0
+		displayFolder: 8 Demande prévue
+		lineageTag: b926a8b3-30bd-43f7-bb4f-5dc3e50bff24
+
+	measure 'Quantité prévue (produit épuisé)' = IF ( NOT ISBLANK ( [Premier mois de rupture] ), [Quantité prévue (année suivante)] )
+		formatString: #,0
+		displayFolder: 8 Demande prévue
+		lineageTag: dd404fb6-0176-4401-a681-abb35cb274e1
+
+	measure 'Mois couverts par le stock' = VAR premier = [Premier mois de rupture] RETURN IF ( NOT ISBLANK ( premier ), MONTH ( premier ) - 1 )
+		formatString: 0
+		displayFolder: 8 Demande prévue
+		lineageTag: dc4554dc-b31e-499d-b722-582589e84979
+
+	measure 'Date de scoring (demande)' = MAX ( 'v_ml_scores_demande'[date_scoring] )
+		formatString: dd/mm/yyyy
+		displayFolder: 8 Demande prévue
+		lineageTag: 25b9bd29-56fc-4d4e-a93f-31a0555002fe
+
+	column Colonne
+		dataType: string
+		isHidden
+		lineageTag: 8b7b2c1b-3245-4e8e-958a-199d8db32fe9
+		summarizeBy: none
+		sourceColumn: Colonne
+
+	partition Mesures = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [Colonne = text], {})
+				in
+				    Source
+

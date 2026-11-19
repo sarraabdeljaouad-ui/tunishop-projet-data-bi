@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TB5_Livraisons"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "73812fb1-98fa-5fd4-be6b-ffb2436f434d"
+  }
+}

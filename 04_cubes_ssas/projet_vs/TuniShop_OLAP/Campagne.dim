@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="523433dc-a866-47ff-9af2-ea7d5e97bdfc">
+  <ID>Campagne</ID>
+  <Name>Campagne</Name>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="2140e59a-95cd-4001-a164-58071ffd4281">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="94ed85b2-4dc1-4673-bb60-99e9e2d9ca2c">
+      <ID>Campagne</ID>
+      <Name>Campagne</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4ce48fef-efe1-4c51-b8ea-29f1b0292044">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6f850893-a810-410c-95a8-5410c6a40232">
+            <TableID>olap_v_dim_campagne</TableID>
+            <ColumnID>campagne_sk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="8421a84b-c133-4957-8ec3-08d062d3247d">
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="29b2ca9e-7a3c-4bae-b6e9-a295a1e8f98a">
+          <TableID>olap_v_dim_campagne</TableID>
+          <ColumnID>nom_campagne</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="842d476e-bea6-4b36-8382-29b6f2a62752">
+          <AttributeID>Canal Media</AttributeID>
+          <Name>Canal Média</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="252c4a9a-e4f5-4cf9-8384-873229f5f9eb">
+          <AttributeID>Type Canal</AttributeID>
+          <Name>Type canal</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="88cc3348-07d1-4437-80d1-11054e02de67">
+          <AttributeID>Objectif</AttributeID>
+          <Name>Objectif</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="925ad026-4461-4695-8747-c6de75238844">
+          <AttributeID>Theme</AttributeID>
+          <Name>Thème</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="41055c40-efa0-4b30-ac62-0c76c7ed7436">
+      <ID>Canal Media</ID>
+      <Name>Canal Média</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ee4cf086-36d6-4b7f-97b8-060e8753bcb4">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="07dac598-6c5f-4def-9fb9-e95d148898db">
+            <TableID>olap_v_dim_campagne</TableID>
+            <ColumnID>canal_media</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="5bc52882-e9c6-4a58-be1c-d16ce4b3e3ed">
+      <ID>Type Canal</ID>
+      <Name>Type canal</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f9d8b09a-cd8f-4767-aa8a-f79c5a23e40b">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f68337f5-2255-452e-82bc-5c3940168143">
+            <TableID>olap_v_dim_campagne</TableID>
+            <ColumnID>type_canal</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="e1926236-75c2-4ae4-a0f0-801299f63d8e">
+      <ID>Objectif</ID>
+      <Name>Objectif</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="950b58ef-2a24-4d1e-a9a2-8facaed24031">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="39ee1519-c388-498b-bdeb-562cf521103f">
+            <TableID>olap_v_dim_campagne</TableID>
+            <ColumnID>objectif</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="daeecab6-e423-4c59-8e65-5acada18d1b9">
+      <ID>Theme</ID>
+      <Name>Thème</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bfe3c1bd-6312-4be0-bf00-a8bd83f1afff">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1487bfc3-5caf-4e75-b905-3e14cc5cfebc">
+            <TableID>olap_v_dim_campagne</TableID>
+            <ColumnID>theme</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="dbe1d33e-9767-438d-87a4-e22a4943e687">
+      <ID>Medias</ID>
+      <Name>Médias</Name>
+      <Levels>
+        <Level dwd:design-time-name="5254dc04-dc83-4c4f-93e8-bb03185cde66">
+          <ID>Canal Media</ID>
+          <Name>Canal Média</Name>
+          <SourceAttributeID>Canal Media</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="8fd56150-5f57-49b3-ac2c-8798d2881420">
+          <ID>Campagne</ID>
+          <Name>Campagne</Name>
+          <SourceAttributeID>Campagne</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

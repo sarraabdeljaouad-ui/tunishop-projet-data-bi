@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "TuniShop_Analyse_ML"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "dab4ed8a-e1f6-4e0a-bf68-20175901ef92"
+  }
+}

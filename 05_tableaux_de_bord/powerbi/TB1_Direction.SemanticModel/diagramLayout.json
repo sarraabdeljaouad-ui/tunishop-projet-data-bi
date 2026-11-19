@@ -1,0 +1,202 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 546.31954308240518,
+            "y": 198.398788956521
+          },
+          "nodeIndex": "Achats",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 714.51620971581292,
+            "y": -50
+          },
+          "nodeIndex": "Avis",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 740.09989939781212,
+            "y": 1444.8272467867459
+          },
+          "nodeIndex": "Clients distincts",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1025.3965197060375,
+            "y": 1157.5494645448284
+          },
+          "nodeIndex": "Commandes",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 213.91710188152467,
+            "y": 795.273793469712
+          },
+          "nodeIndex": "Livraisons",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 517.91015404929772
+          },
+          "nodeIndex": "Marketing",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1734.0198640223236,
+            "y": 740.0610607785934
+          },
+          "nodeIndex": "Measures",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1240.648098469733,
+            "y": 341.9400757603662
+          },
+          "nodeIndex": "Stock mensuel",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1240.6032778568613,
+            "y": 808.09776136443747
+          },
+          "nodeIndex": "Ventes",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1500.0198640223236,
+            "y": 1210.246460498762
+          },
+          "nodeIndex": "Canal",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 500.923070598511,
+            "y": 548.0622816540814
+          },
+          "nodeIndex": "Date",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 953.64964405573653,
+            "y": 634.36188426614331
+          },
+          "nodeIndex": "Entrepôt",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 465.66342237887238,
+            "y": 1144.6625207031855
+          },
+          "nodeIndex": "Géographie",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1167.3328070752543,
+            "y": -11.520751498844675
+          },
+          "nodeIndex": "Produit",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1213.0838271771738,
+            "y": 1482.1221215571868
+          },
+          "nodeIndex": "Statut Commande",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Toutes les tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Toutes les tables",
+  "defaultDiagram": "Toutes les tables"
+}

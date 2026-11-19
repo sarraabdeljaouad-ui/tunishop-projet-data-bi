@@ -1,0 +1,12 @@
+﻿cas;colonnes écartées;raison;statut
+ventes;quantite / nb_commandes;mesurés en même temps que la cible (fuite);OK
+churn;segment_fidelite;attribut calculé par le métier sur tout l'historique, y compris après la date d'observation;OK
+churn;date_fin_validite / est_courant;décrivent l'état final du client, inconnu à la date d'observation;OK
+churn;client_sk / date_observation;identifiants (pas des comportements);OK
+demande;ca_ttc / ca_ht / marge_ht / nb_commandes;mesurés en même temps que la cible (fuite);OK
+demande;stock_fin_mois / en_rupture du mois;connus seulement à la fin du mois prévu (fuite);OK
+retard;date_livraison_sk / delai_livraison_j / retard_j;c'est la réponse elle-même;OK
+retard;est_livree_a_temps / statut_livraison;issue de la livraison;OK
+retard;nb_tentatives / est_premiere_tentative;connues pendant la livraison;OK
+retard;cout_transport_ht;facturé après coup (peut dépendre des tentatives);OK
+retard;livraison_id / commande_id;identifiants;OK

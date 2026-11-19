@@ -1,0 +1,81 @@
+/// Règles d'association
+table v_dm_regles
+	lineageTag: c2d939ee-db1b-458b-95ff-e0eaeec553f4
+
+	column niveau
+		dataType: string
+		lineageTag: 9c478992-a1cb-4862-a881-4c462d08fddc
+		summarizeBy: none
+		sourceColumn: niveau
+
+	column antecedents
+		dataType: string
+		lineageTag: ff80f13e-ca41-4bb9-811a-708e00dc040b
+		summarizeBy: none
+		sourceColumn: antecedents
+
+	column consequents
+		dataType: string
+		lineageTag: 7cdc2b51-18da-4cd6-b4bc-1270550de599
+		summarizeBy: none
+		sourceColumn: consequents
+
+	column support
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 2fff2854-8b9d-4c7a-a970-23d81fc58af3
+		summarizeBy: none
+		sourceColumn: support
+
+	column confidence
+		dataType: double
+		formatString: #,0.00
+		lineageTag: c6e688ab-1643-43d2-807d-03980056a2a6
+		summarizeBy: none
+		sourceColumn: confidence
+
+	column lift
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 91b4ed2a-9c51-4133-aad6-a10ea57db42b
+		summarizeBy: none
+		sourceColumn: lift
+
+	column support_2025
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 9ff549c7-e7f3-422e-b6d5-772e60b91d33
+		summarizeBy: none
+		sourceColumn: support_2025
+
+	column confidence_2025
+		dataType: double
+		formatString: #,0.00
+		lineageTag: c21eda8c-784b-4c5f-b5af-2ac3718bcc47
+		summarizeBy: none
+		sourceColumn: confidence_2025
+
+	column lift_2025
+		dataType: double
+		formatString: #,0.00
+		lineageTag: feecc390-6188-411e-8466-62a16a0e9546
+		summarizeBy: none
+		sourceColumn: lift_2025
+
+	column stable
+		dataType: boolean
+		lineageTag: 06ac814c-60b1-4f6f-9000-817d73897dd2
+		summarizeBy: none
+		sourceColumn: stable
+
+	partition v_dm_regles = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_dm_regles"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"niveau", "antecedents", "consequents", "support", "confidence", "lift", "support_2025", "confidence_2025", "lift_2025", "stable"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"niveau", type text}, {"antecedents", type text}, {"consequents", type text}, {"support", type number}, {"confidence", type number}, {"lift", type number}, {"support_2025", type number}, {"confidence_2025", type number}, {"lift_2025", type number}, {"stable", type logical}})
+				in
+				    Types
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TB2_Ventes"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "494fcd85-27e1-5745-960c-d5e9e82837da"
+  }
+}

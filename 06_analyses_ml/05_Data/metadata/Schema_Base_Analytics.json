@@ -1,0 +1,3871 @@
+{
+ "dm01_actions_segments": {
+  "colonnes": [
+   [
+    "segment_rfm",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "part_clients",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_montant",
+    "FLOAT",
+    true
+   ],
+   [
+    "montant_median_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "churn_apprentissage",
+    "FLOAT",
+    true
+   ],
+   [
+    "churn_test",
+    "FLOAT",
+    true
+   ],
+   [
+    "action_recommandee",
+    "NVARCHAR(255)",
+    true
+   ]
+  ],
+  "lignes": 8,
+  "sources": [
+   "06_Exports/Tables/DM01_actions_segments.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm01_churn_par_segment": {
+  "colonnes": [
+   [
+    "segment_rfm",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "apprentissage",
+    "FLOAT",
+    true
+   ],
+   [
+    "test",
+    "FLOAT",
+    true
+   ],
+   [
+    "photos_test",
+    "INT",
+    true
+   ]
+  ],
+  "lignes": 8,
+  "sources": [
+   "06_Exports/Tables/DM01_churn_par_segment.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm01_migrations": {
+  "colonnes": [
+   [
+    "segment_rfm",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "Champions",
+    "FLOAT",
+    true
+   ],
+   [
+    "Fidèles",
+    "FLOAT",
+    true
+   ],
+   [
+    "Fidèles potentiels",
+    "FLOAT",
+    true
+   ],
+   [
+    "Nouveaux",
+    "INT",
+    true
+   ],
+   [
+    "À surveiller",
+    "FLOAT",
+    true
+   ],
+   [
+    "À risque",
+    "FLOAT",
+    true
+   ],
+   [
+    "Hibernants",
+    "FLOAT",
+    true
+   ],
+   [
+    "Perdus",
+    "FLOAT",
+    true
+   ],
+   [
+    "Inactif",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 8,
+  "sources": [
+   "06_Exports/Tables/DM01_migrations.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm01_profil_segments": {
+  "colonnes": [
+   [
+    "segment_rfm",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "photos",
+    "INT",
+    true
+   ],
+   [
+    "recence_mediane_j",
+    "FLOAT",
+    true
+   ],
+   [
+    "frequence_mediane",
+    "FLOAT",
+    true
+   ],
+   [
+    "montant_median_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "panier_moyen_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "montant_total_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_clients",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_montant",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 8,
+  "sources": [
+   "06_Exports/Tables/DM01_profil_segments.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm02_choix_k": {
+  "colonnes": [
+   [
+    "k",
+    "INT",
+    true
+   ],
+   [
+    "inertie",
+    "FLOAT",
+    true
+   ],
+   [
+    "silhouette",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 7,
+  "sources": [
+   "06_Exports/Tables/DM02_choix_k.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm02_profil_clusters": {
+  "colonnes": [
+   [
+    "cluster",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "clients",
+    "INT",
+    true
+   ],
+   [
+    "recence_mediane_j",
+    "FLOAT",
+    true
+   ],
+   [
+    "frequence_mediane",
+    "FLOAT",
+    true
+   ],
+   [
+    "montant_median_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "panier_median_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_mobile",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_coupon",
+    "FLOAT",
+    true
+   ],
+   [
+    "categories_medianes",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_retard",
+    "FLOAT",
+    true
+   ],
+   [
+    "professionnels",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_clients",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/DM02_profil_clusters.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm02_stabilite_clusters": {
+  "colonnes": [
+   [
+    "cluster",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "apprentissage",
+    "FLOAT",
+    true
+   ],
+   [
+    "test",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_apprentissage",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_test",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/DM02_stabilite_clusters.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm03_evaluation_recommandation": {
+  "colonnes": [
+   [
+    "cle",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "taux de réussite (top 3)",
+    "FLOAT",
+    true
+   ],
+   [
+    "paniers évalués",
+    "INT",
+    true
+   ]
+  ],
+  "lignes": 3,
+  "sources": [
+   "06_Exports/Tables/DM03_evaluation_recommandation.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm03_lift_paires_categories": {
+  "colonnes": [
+   [
+    "article",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "Mode",
+    "FLOAT",
+    true
+   ],
+   [
+    "Maison & Cuisine",
+    "FLOAT",
+    true
+   ],
+   [
+    "Électronique & High-Tech",
+    "FLOAT",
+    true
+   ],
+   [
+    "Beauté & Santé",
+    "FLOAT",
+    true
+   ],
+   [
+    "Fournitures & Livres",
+    "FLOAT",
+    true
+   ],
+   [
+    "Épicerie fine",
+    "FLOAT",
+    true
+   ],
+   [
+    "Bébé & Enfants",
+    "FLOAT",
+    true
+   ],
+   [
+    "Électroménager",
+    "FLOAT",
+    true
+   ],
+   [
+    "Sport & Loisirs",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 9,
+  "sources": [
+   "06_Exports/Tables/DM03_lift_paires_categories.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm03_regles_retenues": {
+  "colonnes": [
+   [
+    "antecedents",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "consequents",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "support",
+    "FLOAT",
+    true
+   ],
+   [
+    "confidence",
+    "FLOAT",
+    true
+   ],
+   [
+    "lift",
+    "FLOAT",
+    true
+   ],
+   [
+    "support_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "confidence_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "lift_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "niveau",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "stable",
+    "BIT",
+    true
+   ]
+  ],
+  "lignes": 86,
+  "sources": [
+   "06_Exports/Tables/DM03_regles_retenues.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm03_taille_paniers": {
+  "colonnes": [
+   [
+    "cle",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "catégorie",
+    "FLOAT",
+    true
+   ],
+   [
+    "sous-catégorie",
+    "FLOAT",
+    true
+   ],
+   [
+    "produit",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 5,
+  "sources": [
+   "06_Exports/Tables/DM03_taille_paniers.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm04_composition_paniers": {
+  "colonnes": [
+   [
+    "categories_panier",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "part",
+    "FLOAT",
+    true
+   ],
+   [
+    "montant_moyen_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "articles_moyens",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_coupon",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/DM04_composition_paniers.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm04_coupon_fidelite": {
+  "colonnes": [
+   [
+    "coupon_1re_commande",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "clients",
+    "INT",
+    true
+   ],
+   [
+    "rachat_90j",
+    "FLOAT",
+    true
+   ],
+   [
+    "commandes_dans_l_annee",
+    "FLOAT",
+    true
+   ],
+   [
+    "aucune_commande_dans_l_annee",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 2,
+  "sources": [
+   "06_Exports/Tables/DM04_coupon_fidelite.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm04_facteurs_rachat": {
+  "colonnes": [
+   [
+    "modalite",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "clients",
+    "INT",
+    true
+   ],
+   [
+    "taux_rachat_90j",
+    "FLOAT",
+    true
+   ],
+   [
+    "facteur",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "ecart_points",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 19,
+  "sources": [
+   "06_Exports/Tables/DM04_facteurs_rachat.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm_clusters_clients": {
+  "colonnes": [
+   [
+    "client_sk",
+    "INT",
+    false
+   ],
+   [
+    "date_observation",
+    "DATE",
+    false
+   ],
+   [
+    "periode",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "cluster",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 43488,
+  "sources": [
+   "05_Data/features/clusters_clients.parquet"
+  ],
+  "partage": null,
+  "cle": [
+   "client_sk",
+   "date_observation"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm_regles_association": {
+  "colonnes": [
+   [
+    "antecedents",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "consequents",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "support",
+    "FLOAT",
+    true
+   ],
+   [
+    "confidence",
+    "FLOAT",
+    true
+   ],
+   [
+    "lift",
+    "FLOAT",
+    true
+   ],
+   [
+    "support_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "confidence_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "lift_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "niveau",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "stable",
+    "BIT",
+    true
+   ]
+  ],
+  "lignes": 260,
+  "sources": [
+   "06_Exports/Modeles/regles_association.parquet"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "dm_segments_rfm": {
+  "colonnes": [
+   [
+    "client_sk",
+    "INT",
+    false
+   ],
+   [
+    "date_observation",
+    "DATE",
+    false
+   ],
+   [
+    "periode",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "score_r",
+    "INT",
+    true
+   ],
+   [
+    "score_f",
+    "INT",
+    true
+   ],
+   [
+    "score_m",
+    "INT",
+    true
+   ],
+   [
+    "code_rfm",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "segment_rfm",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 43488,
+  "sources": [
+   "05_Data/features/segments_rfm.parquet"
+  ],
+  "partage": null,
+  "cle": [
+   "client_sk",
+   "date_observation"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda00_coherence": {
+  "colonnes": [
+   [
+    "controle",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "indicateur",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "valide_pv",
+    "FLOAT",
+    true
+   ],
+   [
+    "sql_vues_bi",
+    "FLOAT",
+    true
+   ],
+   [
+    "python_pandas",
+    "FLOAT",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 5,
+  "sources": [
+   "06_Exports/Tables/EDA00_coherence.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda00_extremes": {
+  "colonnes": [
+   [
+    "table",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "variable",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "libelle",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "valeurs",
+    "INT",
+    true
+   ],
+   [
+    "mediane",
+    "FLOAT",
+    true
+   ],
+   [
+    "q3",
+    "FLOAT",
+    true
+   ],
+   [
+    "seuil_haut",
+    "FLOAT",
+    true
+   ],
+   [
+    "maximum",
+    "FLOAT",
+    true
+   ],
+   [
+    "nb_extremes",
+    "INT",
+    true
+   ],
+   [
+    "part_extremes",
+    "FLOAT",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 7,
+  "sources": [
+   "06_Exports/Tables/EDA00_extremes.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda00_integrite": {
+  "colonnes": [
+   [
+    "fait",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "cle",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "dimension",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes",
+    "INT",
+    true
+   ],
+   [
+    "orphelines",
+    "INT",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 16,
+  "sources": [
+   "06_Exports/Tables/EDA00_integrite.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda00_inventaire": {
+  "colonnes": [
+   [
+    "vue",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "type",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes",
+    "INT",
+    true
+   ],
+   [
+    "colonnes",
+    "INT",
+    true
+   ],
+   [
+    "lignes_attendues",
+    "INT",
+    true
+   ],
+   [
+    "ecart",
+    "INT",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 23,
+  "sources": [
+   "06_Exports/Tables/EDA00_inventaire.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda00_manquants": {
+  "colonnes": [
+   [
+    "table",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "colonne",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes",
+    "INT",
+    true
+   ],
+   [
+    "vides",
+    "INT",
+    true
+   ],
+   [
+    "part_vide",
+    "FLOAT",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "explication",
+    "NVARCHAR(255)",
+    true
+   ]
+  ],
+  "lignes": 21,
+  "sources": [
+   "06_Exports/Tables/EDA00_manquants.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda00_membres": {
+  "colonnes": [
+   [
+    "colonne",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "inconnu_-1",
+    "INT",
+    true
+   ],
+   [
+    "non_applicable_-2",
+    "INT",
+    true
+   ],
+   [
+    "part_-1",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_-2",
+    "FLOAT",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 8,
+  "sources": [
+   "06_Exports/Tables/EDA00_membres.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda00_synthese_qualite": {
+  "colonnes": [
+   [
+    "controle",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "libelle",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "verifications",
+    "INT",
+    true
+   ],
+   [
+    "ok",
+    "INT",
+    true
+   ],
+   [
+    "ecart",
+    "INT",
+    true
+   ],
+   [
+    "info",
+    "INT",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 7,
+  "sources": [
+   "06_Exports/Tables/EDA00_synthese_qualite.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda00_unicite": {
+  "colonnes": [
+   [
+    "table",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "cle",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes",
+    "INT",
+    true
+   ],
+   [
+    "doublons",
+    "INT",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 6,
+  "sources": [
+   "06_Exports/Tables/EDA00_unicite.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_g03_vue_ensemble_annuelle": {
+  "colonnes": [
+   [
+    "annee",
+    "INT",
+    true
+   ],
+   [
+    "commandes_passees",
+    "INT",
+    true
+   ],
+   [
+    "commandes_reconnues",
+    "INT",
+    true
+   ],
+   [
+    "ca_reconnu_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "clients_actifs",
+    "INT",
+    true
+   ],
+   [
+    "panier_moyen_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_retard",
+    "FLOAT",
+    true
+   ],
+   [
+    "note_moyenne",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 3,
+  "sources": [
+   "06_Exports/Tables/G03_vue_ensemble_annuelle.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_g04_tables_variables": {
+  "colonnes": [
+   [
+    "table",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes",
+    "INT",
+    true
+   ],
+   [
+    "colonnes",
+    "INT",
+    true
+   ],
+   [
+    "lignes apprentissage",
+    "INT",
+    true
+   ],
+   [
+    "lignes test",
+    "INT",
+    true
+   ],
+   [
+    "cible",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "taux cible apprentissage",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux cible test",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/G04_tables_variables.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_hypotheses": {
+  "colonnes": [
+   [
+    "notebook",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "question",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "theme",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "question_metier",
+    "NVARCHAR(255)",
+    true
+   ],
+   [
+    "hypothese",
+    "NVARCHAR(255)",
+    true
+   ],
+   [
+    "verdict",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "constat",
+    "NVARCHAR(255)",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/EDA_hypotheses_02_EDA_Sales.csv",
+   "06_Exports/Tables/EDA_hypotheses_03_EDA_Customers.csv",
+   "06_Exports/Tables/EDA_hypotheses_04_EDA_Products.csv",
+   "06_Exports/Tables/EDA_hypotheses_05_EDA_Stock_Logistics.csv",
+   "06_Exports/Tables/EDA_hypotheses_06_EDA_Marketing_Finance.csv"
+  ],
+  "partage": "notebook",
+  "cle": [
+   "question"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q01_ventes_annuelles": {
+  "colonnes": [
+   [
+    "annee",
+    "INT",
+    true
+   ],
+   [
+    "commandes",
+    "INT",
+    true
+   ],
+   [
+    "ca_reconnu_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "panier_moyen_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "croissance_ca",
+    "FLOAT",
+    true
+   ],
+   [
+    "croissance_commandes",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 3,
+  "sources": [
+   "06_Exports/Tables/Q01_ventes_annuelles.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q01_ventes_mensuelles": {
+  "colonnes": [
+   [
+    "mois",
+    "DATE",
+    true
+   ],
+   [
+    "ca_reconnu",
+    "FLOAT",
+    true
+   ],
+   [
+    "commandes",
+    "INT",
+    true
+   ]
+  ],
+  "lignes": 36,
+  "sources": [
+   "06_Exports/Tables/Q01_ventes_mensuelles.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q02_ca_par_periode_commerciale": {
+  "colonnes": [
+   [
+    "periode_commerciale",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "jours",
+    "INT",
+    true
+   ],
+   [
+    "ca_moyen_jour",
+    "FLOAT",
+    true
+   ],
+   [
+    "indice",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 9,
+  "sources": [
+   "06_Exports/Tables/Q02_ca_par_periode_commerciale.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q03_categories": {
+  "colonnes": [
+   [
+    "categorie",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "ca_ht",
+    "FLOAT",
+    true
+   ],
+   [
+    "marge",
+    "FLOAT",
+    true
+   ],
+   [
+    "lignes",
+    "INT",
+    true
+   ],
+   [
+    "taux_marge",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_ca",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 10,
+  "sources": [
+   "06_Exports/Tables/Q03_categories.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q04_gammes_prix": {
+  "colonnes": [
+   [
+    "gamme_prix",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes",
+    "INT",
+    true
+   ],
+   [
+    "ca_ht",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_marge",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_remise_promo",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_ca",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 5,
+  "sources": [
+   "06_Exports/Tables/Q04_gammes_prix.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q05_nouveaux_clients": {
+  "colonnes": [
+   [
+    "annee",
+    "INT",
+    true
+   ],
+   [
+    "clients",
+    "INT",
+    true
+   ],
+   [
+    "nouveaux",
+    "INT",
+    true
+   ],
+   [
+    "part_nouveaux",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 3,
+  "sources": [
+   "06_Exports/Tables/Q05_nouveaux_clients.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q06_valeur_par_canal_inscription": {
+  "colonnes": [
+   [
+    "canal_inscription",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "clients",
+    "INT",
+    true
+   ],
+   [
+    "ca_reconnu_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "ca_par_client",
+    "FLOAT",
+    true
+   ],
+   [
+    "commandes_par_client",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 6,
+  "sources": [
+   "06_Exports/Tables/Q06_valeur_par_canal_inscription.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q06_valeur_par_type": {
+  "colonnes": [
+   [
+    "type_client",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "clients",
+    "INT",
+    true
+   ],
+   [
+    "ca_reconnu_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "ca_par_client",
+    "FLOAT",
+    true
+   ],
+   [
+    "commandes_par_client",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 2,
+  "sources": [
+   "06_Exports/Tables/Q06_valeur_par_type.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q07_cohortes_retention": {
+  "colonnes": [
+   [
+    "cohorte",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "0",
+    "FLOAT",
+    true
+   ],
+   [
+    "1",
+    "FLOAT",
+    true
+   ],
+   [
+    "2",
+    "FLOAT",
+    true
+   ],
+   [
+    "3",
+    "FLOAT",
+    true
+   ],
+   [
+    "4",
+    "FLOAT",
+    true
+   ],
+   [
+    "5",
+    "FLOAT",
+    true
+   ],
+   [
+    "6",
+    "FLOAT",
+    true
+   ],
+   [
+    "7",
+    "FLOAT",
+    true
+   ],
+   [
+    "8",
+    "FLOAT",
+    true
+   ],
+   [
+    "9",
+    "FLOAT",
+    true
+   ],
+   [
+    "10",
+    "FLOAT",
+    true
+   ],
+   [
+    "11",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 12,
+  "sources": [
+   "06_Exports/Tables/Q07_cohortes_retention.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q08_regions": {
+  "colonnes": [
+   [
+    "region",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "commandes",
+    "INT",
+    true
+   ],
+   [
+    "ca_reconnu_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "panier_moyen_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_ca",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 7,
+  "sources": [
+   "06_Exports/Tables/Q08_regions.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q09_echec_paiement": {
+  "colonnes": [
+   [
+    "mode_paiement",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "tentatives",
+    "INT",
+    true
+   ],
+   [
+    "taux_reussite",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_echec",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 5,
+  "sources": [
+   "06_Exports/Tables/Q09_echec_paiement.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q09_parts_canal": {
+  "colonnes": [
+   [
+    "trimestre",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "application_mobile",
+    "FLOAT",
+    true
+   ],
+   [
+    "non_renseigne",
+    "FLOAT",
+    true
+   ],
+   [
+    "reseaux_sociaux",
+    "FLOAT",
+    true
+   ],
+   [
+    "site_web",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 12,
+  "sources": [
+   "06_Exports/Tables/Q09_parts_canal.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q10_causes_echec": {
+  "colonnes": [
+   [
+    "code_erreur",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "echecs",
+    "INT",
+    true
+   ],
+   [
+    "montant_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "part",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 5,
+  "sources": [
+   "06_Exports/Tables/Q10_causes_echec.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q11_performance_canaux_media": {
+  "colonnes": [
+   [
+    "canal_media",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "depense_ht",
+    "FLOAT",
+    true
+   ],
+   [
+    "ca_attribue_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "roas",
+    "FLOAT",
+    true
+   ],
+   [
+    "ctr",
+    "FLOAT",
+    true
+   ],
+   [
+    "cpa_ht",
+    "FLOAT",
+    true
+   ],
+   [
+    "nouveaux_clients",
+    "INT",
+    true
+   ],
+   [
+    "part_depense",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 7,
+  "sources": [
+   "06_Exports/Tables/Q11_performance_canaux_media.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q11_roas_annuel": {
+  "colonnes": [
+   [
+    "canal_media",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "2023",
+    "FLOAT",
+    true
+   ],
+   [
+    "2024",
+    "FLOAT",
+    true
+   ],
+   [
+    "2025",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 7,
+  "sources": [
+   "06_Exports/Tables/Q11_roas_annuel.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q12_coupons_annuels": {
+  "colonnes": [
+   [
+    "annee",
+    "INT",
+    true
+   ],
+   [
+    "commandes",
+    "INT",
+    true
+   ],
+   [
+    "part_avec_coupon",
+    "FLOAT",
+    true
+   ],
+   [
+    "remise_coupon_ttc",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 3,
+  "sources": [
+   "06_Exports/Tables/Q12_coupons_annuels.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q13_retard_transporteur_semestre": {
+  "colonnes": [
+   [
+    "transporteur",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "2023-S1",
+    "FLOAT",
+    true
+   ],
+   [
+    "2023-S2",
+    "FLOAT",
+    true
+   ],
+   [
+    "2024-S1",
+    "FLOAT",
+    true
+   ],
+   [
+    "2024-S2",
+    "FLOAT",
+    true
+   ],
+   [
+    "2025-S1",
+    "FLOAT",
+    true
+   ],
+   [
+    "2025-S2",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/Q13_retard_transporteur_semestre.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q14_entrepots": {
+  "colonnes": [
+   [
+    "nom_entrepot",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "expeditions",
+    "INT",
+    true
+   ],
+   [
+    "taux_non_livree",
+    "FLOAT",
+    true
+   ],
+   [
+    "preparation_moy_h",
+    "FLOAT",
+    true
+   ],
+   [
+    "delai_livraison_moy_j",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_retard",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 3,
+  "sources": [
+   "06_Exports/Tables/Q14_entrepots.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q15_note_selon_retard": {
+  "colonnes": [
+   [
+    "tranche_retard",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "avis",
+    "FLOAT",
+    true
+   ],
+   [
+    "note_moyenne",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/Q15_note_selon_retard.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q16_retours_categorie": {
+  "colonnes": [
+   [
+    "categorie",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes",
+    "INT",
+    true
+   ],
+   [
+    "taux_retour",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 10,
+  "sources": [
+   "06_Exports/Tables/Q16_retours_categorie.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q17_motifs_remboursement": {
+  "colonnes": [
+   [
+    "responsabilite",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "motif",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "demandes",
+    "INT",
+    true
+   ],
+   [
+    "taux_refus",
+    "FLOAT",
+    true
+   ],
+   [
+    "delai_moy_j",
+    "FLOAT",
+    true
+   ],
+   [
+    "rembourse_ttc",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 12,
+  "sources": [
+   "06_Exports/Tables/Q17_motifs_remboursement.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q19_stock_mensuel": {
+  "colonnes": [
+   [
+    "annee_mois",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "taux_rupture",
+    "FLOAT",
+    true
+   ],
+   [
+    "valeur_stock_ht",
+    "FLOAT",
+    true
+   ],
+   [
+    "mois",
+    "DATE",
+    true
+   ]
+  ],
+  "lignes": 36,
+  "sources": [
+   "06_Exports/Tables/Q19_stock_mensuel.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q21_fournisseurs": {
+  "colonnes": [
+   [
+    "nom_fournisseur",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes",
+    "INT",
+    true
+   ],
+   [
+    "taux_retard",
+    "FLOAT",
+    true
+   ],
+   [
+    "fiabilite_annoncee",
+    "FLOAT",
+    true
+   ],
+   [
+    "local",
+    "BIT",
+    true
+   ]
+  ],
+  "lignes": 40,
+  "sources": [
+   "06_Exports/Tables/Q21_fournisseurs.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "eda_q21_fournisseurs_pays": {
+  "colonnes": [
+   [
+    "pays",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "origine",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes_recues",
+    "INT",
+    true
+   ],
+   [
+    "delai_moy_j",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_retard",
+    "FLOAT",
+    true
+   ],
+   [
+    "retard_moy_j",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 6,
+  "sources": [
+   "06_Exports/Tables/Q21_fournisseurs_pays.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml01_cibles": {
+  "colonnes": [
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "cible",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "periode",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes",
+    "INT",
+    true
+   ],
+   [
+    "moyenne",
+    "FLOAT",
+    true
+   ],
+   [
+    "mediane",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_de_zero",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 8,
+  "sources": [
+   "06_Exports/Tables/ML01_cibles.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml01_derive": {
+  "colonnes": [
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "variable",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "psi",
+    "FLOAT",
+    true
+   ],
+   [
+    "niveau",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 78,
+  "sources": [
+   "06_Exports/Tables/ML01_derive.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml01_fiche_jeux_de_donnees": {
+  "colonnes": [
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "titre",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "type",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "grain",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "cible",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "lignes apprentissage",
+    "INT",
+    true
+   ],
+   [
+    "lignes test",
+    "INT",
+    true
+   ],
+   [
+    "variables numériques",
+    "INT",
+    true
+   ],
+   [
+    "variables catégorielles",
+    "INT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/ML01_fiche_jeux_de_donnees.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml01_fuites": {
+  "colonnes": [
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "colonnes écartées",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "raison",
+    "NVARCHAR(255)",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 11,
+  "sources": [
+   "06_Exports/Tables/ML01_fuites.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml01_valeurs_manquantes": {
+  "colonnes": [
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "variable",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "part_vide_apprentissage",
+    "FLOAT",
+    true
+   ],
+   [
+    "traitement",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "raison",
+    "NVARCHAR(100)",
+    true
+   ]
+  ],
+  "lignes": 9,
+  "sources": [
+   "06_Exports/Tables/ML01_valeurs_manquantes.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml02_choix_alpha": {
+  "colonnes": [
+   [
+    "version",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "alpha",
+    "FLOAT",
+    true
+   ],
+   [
+    "MAPE validation (S2 2024)",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 10,
+  "sources": [
+   "06_Exports/Tables/ML02_choix_alpha.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml02_mape_categories": {
+  "colonnes": [
+   [
+    "cle",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "Naïf × croissance",
+    "FLOAT",
+    true
+   ],
+   [
+    "Holt-Winters (référence)",
+    "FLOAT",
+    true
+   ],
+   [
+    "Ridge « calendrier »",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 9,
+  "sources": [
+   "06_Exports/Tables/ML02_mape_categories.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml03_apport_data_mining": {
+  "colonnes": [
+   [
+    "cle",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "AUC 2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "écart",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 2,
+  "sources": [
+   "06_Exports/Tables/ML03_apport_data_mining.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml03_importance": {
+  "colonnes": [
+   [
+    "cle",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "perte_AUC",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 30,
+  "sources": [
+   "06_Exports/Tables/ML03_importance.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml03_validation": {
+  "colonnes": [
+   [
+    "modele",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "AUC validation",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 6,
+  "sources": [
+   "06_Exports/Tables/ML03_validation.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml04_erreur_par_volume": {
+  "colonnes": [
+   [
+    "classe",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "produits",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_du_volume",
+    "FLOAT",
+    true
+   ],
+   [
+    "WAPE",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/ML04_erreur_par_volume.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml04_validation": {
+  "colonnes": [
+   [
+    "modele",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "WAPE validation",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 5,
+  "sources": [
+   "06_Exports/Tables/ML04_validation.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml04_wape_categories": {
+  "colonnes": [
+   [
+    "categorie",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "Moyenne de l'année précédente (référence)",
+    "FLOAT",
+    true
+   ],
+   [
+    "Catégorie × part produit (v2)",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 9,
+  "sources": [
+   "06_Exports/Tables/ML04_wape_categories.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml06_par_transporteur": {
+  "colonnes": [
+   [
+    "transporteur",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "expeditions",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_reel",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_prevu",
+    "FLOAT",
+    true
+   ],
+   [
+    "AUC",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/ML06_par_transporteur.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml06_validation": {
+  "colonnes": [
+   [
+    "modele",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "fenetre",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "AUC validation",
+    "FLOAT",
+    true
+   ],
+   [
+    "lignes",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux prévu",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux réel",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 7,
+  "sources": [
+   "06_Exports/Tables/ML06_validation.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml08_churn_par_segment": {
+  "colonnes": [
+   [
+    "segment_rfm",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "clients",
+    "INT",
+    true
+   ],
+   [
+    "proba_moyenne",
+    "FLOAT",
+    true
+   ],
+   [
+    "en_alerte",
+    "INT",
+    true
+   ],
+   [
+    "montant_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_en_alerte",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 8,
+  "sources": [
+   "06_Exports/Tables/ML08_churn_par_segment.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml08_retard_en_cours": {
+  "colonnes": [
+   [
+    "transporteur",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "colis",
+    "INT",
+    true
+   ],
+   [
+    "proba_moyenne",
+    "FLOAT",
+    true
+   ],
+   [
+    "en_alerte",
+    "INT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/ML08_retard_en_cours.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_metriques_churn": {
+  "colonnes": [
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "modele",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "role",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "AUC_validation",
+    "FLOAT",
+    true
+   ],
+   [
+    "AUC",
+    "FLOAT",
+    true
+   ],
+   [
+    "precision_moyenne",
+    "FLOAT",
+    true
+   ],
+   [
+    "precision",
+    "FLOAT",
+    true
+   ],
+   [
+    "rappel",
+    "FLOAT",
+    true
+   ],
+   [
+    "F1",
+    "FLOAT",
+    true
+   ],
+   [
+    "seuil",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_reel",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_prevu",
+    "FLOAT",
+    true
+   ],
+   [
+    "capture_top_20",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_positifs_top_20",
+    "FLOAT",
+    true
+   ],
+   [
+    "AUC_apprentissage",
+    "FLOAT",
+    true
+   ],
+   [
+    "retenu",
+    "BIT",
+    true
+   ]
+  ],
+  "lignes": 4,
+  "sources": [
+   "06_Exports/Tables/ML_metriques_churn.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_metriques_demande": {
+  "colonnes": [
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "modele",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "role",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "WAPE_validation",
+    "FLOAT",
+    true
+   ],
+   [
+    "WAPE_produit_mois",
+    "FLOAT",
+    true
+   ],
+   [
+    "MAE_produit_mois",
+    "FLOAT",
+    true
+   ],
+   [
+    "biais",
+    "FLOAT",
+    true
+   ],
+   [
+    "WAPE_categorie_mois",
+    "FLOAT",
+    true
+   ],
+   [
+    "gain_vs_reference",
+    "FLOAT",
+    true
+   ],
+   [
+    "retenu",
+    "BIT",
+    true
+   ]
+  ],
+  "lignes": 5,
+  "sources": [
+   "06_Exports/Tables/ML_metriques_demande.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_metriques_retard": {
+  "colonnes": [
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "modele",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "fenetre",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "role",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "AUC_validation",
+    "FLOAT",
+    true
+   ],
+   [
+    "AUC",
+    "FLOAT",
+    true
+   ],
+   [
+    "precision_moyenne",
+    "FLOAT",
+    true
+   ],
+   [
+    "precision",
+    "FLOAT",
+    true
+   ],
+   [
+    "rappel",
+    "FLOAT",
+    true
+   ],
+   [
+    "F1",
+    "FLOAT",
+    true
+   ],
+   [
+    "seuil",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_reel",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_prevu",
+    "FLOAT",
+    true
+   ],
+   [
+    "capture_top_20",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_positifs_top_20",
+    "FLOAT",
+    true
+   ],
+   [
+    "AUC_apprentissage",
+    "FLOAT",
+    true
+   ],
+   [
+    "retenu",
+    "BIT",
+    true
+   ]
+  ],
+  "lignes": 3,
+  "sources": [
+   "06_Exports/Tables/ML_metriques_retard.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_metriques_ventes": {
+  "colonnes": [
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "modele",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "role",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "MAPE_total",
+    "FLOAT",
+    true
+   ],
+   [
+    "WAPE_total",
+    "FLOAT",
+    true
+   ],
+   [
+    "biais_total",
+    "FLOAT",
+    true
+   ],
+   [
+    "MAPE_moyen_categories",
+    "FLOAT",
+    true
+   ],
+   [
+    "gain_vs_reference",
+    "FLOAT",
+    true
+   ],
+   [
+    "MAPE_validation",
+    "FLOAT",
+    true
+   ],
+   [
+    "retenu",
+    "BIT",
+    true
+   ]
+  ],
+  "lignes": 5,
+  "sources": [
+   "06_Exports/Tables/ML_metriques_ventes.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_pred_churn_2025": {
+  "colonnes": [
+   [
+    "client_sk",
+    "INT",
+    false
+   ],
+   [
+    "date_observation",
+    "DATE",
+    false
+   ],
+   [
+    "churn",
+    "INT",
+    true
+   ],
+   [
+    "proba_churn",
+    "FLOAT",
+    true
+   ],
+   [
+    "prediction",
+    "INT",
+    true
+   ]
+  ],
+  "lignes": 19414,
+  "sources": [
+   "06_Exports/Predictions/churn_2025_test.parquet"
+  ],
+  "partage": null,
+  "cle": [
+   "client_sk",
+   "date_observation"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_pred_demande_2025": {
+  "colonnes": [
+   [
+    "produit_id",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "mois",
+    "DATE",
+    false
+   ],
+   [
+    "categorie",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "quantite",
+    "FLOAT",
+    true
+   ],
+   [
+    "Naïf saisonnier",
+    "FLOAT",
+    true
+   ],
+   [
+    "Moyenne de l'année précédente (référence)",
+    "FLOAT",
+    true
+   ],
+   [
+    "Gradient boosting (Poisson)",
+    "FLOAT",
+    true
+   ],
+   [
+    "Gradient boosting (quadratique)",
+    "FLOAT",
+    true
+   ],
+   [
+    "Catégorie × part produit (v2)",
+    "FLOAT",
+    true
+   ],
+   [
+    "prevision_retenue",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 6992,
+  "sources": [
+   "06_Exports/Predictions/demande_2025_test.parquet"
+  ],
+  "partage": null,
+  "cle": [
+   "produit_id",
+   "mois"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_pred_retard_2025": {
+  "colonnes": [
+   [
+    "livraison_id",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "date_expedition",
+    "DATE",
+    true
+   ],
+   [
+    "transporteur",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "en_retard",
+    "INT",
+    true
+   ],
+   [
+    "proba_retard",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 26590,
+  "sources": [
+   "06_Exports/Predictions/retard_2025_test.parquet"
+  ],
+  "partage": null,
+  "cle": [
+   "livraison_id"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_pred_ventes_2025": {
+  "colonnes": [
+   [
+    "mois",
+    "DATE",
+    false
+   ],
+   [
+    "categorie",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "prevision",
+    "FLOAT",
+    true
+   ],
+   [
+    "reel",
+    "FLOAT",
+    true
+   ],
+   [
+    "Naïf saisonnier",
+    "FLOAT",
+    true
+   ],
+   [
+    "Naïf × croissance",
+    "FLOAT",
+    true
+   ],
+   [
+    "Holt-Winters (référence)",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 108,
+  "sources": [
+   "06_Exports/Predictions/ventes_2025_test.parquet"
+  ],
+  "partage": null,
+  "cle": [
+   "categorie",
+   "mois"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_pred_ventes_2026": {
+  "colonnes": [
+   [
+    "mois",
+    "DATE",
+    false
+   ],
+   [
+    "categorie",
+    "NVARCHAR(100)",
+    false
+   ],
+   [
+    "prevision_ca_ttc",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 108,
+  "sources": [
+   "06_Exports/Predictions/ventes_2026.parquet"
+  ],
+  "partage": null,
+  "cle": [
+   "categorie",
+   "mois"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_registre_modeles": {
+  "colonnes": [
+   [
+    "nom",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "role",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "version",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "appris_le",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "periode_apprentissage",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "lignes_apprentissage",
+    "FLOAT",
+    true
+   ],
+   [
+    "taux_cible",
+    "FLOAT",
+    true
+   ],
+   [
+    "empreinte_donnees",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "nb_variables",
+    "INT",
+    true
+   ],
+   [
+    "reglages",
+    "NVARCHAR(1000)",
+    true
+   ],
+   [
+    "seuil",
+    "FLOAT",
+    true
+   ],
+   [
+    "source",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "fichier",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "notes",
+    "NVARCHAR(255)",
+    true
+   ],
+   [
+    "variables",
+    "NVARCHAR(1000)",
+    true
+   ],
+   [
+    "mesure_AUC_test_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "mesure_rappel_test_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "mesure_precision_test_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "version_python",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "version_scikit-learn",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "version_pandas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "mesure_WAPE_test_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "mesure_MAPE_test_2025",
+    "FLOAT",
+    true
+   ],
+   [
+    "mesure_capture_top_20_test_2025",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 6,
+  "sources": [
+   "06_Exports/Tables/ML_registre_modeles.csv"
+  ],
+  "partage": null,
+  "cle": [
+   "nom"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_scores_churn_actuels": {
+  "colonnes": [
+   [
+    "client_sk",
+    "INT",
+    false
+   ],
+   [
+    "date_scoring",
+    "DATE",
+    true
+   ],
+   [
+    "segment_rfm",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "cluster",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "recence_j",
+    "INT",
+    true
+   ],
+   [
+    "frequence",
+    "INT",
+    true
+   ],
+   [
+    "montant_reconnu_ttc",
+    "FLOAT",
+    true
+   ],
+   [
+    "proba_churn",
+    "FLOAT",
+    true
+   ],
+   [
+    "alerte_churn",
+    "INT",
+    true
+   ],
+   [
+    "decile_risque",
+    "INT",
+    true
+   ],
+   [
+    "version_modele",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 7377,
+  "sources": [
+   "06_Exports/Predictions/churn_scores_actuels.parquet"
+  ],
+  "partage": null,
+  "cle": [
+   "client_sk"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_scores_demande": {
+  "colonnes": [
+   [
+    "produit_id",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "categorie",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "mois",
+    "DATE",
+    false
+   ],
+   [
+    "quantite_prevue",
+    "FLOAT",
+    true
+   ],
+   [
+    "stock_depart",
+    "FLOAT",
+    true
+   ],
+   [
+    "demande_cumulee",
+    "FLOAT",
+    true
+   ],
+   [
+    "rupture_sans_reappro",
+    "INT",
+    true
+   ],
+   [
+    "date_scoring",
+    "DATE",
+    true
+   ],
+   [
+    "version_modele",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 7140,
+  "sources": [
+   "06_Exports/Predictions/demande_scores_annee_suivante.parquet"
+  ],
+  "partage": null,
+  "cle": [
+   "produit_id",
+   "mois"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_scores_retard_en_cours": {
+  "colonnes": [
+   [
+    "livraison_id",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "commande_id",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "date_expedition",
+    "DATE",
+    true
+   ],
+   [
+    "transporteur",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "region",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "zone_livraison",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "entrepot",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "proba_retard",
+    "FLOAT",
+    true
+   ],
+   [
+    "alerte_retard",
+    "INT",
+    true
+   ],
+   [
+    "date_scoring",
+    "DATE",
+    true
+   ],
+   [
+    "version_modele",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 211,
+  "sources": [
+   "06_Exports/Predictions/retard_scores_en_cours.parquet"
+  ],
+  "partage": null,
+  "cle": [
+   "livraison_id"
+  ],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "ml_suivi": {
+  "colonnes": [
+   [
+    "cas",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "objet",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "periode",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "indicateur",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "valeur",
+    "FLOAT",
+    true
+   ],
+   [
+    "seuil",
+    "FLOAT",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 123,
+  "sources": [
+   "06_Exports/Tables/ML_suivi.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "13/11/2026 23:48"
+ },
+ "tm_avis": {
+  "colonnes": [
+   [
+    "avis_id",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "commande_id",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "client_sk",
+    "INT",
+    true
+   ],
+   [
+    "produit_id",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "categorie",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "date_avis",
+    "DATE",
+    true
+   ],
+   [
+    "note",
+    "FLOAT",
+    true
+   ],
+   [
+    "sentiment_dwh",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "langue",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "texte_nettoye",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "texte_fr",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "themes",
+    "NVARCHAR(100)",
+    true
+   ],
+   [
+    "nb_themes",
+    "INT",
+    true
+   ],
+   [
+    "polarite_globale",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "coherence",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 6081,
+  "sources": [
+   "06_Exports/Tables/TM_avis.csv"
+  ],
+  "partage": null,
+  "cle": [
+   "avis_id"
+  ],
+  "publie_le": "14/11/2026 15:26"
+ },
+ "tm_avis_themes": {
+  "colonnes": [
+   [
+    "avis_id",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "theme",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "polarite",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "langue",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 10034,
+  "sources": [
+   "06_Exports/Tables/TM_avis_themes.csv"
+  ],
+  "partage": null,
+  "cle": [
+   "avis_id",
+   "theme"
+  ],
+  "publie_le": "14/11/2026 15:26"
+ },
+ "tm_produits": {
+  "colonnes": [
+   [
+    "produit_id",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "categorie",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "nb_avis",
+    "INT",
+    true
+   ],
+   [
+    "note_moyenne",
+    "FLOAT",
+    true
+   ],
+   [
+    "nb_commentes",
+    "INT",
+    true
+   ],
+   [
+    "part_derja",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_positif",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_negatif",
+    "FLOAT",
+    true
+   ],
+   [
+    "theme_negatif_principal",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "nb_incoherents",
+    "INT",
+    true
+   ]
+  ],
+  "lignes": 553,
+  "sources": [
+   "06_Exports/Tables/TM_produits.csv"
+  ],
+  "partage": null,
+  "cle": [
+   "produit_id"
+  ],
+  "publie_le": "14/11/2026 15:26"
+ },
+ "tm_verification_faits": {
+  "colonnes": [
+   [
+    "theme",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "polarite",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "avis",
+    "INT",
+    true
+   ],
+   [
+    "part_colis_en_retard",
+    "FLOAT",
+    true
+   ],
+   [
+    "part_retour",
+    "FLOAT",
+    true
+   ],
+   [
+    "motifs_lies",
+    "NVARCHAR(255)",
+    true
+   ],
+   [
+    "part_retour_motif_lie",
+    "FLOAT",
+    true
+   ]
+  ],
+  "lignes": 16,
+  "sources": [
+   "06_Exports/Tables/TM_verification_faits.csv"
+  ],
+  "partage": null,
+  "cle": [],
+  "publie_le": "14/11/2026 15:26"
+ }
+}

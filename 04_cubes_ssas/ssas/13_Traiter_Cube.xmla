@@ -1,0 +1,21 @@
+<!--
+     13_Traiter_Cube.xmla — TuniShop — traitement complet du cube
+     Où l'exécuter : SSMS → Se connecter → Analysis Services → localhost\DEV
+     → Nouvelle requête → XMLA → coller ce fichier → F5.
+     Ce que ça fait : recopie toutes les données du DWH dans la base
+     TuniShop_OLAP et recalcule le cube (environ 1 à 2 minutes pour TuniShop).
+     À lancer après chaque chargement réussi du DWH (lot SUCCES).
+     Transaction="true" : si une étape échoue, rien n'est modifié et
+     l'ancien cube reste consultable.
+-->
+<Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" Transaction="true">
+  <Parallel>
+    <Process xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <Object>
+        <DatabaseID>TuniShop_OLAP</DatabaseID>
+      </Object>
+      <Type>ProcessFull</Type>
+      <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+    </Process>
+  </Parallel>
+</Batch>

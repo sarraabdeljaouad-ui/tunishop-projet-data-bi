@@ -1,0 +1,134 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "586b75776e6e28d1874e",
+  "position": {
+    "x": 220,
+    "y": 236,
+    "z": 4000,
+    "height": 232,
+    "width": 519,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Motif Retour"
+                        }
+                      },
+                      "Hierarchy": "Types"
+                    }
+                  },
+                  "Level": "Type remboursement"
+                }
+              },
+              "queryRef": "Motif Retour.Types.Type remboursement",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Motif Retour"
+                        }
+                      },
+                      "Hierarchy": "Types"
+                    }
+                  },
+                  "Level": "Motif"
+                }
+              },
+              "queryRef": "Motif Retour.Types.Motif",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Remboursements"
+                    }
+                  },
+                  "Property": "Nb Retours"
+                }
+              },
+              "queryRef": "Remboursements.Nb Retours",
+              "nativeQueryRef": "Nb Retours"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Remboursements"
+                  }
+                },
+                "Property": "Nb Retours"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Retours par type de remboursement puis motif'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

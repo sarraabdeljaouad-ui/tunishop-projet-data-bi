@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="02d5ee72-6417-466f-acd0-a5aa25dfd71f">
+  <ID>Livraisons</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Livraisons</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d9216b6a-f0d2-43c7-ace8-97edcbf3984f">
+          <ID>Livraisons</ID>
+          <Name>Livraisons</Name>
+          <Source xsi:type="DsvTableBinding">
+            <DataSourceViewID>TuniShop</DataSourceViewID>
+            <TableID>olap_v_fact_livraisons</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Remboursements</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="8ad0b500-4d3f-4e6c-9394-201fb854feb7">
+          <ID>Remboursements</ID>
+          <Name>Remboursements</Name>
+          <Source xsi:type="DsvTableBinding">
+            <DataSourceViewID>TuniShop</DataSourceViewID>
+            <TableID>olap_v_fact_remboursements</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Avis</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="3b5fb236-3411-481c-9d9d-4559c3b5d5f4">
+          <ID>Avis</ID>
+          <Name>Avis</Name>
+          <Source xsi:type="DsvTableBinding">
+            <DataSourceViewID>TuniShop</DataSourceViewID>
+            <TableID>olap_v_fact_avis</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

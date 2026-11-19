@@ -1,0 +1,37 @@
+{
+ "nom": "prevision_ventes_ridge_2023_2025",
+ "cas": "ventes",
+ "role": "production",
+ "version": "2026.11.13.2348",
+ "appris_le": "2026-11-13 23:48:07",
+ "periode_apprentissage": "mois de 2023 à 2025",
+ "lignes_apprentissage": 324,
+ "taux_cible": 47523.820679012344,
+ "empreinte_donnees": "596e2e921146c207",
+ "variables": [
+  "t",
+  "part_jours_soldes_hiver",
+  "part_jours_ramadan",
+  "part_jours_pre_aid_fitr",
+  "part_jours_pre_aid_idha",
+  "part_jours_soldes_ete",
+  "part_jours_rentree_scolaire",
+  "part_jours_black_friday",
+  "part_jours_fin_annee",
+  "categorie"
+ ],
+ "nb_variables": 10,
+ "reglages": "{'modele': Ridge(alpha=np.float64(0.1)), 'version': 'calendrier', 'alpha': np.float64(0.1), 'categories': ['Beauté & Santé', 'Bébé & Enfants', 'Fournitures & Livres', 'Maison & Cuisine', 'Mode', 'Sport & Loisirs', 'Électroménager', 'Électronique & High-Tech', 'Épicerie fine'], 'appris_sur': '2023-20",
+ "seuil": null,
+ "mesures": {
+  "MAPE_test_2025": 0.09538878178794624
+ },
+ "versions": {
+  "python": "3.13.1",
+  "scikit-learn": "1.9.1",
+  "pandas": "3.1.0"
+ },
+ "source": "TuniShop_DWH",
+ "fichier": "",
+ "notes": "Ridge « calendrier » réappris sur 2023-2025 par 02_Prevision_Ventes ; sert à la prévision 2026"
+}

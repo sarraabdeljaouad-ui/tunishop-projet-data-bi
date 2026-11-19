@@ -1,0 +1,225 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v042",
+  "position": {
+    "x": 16,
+    "y": 132,
+    "z": 42000,
+    "height": 292,
+    "width": 1248,
+    "tabOrder": 42000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_modeles"
+                    }
+                  },
+                  "Property": "cas"
+                }
+              },
+              "queryRef": "v_ml_modeles.cas",
+              "nativeQueryRef": "cas",
+              "displayName": "Cas"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_modeles"
+                    }
+                  },
+                  "Property": "modele"
+                }
+              },
+              "queryRef": "v_ml_modeles.modele",
+              "nativeQueryRef": "modele",
+              "displayName": "Modèle"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_modeles"
+                    }
+                  },
+                  "Property": "role"
+                }
+              },
+              "queryRef": "v_ml_modeles.role",
+              "nativeQueryRef": "role",
+              "displayName": "Rôle"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_modeles"
+                    }
+                  },
+                  "Property": "mesure"
+                }
+              },
+              "queryRef": "v_ml_modeles.mesure",
+              "nativeQueryRef": "mesure",
+              "displayName": "Mesure"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_modeles"
+                    }
+                  },
+                  "Property": "sens"
+                }
+              },
+              "queryRef": "v_ml_modeles.sens",
+              "nativeQueryRef": "sens",
+              "displayName": "Sens"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_modeles"
+                    }
+                  },
+                  "Property": "valeur_validation"
+                }
+              },
+              "queryRef": "v_ml_modeles.valeur_validation",
+              "nativeQueryRef": "valeur_validation",
+              "displayName": "Validation 2024"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_modeles"
+                    }
+                  },
+                  "Property": "valeur_test"
+                }
+              },
+              "queryRef": "v_ml_modeles.valeur_test",
+              "nativeQueryRef": "valeur_test",
+              "displayName": "Test 2025"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_modeles"
+                    }
+                  },
+                  "Property": "retenu_oui_non"
+                }
+              },
+              "queryRef": "v_ml_modeles.retenu_oui_non",
+              "nativeQueryRef": "retenu_oui_non",
+              "displayName": "Retenu"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "v_ml_modeles"
+                  }
+                },
+                "Property": "cas"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Comparaison des modèles (choix sur la validation, mesure sur le test 2025)'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F4E79'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9E1EA'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

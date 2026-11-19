@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="eec07543-6d2c-49fe-9beb-240b7527eda1">
+  <ID>TuniShop</ID>
+  <Name>TuniShop</Name>
+  <DataSourceID>TuniShop DWH</DataSourceID>
+  <Schema>
+    <xs:schema xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" id="TuniShop">
+      <xs:element name="TuniShop" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="4872115c-eafc-49d7-a656-c0aee1474aa8">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="olap_v_dim_date" msprop:DbTableName="v_dim_date" msprop:FriendlyName="v_dim_date" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="350cf8da-f606-4e7b-8faa-cbeb6ce78eba">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="date_sk" msprop:FriendlyName="date_sk" msprop:DbColumnName="date_sk" msprop:design-time-name="e300c174-61e3-4007-9178-7a3f1b658c5c" type="xs:int"/>
+                  <xs:element name="date" msprop:FriendlyName="date" msprop:DbColumnName="date" msprop:design-time-name="0e0ded02-5d36-4028-b280-d3c3a8de7d00" type="xs:dateTime"/>
+                  <xs:element name="annee" msprop:FriendlyName="annee" msprop:DbColumnName="annee" msprop:design-time-name="a1fdc369-ef28-4a1f-a803-f0c03129322a" type="xs:short"/>
+                  <xs:element name="trimestre" msprop:FriendlyName="trimestre" msprop:DbColumnName="trimestre" msprop:design-time-name="06a14962-25e6-4e6f-a793-36645d3302b6" type="xs:unsignedByte"/>
+                  <xs:element name="libelle_trimestre" msprop:FriendlyName="libelle_trimestre" msprop:DbColumnName="libelle_trimestre" msprop:design-time-name="2c7ed913-9a74-4dd3-bd0c-5f772ce39ecf">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="mois" msprop:FriendlyName="mois" msprop:DbColumnName="mois" msprop:design-time-name="49abbaf4-8346-4c01-8c3a-4187ab063f34" type="xs:unsignedByte"/>
+                  <xs:element name="nom_mois" msprop:FriendlyName="nom_mois" msprop:DbColumnName="nom_mois" msprop:design-time-name="48c8b9ac-79f0-499f-8e12-69b198abff5f">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="annee_mois" msprop:FriendlyName="annee_mois" msprop:DbColumnName="annee_mois" msprop:design-time-name="9f52cde0-4b92-4fda-98fb-5ea0780cbe23">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="libelle_mois" msprop:FriendlyName="libelle_mois" msprop:DbColumnName="libelle_mois" msprop:design-time-name="870c20d9-85a1-4be8-b1f0-8d9b655bfa1a">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="libelle_semestre" msprop:FriendlyName="libelle_semestre" msprop:DbColumnName="libelle_semestre" msprop:design-time-name="08d6ea64-883a-424d-b3e3-38fa559d99fd">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="semaine_iso" msprop:FriendlyName="semaine_iso" msprop:DbColumnName="semaine_iso" msprop:design-time-name="da6b23d5-2e19-4aed-a64c-a10f73bf2edb" type="xs:unsignedByte"/>
+                  <xs:element name="jour_mois" msprop:FriendlyName="jour_mois" msprop:DbColumnName="jour_mois" msprop:design-time-name="0ef65764-2535-4f8b-aa72-c13512ef59c3" type="xs:unsignedByte"/>
+                  <xs:element name="jour_semaine" msprop:FriendlyName="jour_semaine" msprop:DbColumnName="jour_semaine" msprop:design-time-name="8f400d69-12e9-43a5-a897-dc7a4cc926e8" type="xs:unsignedByte"/>
+                  <xs:element name="nom_jour" msprop:FriendlyName="nom_jour" msprop:DbColumnName="nom_jour" msprop:design-time-name="948ae067-c466-4790-b6cc-5d84da829369">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="libelle_jour" msprop:FriendlyName="libelle_jour" msprop:DbColumnName="libelle_jour" msprop:design-time-name="5d569303-6a00-4bab-98df-8a7a4af0c4f7">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="est_weekend" msprop:FriendlyName="est_weekend" msprop:DbColumnName="est_weekend" msprop:design-time-name="92953bd7-2344-4188-8c5f-6d5b55e15784" type="xs:int"/>
+                  <xs:element name="est_jour_ferie" msprop:FriendlyName="est_jour_ferie" msprop:DbColumnName="est_jour_ferie" msprop:design-time-name="9cc9e3ee-2cb7-4f3f-82b7-ef69a5e9b039" type="xs:int"/>
+                  <xs:element name="nom_jour_ferie" msprop:FriendlyName="nom_jour_ferie" msprop:DbColumnName="nom_jour_ferie" msprop:design-time-name="1ba2f6c5-4fa3-4ab3-b58e-28f7f17d6938">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="periode_ramadan" msprop:FriendlyName="periode_ramadan" msprop:DbColumnName="periode_ramadan" msprop:design-time-name="cc214aa9-166c-4c2c-87fe-9eb55e7b499c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="periode_commerciale" msprop:FriendlyName="periode_commerciale" msprop:DbColumnName="periode_commerciale" msprop:design-time-name="90715f21-1eb7-4d57-a698-345afd99c349">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_client" msprop:DbTableName="v_dim_client" msprop:FriendlyName="v_dim_client" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="3f7ee2c9-2dbc-415a-bd4a-d35e74fe54a6">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="client_sk" msprop:FriendlyName="client_sk" msprop:DbColumnName="client_sk" msprop:design-time-name="2cb4c407-0a15-478b-ab0b-28e7dbda8b34" type="xs:int"/>
+                  <xs:element name="client_id" msprop:FriendlyName="client_id" msprop:DbColumnName="client_id" msprop:design-time-name="f0959111-26db-4568-851f-fac60c0c22e5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="type_client" msprop:FriendlyName="type_client" msprop:DbColumnName="type_client" msprop:design-time-name="081d38f4-08ad-4687-ae7f-adcba3d10ff0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nom_complet" msprop:FriendlyName="nom_complet" msprop:DbColumnName="nom_complet" msprop:design-time-name="2b4629b2-6a45-402f-bb5b-fb6e6b5f6681" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="genre" msprop:FriendlyName="genre" msprop:DbColumnName="genre" msprop:design-time-name="56149c67-91a4-4125-bad7-daaa43053625" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="tranche_age" msprop:FriendlyName="tranche_age" msprop:DbColumnName="tranche_age" msprop:design-time-name="c66bd884-8625-4002-a3e6-c45818573419" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gouvernorat" msprop:FriendlyName="gouvernorat" msprop:DbColumnName="gouvernorat" msprop:design-time-name="9701d16d-d2b6-43a5-9260-956f7bbc48b8">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="region" msprop:FriendlyName="region" msprop:DbColumnName="region" msprop:design-time-name="6ca1d194-1db5-46a9-841e-778470496f1e">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ville" msprop:FriendlyName="ville" msprop:DbColumnName="ville" msprop:design-time-name="e627977f-8f3a-49d2-90b2-596cc2a3e119" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="canal_inscription" msprop:FriendlyName="canal_inscription" msprop:DbColumnName="canal_inscription" msprop:design-time-name="28187802-dfcc-406d-8ec7-4b5d0e779b3d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="cohorte_inscription" msprop:FriendlyName="cohorte_inscription" msprop:DbColumnName="cohorte_inscription" msprop:design-time-name="aeb04c25-ae15-452e-a511-f643222a76c0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="segment_fidelite" msprop:FriendlyName="segment_fidelite" msprop:DbColumnName="segment_fidelite" msprop:design-time-name="42a7a022-2ef4-45e9-97c7-1ba816aad1b0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="est_courant" msprop:FriendlyName="est_courant" msprop:DbColumnName="est_courant" msprop:design-time-name="3cada284-324e-4e77-b91d-d43491a27e7f" type="xs:boolean"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_produit" msprop:DbTableName="v_dim_produit" msprop:FriendlyName="v_dim_produit" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="67d7b5bf-c259-4d04-89cd-78cc932a0da3">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="produit_sk" msprop:FriendlyName="produit_sk" msprop:DbColumnName="produit_sk" msprop:design-time-name="44cdaadd-338e-4d10-970e-979556292e9b" type="xs:int"/>
+                  <xs:element name="produit_id" msprop:FriendlyName="produit_id" msprop:DbColumnName="produit_id" msprop:design-time-name="326151eb-66a6-4526-a414-d0aee34d3ef6">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="sku" msprop:FriendlyName="sku" msprop:DbColumnName="sku" msprop:design-time-name="64dc7609-ffb8-4f18-9503-30dba5960a5b">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nom_produit" msprop:FriendlyName="nom_produit" msprop:DbColumnName="nom_produit" msprop:design-time-name="b051adf4-7f6c-4c40-8968-9d7fcbd3301c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="marque" msprop:FriendlyName="marque" msprop:DbColumnName="marque" msprop:design-time-name="58a02124-ac10-4008-b56d-f4c241acdd1c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="categorie" msprop:FriendlyName="categorie" msprop:DbColumnName="categorie" msprop:design-time-name="8d198d97-9370-4f88-8888-9760cc956eb0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="sous_categorie" msprop:FriendlyName="sous_categorie" msprop:DbColumnName="sous_categorie" msprop:design-time-name="f427e091-6d12-472b-8871-4e915e4dfdb4">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gamme_prix" msprop:FriendlyName="gamme_prix" msprop:DbColumnName="gamme_prix" msprop:design-time-name="e6278804-1a4e-446b-bac2-092ccb6ff6a5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="statut_produit" msprop:FriendlyName="statut_produit" msprop:DbColumnName="statut_produit" msprop:design-time-name="67798f6f-1bf6-4d01-acf1-f511ab27d868">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="prix_catalogue_ttc" msprop:FriendlyName="prix_catalogue_ttc" msprop:DbColumnName="prix_catalogue_ttc" msprop:design-time-name="007db5b4-c0ee-4cdc-84a4-c1d0966bc343" type="xs:decimal"/>
+                  <xs:element name="date_debut_validite" msprop:FriendlyName="date_debut_validite" msprop:DbColumnName="date_debut_validite" msprop:design-time-name="79377971-ab5f-402b-959e-47550e15347b" type="xs:dateTime"/>
+                  <xs:element name="date_fin_validite" msprop:FriendlyName="date_fin_validite" msprop:DbColumnName="date_fin_validite" msprop:design-time-name="1c81b0c8-435f-4b0e-9ca7-99307bec8e6a" type="xs:dateTime"/>
+                  <xs:element name="est_courant" msprop:FriendlyName="est_courant" msprop:DbColumnName="est_courant" msprop:design-time-name="5455bd78-3e7f-472f-ac45-f12a92aaacb2" type="xs:boolean"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_fournisseur" msprop:DbTableName="v_dim_fournisseur" msprop:FriendlyName="v_dim_fournisseur" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="fd72cc0b-1bd6-48dd-85b7-d46737640904">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="fournisseur_sk" msprop:FriendlyName="fournisseur_sk" msprop:DbColumnName="fournisseur_sk" msprop:design-time-name="82dc9e5a-7758-40d3-a7d0-e01426998a9b" type="xs:int"/>
+                  <xs:element name="fournisseur_id" msprop:FriendlyName="fournisseur_id" msprop:DbColumnName="fournisseur_id" msprop:design-time-name="db929186-0542-4eeb-ab12-f6817f92b972">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nom_fournisseur" msprop:FriendlyName="nom_fournisseur" msprop:DbColumnName="nom_fournisseur" msprop:design-time-name="591d537b-9393-4c9c-898a-e259c1e28b11">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="pays" msprop:FriendlyName="pays" msprop:DbColumnName="pays" msprop:design-time-name="4a5fbade-9096-4fdf-926f-ecd75b515e3a">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="origine" msprop:FriendlyName="origine" msprop:DbColumnName="origine" msprop:design-time-name="dfbf2459-589b-4094-9eb2-0cf7a419029c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_geographie" msprop:DbTableName="v_dim_geographie" msprop:FriendlyName="v_dim_geographie" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="79a4caf9-061f-4ee0-b6e8-bdaf1b91b6b7">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="geographie_sk" msprop:FriendlyName="geographie_sk" msprop:DbColumnName="geographie_sk" msprop:design-time-name="885d8d64-8245-4464-974e-7a3cac10317c" type="xs:int"/>
+                  <xs:element name="gouvernorat_id" msprop:FriendlyName="gouvernorat_id" msprop:DbColumnName="gouvernorat_id" msprop:design-time-name="3bf53fbc-78fe-4173-a4a2-bb17112f64dc">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gouvernorat" msprop:FriendlyName="gouvernorat" msprop:DbColumnName="gouvernorat" msprop:design-time-name="7656ceba-accd-4288-b1f0-cadec879e7f3">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="region" msprop:FriendlyName="region" msprop:DbColumnName="region" msprop:design-time-name="dc659204-8c51-4dba-b4dc-b0ef149c09f8">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="zone_livraison" msprop:FriendlyName="zone_livraison" msprop:DbColumnName="zone_livraison" msprop:design-time-name="23508710-96c9-45b5-8161-4a01a47913d6">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_entrepot" msprop:DbTableName="v_dim_entrepot" msprop:FriendlyName="v_dim_entrepot" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="8ff1d39e-1bd1-40df-9ed6-8160442eed02">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="entrepot_sk" msprop:FriendlyName="entrepot_sk" msprop:DbColumnName="entrepot_sk" msprop:design-time-name="154eecf2-ce80-4a04-9000-f52f761c7906" type="xs:int"/>
+                  <xs:element name="entrepot_id" msprop:FriendlyName="entrepot_id" msprop:DbColumnName="entrepot_id" msprop:design-time-name="ca8ff385-e013-4806-87d4-5950e09016e6">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nom_entrepot" msprop:FriendlyName="nom_entrepot" msprop:DbColumnName="nom_entrepot" msprop:design-time-name="1f2a8715-6a4e-40c2-a2d2-ae508f9d9b2e">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ville" msprop:FriendlyName="ville" msprop:DbColumnName="ville" msprop:design-time-name="bf67b047-985e-4698-9bac-df2d26e17709">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="region" msprop:FriendlyName="region" msprop:DbColumnName="region" msprop:design-time-name="c30edd35-6edd-45b4-b12c-0e03351aa716">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_transporteur" msprop:DbTableName="v_dim_transporteur" msprop:FriendlyName="v_dim_transporteur" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="ccf2e197-1f88-4c51-bdae-f172e0df99e7">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="transporteur_sk" msprop:FriendlyName="transporteur_sk" msprop:DbColumnName="transporteur_sk" msprop:design-time-name="d7ebd81c-ae35-48ae-b5fa-af5563f5f64c" type="xs:int"/>
+                  <xs:element name="transporteur_id" msprop:FriendlyName="transporteur_id" msprop:DbColumnName="transporteur_id" msprop:design-time-name="fd1a4754-7271-4817-9166-76a1da7f1a05">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nom_transporteur" msprop:FriendlyName="nom_transporteur" msprop:DbColumnName="nom_transporteur" msprop:design-time-name="fd9b6ec7-ac30-44a6-a3e1-4af85d9dfdd1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="couverture" msprop:FriendlyName="couverture" msprop:DbColumnName="couverture" msprop:design-time-name="45031c36-c8ef-4686-a0d0-781dcf4e96f0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_campagne" msprop:DbTableName="v_dim_campagne" msprop:FriendlyName="v_dim_campagne" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="063ee733-8ede-413b-bd96-40efcf14f489">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="campagne_sk" msprop:FriendlyName="campagne_sk" msprop:DbColumnName="campagne_sk" msprop:design-time-name="a9f6a9e1-5305-4eb7-bb67-587643f6eb91" type="xs:int"/>
+                  <xs:element name="campagne_id" msprop:FriendlyName="campagne_id" msprop:DbColumnName="campagne_id" msprop:design-time-name="b18a4686-ba1a-40c6-8232-d45f89c6b964">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nom_campagne" msprop:FriendlyName="nom_campagne" msprop:DbColumnName="nom_campagne" msprop:design-time-name="52c3f288-a621-4f38-be62-36995c6fe349">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="canal_media" msprop:FriendlyName="canal_media" msprop:DbColumnName="canal_media" msprop:design-time-name="63b54f3f-f84b-4649-8ba5-e404aa135bd4">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="type_canal" msprop:FriendlyName="type_canal" msprop:DbColumnName="type_canal" msprop:design-time-name="bc000885-093f-423a-99b5-ccdf0566c892">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="objectif" msprop:FriendlyName="objectif" msprop:DbColumnName="objectif" msprop:design-time-name="ae14ba97-e319-4799-8ef8-5343a7536a56">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="theme" msprop:FriendlyName="theme" msprop:DbColumnName="theme" msprop:design-time-name="c150527d-195e-45da-87ab-ff90a24f1235">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_coupon" msprop:DbTableName="v_dim_coupon" msprop:FriendlyName="v_dim_coupon" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="f22478be-17f9-4d18-9660-9d27183085cb">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="coupon_sk" msprop:FriendlyName="coupon_sk" msprop:DbColumnName="coupon_sk" msprop:design-time-name="5dc92da2-4580-4357-b8d3-8d4a2c7af621" type="xs:int"/>
+                  <xs:element name="code_coupon" msprop:FriendlyName="code_coupon" msprop:DbColumnName="code_coupon" msprop:design-time-name="9205f459-1e62-4a55-bc17-46f91e55ea46">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="type_remise" msprop:FriendlyName="type_remise" msprop:DbColumnName="type_remise" msprop:design-time-name="97fa75ee-54a9-49a4-b165-acdf4c199d33">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_canal" msprop:DbTableName="v_dim_canal" msprop:FriendlyName="v_dim_canal" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="7c5e630c-db4e-4bfe-899a-e6195888b34e">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="canal_sk" msprop:FriendlyName="canal_sk" msprop:DbColumnName="canal_sk" msprop:design-time-name="421756dc-092f-462c-8a52-86544eb93ea2" type="xs:int"/>
+                  <xs:element name="canal" msprop:FriendlyName="canal" msprop:DbColumnName="canal" msprop:design-time-name="e01fa26b-571b-4eeb-9acb-279afc0a7563">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="appareil" msprop:FriendlyName="appareil" msprop:DbColumnName="appareil" msprop:design-time-name="428e9101-8776-400c-8079-536f35840142">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="libelle_canal" msprop:FriendlyName="libelle_canal" msprop:DbColumnName="libelle_canal" msprop:design-time-name="a1218655-b71e-4705-b530-727ca6d171e4">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_mode_paiement" msprop:DbTableName="v_dim_mode_paiement" msprop:FriendlyName="v_dim_mode_paiement" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="806a24b2-3036-4620-8185-cacd3261e23b">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="mode_paiement_sk" msprop:FriendlyName="mode_paiement_sk" msprop:DbColumnName="mode_paiement_sk" msprop:design-time-name="e0d5ca90-07ff-4b3d-b6dd-c591ea06d65f" type="xs:int"/>
+                  <xs:element name="mode_paiement" msprop:FriendlyName="mode_paiement" msprop:DbColumnName="mode_paiement" msprop:design-time-name="cc94bd81-3f6e-4fe8-b5ca-bb716278a43f">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="libelle_mode_paiement" msprop:FriendlyName="libelle_mode_paiement" msprop:DbColumnName="libelle_mode_paiement" msprop:design-time-name="919cac5b-dc84-4f57-8211-9fcc30c94ddf">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_statut_commande" msprop:DbTableName="v_dim_statut_commande" msprop:FriendlyName="v_dim_statut_commande" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="8fcfd5ba-49fc-4b34-84a8-bb22e1c24489">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="statut_commande_sk" msprop:FriendlyName="statut_commande_sk" msprop:DbColumnName="statut_commande_sk" msprop:design-time-name="76f9d1be-e64d-4d19-a0b7-74f4c3d60cd7" type="xs:int"/>
+                  <xs:element name="statut_commande" msprop:FriendlyName="statut_commande" msprop:DbColumnName="statut_commande" msprop:design-time-name="fce1e8f0-febc-4d65-a8c7-ba8f0d83831e">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="libelle_statut" msprop:FriendlyName="libelle_statut" msprop:DbColumnName="libelle_statut" msprop:design-time-name="668c4e6f-6550-4117-9362-f374046a4597">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="famille_statut" msprop:FriendlyName="famille_statut" msprop:DbColumnName="famille_statut" msprop:design-time-name="648820b9-d7b7-43ba-9e2f-68682ccb7470">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_motif_retour" msprop:DbTableName="v_dim_motif_retour" msprop:FriendlyName="v_dim_motif_retour" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="e37f0d4e-9702-40c6-987e-1157d04d6691">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="motif_retour_sk" msprop:FriendlyName="motif_retour_sk" msprop:DbColumnName="motif_retour_sk" msprop:design-time-name="24f635ac-a89f-42b1-8a56-aca3eb58bb77" type="xs:int"/>
+                  <xs:element name="type_remboursement" msprop:FriendlyName="type_remboursement" msprop:DbColumnName="type_remboursement" msprop:design-time-name="59831c08-147d-4966-b329-5d0e2bbcf1a3">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="motif" msprop:FriendlyName="motif" msprop:DbColumnName="motif" msprop:design-time-name="513b4eea-5b2a-4dd9-b248-6a073381e649">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="libelle_motif" msprop:FriendlyName="libelle_motif" msprop:DbColumnName="libelle_motif" msprop:design-time-name="cca367e1-9006-409c-99b0-68512ad2f4a0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="responsabilite" msprop:FriendlyName="responsabilite" msprop:DbColumnName="responsabilite" msprop:design-time-name="99305829-8a44-460b-8233-6f56b5e5433a">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_dim_type_mouvement" msprop:DbTableName="v_dim_type_mouvement" msprop:FriendlyName="v_dim_type_mouvement" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="d1932c8b-0177-4b47-8526-44d84387a197">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="type_mouvement" msprop:FriendlyName="type_mouvement" msprop:DbColumnName="type_mouvement" msprop:design-time-name="8c67f03f-c265-47ed-bc4f-0e6f66070aa7">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="famille_mouvement" msprop:FriendlyName="famille_mouvement" msprop:DbColumnName="famille_mouvement" msprop:design-time-name="8a983a2c-854c-4060-bd36-532605b524b3">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_fact_ventes" msprop:DbTableName="v_fact_ventes" msprop:FriendlyName="v_fact_ventes" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="5707bd84-9e78-4443-a57d-39140544c9b3">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ligne_id" msprop:FriendlyName="ligne_id" msprop:DbColumnName="ligne_id" msprop:design-time-name="0b79d131-7fef-41b5-adfa-9eaf6c79794c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="commande_id" msprop:FriendlyName="commande_id" msprop:DbColumnName="commande_id" msprop:design-time-name="74a9493b-53f8-4d0d-aa73-9d99843eabc5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_commande_sk" msprop:FriendlyName="date_commande_sk" msprop:DbColumnName="date_commande_sk" msprop:design-time-name="3ea91376-794e-4427-8085-0d1be5859645" type="xs:int"/>
+                  <xs:element name="client_sk" msprop:FriendlyName="client_sk" msprop:DbColumnName="client_sk" msprop:design-time-name="605c0d0a-bcbd-4c8c-b308-79b1d5ae0232" type="xs:int"/>
+                  <xs:element name="produit_sk" msprop:FriendlyName="produit_sk" msprop:DbColumnName="produit_sk" msprop:design-time-name="52895c29-cab8-487a-95f9-ac1d5e74b1fe" type="xs:int"/>
+                  <xs:element name="geographie_sk" msprop:FriendlyName="geographie_sk" msprop:DbColumnName="geographie_sk" msprop:design-time-name="374f86ce-278c-40ee-8d99-4f4ed0208b58" type="xs:int"/>
+                  <xs:element name="entrepot_sk" msprop:FriendlyName="entrepot_sk" msprop:DbColumnName="entrepot_sk" msprop:design-time-name="0c4794b1-228b-4fa7-a4cb-ec7975c494c3" type="xs:int"/>
+                  <xs:element name="canal_sk" msprop:FriendlyName="canal_sk" msprop:DbColumnName="canal_sk" msprop:design-time-name="5aa82c05-dfef-4899-865b-5c176c6cb35a" type="xs:int"/>
+                  <xs:element name="campagne_sk" msprop:FriendlyName="campagne_sk" msprop:DbColumnName="campagne_sk" msprop:design-time-name="3eb5eac1-953e-446b-92e3-7cb206ea976f" type="xs:int"/>
+                  <xs:element name="coupon_sk" msprop:FriendlyName="coupon_sk" msprop:DbColumnName="coupon_sk" msprop:design-time-name="8586e88f-d605-41c0-9087-b763678ca107" type="xs:int"/>
+                  <xs:element name="statut_commande_sk" msprop:FriendlyName="statut_commande_sk" msprop:DbColumnName="statut_commande_sk" msprop:design-time-name="1031bdea-9c22-4f4c-9505-c64a3312939d" type="xs:int"/>
+                  <xs:element name="nb_lignes" msprop:FriendlyName="nb_lignes" msprop:DbColumnName="nb_lignes" msprop:design-time-name="73bbe850-b37e-4906-b1e6-0e2baf789eb7" type="xs:int"/>
+                  <xs:element name="quantite" msprop:FriendlyName="quantite" msprop:DbColumnName="quantite" msprop:design-time-name="799c7063-8800-461c-9309-5355df4ee86b" type="xs:int"/>
+                  <xs:element name="montant_brut_ttc" msprop:FriendlyName="montant_brut_ttc" msprop:DbColumnName="montant_brut_ttc" msprop:design-time-name="6805aba5-405f-4f7c-8e64-2102f75a9c73" type="xs:decimal"/>
+                  <xs:element name="montant_remise_promo_ttc" msprop:FriendlyName="montant_remise_promo_ttc" msprop:DbColumnName="montant_remise_promo_ttc" msprop:design-time-name="976f2c9b-e57d-4466-894d-501808588924" type="xs:decimal"/>
+                  <xs:element name="montant_ttc" msprop:FriendlyName="montant_ttc" msprop:DbColumnName="montant_ttc" msprop:design-time-name="7cd470d0-827c-4185-9457-f31d29472a4d" type="xs:decimal"/>
+                  <xs:element name="montant_ht" msprop:FriendlyName="montant_ht" msprop:DbColumnName="montant_ht" msprop:design-time-name="107d0c21-42be-4f55-a349-94668a9e8c10" type="xs:decimal"/>
+                  <xs:element name="montant_tva" msprop:FriendlyName="montant_tva" msprop:DbColumnName="montant_tva" msprop:design-time-name="9b3fb578-673c-49a3-a226-04c62ed98a3a" type="xs:decimal"/>
+                  <xs:element name="cout_achat_ht" msprop:FriendlyName="cout_achat_ht" msprop:DbColumnName="cout_achat_ht" msprop:design-time-name="23f20b2d-2192-441d-8e3a-c7f55c130a86" type="xs:decimal"/>
+                  <xs:element name="marge_brute_ht" msprop:FriendlyName="marge_brute_ht" msprop:DbColumnName="marge_brute_ht" msprop:design-time-name="a4e4562d-39d8-4214-bfe6-28e0317e6400" type="xs:decimal"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_fact_commandes" msprop:DbTableName="v_fact_commandes" msprop:FriendlyName="v_fact_commandes" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="fa0d4ee1-71cb-4b49-96f3-d4f7c2c80651">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="commande_id" msprop:FriendlyName="commande_id" msprop:DbColumnName="commande_id" msprop:design-time-name="0d9f0f85-d7b1-44ba-810b-896c51341b61">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_commande_sk" msprop:FriendlyName="date_commande_sk" msprop:DbColumnName="date_commande_sk" msprop:design-time-name="f9b8e1c9-5d8e-4e11-bbe9-b0d0e1faa69c" type="xs:int"/>
+                  <xs:element name="date_livraison_sk" msprop:FriendlyName="date_livraison_sk" msprop:DbColumnName="date_livraison_sk" msprop:design-time-name="e0fad547-5c0b-4694-9461-43488a1482cd" type="xs:int"/>
+                  <xs:element name="client_sk" msprop:FriendlyName="client_sk" msprop:DbColumnName="client_sk" msprop:design-time-name="7da5bf7d-0aea-4288-a437-6f6906c2df03" type="xs:int"/>
+                  <xs:element name="geographie_sk" msprop:FriendlyName="geographie_sk" msprop:DbColumnName="geographie_sk" msprop:design-time-name="b3b7a65d-d98c-4766-bf11-062098ee4b56" type="xs:int"/>
+                  <xs:element name="entrepot_sk" msprop:FriendlyName="entrepot_sk" msprop:DbColumnName="entrepot_sk" msprop:design-time-name="efccb489-b2d2-4382-8b9b-a65846497541" type="xs:int"/>
+                  <xs:element name="canal_sk" msprop:FriendlyName="canal_sk" msprop:DbColumnName="canal_sk" msprop:design-time-name="faabd1d3-a688-4ab3-8deb-0dfad4c28c1a" type="xs:int"/>
+                  <xs:element name="campagne_sk" msprop:FriendlyName="campagne_sk" msprop:DbColumnName="campagne_sk" msprop:design-time-name="561b259a-eae9-4ac5-9740-6e11d46cb379" type="xs:int"/>
+                  <xs:element name="coupon_sk" msprop:FriendlyName="coupon_sk" msprop:DbColumnName="coupon_sk" msprop:design-time-name="0033c520-e7a1-4647-b311-41d9799c19f2" type="xs:int"/>
+                  <xs:element name="mode_paiement_sk" msprop:FriendlyName="mode_paiement_sk" msprop:DbColumnName="mode_paiement_sk" msprop:design-time-name="cd8c7c9b-3a23-4390-8916-11cd0417f8d5" type="xs:int"/>
+                  <xs:element name="statut_commande_sk" msprop:FriendlyName="statut_commande_sk" msprop:DbColumnName="statut_commande_sk" msprop:design-time-name="98d964f9-f2ff-427f-b1ab-be4ee3e8a6c5" type="xs:int"/>
+                  <xs:element name="nb_commandes" msprop:FriendlyName="nb_commandes" msprop:DbColumnName="nb_commandes" msprop:design-time-name="9d084e46-de63-4d68-93b7-bac8ff8121b8" type="xs:int"/>
+                  <xs:element name="nb_articles" msprop:FriendlyName="nb_articles" msprop:DbColumnName="nb_articles" msprop:design-time-name="c86b60d9-b236-41d7-b594-394cd0ad4f2b" type="xs:int"/>
+                  <xs:element name="sous_total_ttc" msprop:FriendlyName="sous_total_ttc" msprop:DbColumnName="sous_total_ttc" msprop:design-time-name="354f01a4-ffb5-47ac-bd3a-12e4436c6286" type="xs:decimal"/>
+                  <xs:element name="remise_coupon_ttc" msprop:FriendlyName="remise_coupon_ttc" msprop:DbColumnName="remise_coupon_ttc" msprop:design-time-name="5937d593-5c88-47e2-a24e-34027a394c67" type="xs:decimal"/>
+                  <xs:element name="frais_livraison_ttc" msprop:FriendlyName="frais_livraison_ttc" msprop:DbColumnName="frais_livraison_ttc" msprop:design-time-name="e67d1aaa-c867-4327-b351-790c26262fc3" type="xs:decimal"/>
+                  <xs:element name="montant_total_ttc" msprop:FriendlyName="montant_total_ttc" msprop:DbColumnName="montant_total_ttc" msprop:design-time-name="342c3d27-ffe6-474e-bef8-cddaab9a83c4" type="xs:decimal"/>
+                  <xs:element name="cout_achat_ht" msprop:FriendlyName="cout_achat_ht" msprop:DbColumnName="cout_achat_ht" msprop:design-time-name="2f11c030-0d4d-44f4-a7fb-fa8fa37f6553" type="xs:decimal"/>
+                  <xs:element name="cout_transport_ht" msprop:FriendlyName="cout_transport_ht" msprop:DbColumnName="cout_transport_ht" msprop:design-time-name="97b862ea-888b-4706-b08d-edb84edf5804" type="xs:decimal" minOccurs="0"/>
+                  <xs:element name="montant_rembourse_ttc" msprop:FriendlyName="montant_rembourse_ttc" msprop:DbColumnName="montant_rembourse_ttc" msprop:design-time-name="7197bd8c-b181-4db4-8f46-465830f51a40" type="xs:decimal"/>
+                  <xs:element name="nb_premieres_commandes" msprop:FriendlyName="nb_premieres_commandes" msprop:DbColumnName="nb_premieres_commandes" msprop:design-time-name="a860d907-36e5-4f30-9b82-1312121b1a13" type="xs:int"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_fact_paiements" msprop:DbTableName="v_fact_paiements" msprop:FriendlyName="v_fact_paiements" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="df49930c-9790-4b25-b686-e3e5636c53da">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="paiement_id" msprop:FriendlyName="paiement_id" msprop:DbColumnName="paiement_id" msprop:design-time-name="5c7ddfcf-6ca9-40f5-b734-3b417c751331">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="commande_id" msprop:FriendlyName="commande_id" msprop:DbColumnName="commande_id" msprop:design-time-name="3c4a9471-28a4-487c-9e44-5a3a9936d147">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_paiement_sk" msprop:FriendlyName="date_paiement_sk" msprop:DbColumnName="date_paiement_sk" msprop:design-time-name="8dadc689-d62b-4e5d-9580-cf8a42ac9203" type="xs:int"/>
+                  <xs:element name="client_sk" msprop:FriendlyName="client_sk" msprop:DbColumnName="client_sk" msprop:design-time-name="04eecde7-a808-4a88-b393-326ed6560424" type="xs:int"/>
+                  <xs:element name="mode_paiement_sk" msprop:FriendlyName="mode_paiement_sk" msprop:DbColumnName="mode_paiement_sk" msprop:design-time-name="9377bea6-4a42-4fd8-ac99-7d6407e522c2" type="xs:int"/>
+                  <xs:element name="nb_tentatives" msprop:FriendlyName="nb_tentatives" msprop:DbColumnName="nb_tentatives" msprop:design-time-name="02afc65f-05b7-43ab-b289-80f35d3c0546" type="xs:int"/>
+                  <xs:element name="nb_reussies" msprop:FriendlyName="nb_reussies" msprop:DbColumnName="nb_reussies" msprop:design-time-name="2a90bba7-05d0-4672-b7df-bc1d3fcbb80a" type="xs:int"/>
+                  <xs:element name="montant_ttc" msprop:FriendlyName="montant_ttc" msprop:DbColumnName="montant_ttc" msprop:design-time-name="ddc286d2-798d-4530-8cf2-6b8721393da3" type="xs:decimal"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_fact_livraisons" msprop:DbTableName="v_fact_livraisons" msprop:FriendlyName="v_fact_livraisons" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="06c45b81-cd5a-4d33-b699-b8555097c8d7">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="livraison_id" msprop:FriendlyName="livraison_id" msprop:DbColumnName="livraison_id" msprop:design-time-name="ba914a09-4f35-43fd-8bb3-03772c965eb5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="commande_id" msprop:FriendlyName="commande_id" msprop:DbColumnName="commande_id" msprop:design-time-name="1127793e-c77a-410a-9794-95bdc2784905">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_expedition_sk" msprop:FriendlyName="date_expedition_sk" msprop:DbColumnName="date_expedition_sk" msprop:design-time-name="eeb014b5-2fef-4c5a-a89d-e3dcd629152e" type="xs:int"/>
+                  <xs:element name="date_livraison_sk" msprop:FriendlyName="date_livraison_sk" msprop:DbColumnName="date_livraison_sk" msprop:design-time-name="526319da-eca3-4323-9b56-d75661b45a85" type="xs:int"/>
+                  <xs:element name="client_sk" msprop:FriendlyName="client_sk" msprop:DbColumnName="client_sk" msprop:design-time-name="e669fd6c-d969-4156-b84d-8688b4693012" type="xs:int"/>
+                  <xs:element name="entrepot_sk" msprop:FriendlyName="entrepot_sk" msprop:DbColumnName="entrepot_sk" msprop:design-time-name="65d93b15-88a0-4532-9fc4-ff3a541e6e88" type="xs:int"/>
+                  <xs:element name="transporteur_sk" msprop:FriendlyName="transporteur_sk" msprop:DbColumnName="transporteur_sk" msprop:design-time-name="37706f1c-d57f-4643-8c20-66342951b209" type="xs:int"/>
+                  <xs:element name="geographie_sk" msprop:FriendlyName="geographie_sk" msprop:DbColumnName="geographie_sk" msprop:design-time-name="06c69c6e-4ca1-44fe-acf1-71a3ca23dd94" type="xs:int"/>
+                  <xs:element name="nb_livraisons" msprop:FriendlyName="nb_livraisons" msprop:DbColumnName="nb_livraisons" msprop:design-time-name="196fc5c0-3e98-4e96-a6d4-2f0a4579722b" type="xs:int"/>
+                  <xs:element name="nb_livrees" msprop:FriendlyName="nb_livrees" msprop:DbColumnName="nb_livrees" msprop:design-time-name="5deacae5-1e45-4cff-a9eb-876253f5f16c" type="xs:int"/>
+                  <xs:element name="nb_livrees_a_temps" msprop:FriendlyName="nb_livrees_a_temps" msprop:DbColumnName="nb_livrees_a_temps" msprop:design-time-name="54405dc4-5e5c-40b9-beb4-94ee9b7df721" type="xs:int"/>
+                  <xs:element name="nb_livrees_en_retard" msprop:FriendlyName="nb_livrees_en_retard" msprop:DbColumnName="nb_livrees_en_retard" msprop:design-time-name="69c35ecd-d4c1-4514-86a3-09520de8ec75" type="xs:int"/>
+                  <xs:element name="nb_livrees_1er_passage" msprop:FriendlyName="nb_livrees_1er_passage" msprop:DbColumnName="nb_livrees_1er_passage" msprop:design-time-name="397b9c16-48e6-4df1-b306-d92fdef82ea5" type="xs:int"/>
+                  <xs:element name="delai_livraison_j" msprop:FriendlyName="delai_livraison_j" msprop:DbColumnName="delai_livraison_j" msprop:design-time-name="4c31cd09-567d-457d-8fcc-a99038554cd0" type="xs:decimal" minOccurs="0"/>
+                  <xs:element name="retard_j" msprop:FriendlyName="retard_j" msprop:DbColumnName="retard_j" msprop:design-time-name="d31da5f0-8548-4678-9fc1-b5e40109014f" type="xs:int" minOccurs="0"/>
+                  <xs:element name="cout_transport_ht" msprop:FriendlyName="cout_transport_ht" msprop:DbColumnName="cout_transport_ht" msprop:design-time-name="060946ae-ab51-474b-b80c-8634e257e435" type="xs:decimal"/>
+                  <xs:element name="poids_kg" msprop:FriendlyName="poids_kg" msprop:DbColumnName="poids_kg" msprop:design-time-name="afe53f29-36e4-4d47-b707-b0789c1dd81d" type="xs:decimal"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_fact_remboursements" msprop:DbTableName="v_fact_remboursements" msprop:FriendlyName="v_fact_remboursements" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="8f345956-b65c-4ec5-a835-0e0b126efc42">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="remboursement_id" msprop:FriendlyName="remboursement_id" msprop:DbColumnName="remboursement_id" msprop:design-time-name="974160fb-3bd2-43f1-94f9-726253c5ff4c">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="commande_id" msprop:FriendlyName="commande_id" msprop:DbColumnName="commande_id" msprop:design-time-name="67611e7b-475d-42c2-baa7-d7650323f171">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_demande_sk" msprop:FriendlyName="date_demande_sk" msprop:DbColumnName="date_demande_sk" msprop:design-time-name="54ebea50-c08b-4747-80ce-18dc3f11b4fe" type="xs:int"/>
+                  <xs:element name="client_sk" msprop:FriendlyName="client_sk" msprop:DbColumnName="client_sk" msprop:design-time-name="289f3fe3-0f0d-4116-9d5b-850772589c9f" type="xs:int"/>
+                  <xs:element name="produit_sk" msprop:FriendlyName="produit_sk" msprop:DbColumnName="produit_sk" msprop:design-time-name="70fb3d7d-61f4-40c9-8719-00231dcf7921" type="xs:int"/>
+                  <xs:element name="motif_retour_sk" msprop:FriendlyName="motif_retour_sk" msprop:DbColumnName="motif_retour_sk" msprop:design-time-name="0c9853e0-d253-49ab-ac76-a1bd8aacdb52" type="xs:int"/>
+                  <xs:element name="nb_demandes" msprop:FriendlyName="nb_demandes" msprop:DbColumnName="nb_demandes" msprop:design-time-name="0cfc2261-8227-4552-b276-ea67b68bb29b" type="xs:int"/>
+                  <xs:element name="nb_retours" msprop:FriendlyName="nb_retours" msprop:DbColumnName="nb_retours" msprop:design-time-name="d7572aa8-b6f1-4ce7-9eda-e310d4c7ff27" type="xs:int"/>
+                  <xs:element name="nb_rembourses" msprop:FriendlyName="nb_rembourses" msprop:DbColumnName="nb_rembourses" msprop:design-time-name="7191d652-53ee-4697-9113-8dc48b6e3ac6" type="xs:int"/>
+                  <xs:element name="nb_delais_rembourses" msprop:FriendlyName="nb_delais_rembourses" msprop:DbColumnName="nb_delais_rembourses" msprop:design-time-name="b0003604-338b-421f-8ffc-543b45793f9a" type="xs:int"/>
+                  <xs:element name="quantite" msprop:FriendlyName="quantite" msprop:DbColumnName="quantite" msprop:design-time-name="487fa8da-e061-4651-8228-26152c0c2653" type="xs:int" minOccurs="0"/>
+                  <xs:element name="montant_demande_ttc" msprop:FriendlyName="montant_demande_ttc" msprop:DbColumnName="montant_demande_ttc" msprop:design-time-name="9547d901-9cd6-4521-838b-d62de11a3716" type="xs:decimal"/>
+                  <xs:element name="montant_rembourse_ttc" msprop:FriendlyName="montant_rembourse_ttc" msprop:DbColumnName="montant_rembourse_ttc" msprop:design-time-name="6610f11b-9377-4986-9ce2-150799cabe7a" type="xs:decimal"/>
+                  <xs:element name="delai_traitement_j" msprop:FriendlyName="delai_traitement_j" msprop:DbColumnName="delai_traitement_j" msprop:design-time-name="b23c8559-ef2a-4ed5-85c1-65fc2dd5b15e" type="xs:decimal" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_fact_avis" msprop:DbTableName="v_fact_avis" msprop:FriendlyName="v_fact_avis" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="a75e9b80-5fd2-4ef6-82a5-5e48671a16cd">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="avis_id" msprop:FriendlyName="avis_id" msprop:DbColumnName="avis_id" msprop:design-time-name="3fae6c20-10d7-4113-8a73-1104ef0386f5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="commande_id" msprop:FriendlyName="commande_id" msprop:DbColumnName="commande_id" msprop:design-time-name="ce8fffa6-ba85-4448-88bc-85007c55b119">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_avis_sk" msprop:FriendlyName="date_avis_sk" msprop:DbColumnName="date_avis_sk" msprop:design-time-name="799518e7-d9a0-406e-832e-e06f54c428ff" type="xs:int"/>
+                  <xs:element name="client_sk" msprop:FriendlyName="client_sk" msprop:DbColumnName="client_sk" msprop:design-time-name="7be3b7db-4d80-4a12-945e-fa64eceb9a08" type="xs:int"/>
+                  <xs:element name="produit_sk" msprop:FriendlyName="produit_sk" msprop:DbColumnName="produit_sk" msprop:design-time-name="36821d2e-8505-4dad-8ad0-bd148523107a" type="xs:int"/>
+                  <xs:element name="nb_avis" msprop:FriendlyName="nb_avis" msprop:DbColumnName="nb_avis" msprop:design-time-name="e152b542-ef44-41cc-867b-0afcaf046af1" type="xs:int"/>
+                  <xs:element name="nb_avis_notes" msprop:FriendlyName="nb_avis_notes" msprop:DbColumnName="nb_avis_notes" msprop:design-time-name="e9f59d2e-6d4f-4938-8df7-d240233de629" type="xs:int"/>
+                  <xs:element name="nb_avis_negatifs" msprop:FriendlyName="nb_avis_negatifs" msprop:DbColumnName="nb_avis_negatifs" msprop:design-time-name="3cb10c60-bf38-4b21-adcc-feb2f76943f5" type="xs:int"/>
+                  <xs:element name="note" msprop:FriendlyName="note" msprop:DbColumnName="note" msprop:design-time-name="4a8c90fb-613a-4ad1-93b9-9b2ded58268b" type="xs:int" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_fact_marketing_quotidien" msprop:DbTableName="v_fact_marketing_quotidien" msprop:FriendlyName="v_fact_marketing_quotidien" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="5b27cf5d-2ab1-40f8-b1ee-6f0e6aa5c7b0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="depense_id" msprop:FriendlyName="depense_id" msprop:DbColumnName="depense_id" msprop:design-time-name="2d253bac-9654-46fd-903e-326ced806cbe">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_sk" msprop:FriendlyName="date_sk" msprop:DbColumnName="date_sk" msprop:design-time-name="c7aeb236-5980-478c-a601-5c17aafe2575" type="xs:int"/>
+                  <xs:element name="campagne_sk" msprop:FriendlyName="campagne_sk" msprop:DbColumnName="campagne_sk" msprop:design-time-name="a55aa8fd-3fc0-49f8-bc9d-38be9f40553d" type="xs:int"/>
+                  <xs:element name="depense_ht" msprop:FriendlyName="depense_ht" msprop:DbColumnName="depense_ht" msprop:design-time-name="b1414636-f5a9-426b-b1f2-bd706de3a642" type="xs:decimal"/>
+                  <xs:element name="impressions" msprop:FriendlyName="impressions" msprop:DbColumnName="impressions" msprop:design-time-name="160fa053-ad36-4814-ae0f-cdcbb7379241" type="xs:int" minOccurs="0"/>
+                  <xs:element name="clics" msprop:FriendlyName="clics" msprop:DbColumnName="clics" msprop:design-time-name="667d1d60-62c3-40eb-8ae5-9f14d19b2009" type="xs:int"/>
+                  <xs:element name="commandes_attribuees" msprop:FriendlyName="commandes_attribuees" msprop:DbColumnName="commandes_attribuees" msprop:design-time-name="bedd1f48-d3fb-489b-9f2b-abbcf47fa98c" type="xs:int"/>
+                  <xs:element name="nouveaux_clients_attribues" msprop:FriendlyName="nouveaux_clients_attribues" msprop:DbColumnName="nouveaux_clients_attribues" msprop:design-time-name="f9fb6335-a35c-4035-b081-f5240de47bd9" type="xs:int"/>
+                  <xs:element name="ca_attribue_ttc" msprop:FriendlyName="ca_attribue_ttc" msprop:DbColumnName="ca_attribue_ttc" msprop:design-time-name="fff0a2fe-8bd7-4ab8-9e74-120bb4f17fb5" type="xs:decimal"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_fact_achats_fournisseur" msprop:DbTableName="v_fact_achats_fournisseur" msprop:FriendlyName="v_fact_achats_fournisseur" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="feb60ffa-2de4-4cba-a16a-349bee21611d">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ligne_cf_id" msprop:FriendlyName="ligne_cf_id" msprop:DbColumnName="ligne_cf_id" msprop:design-time-name="cfef3056-fb9c-4b64-85dc-8565a9dbd41a">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="commande_fournisseur_id" msprop:FriendlyName="commande_fournisseur_id" msprop:DbColumnName="commande_fournisseur_id" msprop:design-time-name="386155b8-06eb-4fa9-9d4b-822f2132258a">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_commande_sk" msprop:FriendlyName="date_commande_sk" msprop:DbColumnName="date_commande_sk" msprop:design-time-name="be936703-2f5f-4348-a56d-d6419a8a7dfc" type="xs:int"/>
+                  <xs:element name="fournisseur_sk" msprop:FriendlyName="fournisseur_sk" msprop:DbColumnName="fournisseur_sk" msprop:design-time-name="73558bf8-a118-4ea1-9ee2-abea6d912b13" type="xs:int"/>
+                  <xs:element name="produit_sk" msprop:FriendlyName="produit_sk" msprop:DbColumnName="produit_sk" msprop:design-time-name="5459563d-65ef-4001-8087-b48a0cf0680d" type="xs:int"/>
+                  <xs:element name="entrepot_sk" msprop:FriendlyName="entrepot_sk" msprop:DbColumnName="entrepot_sk" msprop:design-time-name="f88d1b79-70fa-4dad-808e-f445fa8eb564" type="xs:int"/>
+                  <xs:element name="nb_lignes_cf" msprop:FriendlyName="nb_lignes_cf" msprop:DbColumnName="nb_lignes_cf" msprop:design-time-name="9211527a-70c7-4b56-90de-7dcf872847b9" type="xs:int"/>
+                  <xs:element name="nb_lignes_recues" msprop:FriendlyName="nb_lignes_recues" msprop:DbColumnName="nb_lignes_recues" msprop:design-time-name="359a407e-f84b-4421-ae16-21b5ef6415ae" type="xs:int"/>
+                  <xs:element name="nb_receptions_partielles" msprop:FriendlyName="nb_receptions_partielles" msprop:DbColumnName="nb_receptions_partielles" msprop:design-time-name="c5f0a19c-556d-42cf-88f8-954b03b01fce" type="xs:int"/>
+                  <xs:element name="quantite_commandee" msprop:FriendlyName="quantite_commandee" msprop:DbColumnName="quantite_commandee" msprop:design-time-name="fbd7aa8f-de3c-4a1e-907f-bef7dfb17593" type="xs:int"/>
+                  <xs:element name="quantite_commandee_recue" msprop:FriendlyName="quantite_commandee_recue" msprop:DbColumnName="quantite_commandee_recue" msprop:design-time-name="a459f659-a6e3-4716-b2bf-f1f5ce11b54c" type="xs:int"/>
+                  <xs:element name="quantite_recue" msprop:FriendlyName="quantite_recue" msprop:DbColumnName="quantite_recue" msprop:design-time-name="b95c97b8-9c74-4410-8f19-b045223bc3d3" type="xs:int"/>
+                  <xs:element name="montant_ht" msprop:FriendlyName="montant_ht" msprop:DbColumnName="montant_ht" msprop:design-time-name="01b9b309-d028-40f7-aa15-51f1804273a8" type="xs:decimal"/>
+                  <xs:element name="delai_appro_j" msprop:FriendlyName="delai_appro_j" msprop:DbColumnName="delai_appro_j" msprop:design-time-name="b9ead1aa-b8bc-4b7c-9859-4c93c94af51b" type="xs:int" minOccurs="0"/>
+                  <xs:element name="retard_appro_j" msprop:FriendlyName="retard_appro_j" msprop:DbColumnName="retard_appro_j" msprop:design-time-name="2452ea1c-3262-4de0-8618-79f893947f58" type="xs:int" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_fact_mouvements_stock" msprop:DbTableName="v_fact_mouvements_stock" msprop:FriendlyName="v_fact_mouvements_stock" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="3f1f2e3d-4419-429e-8cc8-236542291aa7">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="mouvement_id" msprop:FriendlyName="mouvement_id" msprop:DbColumnName="mouvement_id" msprop:design-time-name="f2c3810b-5711-4214-a212-c300bbadadc4">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_sk" msprop:FriendlyName="date_sk" msprop:DbColumnName="date_sk" msprop:design-time-name="77de64a9-c7b1-448c-94a7-ede593506717" type="xs:int"/>
+                  <xs:element name="produit_sk" msprop:FriendlyName="produit_sk" msprop:DbColumnName="produit_sk" msprop:design-time-name="1a916833-9e5a-4f28-b42e-9d85a71b07b3" type="xs:int"/>
+                  <xs:element name="entrepot_sk" msprop:FriendlyName="entrepot_sk" msprop:DbColumnName="entrepot_sk" msprop:design-time-name="ef72c4eb-4c7c-4a4c-a04b-09bd52219acd" type="xs:int"/>
+                  <xs:element name="type_mouvement" msprop:FriendlyName="type_mouvement" msprop:DbColumnName="type_mouvement" msprop:design-time-name="73276a2d-db65-4510-8cbb-7e1940d5c76f">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="sens" msprop:FriendlyName="sens" msprop:DbColumnName="sens" msprop:design-time-name="32058932-6ec3-4159-8fb5-0fb7cc9bba00">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nb_mouvements" msprop:FriendlyName="nb_mouvements" msprop:DbColumnName="nb_mouvements" msprop:design-time-name="88d02412-89da-4b7d-a396-a78419ecf176" type="xs:int"/>
+                  <xs:element name="quantite" msprop:FriendlyName="quantite" msprop:DbColumnName="quantite" msprop:design-time-name="7b5ee19f-c1ef-403b-a3e1-8df912f233af" type="xs:int"/>
+                  <xs:element name="valeur_ht" msprop:FriendlyName="valeur_ht" msprop:DbColumnName="valeur_ht" msprop:design-time-name="b345feb0-322a-4d3e-8e68-64067a64fa0e" type="xs:decimal"/>
+                  <xs:element name="quantite_vendue" msprop:FriendlyName="quantite_vendue" msprop:DbColumnName="quantite_vendue" msprop:design-time-name="a56518ed-ab93-4e18-81a0-26a69e03ddfb" type="xs:int"/>
+                  <xs:element name="cout_des_ventes_ht" msprop:FriendlyName="cout_des_ventes_ht" msprop:DbColumnName="cout_des_ventes_ht" msprop:design-time-name="7e84161e-5614-4bf7-bbee-4b2e448c0be2" type="xs:decimal"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="olap_v_fact_stock_mensuel" msprop:DbTableName="v_fact_stock_mensuel" msprop:FriendlyName="v_fact_stock_mensuel" msprop:TableType="View" msprop:DbSchemaName="olap" msprop:design-time-name="f810273a-5f9c-43a3-bda9-0e243d3688e1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="inventaire_id" msprop:FriendlyName="inventaire_id" msprop:DbColumnName="inventaire_id" msprop:design-time-name="8e1f2c19-24fa-41cf-88f4-e0975a863220">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="12"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date_sk" msprop:FriendlyName="date_sk" msprop:DbColumnName="date_sk" msprop:design-time-name="77cc45ca-752c-43da-8877-c8548ae0a883" type="xs:int"/>
+                  <xs:element name="produit_sk" msprop:FriendlyName="produit_sk" msprop:DbColumnName="produit_sk" msprop:design-time-name="eec317c2-093c-4d69-9ab1-641b31b7023d" type="xs:int"/>
+                  <xs:element name="entrepot_sk" msprop:FriendlyName="entrepot_sk" msprop:DbColumnName="entrepot_sk" msprop:design-time-name="64c8eb48-e1b4-471b-a6b6-02fc28e79896" type="xs:int"/>
+                  <xs:element name="nb_inventaires" msprop:FriendlyName="nb_inventaires" msprop:DbColumnName="nb_inventaires" msprop:design-time-name="eb939695-4d46-4cbf-95d0-5817c9e9bff8" type="xs:int"/>
+                  <xs:element name="nb_ruptures" msprop:FriendlyName="nb_ruptures" msprop:DbColumnName="nb_ruptures" msprop:design-time-name="4390046e-0541-4626-93de-c983f467242c" type="xs:int"/>
+                  <xs:element name="stock_fin_mois" msprop:FriendlyName="stock_fin_mois" msprop:DbColumnName="stock_fin_mois" msprop:design-time-name="96a44111-ebda-4c75-9abe-0ba7dbcd8c6d" type="xs:int"/>
+                  <xs:element name="quantite_en_commande" msprop:FriendlyName="quantite_en_commande" msprop:DbColumnName="quantite_en_commande" msprop:design-time-name="4a9052b1-f906-4d66-b341-ab82daba3a54" type="xs:int"/>
+                  <xs:element name="valeur_stock_ht" msprop:FriendlyName="valeur_stock_ht" msprop:DbColumnName="valeur_stock_ht" msprop:design-time-name="773e89f2-4fa2-4ff6-811a-07db78a0a994" type="xs:decimal"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="PK_olap_v_dim_date" msdata:ConstraintName="PK_olap_v_dim_date" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_date"/>
+          <xs:field xpath="date_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_client" msdata:ConstraintName="PK_olap_v_dim_client" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_client"/>
+          <xs:field xpath="client_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_produit" msdata:ConstraintName="PK_olap_v_dim_produit" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_produit"/>
+          <xs:field xpath="produit_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_fournisseur" msdata:ConstraintName="PK_olap_v_dim_fournisseur" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_fournisseur"/>
+          <xs:field xpath="fournisseur_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_geographie" msdata:ConstraintName="PK_olap_v_dim_geographie" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_geographie"/>
+          <xs:field xpath="geographie_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_entrepot" msdata:ConstraintName="PK_olap_v_dim_entrepot" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_entrepot"/>
+          <xs:field xpath="entrepot_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_transporteur" msdata:ConstraintName="PK_olap_v_dim_transporteur" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_transporteur"/>
+          <xs:field xpath="transporteur_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_campagne" msdata:ConstraintName="PK_olap_v_dim_campagne" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_campagne"/>
+          <xs:field xpath="campagne_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_coupon" msdata:ConstraintName="PK_olap_v_dim_coupon" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_coupon"/>
+          <xs:field xpath="coupon_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_canal" msdata:ConstraintName="PK_olap_v_dim_canal" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_canal"/>
+          <xs:field xpath="canal_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_mode_paiement" msdata:ConstraintName="PK_olap_v_dim_mode_paiement" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_mode_paiement"/>
+          <xs:field xpath="mode_paiement_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_statut_commande" msdata:ConstraintName="PK_olap_v_dim_statut_commande" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_statut_commande"/>
+          <xs:field xpath="statut_commande_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_motif_retour" msdata:ConstraintName="PK_olap_v_dim_motif_retour" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_motif_retour"/>
+          <xs:field xpath="motif_retour_sk"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_dim_type_mouvement" msdata:ConstraintName="PK_olap_v_dim_type_mouvement" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_dim_type_mouvement"/>
+          <xs:field xpath="type_mouvement"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_fact_ventes" msdata:ConstraintName="PK_olap_v_fact_ventes" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_fact_ventes"/>
+          <xs:field xpath="ligne_id"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_fact_commandes" msdata:ConstraintName="PK_olap_v_fact_commandes" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_fact_commandes"/>
+          <xs:field xpath="commande_id"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_fact_paiements" msdata:ConstraintName="PK_olap_v_fact_paiements" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_fact_paiements"/>
+          <xs:field xpath="paiement_id"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_fact_livraisons" msdata:ConstraintName="PK_olap_v_fact_livraisons" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_fact_livraisons"/>
+          <xs:field xpath="livraison_id"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_fact_remboursements" msdata:ConstraintName="PK_olap_v_fact_remboursements" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_fact_remboursements"/>
+          <xs:field xpath="remboursement_id"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_fact_avis" msdata:ConstraintName="PK_olap_v_fact_avis" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_fact_avis"/>
+          <xs:field xpath="avis_id"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_fact_marketing_quotidien" msdata:ConstraintName="PK_olap_v_fact_marketing_quotidien" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_fact_marketing_quotidien"/>
+          <xs:field xpath="depense_id"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_fact_achats_fournisseur" msdata:ConstraintName="PK_olap_v_fact_achats_fournisseur" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_fact_achats_fournisseur"/>
+          <xs:field xpath="ligne_cf_id"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_fact_mouvements_stock" msdata:ConstraintName="PK_olap_v_fact_mouvements_stock" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_fact_mouvements_stock"/>
+          <xs:field xpath="mouvement_id"/>
+        </xs:unique>
+        <xs:unique name="PK_olap_v_fact_stock_mensuel" msdata:ConstraintName="PK_olap_v_fact_stock_mensuel" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//olap_v_fact_stock_mensuel"/>
+          <xs:field xpath="inventaire_id"/>
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="FK_v_fact_ventes_date_commande_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_ventes" msdata:parentkey="date_sk" msdata:childkey="date_commande_sk"/>
+          <msdata:Relationship name="FK_v_fact_commandes_date_commande_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_commandes" msdata:parentkey="date_sk" msdata:childkey="date_commande_sk"/>
+          <msdata:Relationship name="FK_v_fact_commandes_date_livraison_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_commandes" msdata:parentkey="date_sk" msdata:childkey="date_livraison_sk"/>
+          <msdata:Relationship name="FK_v_fact_paiements_date_paiement_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_paiements" msdata:parentkey="date_sk" msdata:childkey="date_paiement_sk"/>
+          <msdata:Relationship name="FK_v_fact_livraisons_date_expedition_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_livraisons" msdata:parentkey="date_sk" msdata:childkey="date_expedition_sk"/>
+          <msdata:Relationship name="FK_v_fact_livraisons_date_livraison_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_livraisons" msdata:parentkey="date_sk" msdata:childkey="date_livraison_sk"/>
+          <msdata:Relationship name="FK_v_fact_remboursements_date_demande_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_remboursements" msdata:parentkey="date_sk" msdata:childkey="date_demande_sk"/>
+          <msdata:Relationship name="FK_v_fact_avis_date_avis_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_avis" msdata:parentkey="date_sk" msdata:childkey="date_avis_sk"/>
+          <msdata:Relationship name="FK_v_fact_marketing_quotidien_date_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_marketing_quotidien" msdata:parentkey="date_sk" msdata:childkey="date_sk"/>
+          <msdata:Relationship name="FK_v_fact_achats_fournisseur_date_commande_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_achats_fournisseur" msdata:parentkey="date_sk" msdata:childkey="date_commande_sk"/>
+          <msdata:Relationship name="FK_v_fact_mouvements_stock_date_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_mouvements_stock" msdata:parentkey="date_sk" msdata:childkey="date_sk"/>
+          <msdata:Relationship name="FK_v_fact_stock_mensuel_date_sk" msdata:parent="olap_v_dim_date" msdata:child="olap_v_fact_stock_mensuel" msdata:parentkey="date_sk" msdata:childkey="date_sk"/>
+          <msdata:Relationship name="FK_v_fact_ventes_client_sk" msdata:parent="olap_v_dim_client" msdata:child="olap_v_fact_ventes" msdata:parentkey="client_sk" msdata:childkey="client_sk"/>
+          <msdata:Relationship name="FK_v_fact_ventes_produit_sk" msdata:parent="olap_v_dim_produit" msdata:child="olap_v_fact_ventes" msdata:parentkey="produit_sk" msdata:childkey="produit_sk"/>
+          <msdata:Relationship name="FK_v_fact_ventes_geographie_sk" msdata:parent="olap_v_dim_geographie" msdata:child="olap_v_fact_ventes" msdata:parentkey="geographie_sk" msdata:childkey="geographie_sk"/>
+          <msdata:Relationship name="FK_v_fact_ventes_entrepot_sk" msdata:parent="olap_v_dim_entrepot" msdata:child="olap_v_fact_ventes" msdata:parentkey="entrepot_sk" msdata:childkey="entrepot_sk"/>
+          <msdata:Relationship name="FK_v_fact_ventes_canal_sk" msdata:parent="olap_v_dim_canal" msdata:child="olap_v_fact_ventes" msdata:parentkey="canal_sk" msdata:childkey="canal_sk"/>
+          <msdata:Relationship name="FK_v_fact_ventes_campagne_sk" msdata:parent="olap_v_dim_campagne" msdata:child="olap_v_fact_ventes" msdata:parentkey="campagne_sk" msdata:childkey="campagne_sk"/>
+          <msdata:Relationship name="FK_v_fact_ventes_coupon_sk" msdata:parent="olap_v_dim_coupon" msdata:child="olap_v_fact_ventes" msdata:parentkey="coupon_sk" msdata:childkey="coupon_sk"/>
+          <msdata:Relationship name="FK_v_fact_ventes_statut_commande_sk" msdata:parent="olap_v_dim_statut_commande" msdata:child="olap_v_fact_ventes" msdata:parentkey="statut_commande_sk" msdata:childkey="statut_commande_sk"/>
+          <msdata:Relationship name="FK_v_fact_commandes_client_sk" msdata:parent="olap_v_dim_client" msdata:child="olap_v_fact_commandes" msdata:parentkey="client_sk" msdata:childkey="client_sk"/>
+          <msdata:Relationship name="FK_v_fact_commandes_geographie_sk" msdata:parent="olap_v_dim_geographie" msdata:child="olap_v_fact_commandes" msdata:parentkey="geographie_sk" msdata:childkey="geographie_sk"/>
+          <msdata:Relationship name="FK_v_fact_commandes_entrepot_sk" msdata:parent="olap_v_dim_entrepot" msdata:child="olap_v_fact_commandes" msdata:parentkey="entrepot_sk" msdata:childkey="entrepot_sk"/>
+          <msdata:Relationship name="FK_v_fact_commandes_canal_sk" msdata:parent="olap_v_dim_canal" msdata:child="olap_v_fact_commandes" msdata:parentkey="canal_sk" msdata:childkey="canal_sk"/>
+          <msdata:Relationship name="FK_v_fact_commandes_campagne_sk" msdata:parent="olap_v_dim_campagne" msdata:child="olap_v_fact_commandes" msdata:parentkey="campagne_sk" msdata:childkey="campagne_sk"/>
+          <msdata:Relationship name="FK_v_fact_commandes_coupon_sk" msdata:parent="olap_v_dim_coupon" msdata:child="olap_v_fact_commandes" msdata:parentkey="coupon_sk" msdata:childkey="coupon_sk"/>
+          <msdata:Relationship name="FK_v_fact_commandes_mode_paiement_sk" msdata:parent="olap_v_dim_mode_paiement" msdata:child="olap_v_fact_commandes" msdata:parentkey="mode_paiement_sk" msdata:childkey="mode_paiement_sk"/>
+          <msdata:Relationship name="FK_v_fact_commandes_statut_commande_sk" msdata:parent="olap_v_dim_statut_commande" msdata:child="olap_v_fact_commandes" msdata:parentkey="statut_commande_sk" msdata:childkey="statut_commande_sk"/>
+          <msdata:Relationship name="FK_v_fact_paiements_client_sk" msdata:parent="olap_v_dim_client" msdata:child="olap_v_fact_paiements" msdata:parentkey="client_sk" msdata:childkey="client_sk"/>
+          <msdata:Relationship name="FK_v_fact_paiements_mode_paiement_sk" msdata:parent="olap_v_dim_mode_paiement" msdata:child="olap_v_fact_paiements" msdata:parentkey="mode_paiement_sk" msdata:childkey="mode_paiement_sk"/>
+          <msdata:Relationship name="FK_v_fact_livraisons_client_sk" msdata:parent="olap_v_dim_client" msdata:child="olap_v_fact_livraisons" msdata:parentkey="client_sk" msdata:childkey="client_sk"/>
+          <msdata:Relationship name="FK_v_fact_livraisons_entrepot_sk" msdata:parent="olap_v_dim_entrepot" msdata:child="olap_v_fact_livraisons" msdata:parentkey="entrepot_sk" msdata:childkey="entrepot_sk"/>
+          <msdata:Relationship name="FK_v_fact_livraisons_transporteur_sk" msdata:parent="olap_v_dim_transporteur" msdata:child="olap_v_fact_livraisons" msdata:parentkey="transporteur_sk" msdata:childkey="transporteur_sk"/>
+          <msdata:Relationship name="FK_v_fact_livraisons_geographie_sk" msdata:parent="olap_v_dim_geographie" msdata:child="olap_v_fact_livraisons" msdata:parentkey="geographie_sk" msdata:childkey="geographie_sk"/>
+          <msdata:Relationship name="FK_v_fact_remboursements_client_sk" msdata:parent="olap_v_dim_client" msdata:child="olap_v_fact_remboursements" msdata:parentkey="client_sk" msdata:childkey="client_sk"/>
+          <msdata:Relationship name="FK_v_fact_remboursements_produit_sk" msdata:parent="olap_v_dim_produit" msdata:child="olap_v_fact_remboursements" msdata:parentkey="produit_sk" msdata:childkey="produit_sk"/>
+          <msdata:Relationship name="FK_v_fact_remboursements_motif_retour_sk" msdata:parent="olap_v_dim_motif_retour" msdata:child="olap_v_fact_remboursements" msdata:parentkey="motif_retour_sk" msdata:childkey="motif_retour_sk"/>
+          <msdata:Relationship name="FK_v_fact_avis_client_sk" msdata:parent="olap_v_dim_client" msdata:child="olap_v_fact_avis" msdata:parentkey="client_sk" msdata:childkey="client_sk"/>
+          <msdata:Relationship name="FK_v_fact_avis_produit_sk" msdata:parent="olap_v_dim_produit" msdata:child="olap_v_fact_avis" msdata:parentkey="produit_sk" msdata:childkey="produit_sk"/>
+          <msdata:Relationship name="FK_v_fact_marketing_quotidien_campagne_sk" msdata:parent="olap_v_dim_campagne" msdata:child="olap_v_fact_marketing_quotidien" msdata:parentkey="campagne_sk" msdata:childkey="campagne_sk"/>
+          <msdata:Relationship name="FK_v_fact_achats_fournisseur_fournisseur_sk" msdata:parent="olap_v_dim_fournisseur" msdata:child="olap_v_fact_achats_fournisseur" msdata:parentkey="fournisseur_sk" msdata:childkey="fournisseur_sk"/>
+          <msdata:Relationship name="FK_v_fact_achats_fournisseur_produit_sk" msdata:parent="olap_v_dim_produit" msdata:child="olap_v_fact_achats_fournisseur" msdata:parentkey="produit_sk" msdata:childkey="produit_sk"/>
+          <msdata:Relationship name="FK_v_fact_achats_fournisseur_entrepot_sk" msdata:parent="olap_v_dim_entrepot" msdata:child="olap_v_fact_achats_fournisseur" msdata:parentkey="entrepot_sk" msdata:childkey="entrepot_sk"/>
+          <msdata:Relationship name="FK_v_fact_mouvements_stock_produit_sk" msdata:parent="olap_v_dim_produit" msdata:child="olap_v_fact_mouvements_stock" msdata:parentkey="produit_sk" msdata:childkey="produit_sk"/>
+          <msdata:Relationship name="FK_v_fact_mouvements_stock_entrepot_sk" msdata:parent="olap_v_dim_entrepot" msdata:child="olap_v_fact_mouvements_stock" msdata:parentkey="entrepot_sk" msdata:childkey="entrepot_sk"/>
+          <msdata:Relationship name="FK_v_fact_stock_mensuel_produit_sk" msdata:parent="olap_v_dim_produit" msdata:child="olap_v_fact_stock_mensuel" msdata:parentkey="produit_sk" msdata:childkey="produit_sk"/>
+          <msdata:Relationship name="FK_v_fact_stock_mensuel_entrepot_sk" msdata:parent="olap_v_dim_entrepot" msdata:child="olap_v_fact_stock_mensuel" msdata:parentkey="entrepot_sk" msdata:childkey="entrepot_sk"/>
+          <msdata:Relationship name="FK_v_fact_mouvements_stock_type_mouvement" msdata:parent="olap_v_dim_type_mouvement" msdata:child="olap_v_fact_mouvements_stock" msdata:parentkey="type_mouvement" msdata:childkey="type_mouvement"/>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <TuniShop xmlns=""/>
+  </Schema>
+</DataSourceView>

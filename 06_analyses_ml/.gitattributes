@@ -1,0 +1,8 @@
+# Les sorties des notebooks (graphiques, tableaux) sont retirées à chaque commit par nbstripout :
+# Git ne garde que le code et le texte. Installation une fois : nbstripout --install --attributes .gitattributes
+*.ipynb filter=nbstripout
+*.ipynb diff=ipynb
+# Fins de ligne : Windows garde CRLF pour les scripts SQL, LF ailleurs
+*.sql text eol=crlf
+*.py  text eol=lf
+*.md  text eol=lf

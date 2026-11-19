@@ -1,0 +1,5 @@
+transporteur_id,nom_transporteur,couverture,cout_base_ht,ecart_delai_moyen_j,date_debut_contrat
+TR01,Rapid Colis,national,6.5,0.0,2020-01-01
+TR02,TunExpress,national,7.8,-0.3,2020-06-01
+TR03,SahelLog,régional Centre/Sud,5.4,0.2,2021-09-15
+TR04,Poste Colis Plus,national,4.9,0.8,2019-01-01

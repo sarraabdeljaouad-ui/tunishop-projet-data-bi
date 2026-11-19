@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="7be02fd5-9d94-4960-b42a-c568f383a903">
+  <ID>Fournisseur</ID>
+  <Name>Fournisseur</Name>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="9c1fb814-16b9-42a4-a248-2471a776a478">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="598f04e2-a650-4bb2-8f22-7b92213a8e42">
+      <ID>Fournisseur</ID>
+      <Name>Fournisseur</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d526b103-127c-4d1f-811e-744c9d0d7548">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0be56275-5d26-4a80-96df-419cacb43087">
+            <TableID>olap_v_dim_fournisseur</TableID>
+            <ColumnID>fournisseur_sk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="73324abc-1ce1-4285-9c3c-c754703ea84d">
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="70b43144-20e6-4676-98b1-c8cec1e9787c">
+          <TableID>olap_v_dim_fournisseur</TableID>
+          <ColumnID>nom_fournisseur</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="3ac200b6-8267-48f2-9288-9a1acb453cc0">
+          <AttributeID>Pays</AttributeID>
+          <Name>Pays</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="a56088e5-a714-4977-ab7b-07b861f372c7">
+      <ID>Pays</ID>
+      <Name>Pays</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7149eabf-8550-4956-94e7-a352bdeaa944">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4311d62c-9e83-4b87-8ead-fc2160575685">
+            <TableID>olap_v_dim_fournisseur</TableID>
+            <ColumnID>pays</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1c230d1e-3743-491b-9391-aa5fa53f8d88">
+          <AttributeID>Origine</AttributeID>
+          <Name>Origine</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="18eb8d73-2734-4621-b527-237109560538">
+      <ID>Origine</ID>
+      <Name>Origine</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a9fc8700-f84a-4930-a6f2-746c775e54de">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="de20c519-93cb-4551-bd3a-655145755645">
+            <TableID>olap_v_dim_fournisseur</TableID>
+            <ColumnID>origine</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="2db9a104-db86-42bd-a61d-715afa4d2e6e">
+      <ID>Origines</ID>
+      <Name>Origines</Name>
+      <Levels>
+        <Level dwd:design-time-name="2c885910-33f9-4637-8f46-facf0294068d">
+          <ID>Origine</ID>
+          <Name>Origine</Name>
+          <SourceAttributeID>Origine</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="756456b7-7b06-49fe-a79b-c6773548a7d6">
+          <ID>Pays</ID>
+          <Name>Pays</Name>
+          <SourceAttributeID>Pays</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="504e103d-3108-4f32-b555-4256f308679e">
+          <ID>Fournisseur</ID>
+          <Name>Fournisseur</Name>
+          <SourceAttributeID>Fournisseur</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

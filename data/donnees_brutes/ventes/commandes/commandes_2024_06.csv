@@ -1,0 +1,1317 @@
+commande_id,client_id,date_commande,canal,appareil,gouvernorat_livraison_id,ville_livraison,entrepot_id,campagne_id,code_coupon,mode_paiement,nb_lignes,nb_articles,sous_total_ttc,remise_coupon_ttc,frais_livraison_ttc,montant_total_ttc,statut_commande,motif_annulation,date_annulation,est_premiere_commande
+CMD0023301,CLI005527,2024-06-01 08:24:25,reseaux_sociaux,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,2,2,51.8,0.0,7.0,58.8,livree,,,False
+CMD0023302,CLI007811,2024-06-01 09:12:45,application_mobile,mobile,G13,Moknine,ENT02,,,carte_bancaire,2,2,2242.8,0.0,0.0,2242.8,livree,,,False
+CMD0023303,CLI006110,2024-06-01 10:02:58,application_mobile,mobile,G01,Le Bardo,ENT01,,,paiement_a_la_livraison,1,1,36.9,0.0,7.0,43.9,livraison_echouee,,,True
+CMD0023304,CLI006006,2024-06-01 11:06:43,site_web,mobile,G05,Nabeul,ENT01,,,carte_bancaire,1,2,245.8,0.0,0.0,245.8,livree,,,False
+CMD0023305,CLI006928,2024-06-01 11:11:23,site_web,ordinateur,G23,Nefta,ENT03,,,virement,2,4,338.6,0.0,0.0,338.6,livree,,,False
+CMD0023306,CLI008037,2024-06-01 11:13:57,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,portefeuille_mobile,1,3,71.7,0.0,7.0,78.7,retournee,,,False
+CMD0023307,CLI000506,2024-06-01 11:44:31,site_web,mobile,G22,Redeyef,ENT03,,,paiement_a_la_livraison,1,1,51.9,0.0,7.0,58.9,livree,,,False
+CMD0023308,CLI004146,2024-06-01 12:20:02,site_web,ordinateur,G08,Medjez el-Bab,ENT01,,,carte_bancaire,1,1,26.9,0.0,7.0,33.9,retournee,,,False
+CMD0023309,CLI006491,2024-06-01 12:24:17,application_mobile,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,1,1,19.9,0.0,7.0,26.9,livree,,,False
+CMD0023310,CLI003783,2024-06-01 12:29:48,application_mobile,mobile,G13,Ksar Hellal,ENT01,,,virement,2,12,754.8,0.0,0.0,754.8,livree,,,False
+CMD0023311,CLI008088,2024-06-01 12:35:19,application_mobile,mobile,G16,Haffouz,ENT02,,,carte_bancaire,1,1,30.9,0.0,7.0,37.9,retournee,,,True
+CMD0023312,CLI007897,2024-06-01 13:36:53,site_web,tablette,G21,Tataouine,ENT03,,,carte_bancaire,1,1,56.9,0.0,7.0,63.9,livree,,,True
+CMD0023313,CLI003403,2024-06-01 13:57:55,application_mobile,mobile,G20,Djerba Houmt Souk,ENT03,,,paiement_a_la_livraison,1,1,24.9,0.0,7.0,31.9,livree,,,False
+CMD0023314,CLI006214,2024-06-01 14:16:38,site_web,ordinateur,G13,Monastir,ENT02,,,carte_bancaire,2,3,145.7,0.0,7.0,152.7,livree,,,False
+CMD0023315,CLI007379,2024-06-01 15:10:01,site_web,mobile,G10,Le Kef,ENT01,,,carte_bancaire,1,2,43.8,0.0,7.0,50.8,livree,,,True
+CMD0023316,CLI008084,2024-06-01 15:54:38,reseaux_sociaux,mobile,G06,El Fahs,ENT01,,BIENVENUE10,carte_bancaire,2,2,56.8,5.68,7.0,58.12,livree,,,True
+CMD0023317,CLI004835,2024-06-01 16:03:54,reseaux_sociaux,mobile,G22,Redeyef,ENT03,,,paiement_a_la_livraison,1,1,99.9,0.0,7.0,106.9,livraison_echouee,,,False
+CMD0023318,CLI006350,2024-06-01 16:04:30,site_web,mobile,G03,Radès,ENT01,,,paiement_a_la_livraison,4,7,286.3,0.0,0.0,286.3,livree,,,False
+CMD0023319,CLI001699,2024-06-01 16:47:13,site_web,mobile,G20,Djerba Houmt Souk,ENT03,,,paiement_a_la_livraison,5,6,664.4,0.0,0.0,664.4,livree,,,False
+CMD0023320,CLI007899,2024-06-01 17:09:56,application_mobile,mobile,G12,Msaken,ENT02,,,paiement_a_la_livraison,5,6,719.4,0.0,0.0,719.4,partiellement_retournee,,,False
+CMD0023321,CLI006677,2024-06-01 17:21:49,site_web,ordinateur,G10,Dahmani,ENT01,,,carte_bancaire,2,3,44.7,0.0,7.0,51.7,livree,,,False
+CMD0023322,CLI001128,2024-06-01 17:36:07,site_web,ordinateur,G01,La Marsa,ENT01,,,portefeuille_mobile,5,6,269.4,0.0,0.0,269.4,livree,,,False
+CMD0023323,CLI008085,2024-06-01 18:06:09,site_web,tablette,G02,Ariana Ville,ENT01,,,portefeuille_mobile,1,2,187.8,0.0,0.0,187.8,livree,,,True
+CMD0023324,CLI006531,2024-06-01 18:22:27,reseaux_sociaux,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,1,22.9,0.0,7.0,29.9,livree,,,False
+CMD0023325,CLI007051,2024-06-01 19:03:42,application_mobile,mobile,G13,Ksar Hellal,ENT02,,,paiement_a_la_livraison,1,1,29.9,0.0,7.0,36.9,livree,,,False
+CMD0023326,CLI004951,2024-06-01 19:46:19,site_web,mobile,G03,Mégrine,ENT01,,,carte_prepayee,1,1,39.9,0.0,7.0,46.9,livree,,,False
+CMD0023327,CLI005500,2024-06-01 19:47:45,application_mobile,mobile,G16,Kairouan,ENT02,,,paiement_a_la_livraison,1,2,57.8,0.0,7.0,64.8,livree,,,False
+CMD0023328,CLI004002,2024-06-01 19:54:10,application_mobile,mobile,G14,Mahdia,ENT02,,,paiement_a_la_livraison,1,1,44.9,0.0,7.0,51.9,livree,,,False
+CMD0023329,CLI005438,2024-06-01 20:17:58,site_web,mobile,G02,Ariana Ville,ENT01,,,paiement_a_la_livraison,1,1,106.9,0.0,7.0,113.9,livree,,,False
+CMD0023330,CLI005986,2024-06-01 20:56:52,site_web,mobile,G08,Medjez el-Bab,ENT01,,,carte_bancaire,3,4,623.6,0.0,0.0,623.6,partiellement_retournee,,,False
+CMD0023331,CLI003430,2024-06-01 21:06:58,,mobile,G21,Ghomrassen,ENT03,,,paiement_a_la_livraison,4,5,1442.5,0.0,0.0,1442.5,livree,,,False
+CMD0023332,CLI007915,2024-06-01 21:09:47,site_web,ordinateur,G15,Sakiet Ezzit,ENT03,,,portefeuille_mobile,2,3,512.7,0.0,0.0,512.7,livree,,,False
+CMD0023333,CLI004800,2024-06-01 21:36:17,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,carte_bancaire,2,3,218.7,0.0,0.0,218.7,partiellement_retournee,,,False
+CMD0023334,CLI005903,2024-06-01 21:40:08,application_mobile,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,2,4,57.6,0.0,7.0,64.6,livree,,,False
+CMD0023335,CLI005188,2024-06-01 21:56:10,site_web,mobile,G04,Oued Ellil,ENT01,,,portefeuille_mobile,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0023336,CLI002061,2024-06-01 22:02:02,site_web,mobile,G18,Regueb,ENT02,,,paiement_a_la_livraison,1,1,95.9,0.0,7.0,102.9,livree,,,False
+CMD0023337,CLI004923,2024-06-01 22:06:36,application_mobile,mobile,G22,Redeyef,ENT03,,,carte_bancaire,3,3,296.7,0.0,0.0,296.7,livree,,,False
+CMD0023338,CLI007761,2024-06-01 22:29:47,site_web,mobile,G01,Carthage,ENT01,,,carte_bancaire,1,2,525.8,0.0,0.0,525.8,livree,,,False
+CMD0023338,CLI007761,2024-06-01 22:29:47,site_web,mobile,G01,Carthage,ENT01,,,carte_bancaire,1,2,525.8,0.0,0.0,525.8,livree,,,False
+CMD0023339,CLI003411,2024-06-01 23:59:52,application_mobile,mobile,G09,Jendouba,ENT01,,,paiement_a_la_livraison,2,2,86.8,0.0,7.0,93.8,livree,,,False
+CMD0023340,CLI007350,2024-06-02 01:42:48,application_mobile,mobile,G13,Monastir,ENT02,,,paiement_a_la_livraison,1,1,56.9,0.0,7.0,63.9,livree,,,False
+CMD0023341,CLI002858,2024-06-02 02:20:57,application_mobile,mobile,G08,Medjez el-Bab,ENT01,,,paiement_a_la_livraison,1,1,36.9,0.0,7.0,43.9,livree,,,False
+CMD0023342,CLI007649,2024-06-02 08:30:32,site_web,ordinateur,G01,La Marsa,ENT01,,,carte_bancaire,1,1,107.9,0.0,7.0,114.9,livree,,,False
+CMD0023343,CLI008096,2024-06-02 08:56:16,reseaux_sociaux,mobile,G19,Gabès,ENT03,,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,retournee,,,True
+CMD0023344,CLI008080,2024-06-02 09:52:33,site_web,mobile,G12,Sousse,ENT02,,,carte_bancaire,1,1,209.9,0.0,0.0,209.9,livree,,,False
+CMD0023345,CLI008099,2024-06-02 10:11:51,site_web,ordinateur,G01,Tunis,ENT01,,,paiement_a_la_livraison,2,3,154.7,0.0,0.0,154.7,livree,,,True
+CMD0023346,CLI002954,2024-06-02 10:38:58,site_web,ordinateur,G13,Moknine,ENT02,,,portefeuille_mobile,1,1,24.9,0.0,7.0,31.9,livree,,,False
+CMD0023347,CLI006909,2024-06-02 11:13:52,application_mobile,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,1,1,125.9,0.0,7.0,132.9,livree,,,False
+CMD0023348,CLI003403,2024-06-02 12:15:15,site_web,mobile,G20,Médenine,ENT03,,,paiement_a_la_livraison,1,3,101.7,0.0,7.0,108.7,livree,,,False
+CMD0023349,CLI005436,2024-06-02 12:25:23,site_web,mobile,G05,Kélibia,ENT01,,,carte_prepayee,1,1,26.9,0.0,7.0,33.9,livree,,,False
+CMD0023350,CLI004437,2024-06-02 12:50:02,application_mobile,mobile,G05,Hammamet,ENT01,,,carte_prepayee,2,2,2125.8,0.0,0.0,2125.8,livree,,,False
+CMD0023351,CLI004327,2024-06-02 13:13:10,site_web,ordinateur,G15,Sakiet Ezzit,ENT03,,,carte_prepayee,1,2,131.8,0.0,7.0,138.8,livree,,,False
+CMD0023352,CLI006097,2024-06-02 13:22:37,site_web,ordinateur,G06,El Fahs,ENT01,,,carte_bancaire,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0023353,CLI007079,2024-06-02 13:32:46,application_mobile,mobile,G13,Monastir,ENT02,,,carte_prepayee,2,2,349.8,0.0,0.0,349.8,livree,,,False
+CMD0023354,CLI008095,2024-06-02 14:08:44,site_web,ordinateur,G19,El Hamma,ENT03,,,paiement_a_la_livraison,2,2,177.8,0.0,0.0,177.8,livree,,,True
+CMD0023355,CLI007618,2024-06-02 14:11:05,site_web,ordinateur,G23,Tozeur,ENT03,,,paiement_a_la_livraison,3,3,120.7,0.0,7.0,127.7,partiellement_retournee,,,False
+CMD0023356,CLI006788,2024-06-02 14:25:44,application_mobile,mobile,G05,Kélibia,ENT01,,,portefeuille_mobile,1,1,33.9,0.0,7.0,40.9,livree,,,False
+CMD0023357,CLI007397,2024-06-02 14:29:10,site_web,mobile,G16,Kairouan,ENT02,,,carte_bancaire,2,2,180.8,0.0,0.0,180.8,partiellement_retournee,,,False
+CMD0023358,CLI002793,2024-06-02 15:11:07,reseaux_sociaux,mobile,G01,La Marsa,ENT01,,,paiement_a_la_livraison,1,1,37.9,0.0,7.0,44.9,livree,,,False
+CMD0023359,CLI001775,2024-06-02 15:13:37,application_mobile,mobile,G05,Nabeul,ENT01,,,paiement_a_la_livraison,4,7,187.3,0.0,0.0,187.3,partiellement_retournee,,,False
+CMD0023360,CLI004652,2024-06-02 15:15:21,site_web,ordinateur,G14,Ksour Essef,ENT02,,,carte_prepayee,2,3,73.7,0.0,7.0,80.7,livree,,,False
+CMD0023361,CLI003612,2024-06-02 16:23:34,application_mobile,mobile,G02,Raoued,ENT01,,,carte_bancaire,2,4,440.6,0.0,0.0,440.6,livree,,,False
+CMD0023362,CLI006112,2024-06-02 16:51:32,site_web,mobile,G09,Tabarka,ENT01,,,carte_bancaire,3,3,432.7,0.0,0.0,432.7,livree,,,False
+CMD0023363,CLI005372,2024-06-02 17:45:42,application_mobile,mobile,G03,Ezzahra,ENT01,,,paiement_a_la_livraison,1,1,146.9,0.0,7.0,153.9,livree,,,False
+CMD0023364,CLI002243,2024-06-02 17:57:19,application_mobile,mobile,G11,Siliana,ENT01,,,paiement_a_la_livraison,1,1,74.9,0.0,7.0,81.9,retournee,,,False
+CMD0023365,CLI004932,2024-06-02 18:02:18,site_web,ordinateur,G13,Ksar Hellal,ENT02,,,virement,1,1,146.9,0.0,7.0,153.9,livree,,,False
+CMD0023366,CLI002858,2024-06-02 18:05:21,application_mobile,mobile,G08,Béja,ENT01,,,paiement_a_la_livraison,2,2,97.8,0.0,7.0,104.8,livree,,,False
+CMD0023367,CLI006321,2024-06-02 18:08:17,application_mobile,mobile,G20,Djerba Houmt Souk,ENT03,,,paiement_a_la_livraison,1,1,259.9,0.0,0.0,259.9,livree,,,False
+CMD0023368,CLI008090,2024-06-02 18:12:04,application_mobile,mobile,G24,Douz,ENT03,,,paiement_a_la_livraison,1,1,35.9,0.0,7.0,42.9,livree,,,True
+CMD0023369,CLI008097,2024-06-02 18:37:03,application_mobile,mobile,G02,La Soukra,ENT01,,,paiement_a_la_livraison,4,5,3525.5,0.0,0.0,3525.5,livree,,,True
+CMD0023370,CLI004229,2024-06-02 18:57:12,application_mobile,mobile,G02,Ariana Ville,ENT01,,,paiement_a_la_livraison,1,1,79.9,0.0,7.0,86.9,livree,,,False
+CMD0023371,CLI004142,2024-06-02 19:05:42,application_mobile,mobile,G09,Tabarka,ENT01,,,carte_bancaire,2,2,126.8,0.0,7.0,133.8,livree,,,False
+CMD0023372,CLI007651,02/06/2024 19:09,site_web,tablette,G12,Sousse,ENT02,,,virement,3,8,588.2,0.0,0.0,588.2,livree,,,False
+CMD0023373,CLI006725,2024-06-02 19:27:17,site_web,tablette,G12,Msaken,ENT02,,,carte_bancaire,2,2,355.8,0.0,0.0,355.8,livree,,,False
+CMD0023374,CLI005649,2024-06-02 19:31:38,application_mobile,mobile,G05,Kélibia,ENT01,,,paiement_a_la_livraison,4,5,464.5,0.0,0.0,464.5,partiellement_retournee,,,False
+CMD0023375,CLI007930,2024-06-02 19:31:51,site_web,mobile,G15,Sakiet Ezzit,ENT03,,,portefeuille_mobile,1,1,22.9,0.0,7.0,29.9,livree,,,False
+CMD0023376,CLI007459,2024-06-02 19:42:44,application_mobile,mobile,G07,Mateur,ENT01,,BIENVENUE10,carte_bancaire,1,1,74.9,7.49,7.0,74.41,livraison_echouee,,,True
+CMD0023377,CLI006581,2024-06-02 19:43:23,site_web,mobile,G01,Le Bardo,ENT01,,,paiement_a_la_livraison,1,1,87.9,0.0,7.0,94.9,livree,,,False
+CMD0023378,CLI008092,2024-06-02 19:46:45,application_mobile,mobile,G04,Den Den,ENT01,,BIENVENUE10,carte_bancaire,1,1,58.9,5.89,7.0,60.01,livree,,,True
+CMD0023379,CLI007101,2024-06-02 20:04:16,site_web,ordinateur,G22,Gafsa,ENT03,,,paiement_a_la_livraison,2,2,58.8,0.0,7.0,65.8,partiellement_retournee,,,False
+CMD0023380,CLI003206,2024-06-02 20:05:52,application_mobile,mobile,G20,Djerba Houmt Souk,ENT03,,,carte_bancaire,6,9,578.1,0.0,0.0,578.1,partiellement_retournee,,,False
+CMD0023381,CLI007587,2024-06-02 20:36:47,site_web,mobile,G02,La Soukra,ENT01,,,paiement_a_la_livraison,2,3,70.7,0.0,7.0,77.7,livree,,,False
+CMD0023382,CLI006228,2024-06-02 21:02:26,site_web,ordinateur,G08,Medjez el-Bab,ENT01,,,portefeuille_mobile,1,1,88.9,0.0,7.0,95.9,livree,,,False
+CMD0023383,CLI008091,2024-06-02 21:20:19,site_web,ordinateur,G09,Tabarka,ENT01,,,paiement_a_la_livraison,4,6,192.4,0.0,0.0,192.4,livree,,,True
+CMD0023384,CLI003882,2024-06-02 21:33:02,application_mobile,mobile,G15,Sfax,ENT01,,,carte_bancaire,8,57,2475.3,0.0,0.0,2475.3,livree,,,False
+CMD0023385,CLI002952,2024-06-02 21:52:08,application_mobile,mobile,G01,Le Bardo,ENT01,,,portefeuille_mobile,1,1,115.9,0.0,7.0,122.9,livree,,,False
+CMD0023386,CLI007472,2024-06-02 21:54:49,site_web,ordinateur,G02,Raoued,ENT01,,,carte_prepayee,2,2,28.8,0.0,7.0,35.8,partiellement_retournee,,,False
+CMD0023387,CLI004020,2024-06-02 22:25:52,application_mobile,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,1,1,31.9,0.0,7.0,38.9,retournee,,,False
+CMD0023388,CLI005351,2024-06-02 22:26:29,application_mobile,mobile,G18,Regueb,ENT02,,,portefeuille_mobile,1,1,138.9,0.0,7.0,145.9,livree,,,False
+CMD0023389,CLI005774,02/06/2024 22:37,application_mobile,mobile,G07,Menzel Bourguiba,ENT01,,,carte_prepayee,1,1,44.9,0.0,7.0,51.9,livree,,,True
+CMD0023390,CLI004483,2024-06-02 22:38:48,site_web,mobile,G01,Tunis,ENT01,,,carte_prepayee,1,1,8.9,0.0,7.0,15.9,livree,,,False
+CMD0023391,CLI007587,2024-06-03 00:19:35,site_web,ordinateur,G02,Ariana Ville,ENT01,,,carte_bancaire,4,4,632.6,0.0,0.0,632.6,livree,,,False
+CMD0023392,CLI007890,2024-06-03 01:04:13,application_mobile,mobile,G18,Sidi Bouzid,ENT02,,,paiement_a_la_livraison,4,4,725.6,0.0,0.0,725.6,partiellement_retournee,,,False
+CMD0023393,CLI008100,2024-06-03 01:56:43,application_mobile,mobile,G20,Djerba Houmt Souk,ENT03,,,carte_bancaire,1,1,125.9,0.0,7.0,132.9,livree,,,True
+CMD0023394,CLI002814,2024-06-03 07:47:14,site_web,mobile,G20,Djerba Houmt Souk,ENT03,,,carte_bancaire,1,1,24.9,0.0,7.0,31.9,livree,,,False
+CMD0023395,CLI004830,2024-06-03 08:12:44,site_web,mobile,G02,Raoued,ENT01,,,portefeuille_mobile,2,4,247.6,0.0,0.0,247.6,livree,,,False
+CMD0023396,CLI001007,2024-06-03 09:00:33,application_mobile,mobile,G18,Regueb,,,,portefeuille_mobile,4,6,141.4,0.0,7.0,148.4,paiement_echoue,,,False
+CMD0023397,CLI005610,2024-06-03 09:46:09,reseaux_sociaux,mobile,G03,Mégrine,ENT01,,,paiement_a_la_livraison,2,2,419.8,0.0,0.0,419.8,livree,,,False
+CMD0023398,CLI005032,2024-06-03 10:38:35,application_mobile,mobile,G16,Haffouz,ENT02,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0023399,CLI007351,2024-06-03 10:42:53,application_mobile,mobile,G16,Kairouan,ENT02,,,paiement_a_la_livraison,1,2,93.8,0.0,7.0,100.8,livraison_echouee,,,True
+CMD0023400,CLI003893,2024-06-03 11:06:06,,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,3,4,3292.6,0.0,0.0,3292.6,livree,,,False
+CMD0023401,CLI005258,2024-06-03 11:18:52,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,2,2,103.8,0.0,7.0,110.8,livraison_echouee,,,False
+CMD0023402,CLI004809,2024-06-03 11:20:19,application_mobile,mobile,G01,Le Bardo,ENT01,,,carte_prepayee,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0023403,CLI005194,2024-06-03 11:58:16,application_mobile,mobile,G13,Moknine,ENT02,,,portefeuille_mobile,1,1,2018.9,0.0,0.0,2018.9,livree,,,False
+CMD0023404,CLI006541,2024-06-03 12:25:13,application_mobile,mobile,G08,Béja,ENT01,,,carte_bancaire,2,2,347.8,0.0,0.0,347.8,livree,,,False
+CMD0023405,CLI007222,2024-06-03 12:32:32,site_web,ordinateur,G01,La Marsa,ENT01,,,carte_bancaire,1,1,277.9,0.0,0.0,277.9,annulee,annulation_client,2024-06-03 15:49:46,False
+CMD0023406,CLI003188,2024-06-03 12:33:41,site_web,mobile,G18,Sidi Bouzid,ENT02,,,carte_bancaire,1,1,116.9,0.0,7.0,123.9,livree,,,False
+CMD0023407,CLI002498,2024-06-03 12:36:43,site_web,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,1,36.9,0.0,7.0,43.9,livree,,,False
+CMD0023408,CLI006393,2024-06-03 12:40:41,site_web,mobile,G21,Tataouine,ENT03,,,carte_bancaire,3,16,921.4,0.0,0.0,921.4,livree,,,False
+CMD0023409,CLI005438,2024-06-03 12:57:55,application_mobile,mobile,G07,Menzel Bourguiba,ENT01,,,paiement_a_la_livraison,1,1,27.9,0.0,7.0,34.9,livree,,,False
+CMD0023410,CLI006905,2024-06-03 13:45:16,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,79.9,0.0,7.0,86.9,retournee,,,False
+CMD0023411,CLI006124,2024-06-03 13:47:45,application_mobile,mobile,G07,Menzel Bourguiba,ENT01,,,carte_bancaire,1,1,21.9,0.0,7.0,28.9,livree,,,False
+CMD0023412,CLI005065,03/06/2024 14:10,application_mobile,mobile,G05,Nabeul,ENT01,,,paiement_a_la_livraison,1,1,7.9,0.0,7.0,14.9,retournee,,,False
+CMD0023413,CLI008105,2024-06-03 14:15:44,reseaux_sociaux,mobile,G14,El Jem,ENT02,,BIENVENUE10,paiement_a_la_livraison,4,6,778.4,30.0,0.0,748.4,livraison_echouee,,,True
+CMD0023414,CLI003497,2024-06-03 14:35:13,site_web,ordinateur,G07,Bizerte,ENT01,,,paiement_a_la_livraison,1,1,33.9,0.0,7.0,40.9,livree,,,False
+CMD0023415,CLI002901,2024-06-03 14:56:49,site_web,mobile,G10,Dahmani,ENT01,,,paiement_a_la_livraison,1,2,243.8,0.0,0.0,243.8,livree,,,False
+CMD0023416,CLI002240,2024-06-03 15:05:30,site_web,ordinateur,G14,Ksour Essef,ENT02,,,paiement_a_la_livraison,1,1,144.9,0.0,7.0,151.9,livree,,,False
+CMD0023417,CLI003952,2024-06-03 15:21:43,site_web,mobile,G08,Medjez el-Bab,ENT01,,,paiement_a_la_livraison,2,2,1639.8,0.0,0.0,1639.8,livree,,,False
+CMD0023418,CLI008101,2024-06-03 15:39:28,application_mobile,mobile,G20,Zarzis,ENT03,,BIENVENUE10,portefeuille_mobile,2,2,82.8,8.28,7.0,81.52,annulee,annulation_client,2024-06-04 04:52:13,True
+CMD0023419,CLI007608,2024-06-03 16:08:47,site_web,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,1,2,17.8,0.0,7.0,24.8,livree,,,False
+CMD0023420,CLI007318,2024-06-03 16:09:29,site_web,mobile,G18,Sidi Bouzid,ENT02,,,portefeuille_mobile,1,2,129.8,0.0,7.0,136.8,livree,,,False
+CMD0023421,CLI006640,2024-06-03 16:22:16,site_web,mobile,G01,Tunis,ENT01,,,portefeuille_mobile,4,6,2227.4,0.0,0.0,2227.4,partiellement_retournee,,,False
+CMD0023422,CLI005700,2024-06-03 17:02:08,site_web,ordinateur,G22,Redeyef,ENT03,,,paiement_a_la_livraison,1,1,174.9,0.0,0.0,174.9,livree,,,False
+CMD0023423,CLI001797,2024-06-03 17:57:08,application_mobile,mobile,G04,Den Den,ENT01,,,portefeuille_mobile,1,2,19.8,0.0,7.0,26.8,livree,,,False
+CMD0023424,CLI008102,2024-06-03 18:48:44,site_web,mobile,G04,Oued Ellil,ENT01,,BIENVENUE10,carte_bancaire,1,1,121.9,12.19,7.0,116.71,livree,,,True
+CMD0023425,CLI000566,2024-06-03 19:20:15,reseaux_sociaux,mobile,G22,Gafsa,ENT03,,,carte_bancaire,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0023426,CLI005376,03/06/2024 19:41,site_web,ordinateur,G18,Regueb,ENT02,,,portefeuille_mobile,4,6,880.4,0.0,0.0,880.4,livree,,,False
+CMD0023427,CLI007656,2024-06-03 19:47:46,application_mobile,mobile,G05,Kélibia,ENT01,,,carte_bancaire,1,1,34.9,0.0,7.0,41.9,livree,,,False
+CMD0023428,CLI006364,2024-06-03 20:09:22,site_web,ordinateur,G03,Mégrine,ENT01,,,carte_bancaire,1,1,193.9,0.0,0.0,193.9,livree,,,False
+CMD0023429,CLI003480,2024-06-03 20:15:46,site_web,mobile,G21,Ghomrassen,ENT03,,,paiement_a_la_livraison,1,1,577.9,0.0,0.0,577.9,livree,,,False
+CMD0023430,CLI003280,2024-06-03 20:31:11,site_web,ordinateur,G22,Métlaoui,ENT03,,,paiement_a_la_livraison,3,4,208.6,0.0,0.0,208.6,livree,,,False
+CMD0023431,CLI000771,2024-06-03 20:36:40,application_mobile,mobile,G17,Sbeïtla,ENT02,,,carte_bancaire,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0023432,CLI006670,2024-06-03 20:42:05,site_web,mobile,G03,Ben Arous,ENT01,,,carte_bancaire,1,1,20.9,0.0,7.0,27.9,livree,,,False
+CMD0023433,CLI005555,2024-06-03 21:02:12,site_web,mobile,G16,Kairouan,ENT02,,,portefeuille_mobile,3,3,493.7,0.0,0.0,493.7,livree,,,False
+CMD0023434,CLI006097,2024-06-03 21:07:04,application_mobile,mobile,G06,El Fahs,ENT01,,,carte_prepayee,1,1,404.9,0.0,0.0,404.9,livree,,,False
+CMD0023435,CLI004347,2024-06-03 21:33:09,site_web,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,3,3,277.7,0.0,0.0,277.7,livree,,,False
+CMD0023436,CLI001475,2024-06-03 21:38:07,application_mobile,mobile,G19,El Hamma,ENT03,,,paiement_a_la_livraison,1,1,260.9,0.0,0.0,260.9,livraison_echouee,,,False
+CMD0023437,CLI004811,2024-06-03 22:28:44,site_web,ordinateur,G14,Mahdia,ENT02,,,paiement_a_la_livraison,1,1,28.9,0.0,7.0,35.9,livree,,,False
+CMD0023438,CLI000449,2024-06-03 22:50:55,reseaux_sociaux,mobile,G19,Gabès,ENT03,,,paiement_a_la_livraison,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0023439,CLI006528,2024-06-03 22:53:13,application_mobile,mobile,G20,Djerba Houmt Souk,ENT03,,,paiement_a_la_livraison,1,1,95.9,0.0,7.0,102.9,livree,,,False
+CMD0023440,CLI003854,2024-06-03 23:40:12,reseaux_sociaux,mobile,G22,Métlaoui,ENT03,,,paiement_a_la_livraison,2,2,71.8,0.0,7.0,78.8,livree,,,False
+CMD0023441,CLI007499,2024-06-04 02:14:27,site_web,mobile,G13,Monastir,ENT02,,,paiement_a_la_livraison,2,3,86.7,0.0,7.0,93.7,livree,,,False
+CMD0023442,CLI006723,2024-06-04 03:11:13,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,2,3,105.7,0.0,7.0,112.7,livree,,,False
+CMD0023443,CLI008112,2024-06-04 08:00:54,,ordinateur,G03,Mégrine,ENT01,,,carte_bancaire,1,1,129.9,0.0,7.0,136.9,livree,,,True
+CMD0023444,CLI006661,2024-06-04 08:30:53,application_mobile,mobile,G05,Nabeul,ENT01,,,paiement_a_la_livraison,2,2,168.8,0.0,0.0,168.8,livree,,,False
+CMD0023445,CLI004327,2024-06-04 08:43:44,site_web,mobile,G15,Sakiet Eddaïer,ENT03,,,carte_bancaire,1,2,243.8,0.0,0.0,243.8,livree,,,False
+CMD0023446,CLI006720,2024-06-04 10:04:15,site_web,mobile,G24,Kébili,ENT03,,,carte_bancaire,3,3,346.7,0.0,0.0,346.7,partiellement_retournee,,,False
+CMD0023447,CLI005696,2024-06-04 10:24:38,application_mobile,mobile,G07,Mateur,ENT01,,,paiement_a_la_livraison,3,3,294.7,0.0,0.0,294.7,livree,,,False
+CMD0023448,CLI004815,2024-06-04 12:16:36,,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,4,4,135.6,0.0,7.0,142.6,livree,,,False
+CMD0023449,CLI007365,2024-06-04 12:47:51,application_mobile,mobile,G13,Ksar Hellal,ENT02,,,portefeuille_mobile,5,5,302.5,0.0,0.0,302.5,partiellement_retournee,,,False
+CMD0023450,CLI005608,2024-06-04 13:14:12,application_mobile,mobile,G16,Kairouan,ENT02,,,carte_bancaire,6,8,528.2,0.0,0.0,528.2,livree,,,False
+CMD0023451,CLI005675,2024-06-04 13:19:17,application_mobile,mobile,G02,Ariana Ville,ENT01,,,carte_bancaire,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0023452,CLI003951,04/06/2024 13:20,site_web,mobile,G22,Gafsa,ENT03,,,carte_bancaire,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0023453,CLI006670,04/06/2024 13:43,site_web,ordinateur,G03,Mégrine,ENT01,,,portefeuille_mobile,1,1,63.9,0.0,7.0,70.9,retournee,,,False
+CMD0023454,CLI008109,2024-06-04 13:54:14,site_web,mobile,G01,Tunis,ENT01,,,carte_prepayee,1,1,17.9,0.0,7.0,24.9,livree,,,True
+CMD0023455,CLI006670,2024-06-04 14:09:28,application_mobile,mobile,G03,Mégrine,ENT01,,,paiement_a_la_livraison,1,2,109.8,0.0,7.0,116.8,livree,,,False
+CMD0023456,CLI007568,2024-06-04 15:03:59,application_mobile,mobile,G01,Tunis,ENT01,,,paiement_a_la_livraison,1,1,35.9,0.0,7.0,42.9,livree,,,False
+CMD0023457,CLI008113,2024-06-04 15:18:17,application_mobile,mobile,G14,El Jem,ENT02,,,portefeuille_mobile,1,1,39.9,0.0,7.0,46.9,livree,,,True
+CMD0023458,CLI006477,2024-06-04 15:21:28,site_web,mobile,G01,La Marsa,ENT01,,,paiement_a_la_livraison,2,2,257.8,0.0,0.0,257.8,annulee,annulation_client,2024-06-04 19:34:06,False
+CMD0023459,CLI007016,2024-06-04 15:34:49,site_web,ordinateur,G05,Nabeul,ENT01,,,paiement_a_la_livraison,1,1,38.9,0.0,7.0,45.9,annulee,annulation_client,2024-06-04 21:00:29,False
+CMD0023460,CLI004812,2024-06-04 15:56:48,site_web,mobile,G15,Sakiet Eddaïer,ENT03,,,carte_bancaire,2,2,326.8,0.0,0.0,326.8,livree,,,False
+CMD0023461,CLI007916,2024-06-04 16:02:34,application_mobile,mobile,G05,Hammamet,ENT01,,,carte_bancaire,1,1,103.9,0.0,7.0,110.9,livree,,,False
+CMD0023462,CLI003018,2024-06-04 16:02:55,site_web,ordinateur,G09,Jendouba,ENT01,,,carte_bancaire,2,2,67.8,0.0,7.0,74.8,livree,,,False
+CMD0023463,CLI002812,2024-06-04 16:50:13,site_web,mobile,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,1,3,20.7,0.0,7.0,27.7,livree,,,False
+CMD0023464,CLI005770,04/06/2024 17:06,reseaux_sociaux,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,2,2,49.8,0.0,7.0,56.8,livree,,,False
+CMD0023465,CLI007201,2024-06-04 17:11:17,reseaux_sociaux,mobile,G01,Le Bardo,ENT01,,,carte_prepayee,1,2,69.8,0.0,7.0,76.8,livree,,,False
+CMD0023466,CLI005426,2024-06-04 19:01:38,,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,1,52.9,0.0,7.0,59.9,livree,,,False
+CMD0023467,CLI008111,2024-06-04 19:07:09,site_web,ordinateur,G12,Kalâa Kebira,ENT02,,,carte_bancaire,1,1,7.9,0.0,7.0,14.9,livree,,,True
+CMD0023468,CLI005784,2024-06-04 19:17:38,application_mobile,mobile,G09,Jendouba,ENT01,,,carte_bancaire,4,6,331.4,0.0,0.0,331.4,livrée,,,False
+CMD0023469,CLI006806,2024-06-04 19:27:08,site_web,mobile,G08,Medjez el-Bab,ENT01,,,portefeuille_mobile,2,2,93.8,0.0,7.0,100.8,partiellement_retournee,,,False
+CMD0023470,CLI007568,2024-06-04 19:54:25,application_mobile,mobile,G01,La Marsa,ENT01,,,carte_bancaire,4,4,752.6,0.0,0.0,752.6,partiellement_retournee,,,False
+CMD0023471,CLI006782,2024-06-04 20:04:17,reseaux_sociaux,mobile,G01,Carthage,ENT01,,,carte_prepayee,1,1,133.9,0.0,7.0,140.9,livree,,,False
+CMD0023472,CLI002470,2024-06-04 20:24:54,site_web,mobile,G01,Tunis,ENT02,,,carte_prepayee,5,7,608.3,0.0,0.0,608.3,livree,,,False
+CMD0023473,CLI007562,2024-06-04 22:04:25,reseaux_sociaux,mobile,G01,Le Bardo,ENT01,,,carte_prepayee,1,1,608.9,0.0,0.0,608.9,livree,,,False
+CMD0023474,CLI007848,2024-06-04 22:28:15,application_mobile,mobile,G12,Kalâa Kebira,ENT01,,,virement,6,29,3037.1,0.0,0.0,3037.1,annulee,annulation_client,2024-06-05 01:46:24,False
+CMD0023475,CLI003280,2024-06-04 22:40:31,site_web,tablette,G22,Gafsa,ENT03,,,carte_bancaire,4,4,3295.6,0.0,0.0,3295.6,livree,,,False
+CMD0023476,CLI004932,04/06/2024 22:42,reseaux_sociaux,mobile,G13,Monastir,ENT01,,,carte_bancaire,3,27,920.3,0.0,0.0,920.3,livree,,,False
+CMD0023477,CLI002933,2024-06-04 22:56:38,application_mobile,mobile,G04,Den Den,ENT01,,,carte_prepayee,4,4,115.6,0.0,7.0,122.6,livree,,,False
+CMD0023478,CLI000196,2024-06-04 22:57:41,application_mobile,mobile,G02,La Soukra,ENT01,,,virement,5,15,917.5,0.0,0.0,917.5,livree,,,False
+CMD0023479,CLI007424,2024-06-04 23:05:27,reseaux_sociaux,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,36.9,0.0,7.0,43.9,livraison_echouee,,,False
+CMD0023480,CLI002099,2024-06-04 23:10:43,application_mobile,mobile,G17,Kasserine,ENT02,,,carte_bancaire,1,1,40.9,0.0,7.0,47.9,livree,,,False
+CMD0023481,CLI004664,2024-06-04 23:28:49,site_web,mobile,G03,Radès,ENT01,,,carte_bancaire,1,1,72.9,0.0,7.0,79.9,livree,,,False
+CMD0023482,CLI006229,2024-06-05 00:19:39,application_mobile,mobile,G05,Hammamet,ENT01,,,carte_bancaire,1,1,25.9,0.0,7.0,32.9,livree,,,False
+CMD0023483,CLI006875,2024-06-05 07:23:12,site_web,ordinateur,G16,Haffouz,ENT02,,,paiement_a_la_livraison,5,7,237.3,0.0,0.0,237.3,livree,,,False
+CMD0023484,CLI005874,2024-06-05 07:57:42,reseaux_sociaux,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,68.9,0.0,7.0,75.9,livree,,,True
+CMD0023485,CLI006303,2024-06-05 09:26:24,site_web,ordinateur,G05,Hammamet,ENT01,,,carte_prepayee,1,1,106.9,0.0,7.0,113.9,livree,,,False
+CMD0023486,CLI008117,2024-06-05 09:45:03,reseaux_sociaux,mobile,G14,Ksour Essef,ENT02,,,carte_bancaire,2,2,433.8,0.0,0.0,433.8,livree,,,True
+CMD0023487,CLI007455,2024-06-05 10:09:48,application_mobile,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0023488,CLI007763,2024-06-05 10:11:45,application_mobile,mobile,G03,Ezzahra,ENT01,,,paiement_a_la_livraison,6,9,767.1,0.0,0.0,767.1,livree,,,True
+CMD0023489,CLI003093,2024-06-05 10:35:59,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,2,2,100.8,0.0,7.0,107.8,livree,,,False
+CMD0023490,CLI007686,2024-06-05 10:53:30,application_mobile,mobile,G01,Le Bardo,ENT01,,,paiement_a_la_livraison,5,9,345.1,0.0,0.0,345.1,livraison_echouee,,,False
+CMD0023491,CLI008116,2024-06-05 11:24:21,application_mobile,mobile,G13,Moknine,ENT02,,,portefeuille_mobile,1,3,314.7,0.0,0.0,314.7,livree,,,True
+CMD0023492,CLI008106,2024-06-05 11:33:55,application_mobile,mobile,G10,Dahmani,ENT01,,,paiement_a_la_livraison,2,2,311.8,0.0,0.0,311.8,livree,,,True
+CMD0023493,CLI007557,2024-06-05 11:40:07,application_mobile,mobile,G22,Redeyef,ENT03,,,carte_bancaire,1,1,72.9,0.0,7.0,79.9,livree,,,False
+CMD0023494,CLI008120,2024-06-05 11:40:36,site_web,ordinateur,G14,Mahdia,ENT02,,,portefeuille_mobile,1,1,142.9,0.0,7.0,149.9,livree,,,True
+CMD0023495,CLI005005,2024-06-05 11:55:31,site_web,ordinateur,G01,Carthage,ENT01,,,carte_bancaire,1,1,58.9,0.0,7.0,65.9,livraison_echouee,,,False
+CMD0023496,CLI004538,2024-06-05 12:05:41,application_mobile,mobile,G05,Hammamet,ENT01,,,paiement_a_la_livraison,2,3,225.7,0.0,0.0,225.7,partiellement_retournee,,,False
+CMD0023497,CLI007483,2024-06-05 12:50:10,site_web,ordinateur,G09,Jendouba,ENT01,,,paiement_a_la_livraison,1,2,357.8,0.0,0.0,357.8,partiellement_retournee,,,False
+CMD0023498,CLI005003,2024-06-05 14:40:59,application_mobile,mobile,G19,El Hamma,ENT03,,,paiement_a_la_livraison,1,1,7.9,0.0,7.0,14.9,livree,,,False
+CMD0023499,CLI008118,2024-06-05 15:24:28,site_web,mobile,G19,Gabès,ENT03,,,paiement_a_la_livraison,1,1,21.9,0.0,7.0,28.9,livree,,,True
+CMD0023500,CLI006970,2024-06-05 15:52:12,site_web,ordinateur,G15,Sfax,ENT03,,,paiement_a_la_livraison,4,6,149.4,0.0,7.0,156.4,livree,,,False
+CMD0023501,CLI006042,2024-06-05 16:17:22,application_mobile,mobile,G01,Le Bardo,ENT01,,,carte_bancaire,1,3,116.7,0.0,7.0,123.7,livree,,,False
+CMD0023502,CLI005364,2024-06-05 17:41:15,application_mobile,mobile,G01,Le Bardo,ENT01,,,paiement_a_la_livraison,1,1,333.9,0.0,0.0,333.9,livree,,,False
+CMD0023503,CLI005878,2024-06-05 17:50:33,site_web,mobile,G05,Nabeul,ENT01,,,portefeuille_mobile,1,4,87.6,0.0,7.0,94.6,livree,,,False
+CMD0023504,CLI004898,2024-06-05 18:11:02,application_mobile,mobile,G11,Makthar,ENT01,,,paiement_a_la_livraison,3,3,243.7,0.0,0.0,243.7,partiellement_retournee,,,False
+CMD0023505,CLI006933,2024-06-05 18:32:36,site_web,mobile,G15,Sfax,ENT03,,,carte_bancaire,1,1,112.9,0.0,7.0,119.9,livree,,,False
+CMD0023506,CLI007328,2024-06-05 19:02:27,site_web,mobile,G23,Nefta,ENT03,,,paiement_a_la_livraison,1,1,57.9,0.0,7.0,64.9,annulee,annulation_client,2024-06-06 03:39:21,False
+CMD0023507,CLI003738,2024-06-05 19:05:27,reseaux_sociaux,mobile,G13,Ksar Hellal,ENT02,,,carte_bancaire,1,2,47.8,0.0,7.0,54.8,livree,,,False
+CMD0023508,CLI007429,2024-06-05 19:11:15,site_web,ordinateur,G07,Mateur,ENT01,,,carte_bancaire,2,2,213.8,0.0,0.0,213.8,livree,,,False
+CMD0023509,CLI004433,2024-06-05 19:39:47,site_web,ordinateur,G04,Oued Ellil,ENT01,,,paiement_a_la_livraison,2,2,169.8,0.0,0.0,169.8,livraison_echouee,,,False
+CMD0023510,CLI007374,2024-06-05 19:49:37,site_web,tablette,G02,La Soukra,ENT01,,,carte_bancaire,1,1,48.9,0.0,7.0,55.9,livree,,,False
+CMD0023511,CLI007458,2024-06-05 20:38:46,site_web,mobile,G09,Aïn Draham,ENT01,,,paiement_a_la_livraison,1,1,56.9,0.0,7.0,63.9,livree,,,False
+CMD0023512,CLI004286,2024-06-05 20:43:59,site_web,ordinateur,G13,Monastir,ENT02,,,paiement_a_la_livraison,1,2,31.8,0.0,7.0,38.8,livree,,,False
+CMD0023513,CLI003341,2024-06-05 21:05:20,site_web,ordinateur,G12,Kalâa Kebira,ENT02,,,paiement_a_la_livraison,1,1,34.9,0.0,7.0,41.9,retournee,,,False
+CMD0023514,CLI001424,2024-06-05 21:12:00,site_web,mobile,G04,Manouba,ENT01,,,paiement_a_la_livraison,3,4,271.6,0.0,0.0,271.6,livree,,,False
+CMD0023515,CLI007935,2024-06-05 21:13:03,application_mobile,mobile,G07,Bizerte,ENT01,,,carte_prepayee,3,3,226.7,0.0,0.0,226.7,livree,,,False
+CMD0023516,CLI005965,2024-06-05 21:44:23,site_web,ordinateur,G03,Mégrine,ENT01,,,paiement_a_la_livraison,1,1,244.9,0.0,0.0,244.9,livree,,,False
+CMD0023517,CLI008115,2024-06-05 21:47:30,reseaux_sociaux,mobile,G22,Gafsa,ENT03,,BIENVENUE10,paiement_a_la_livraison,1,2,243.8,24.38,0.0,219.42,livree,,,True
+CMD0023518,CLI006334,2024-06-05 22:44:57,reseaux_sociaux,mobile,G18,Sidi Bouzid,ENT02,,,paiement_a_la_livraison,2,2,138.8,0.0,7.0,145.8,livree,,,False
+CMD0023519,CLI000098,2024-06-05 22:48:10,site_web,mobile,G05,Kélibia,ENT01,,,carte_prepayee,1,1,84.9,0.0,7.0,91.9,livree,,,False
+CMD0023520,CLI008119,2024-06-05 22:50:34,site_web,mobile,G22,Redeyef,ENT03,,,carte_bancaire,1,1,42.9,0.0,7.0,49.9,livree,,,True
+CMD0023521,CLI006133,2024-06-05 22:54:42,site_web,ordinateur,G19,El Hamma,ENT01,,,carte_bancaire,1,3,59.7,0.0,7.0,66.7,livree,,,False
+CMD0023522,CLI003392,2024-06-05 23:23:53,application_mobile,mobile,G13,Monastir,ENT02,,,portefeuille_mobile,2,2,39.8,0.0,7.0,46.8,livree,,,False
+CMD0023523,CLI005078,2024-06-06 01:23:15,site_web,ordinateur,G23,Tozeur,ENT01,,,portefeuille_mobile,3,4,1308.6,0.0,0.0,1308.6,partiellement_retournee,,,False
+CMD0023524,CLI008126,2024-06-06 08:01:44,reseaux_sociaux,mobile,G19,El Hamma,ENT03,,,carte_prepayee,1,1,152.9,0.0,0.0,152.9,retournee,,,True
+CMD0023525,CLI004538,2024-06-06 08:18:39,,mobile,G05,Hammamet,ENT01,,,paiement_a_la_livraison,1,1,286.9,0.0,0.0,286.9,livree,,,False
+CMD0023526,CLI002243,2024-06-06 08:24:48,application_mobile,mobile,G11,Makthar,ENT01,,,portefeuille_mobile,1,3,92.7,0.0,7.0,99.7,livree,,,False
+CMD0023527,CLI007077,2024-06-06 09:29:12,application_mobile,mobile,G14,El Jem,ENT02,,,carte_prepayee,1,1,15.9,0.0,7.0,22.9,livree,,,False
+CMD0023528,CLI002766,2024-06-06 09:58:26,application_mobile,mobile,G02,Ariana Ville,ENT01,,,carte_bancaire,2,2,491.8,0.0,0.0,491.8,livree,,,False
+CMD0023529,CLI006905,2024-06-06 09:58:55,site_web,ordinateur,G10,Le Kef,ENT01,,,carte_bancaire,1,1,594.9,0.0,0.0,594.9,livree,,,False
+CMD0023530,CLI005579,2024-06-06 10:41:52,application_mobile,mobile,G12,Kalâa Kebira,ENT02,,,carte_bancaire,1,1,19.9,0.0,7.0,26.9,livree,,,False
+CMD0023531,CLI001153,2024-06-06 10:55:59,site_web,ordinateur,G01,Le Bardo,ENT01,,,paiement_a_la_livraison,2,3,184.7,0.0,0.0,184.7,annulee,annulation_client,2024-06-06 11:10:02,False
+CMD0023532,CLI005878,2024-06-06 11:24:16,site_web,ordinateur,G02,Ariana Ville,ENT01,,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0023533,CLI001697,2024-06-06 12:23:33,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,3,3,177.7,0.0,0.0,177.7,livree,,,False
+CMD0023534,CLI007656,2024-06-06 12:26:06,site_web,ordinateur,G05,Hammamet,ENT01,,,paiement_a_la_livraison,4,5,272.5,0.0,0.0,272.5,livree,,,False
+CMD0023535,CLI003882,2024-06-06 12:50:23,reseaux_sociaux,mobile,G15,Sfax,ENT01,,,virement,6,49,1918.1,0.0,0.0,1918.1,livree,,,False
+CMD0023536,CLI006741,2024-06-06 12:53:30,site_web,ordinateur,G05,Nabeul,ENT01,,,carte_prepayee,2,3,327.7,0.0,0.0,327.7,livree,,,False
+CMD0023537,CLI007768,2024-06-06 13:28:32,application_mobile,mobile,G01,La Marsa,ENT01,,,carte_bancaire,1,1,38.9,0.0,7.0,45.9,livree,,,False
+CMD0023538,CLI005556,2024-06-06 13:46:36,site_web,tablette,G06,El Fahs,ENT01,,,paiement_a_la_livraison,1,1,172.9,0.0,0.0,172.9,livraison_echouee,,,False
+CMD0023539,CLI001256,2024-06-06 14:38:48,reseaux_sociaux,mobile,G08,Béja,ENT03,,,carte_bancaire,2,24,1074.6,0.0,0.0,1074.6,livree,,,False
+CMD0023540,CLI002445,2024-06-06 14:44:59,application_mobile,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,2,5,428.5,0.0,0.0,428.5,livree,,,False
+CMD0023541,CLI000518,2024-06-06 14:59:44,site_web,mobile,G02,La Soukra,ENT03,,,virement,2,26,915.4,0.0,0.0,915.4,livree,,,False
+CMD0023542,CLI001198,2024-06-06 15:41:42,reseaux_sociaux,mobile,G24,Douz,ENT03,,,paiement_a_la_livraison,3,3,220.7,0.0,0.0,220.7,livree,,,False
+CMD0023543,CLI008127,2024-06-06 16:16:27,application_mobile,mobile,G02,Ariana Ville,ENT01,,BIENVENUE10,carte_bancaire,4,4,550.6,30.0,0.0,520.6,livree,,,True
+CMD0023544,CLI008123,2024-06-06 16:58:21,reseaux_sociaux,mobile,G04,Manouba,ENT01,,,paiement_a_la_livraison,2,2,2930.8,0.0,0.0,2930.8,livree,,,True
+CMD0023545,CLI006862,2024-06-06 17:02:36,site_web,ordinateur,G17,Sbeïtla,ENT02,,,paiement_a_la_livraison,4,4,2324.6,0.0,0.0,2324.6,livree,,,False
+CMD0023546,CLI004575,2024-06-06 17:08:59,site_web,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,3,6,241.4,0.0,0.0,241.4,livree,,,False
+CMD0023547,CLI003635,2024-06-06 17:29:11,application_mobile,mobile,G12,Hammam Sousse,ENT02,,,carte_bancaire,1,1,58.9,0.0,7.0,65.9,livree,,,True
+CMD0023548,CLI002814,2024-06-06 17:49:40,site_web,mobile,G05,Nabeul,ENT01,,,carte_bancaire,3,3,141.7,0.0,7.0,148.7,livree,,,False
+CMD0023549,CLI007016,2024-06-06 18:37:23,site_web,mobile,G05,Kélibia,ENT01,,,carte_bancaire,1,1,106.9,0.0,7.0,113.9,livree,,,False
+CMD0023550,CLI006013,2024-06-06 19:05:57,site_web,mobile,G12,Kalâa Kebira,ENT02,,,carte_bancaire,2,2,149.8,0.0,7.0,156.8,partiellement_retournee,,,False
+CMD0023551,CLI003280,2024-06-06 19:28:22,application_mobile,mobile,G22,Métlaoui,ENT03,,,carte_bancaire,1,1,125.9,0.0,7.0,132.9,livree,,,False
+CMD0023552,CLI003984,2024-06-06 19:58:42,application_mobile,mobile,G04,Den Den,ENT01,,,paiement_a_la_livraison,2,2,96.8,0.0,7.0,103.8,partiellement_retournee,,,False
+CMD0023553,CLI008124,2024-06-06 20:19:58,application_mobile,mobile,G12,Kalâa Kebira,,,BIENVENUE10,carte_bancaire,1,1,98.9,9.89,7.0,96.01,paiement_echoue,,,True
+CMD0023554,CLI007062,2024-06-06 20:32:13,site_web,mobile,G07,Mateur,ENT01,,,carte_bancaire,1,2,209.8,0.0,0.0,209.8,livree,,,False
+CMD0023555,CLI002265,2024-06-06 20:36:17,site_web,tablette,G18,Regueb,ENT01,,,virement,1,15,358.5,0.0,0.0,358.5,livree,,,False
+CMD0023556,CLI007556,2024-06-06 20:38:50,site_web,ordinateur,G22,Redeyef,ENT03,,,paiement_a_la_livraison,1,2,31.8,0.0,7.0,38.8,livree,,,False
+CMD0023557,CLI008121,2024-06-06 20:41:48,application_mobile,mobile,G19,Gabès,ENT03,,,paiement_a_la_livraison,3,3,295.7,0.0,0.0,295.7,livree,,,True
+CMD0023558,CLI004769,2024-06-06 21:16:05,application_mobile,mobile,G15,Sfax,ENT01,,,virement,4,38,872.2,0.0,0.0,872.2,livree,,,False
+CMD0023559,CLI007630,2024-06-06 21:41:22,application_mobile,mobile,G09,Aïn Draham,ENT01,,,paiement_a_la_livraison,2,2,99.8,0.0,7.0,106.8,livree,,,True
+CMD0023560,CLI008049,2024-06-06 23:52:06,site_web,ordinateur,G12,Hammam Sousse,ENT02,,,paiement_a_la_livraison,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0023561,CLI004347,2024-06-07 09:45:21,site_web,mobile,G01,La Marsa,ENT01,,,paiement_a_la_livraison,2,2,88.8,0.0,7.0,95.8,partiellement_retournee,,,False
+CMD0023562,CLI007731,2024-06-07 10:14:46,site_web,tablette,G13,Moknine,ENT02,,,paiement_a_la_livraison,3,6,156.4,0.0,0.0,156.4,partiellement_retournee,,,False
+CMD0023563,CLI007397,2024-06-07 10:16:18,reseaux_sociaux,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,2,2,156.8,0.0,0.0,156.8,livree,,,False
+CMD0023564,CLI005301,2024-06-07 10:23:50,application_mobile,mobile,G18,Sidi Bouzid,ENT02,,,paiement_a_la_livraison,1,1,55.9,0.0,7.0,62.9,livree,,,False
+CMD0023565,CLI003447,2024-06-07 10:54:40,site_web,tablette,G15,Sfax,ENT03,,,carte_bancaire,1,1,38.9,0.0,7.0,45.9,livree,,,False
+CMD0023566,CLI006396,2024-06-07 11:16:53,site_web,mobile,G04,Manouba,ENT01,,,carte_bancaire,1,1,63.9,0.0,7.0,70.9,livree,,,False
+CMD0023567,CLI006891,2024-06-07 11:21:46,site_web,ordinateur,G15,Sfax,ENT03,,,paiement_a_la_livraison,3,3,267.7,0.0,0.0,267.7,partiellement_retournee,,,False
+CMD0023568,CLI000441,2024-06-07 11:27:24,site_web,ordinateur,G14,Mahdia,ENT02,,,carte_prepayee,2,2,88.8,0.0,7.0,95.8,livree,,,False
+CMD0023569,CLI006191,2024-06-07 13:21:16,site_web,ordinateur,G08,Medjez el-Bab,ENT01,,,paiement_a_la_livraison,2,2,90.8,0.0,7.0,97.8,livree,,,False
+CMD0023570,CLI008129,2024-06-07 14:07:59,application_mobile,mobile,G05,Nabeul,ENT01,,,carte_prepayee,2,2,123.8,0.0,7.0,130.8,livree,,,True
+CMD0023571,CLI004971,2024-06-07 14:32:50,site_web,ordinateur,G10,Le Kef,ENT01,,,paiement_a_la_livraison,1,1,43.9,0.0,7.0,50.9,livree,,,False
+CMD0023572,CLI003196,2024-06-07 14:36:18,application_mobile,mobile,G13,Moknine,ENT02,,,carte_prepayee,1,1,194.9,0.0,0.0,194.9,livree,,,False
+CMD0023573,CLI003514,2024-06-07 14:47:30,site_web,mobile,G02,Raoued,ENT01,,,carte_bancaire,1,1,2191.9,0.0,0.0,2191.9,livree,,,False
+CMD0023574,CLI002753,2024-06-07 14:55:54,site_web,ordinateur,G05,Kélibia,ENT01,,,portefeuille_mobile,4,5,155.5,0.0,0.0,155.5,livree,,,False
+CMD0023575,CLI003648,2024-06-07 15:05:50,site_web,mobile,G15,Sakiet Eddaïer,ENT01,,,carte_bancaire,4,22,416.8,0.0,0.0,416.8,livree,,,False
+CMD0023576,CLI008130,2024-06-07 15:30:36,application_mobile,mobile,G20,Médenine,ENT03,,,paiement_a_la_livraison,1,1,125.9,0.0,7.0,132.9,livree,,,True
+CMD0023577,CLI006695,2024-06-07 15:31:00,site_web,ordinateur,G24,Kébili,ENT03,,,paiement_a_la_livraison,1,1,237.9,0.0,0.0,237.9,livree,,,False
+CMD0023578,CLI005054,07/06/2024 16:00,site_web,ordinateur,G02,Raoued,ENT01,,,paiement_a_la_livraison,1,1,40.9,0.0,7.0,47.9,livree,,,False
+CMD0023579,CLI007242,2024-06-07 16:01:33,site_web,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,157.9,0.0,0.0,157.9,livree,,,False
+CMD0023580,CLI006856,2024-06-07 16:02:57,site_web,mobile,G13,Ksar Hellal,ENT02,,,portefeuille_mobile,2,3,53.7,0.0,7.0,60.7,livree,,,False
+CMD0023581,CLI007393,2024-06-07 16:14:48,reseaux_sociaux,mobile,G08,Béja,ENT01,,,carte_bancaire,1,3,47.7,0.0,7.0,54.7,livree,,,False
+CMD0023582,CLI002447,2024-06-07 16:26:10,reseaux_sociaux,mobile,G12,Kalâa Kebira,ENT02,,,portefeuille_mobile,2,2,136.8,0.0,7.0,143.8,livree,,,False
+CMD0023583,CLI006133,2024-06-07 16:26:50,reseaux_sociaux,mobile,G19,Gabès,ENT03,,,paiement_a_la_livraison,1,1,396.9,0.0,0.0,396.9,livree,,,False
+CMD0023584,CLI007265,2024-06-07 16:53:50,application_mobile,mobile,G04,Den Den,ENT01,,,paiement_a_la_livraison,3,4,226.6,0.0,0.0,226.6,livree,,,True
+CMD0023585,CLI007330,2024-06-07 17:34:01,site_web,ordinateur,G20,Médenine,ENT03,,,paiement_a_la_livraison,1,2,697.8,0.0,0.0,697.8,livree,,,False
+CMD0023586,CLI007219,2024-06-07 18:11:33,site_web,ordinateur,G11,Siliana,ENT01,,,paiement_a_la_livraison,1,1,28.9,0.0,7.0,35.9,livree,,,False
+CMD0023587,CLI008119,2024-06-07 18:26:19,site_web,mobile,G22,Redeyef,ENT03,,,carte_bancaire,1,1,25.9,0.0,7.0,32.9,livree,,,False
+CMD0023588,CLI004667,2024-06-07 19:06:28,application_mobile,mobile,G22,Gafsa,ENT03,,,paiement_a_la_livraison,1,1,125.9,0.0,7.0,132.9,livree,,,False
+CMD0023589,CLI005541,2024-06-07 19:29:38,site_web,mobile,G15,Sakiet Eddaïer,ENT03,,,carte_prepayee,3,4,301.6,0.0,0.0,301.6,livree,,,False
+CMD0023590,CLI005418,2024-06-07 19:35:06,site_web,ordinateur,G03,Radès,ENT01,,,paiement_a_la_livraison,5,7,348.3,0.0,0.0,348.3,livree,,,False
+CMD0023591,CLI006088,2024-06-07 20:03:29,site_web,mobile,G12,Msaken,ENT02,,,carte_bancaire,1,1,144.9,0.0,7.0,151.9,livree,,,False
+CMD0023592,CLI004982,07/06/2024 20:12,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,,,carte_bancaire,1,2,603.8,0.0,0.0,603.8,livree,,,False
+CMD0023593,CLI005701,2024-06-07 20:12:30,site_web,mobile,G10,Le Kef,ENT01,,,paiement_a_la_livraison,2,2,199.8,0.0,0.0,199.8,livree,,,False
+CMD0023594,CLI004646,2024-06-07 20:41:25,application_mobile,mobile,G11,Makthar,ENT01,,,paiement_a_la_livraison,1,1,38.9,0.0,7.0,45.9,livree,,,False
+CMD0023595,CLI003605,2024-06-07 20:42:30,application_mobile,mobile,G03,Mégrine,ENT01,,,paiement_a_la_livraison,1,1,38.9,0.0,7.0,45.9,livree,,,False
+CMD0023596,CLI001429,2024-06-07 21:33:13,application_mobile,mobile,G07,Mateur,ENT01,,,carte_prepayee,2,2,48.8,0.0,7.0,55.8,livree,,,False
+CMD0023597,CLI007278,2024-06-07 23:47:26,site_web,ordinateur,G01,Le Bardo,ENT01,,,portefeuille_mobile,1,1,33.9,0.0,7.0,40.9,livrée,,,False
+CMD0023598,CLI008134,2024-06-08 01:31:59,site_web,ordinateur,G11,Makthar,ENT01,,BIENVENUE10,paiement_a_la_livraison,3,5,280.5,28.05,0.0,252.45,livree,,,True
+CMD0023599,CLI006775,2024-06-08 06:14:28,site_web,mobile,G05,Nabeul,ENT01,,,paiement_a_la_livraison,2,2,48.8,0.0,7.0,55.8,livree,,,False
+CMD0023600,CLI004793,2024-06-08 10:08:27,application_mobile,mobile,G08,Béja,ENT01,,,paiement_a_la_livraison,4,4,440.6,0.0,0.0,440.6,livree,,,False
+CMD0023601,CLI008144,2024-06-08 10:30:32,site_web,mobile,G02,La Soukra,ENT01,,,paiement_a_la_livraison,1,1,42.9,0.0,7.0,49.9,livree,,,True
+CMD0023602,CLI007891,2024-06-08 10:44:19,site_web,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,3,29.7,0.0,7.0,36.7,livree,,,False
+CMD0023603,CLI007271,2024-06-08 10:46:36,application_mobile,mobile,G04,Den Den,ENT01,,,paiement_a_la_livraison,1,1,462.9,0.0,0.0,462.9,livree,,,False
+CMD0023604,CLI007574,2024-06-08 10:51:42,application_mobile,mobile,G03,Mégrine,ENT02,,,portefeuille_mobile,1,1,114.9,0.0,7.0,121.9,livree,,,True
+CMD0023605,CLI005970,2024-06-08 11:01:23,application_mobile,mobile,G12,Sousse,ENT02,,,carte_bancaire,1,1,29.9,0.0,7.0,36.9,retournee,,,False
+CMD0023606,CLI007953,2024-06-08 11:14:45,application_mobile,mobile,G03,Ezzahra,ENT01,,,carte_prepayee,1,2,29.8,0.0,7.0,36.8,livree,,,False
+CMD0023607,CLI004385,2024-06-08 11:19:44,site_web,mobile,G01,La Marsa,ENT01,,,paiement_a_la_livraison,2,2,335.8,0.0,0.0,335.8,livree,,,False
+CMD0023608,CLI007903,2024-06-08 11:38:17,site_web,tablette,G15,Sakiet Eddaïer,ENT03,,BIENVENUE10,paiement_a_la_livraison,1,1,88.9,8.89,7.0,87.01,livree,,,True
+CMD0023609,CLI001402,2024-06-08 12:30:43,site_web,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,1,1,88.9,0.0,7.0,95.9,livree,,,False
+CMD0023610,CLI008140,2024-06-08 12:36:00,application_mobile,mobile,G17,Sbeïtla,ENT02,,,carte_bancaire,1,1,2018.9,0.0,0.0,2018.9,livree,,,True
+CMD0023611,CLI006229,2024-06-08 13:00:09,application_mobile,mobile,G16,Kairouan,ENT02,,,paiement_a_la_livraison,1,1,68.9,0.0,7.0,75.9,annulee,annulation_client,2024-06-08 13:15:08,False
+CMD0023612,CLI001342,2024-06-08 13:02:33,site_web,tablette,G15,Sakiet Ezzit,ENT03,,,carte_bancaire,1,1,51.9,0.0,7.0,58.9,Livree,,,False
+CMD0023613,CLI002991,08/06/2024 13:17,application_mobile,mobile,G12,Kalâa Kebira,ENT02,,,carte_prepayee,1,1,114.9,0.0,7.0,121.9,livree,,,False
+CMD0023614,CLI008146,2024-06-08 13:58:42,site_web,mobile,G03,Ezzahra,ENT01,,BIENVENUE10,paiement_a_la_livraison,3,3,78.7,7.87,7.0,77.83,livree,,,True
+CMD0023615,CLI004973,2024-06-08 14:07:42,application_mobile,mobile,G04,Oued Ellil,ENT03,,,portefeuille_mobile,5,7,250.3,0.0,0.0,250.3,livree,,,False
+CMD0023616,CLI005874,2024-06-08 14:35:13,site_web,mobile,G15,Sfax,ENT03,,,carte_bancaire,1,1,84.9,0.0,7.0,91.9,livree,,,False
+CMD0023617,CLI007384,2024-06-08 15:00:24,application_mobile,mobile,G20,Médenine,ENT03,,,paiement_a_la_livraison,2,2,52.8,0.0,7.0,59.8,livree,,,False
+CMD0023618,CLI001552,2024-06-08 15:11:25,application_mobile,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,1,2,809.8,0.0,0.0,809.8,livree,,,False
+CMD0023619,CLI007781,2024-06-08 15:29:05,reseaux_sociaux,mobile,G18,Regueb,ENT01,,,paiement_a_la_livraison,4,4,191.6,0.0,0.0,191.6,partiellement_retournee,,,False
+CMD0023620,CLI001889,2024-06-08 15:42:00,reseaux_sociaux,mobile,G12,Kalâa Kebira,ENT02,,,paiement_a_la_livraison,2,3,90.7,0.0,7.0,97.7,livree,,,False
+CMD0023621,CLI007593,2024-06-08 16:14:36,site_web,mobile,G01,Le Bardo,ENT01,,,paiement_a_la_livraison,2,2,224.8,0.0,0.0,224.8,livree,,,True
+CMD0023622,CLI005720,2024-06-08 16:17:07,application_mobile,mobile,G12,Hammam Sousse,ENT02,,,portefeuille_mobile,3,5,648.5,0.0,0.0,648.5,livree,,,False
+CMD0023623,CLI001616,2024-06-08 16:24:45,application_mobile,mobile,G22,Métlaoui,ENT03,,,portefeuille_mobile,2,3,271.7,0.0,0.0,271.7,livree,,,False
+CMD0023624,CLI005739,2024-06-08 16:30:25,application_mobile,mobile,G02,La Soukra,ENT01,,,paiement_a_la_livraison,2,2,585.8,0.0,0.0,585.8,annulee,annulation_client,2024-06-09 20:49:53,False
+CMD0023625,CLI008143,2024-06-08 17:20:05,application_mobile,mobile,G20,Zarzis,ENT03,,,virement,4,13,1534.7,0.0,0.0,1534.7,livree,,,True
+CMD0023626,CLI007127,2024-06-08 18:06:21,site_web,ordinateur,G03,Mégrine,ENT01,,,paiement_a_la_livraison,1,2,101.8,0.0,7.0,108.8,livree,,,False
+CMD0023627,CLI005252,2024-06-08 18:23:49,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,carte_bancaire,3,3,252.7,0.0,0.0,252.7,livree,,,False
+CMD0023628,CLI006299,2024-06-08 18:27:50,reseaux_sociaux,mobile,G16,Kairouan,ENT02,,,carte_bancaire,1,1,134.9,0.0,7.0,141.9,livree,,,False
+CMD0023629,CLI005934,2024-06-08 18:36:01,application_mobile,mobile,G10,Dahmani,ENT01,,,carte_bancaire,2,3,92.7,0.0,7.0,99.7,livree,,,False
+CMD0023630,CLI002334,2024-06-08 18:50:14,site_web,mobile,G03,Ben Arous,ENT01,,,carte_bancaire,1,1,35.9,0.0,7.0,42.9,livree,,,False
+CMD0023631,CLI004670,08/06/2024 19:16,site_web,ordinateur,G15,Sfax,ENT03,,,paiement_a_la_livraison,2,2,692.8,0.0,0.0,692.8,livree,,,False
+CMD0023632,CLI002304,2024-06-08 19:17:47,application_mobile,mobile,G08,Béja,ENT01,,,paiement_a_la_livraison,1,1,121.9,0.0,7.0,128.9,retournee,,,False
+CMD0023633,CLI008141,2024-06-08 19:45:49,application_mobile,mobile,G01,Le Bardo,ENT01,,,paiement_a_la_livraison,2,2,293.8,0.0,0.0,293.8,partiellement_retournee,,,True
+CMD0023634,CLI002163,2024-06-08 19:52:38,application_mobile,mobile,G07,Bizerte,ENT01,,,carte_bancaire,1,1,64.9,0.0,7.0,71.9,annulee,annulation_client,2024-06-08 23:01:56,False
+CMD0023635,CLI008145,2024-06-08 19:57:55,site_web,tablette,G17,Sbeïtla,ENT02,,BIENVENUE10,paiement_a_la_livraison,1,1,144.9,14.49,7.0,137.41,livraison_echouee,,,True
+CMD0023636,CLI005403,2024-06-08 20:05:09,application_mobile,mobile,G04,Oued Ellil,ENT01,,,paiement_a_la_livraison,1,1,285.9,0.0,0.0,285.9,livree,,,False
+CMD0023637,CLI001007,2024-06-08 21:04:12,application_mobile,mobile,G18,Sidi Bouzid,ENT02,,,paiement_a_la_livraison,4,4,128.6,0.0,7.0,135.6,livree,,,False
+CMD0023638,CLI007660,2024-06-08 21:17:37,application_mobile,mobile,G19,El Hamma,ENT03,,,paiement_a_la_livraison,1,1,2191.9,0.0,0.0,2191.9,livree,,,True
+CMD0023639,CLI005816,2024-06-08 21:41:40,application_mobile,mobile,G22,Métlaoui,ENT03,,,carte_bancaire,2,6,299.4,0.0,0.0,299.4,livree,,,False
+CMD0023640,CLI007980,2024-06-08 21:42:20,site_web,mobile,G09,Aïn Draham,ENT01,,,paiement_a_la_livraison,1,1,79.9,0.0,7.0,86.9,livree,,,False
+CMD0023641,CLI000382,2024-06-08 22:04:27,site_web,ordinateur,G24,Douz,ENT03,,,paiement_a_la_livraison,1,1,1201.9,0.0,0.0,1201.9,livree,,,False
+CMD0023642,CLI007423,2024-06-08 22:09:07,reseaux_sociaux,mobile,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,4,6,1894.4,0.0,0.0,1894.4,partiellement_retournee,,,False
+CMD0023643,CLI006640,2024-06-08 22:15:47,site_web,ordinateur,G01,La Marsa,ENT01,,,paiement_a_la_livraison,3,3,192.7,0.0,0.0,192.7,livree,,,False
+CMD0023644,CLI003051,2024-06-08 22:17:33,application_mobile,mobile,G02,Ariana Ville,ENT01,,,paiement_a_la_livraison,1,1,80.9,0.0,7.0,87.9,livree,,,False
+CMD0023645,CLI008094,2024-06-08 22:23:00,site_web,mobile,G18,Sidi Bouzid,ENT02,,,carte_bancaire,4,4,2294.6,0.0,0.0,2294.6,livree,,,True
+CMD0023646,CLI007781,2024-06-08 22:56:40,application_mobile,mobile,G18,Sidi Bouzid,ENT02,,,carte_bancaire,1,1,38.9,0.0,7.0,45.9,livree,,,False
+CMD0023647,CLI008152,2024-06-09 00:01:02,site_web,ordinateur,G16,Kairouan,ENT02,,BIENVENUE10,carte_bancaire,1,1,64.9,6.49,7.0,65.41,livree,,,True
+CMD0023648,CLI005500,2024-06-09 00:25:45,reseaux_sociaux,mobile,G16,Kairouan,ENT01,,,paiement_a_la_livraison,3,3,421.7,0.0,0.0,421.7,livree,,,False
+CMD0023649,CLI006814,2024-06-09 01:50:49,site_web,mobile,G14,Ksour Essef,ENT02,,,carte_bancaire,3,4,1211.6,0.0,0.0,1211.6,livree,,,False
+CMD0023650,CLI007688,2024-06-09 05:06:31,site_web,tablette,G14,Mahdia,ENT02,,,paiement_a_la_livraison,2,5,253.5,0.0,0.0,253.5,livree,,,False
+CMD0023651,CLI008021,2024-06-09 07:10:25,application_mobile,mobile,G04,Manouba,ENT01,,,carte_bancaire,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0023652,CLI006318,2024-06-09 09:22:41,application_mobile,mobile,G02,Ariana Ville,ENT01,,,carte_prepayee,1,1,30.9,0.0,7.0,45.101,livree,,,False
+CMD0023653,CLI001876,2024-06-09 09:36:02,application_mobile,mobile,G09,Jendouba,ENT01,,,paiement_a_la_livraison,1,1,93.9,0.0,7.0,100.9,livree,,,False
+CMD0023654,CLI006228,2024-06-09 09:58:38,site_web,ordinateur,G10,Le Kef,ENT01,,,paiement_a_la_livraison,1,1,17.9,0.0,7.0,24.9,livree,,,False
+CMD0023655,CLI004796,2024-06-09 10:05:00,site_web,ordinateur,G20,Djerba Houmt Souk,ENT03,,,paiement_a_la_livraison,3,3,988.7,0.0,0.0,988.7,livree,,,False
+CMD0023656,CLI007524,2024-06-09 10:28:47,site_web,mobile,G10,Le Kef,ENT02,,,carte_prepayee,1,2,11.8,0.0,7.0,18.8,livree,,,True
+CMD0023657,CLI008139,2024-06-09 10:29:52,site_web,ordinateur,G18,Sidi Bouzid,ENT02,,BIENVENUE10,paiement_a_la_livraison,1,1,585.9,30.0,0.0,555.9,livree,,,True
+CMD0023658,CLI005720,2024-06-09 10:30:57,site_web,mobile,G12,Hammam Sousse,ENT02,,,portefeuille_mobile,2,2,298.8,0.0,0.0,298.8,livree,,,False
+CMD0023659,CLI002569,2024-06-09 10:53:25,application_mobile,mobile,G15,Sfax,ENT03,,,carte_bancaire,2,2,61.8,0.0,7.0,68.8,livree,,,False
+CMD0023660,CLI008076,2024-06-09 11:01:29,,tablette,G01,Carthage,ENT01,,BIENVENUE10,carte_prepayee,2,2,465.8,30.0,0.0,435.8,partiellement_retournee,,,True
+CMD0023661,CLI006804,2024-06-09 11:52:00,site_web,mobile,G13,Monastir,ENT02,,,carte_bancaire,1,1,33.9,0.0,7.0,40.9,livree,,,False
+CMD0023662,CLI007250,2024-06-09 11:58:23,reseaux_sociaux,mobile,G18,Sidi Bouzid,ENT02,,,paiement_a_la_livraison,1,1,40.9,0.0,7.0,47.9,annulee,annulation_client,2024-06-10 10:57:51,False
+CMD0023663,CLI002591,2024-06-09 12:04:06,site_web,ordinateur,G12,Kalâa Kebira,ENT02,,,carte_bancaire,1,1,373.9,0.0,0.0,373.9,livree,,,False
+CMD0023664,CLI005351,2024-06-09 12:08:39,site_web,mobile,G18,Regueb,ENT02,,,paiement_a_la_livraison,3,4,405.6,0.0,0.0,405.6,livree,,,False
+CMD0023665,CLI006014,2024-06-09 12:30:02,site_web,ordinateur,G07,Menzel Bourguiba,ENT03,,,paiement_a_la_livraison,4,4,277.6,0.0,0.0,277.6,livree,,,False
+CMD0023666,CLI000950,09/06/2024 13:33,site_web,mobile,G05,Hammamet,ENT01,,,virement,6,33,2656.7,0.0,0.0,2656.7,livree,,,False
+CMD0023667,CLI002545,2024-06-09 14:07:52,reseaux_sociaux,mobile,G02,La Soukra,ENT01,,,carte_bancaire,1,1,404.9,0.0,0.0,404.9,livree,,,False
+CMD0023668,CLI007689,2024-06-09 14:57:21,application_mobile,mobile,G05,Nabeul,ENT01,,,paiement_a_la_livraison,3,4,161.6,0.0,0.0,161.6,livree,,,False
+CMD0023669,CLI007820,2024-06-09 15:12:23,,mobile,G01,La Marsa,ENT01,,,carte_bancaire,1,1,157.9,0.0,0.0,157.9,livree,,,False
+CMD0023670,CLI008153,2024-06-09 15:26:50,application_mobile,mobile,G16,Kairouan,ENT02,,BIENVENUE10,paiement_a_la_livraison,2,2,255.8,25.58,0.0,230.22,livree,,,True
+CMD0023671,CLI005546,2024-06-09 15:31:05,site_web,ordinateur,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,3,5,376.5,0.0,0.0,376.5,livree,,,False
+CMD0023672,CLI008129,2024-06-09 16:02:52,application_mobile,mobile,G05,Kélibia,ENT01,,,paiement_a_la_livraison,1,1,39.9,0.0,7.0,46.9,retournee,,,False
+CMD0023673,CLI007422,2024-06-09 16:05:30,application_mobile,mobile,G08,Medjez el-Bab,ENT01,,,carte_bancaire,2,2,117.8,0.0,7.0,124.8,livree,,,False
+CMD0023674,CLI004987,2024-06-09 17:22:07,application_mobile,mobile,G03,Mégrine,ENT01,,,paiement_a_la_livraison,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0023675,CLI006256,2024-06-09 17:53:07,site_web,ordinateur,G05,Kélibia,ENT01,,,paiement_a_la_livraison,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0023676,CLI003844,2024-06-09 18:08:06,site_web,mobile,G12,Kalâa Kebira,ENT02,,,paiement_a_la_livraison,5,7,1329.3,0.0,0.0,1329.3,livree,,,False
+CMD0023677,CLI006743,2024-06-09 18:43:17,application_mobile,mobile,G11,Makthar,ENT01,,BIENVENUE10,paiement_a_la_livraison,1,1,122.9,12.29,7.0,117.61,livree,,,True
+CMD0023678,CLI003642,2024-06-09 19:06:09,site_web,mobile,G02,La Soukra,,,,portefeuille_mobile,2,3,756.7,0.0,0.0,756.7,paiement_echoue,,,False
+CMD0023679,CLI002812,2024-06-09 19:40:51,application_mobile,mobile,G04,Den Den,ENT01,,,portefeuille_mobile,2,4,135.6,0.0,7.0,142.6,livree,,,False
+CMD0023680,CLI007420,2024-06-09 20:46:59,site_web,ordinateur,G13,Monastir,ENT02,,BIENVENUE10,carte_prepayee,1,1,212.9,21.29,0.0,191.61,livree,,,True
+CMD0023681,CLI002910,2024-06-09 20:53:57,application_mobile,mobile,G10,Dahmani,ENT01,,,carte_bancaire,3,3,169.7,0.0,0.0,169.7,partiellement_retournee,,,False
+CMD0023682,CLI005968,2024-06-09 20:57:43,site_web,mobile,G17,Kasserine,ENT02,,,carte_bancaire,1,1,5.9,0.0,7.0,12.9,annulee,annulation_client,2024-06-09 21:47:05,False
+CMD0023683,CLI005188,2024-06-09 21:06:07,site_web,ordinateur,G04,Oued Ellil,ENT01,,,carte_bancaire,1,1,200.9,0.0,0.0,200.9,livree,,,False
+CMD0023684,CLI004925,2024-06-09 21:07:15,application_mobile,mobile,G22,Redeyef,ENT03,,,paiement_a_la_livraison,1,1,31.9,0.0,7.0,38.9,livree,,,False
+CMD0023685,CLI003508,2024-06-09 21:10:22,application_mobile,mobile,G17,Sbeïtla,ENT02,,,carte_bancaire,2,2,77.8,0.0,7.0,84.8,livree,,,False
+CMD0023686,CLI004793,2024-06-09 21:51:18,site_web,ordinateur,G08,Béja,ENT01,,,paiement_a_la_livraison,3,3,496.7,0.0,0.0,496.7,partiellement_retournee,,,False
+CMD0023687,CLI004828,2024-06-09 21:51:30,site_web,mobile,G17,Kasserine,ENT02,,,paiement_a_la_livraison,2,2,1791.8,0.0,0.0,1791.8,livree,,,False
+CMD0023688,CLI008140,2024-06-09 21:57:48,reseaux_sociaux,mobile,G17,Kasserine,ENT02,,,paiement_a_la_livraison,1,1,93.9,0.0,7.0,100.9,livraison_echouee,,,False
+CMD0023689,CLI005453,2024-06-09 22:07:57,site_web,ordinateur,G01,Tunis,ENT01,,,portefeuille_mobile,1,1,9.9,0.0,7.0,16.9,livree,,,False
+CMD0023690,CLI006888,2024-06-09 22:10:52,application_mobile,mobile,G08,Medjez el-Bab,ENT01,,,carte_bancaire,1,1,63.9,0.0,7.0,70.9,livree,,,False
+CMD0023691,CLI008155,2024-06-09 22:13:06,application_mobile,mobile,G01,Le Bardo,ENT01,,BIENVENUE10,carte_bancaire,1,2,157.8,15.78,7.0,149.02,livree,,,True
+CMD0023692,CLI005456,2024-06-09 22:45:44,application_mobile,mobile,G13,Ksar Hellal,ENT02,,,carte_bancaire,6,7,628.3,0.0,0.0,628.3,partiellement_retournee,,,False
+CMD0023693,CLI008076,2024-06-09 23:48:53,application_mobile,mobile,G01,La Marsa,ENT01,,,paiement_a_la_livraison,3,4,416.6,0.0,0.0,416.6,partiellement_retournee,,,False
+CMD0023694,CLI007059,2024-06-10 00:45:05,site_web,mobile,G12,Hammam Sousse,ENT02,,,portefeuille_mobile,1,1,35.9,0.0,7.0,42.9,livree,,,True
+CMD0023695,CLI006662,2024-06-10 01:11:06,reseaux_sociaux,mobile,G03,Radès,ENT01,,,paiement_a_la_livraison,1,3,47.7,0.0,7.0,54.7,livree,,,False
+CMD0023696,CLI006292,2024-06-10 01:19:54,site_web,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0023697,CLI005212,2024-06-10 06:29:42,application_mobile,mobile,G16,Haffouz,ENT02,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0023698,CLI000370,2024-06-10 08:42:58,application_mobile,mobile,G12,Kalâa Kebira,ENT02,,,carte_bancaire,1,1,99.9,0.0,7.0,106.9,livree,,,False
+CMD0023699,CLI000515,2024-06-10 08:54:45,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,2,2,205.8,0.0,0.0,205.8,livree,,,False
+CMD0023700,CLI002742,2024-06-10 11:11:52,site_web,ordinateur,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,3,4,120.6,0.0,7.0,127.6,livree,,,False
+CMD0023701,CLI003734,2024-06-10 11:19:41,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,51.9,0.0,7.0,58.9,livree,,,False
+CMD0023702,CLI003808,2024-06-10 11:45:29,application_mobile,mobile,G12,Sousse,ENT02,,,portefeuille_mobile,1,3,83.7,0.0,7.0,90.7,livree,,,False
+CMD0023703,CLI004623,2024-06-10 11:50:30,site_web,ordinateur,G18,Sidi Bouzid,ENT02,,,carte_bancaire,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0023704,CLI000361,2024-06-10 12:01:17,application_mobile,mobile,G12,Kalâa Kebira,ENT02,,,paiement_a_la_livraison,1,1,29.9,0.0,7.0,36.9,livree,,,False
+CMD0023705,CLI006174,2024-06-10 13:14:08,application_mobile,mobile,G02,La Soukra,ENT01,,,paiement_a_la_livraison,1,1,22.9,0.0,7.0,29.9,livree,,,False
+CMD0023706,CLI002925,2024-06-10 13:33:24,application_mobile,mobile,G05,Nabeul,ENT01,,,paiement_a_la_livraison,3,5,320.5,0.0,0.0,320.5,livree,,,False
+CMD0023707,CLI004602,2024-06-10 13:46:07,application_mobile,mobile,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,2,2,35.8,0.0,7.0,42.8,livree,,,False
+CMD0023708,CLI006174,2024-06-10 14:19:25,site_web,ordinateur,G02,Raoued,ENT01,,,carte_bancaire,2,2,61.8,0.0,7.0,68.8,livree,,,False
+CMD0023709,CLI008004,2024-06-10 14:21:29,site_web,mobile,G01,Carthage,ENT01,,,carte_bancaire,5,5,564.5,0.0,0.0,564.5,annulee,annulation_client,2024-06-10 22:47:58,False
+CMD0023710,CLI006928,2024-06-10 14:31:44,site_web,ordinateur,G23,Tozeur,ENT01,,,virement,5,41,1326.9,0.0,0.0,1326.9,livree,,,False
+CMD0023711,CLI006468,2024-06-10 15:08:01,site_web,mobile,G17,Kasserine,ENT02,,,paiement_a_la_livraison,1,2,57.8,0.0,7.0,64.8,livree,,,False
+CMD0023712,CLI001413,2024-06-10 15:23:33,application_mobile,mobile,G03,Radès,ENT01,,,paiement_a_la_livraison,3,27,638.3,0.0,0.0,638.3,livree,,,False
+CMD0023713,CLI004693,2024-06-10 15:26:08,site_web,ordinateur,G17,Kasserine,ENT02,,,paiement_a_la_livraison,1,1,19.9,0.0,7.0,26.9,livree,,,False
+CMD0023714,CLI001591,2024-06-10 15:54:28,reseaux_sociaux,mobile,G01,Tunis,ENT01,,,paiement_a_la_livraison,1,1,46.9,0.0,7.0,53.9,livree,,,False
+CMD0023715,CLI001680,2024-06-10 16:07:56,site_web,ordinateur,G08,Medjez el-Bab,ENT02,,,paiement_a_la_livraison,1,1,28.9,0.0,7.0,35.9,livree,,,False
+CMD0023716,CLI003257,2024-06-10 17:18:36,application_mobile,mobile,G12,Kalâa Kebira,ENT02,,,carte_bancaire,1,1,40.9,0.0,7.0,47.9,livree,,,False
+CMD0023717,CLI003853,2024-06-10 17:39:29,application_mobile,mobile,G05,Nabeul,ENT03,,,carte_bancaire,5,6,552.4,0.0,0.0,552.4,livree,,,False
+CMD0023718,CLI004793,2024-06-10 17:40:16,application_mobile,mobile,G08,Béja,ENT01,,,paiement_a_la_livraison,1,1,157.9,0.0,0.0,157.9,livree,,,False
+CMD0023719,CLI007149,2024-06-10 17:52:52,application_mobile,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,2,2,60.8,0.0,7.0,67.8,livree,,,False
+CMD0023720,CLI007985,2024-06-10 18:26:38,site_web,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,1,34.9,0.0,7.0,41.9,livree,,,False
+CMD0023721,CLI001697,2024-06-10 18:26:42,application_mobile,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,4,4,459.6,0.0,0.0,459.6,livraison_echouee,,,False
+CMD0023722,CLI007617,2024-06-10 18:37:14,site_web,ordinateur,G15,Sfax,ENT02,,,virement,1,2,305.8,0.0,0.0,305.8,livree,,,False
+CMD0023723,CLI008156,2024-06-10 19:01:00,site_web,ordinateur,G20,Djerba Houmt Souk,,,BIENVENUE10,portefeuille_mobile,1,2,75.8,7.58,7.0,75.22,paiement_echoue,,,True
+CMD0023724,CLI005403,2024-06-10 19:05:34,application_mobile,mobile,G04,Manouba,ENT01,,,carte_prepayee,1,1,22.9,0.0,7.0,29.9,livree,,,False
+CMD0023725,CLI006871,2024-06-10 19:42:33,application_mobile,mobile,G01,Tunis,ENT01,,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0023726,CLI003801,2024-06-10 20:30:51,,mobile,G17,Sbeïtla,ENT02,,,carte_bancaire,1,1,32.9,0.0,7.0,39.9,retournee,,,False
+CMD0023727,CLI008046,2024-06-10 20:31:34,site_web,ordinateur,G04,Den Den,ENT01,,,carte_bancaire,3,3,121.7,0.0,7.0,128.7,livree,,,False
+CMD0023728,CLI008159,2024-06-10 20:53:00,site_web,ordinateur,G01,La Marsa,ENT02,,BIENVENUE10,paiement_a_la_livraison,4,4,97.6,9.76,7.0,94.84,livree,,,True
+CMD0023729,CLI005516,2024-06-10 21:01:14,application_mobile,mobile,G20,Zarzis,ENT03,,,carte_bancaire,1,1,2211.9,0.0,0.0,2211.9,livree,,,False
+CMD0023730,CLI002368,2024-06-10 21:10:03,application_mobile,mobile,G07,Menzel Bourguiba,ENT02,,,carte_bancaire,2,3,46.7,0.0,7.0,53.7,annulee,annulation_client,2024-06-11 03:07:13,False
+CMD0023731,CLI000937,2024-06-10 21:28:43,application_mobile,mobile,G22,Redeyef,ENT03,,,carte_bancaire,3,4,447.6,0.0,0.0,447.6,livree,,,False
+CMD0023732,CLI007928,10/06/2024 21:48,application_mobile,mobile,G02,Ariana Ville,ENT01,,,carte_bancaire,1,2,31.8,0.0,7.0,38.8,livree,,,False
+CMD0023733,CLI008157,2024-06-10 22:02:06,site_web,ordinateur,G03,Ben Arous,ENT01,,BIENVENUE10,paiement_a_la_livraison,1,1,54.9,5.49,7.0,56.41,livree,,,True
+CMD0023734,CLI006843,2024-06-10 22:37:48,application_mobile,mobile,G08,Medjez el-Bab,ENT01,,,paiement_a_la_livraison,1,1,123.9,0.0,7.0,130.9,livree,,,False
+CMD0023735,CLI005065,2024-06-10 22:43:19,application_mobile,mobile,G05,Nabeul,ENT01,,,paiement_a_la_livraison,1,1,29.9,0.0,7.0,36.9,livree,,,False
+CMD0023736,CLI006229,2024-06-10 23:23:13,site_web,mobile,G10,Dahmani,ENT01,,,carte_bancaire,1,2,189.8,0.0,0.0,189.8,livree,,,False
+CMD0023737,CLI003454,2024-06-10 23:51:05,application_mobile,mobile,G16,Kairouan,ENT02,,,paiement_a_la_livraison,1,1,149.9,0.0,7.0,156.9,livree,,,False
+CMD0023738,CLI004836,2024-06-11 01:13:28,application_mobile,mobile,G17,Sbeïtla,ENT02,,,portefeuille_mobile,2,2,64.8,0.0,7.0,71.8,livree,,,False
+CMD0023739,CLI001680,2024-06-11 01:21:26,application_mobile,mobile,G08,Medjez el-Bab,ENT01,,,carte_bancaire,1,2,245.8,0.0,0.0,245.8,livree,,,False
+CMD0023740,CLI006843,11/06/2024 08:01,site_web,ordinateur,G08,Béja,ENT01,,,paiement_a_la_livraison,1,1,113.9,0.0,7.0,120.9,livraison_echouee,,,False
+CMD0023741,CLI000500,2024-06-11 08:07:06,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,carte_bancaire,2,4,60.6,0.0,7.0,67.6,livree,,,False
+CMD0023742,CLI006145,2024-06-11 08:25:02,site_web,mobile,G19,Gabès,ENT03,,,carte_bancaire,2,2,54.8,0.0,7.0,61.8,livree,,,False
+CMD0023743,CLI007649,2024-06-11 08:31:20,application_mobile,mobile,G01,Tunis,ENT01,,,carte_bancaire,2,3,266.7,0.0,0.0,266.7,livree,,,False
+CMD0023744,CLI008168,2024-06-11 09:25:47,application_mobile,mobile,G13,Monastir,ENT02,,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,livree,,,True
+CMD0023745,CLI007773,2024-06-11 10:15:01,reseaux_sociaux,mobile,G01,Tunis,ENT01,,,carte_prepayee,1,1,248.9,0.0,0.0,248.9,livree,,,False
+CMD0023746,CLI006250,2024-06-11 10:32:16,site_web,mobile,G22,Métlaoui,ENT03,,,carte_bancaire,1,2,1555.8,0.0,0.0,1555.8,livree,,,False
+CMD0023747,CLI007464,2024-06-11 11:14:16,application_mobile,mobile,G17,Kasserine,ENT02,,BIENVENUE10,paiement_a_la_livraison,2,2,100.8,10.08,7.0,97.72,partiellement_retournee,,,True
+CMD0023748,CLI007581,2024-06-11 11:40:54,site_web,mobile,G03,Ezzahra,ENT01,,,paiement_a_la_livraison,1,1,113.9,0.0,7.0,120.9,livree,,,False
+CMD0023749,CLI008045,2024-06-11 11:42:09,application_mobile,mobile,G13,Ksar Hellal,ENT02,,,virement,1,1,223.9,0.0,0.0,223.9,livree,,,True
+CMD0023750,CLI005161,2024-06-11 11:48:24,site_web,ordinateur,G14,Ksour Essef,ENT02,,,paiement_a_la_livraison,1,2,97.8,0.0,7.0,104.8,livree,,,False
+CMD0023751,CLI007629,2024-06-11 11:53:40,application_mobile,mobile,G04,Oued Ellil,ENT01,,,portefeuille_mobile,1,1,32.9,0.0,7.0,39.9,livree,,,False
+CMD0023752,CLI008167,2024-06-11 12:24:44,application_mobile,mobile,G08,Medjez el-Bab,ENT01,,BIENVENUE10,portefeuille_mobile,3,4,3100.6,30.0,0.0,3070.6,livree,,,True
+CMD0023753,CLI007673,2024-06-11 12:52:48,application_mobile,mobile,G05,Nabeul,ENT02,,,carte_bancaire,6,6,1042.4,0.0,0.0,1042.4,partiellement_retournee,,,False
+CMD0023754,CLI005402,2024-06-11 13:11:25,site_web,mobile,G01,La Marsa,ENT01,,,carte_bancaire,1,1,286.9,0.0,0.0,286.9,livree,,,False
+CMD0023755,CLI003598,2024-06-11 13:26:43,site_web,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,1,1,52.9,0.0,7.0,59.9,livree,,,False
+CMD0023756,CLI004488,2024-06-11 14:19:31,application_mobile,mobile,G12,Sousse,ENT02,,,carte_prepayee,1,1,212.9,0.0,0.0,212.9,livree,,,False
+CMD0023757,CLI005032,2024-06-11 14:59:20,application_mobile,mobile,G16,Kairouan,ENT01,,,portefeuille_mobile,5,5,836.5,0.0,0.0,836.5,livree,,,False
+CMD0023758,CLI005438,11/06/2024 15:19,application_mobile,mobile,G02,Ariana Ville,ENT01,,,paiement_a_la_livraison,2,2,173.8,0.0,0.0,173.8,livree,,,False
+CMD0023759,CLI007745,2024-06-11 15:44:51,reseaux_sociaux,mobile,G11,Siliana,ENT01,,,portefeuille_mobile,1,1,98.9,0.0,7.0,105.9,livree,,,False
+CMD0023760,CLI001396,2024-06-11 15:52:44,site_web,ordinateur,G13,Moknine,ENT02,,,paiement_a_la_livraison,3,3,284.7,0.0,0.0,284.7,partiellement_retournee,,,False
+CMD0023761,CLI007331,2024-06-11 16:29:00,site_web,mobile,G16,Haffouz,ENT02,,,carte_bancaire,1,1,24.9,0.0,7.0,31.9,livree,,,False
+CMD0023762,CLI004804,2024-06-11 16:43:28,application_mobile,mobile,G14,Ksour Essef,ENT02,,,carte_bancaire,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0023763,CLI007781,2024-06-11 17:05:26,application_mobile,mobile,G14,Mahdia,ENT02,,,paiement_a_la_livraison,2,2,127.8,0.0,7.0,134.8,livree,,,False
+CMD0023764,CLI006452,11/06/2024 17:30,site_web,ordinateur,G15,Sfax,ENT03,,,carte_prepayee,1,1,45.9,0.0,7.0,52.9,livree,,,False
+CMD0023765,CLI004538,2024-06-11 18:30:58,application_mobile,mobile,G05,Hammamet,ENT01,,,paiement_a_la_livraison,1,1,8.9,0.0,7.0,15.9,livree,,,False
+CMD0023766,CLI003555,2024-06-11 19:43:17,site_web,ordinateur,G06,El Fahs,ENT01,,,carte_bancaire,2,2,948.8,0.0,0.0,948.8,livree,,,False
+CMD0023767,CLI006828,2024-06-11 19:51:22,reseaux_sociaux,mobile,G01,Le Bardo,ENT01,,,carte_bancaire,1,1,125.9,0.0,7.0,132.9,livree,,,False
+CMD0023768,CLI001402,2024-06-11 20:05:03,site_web,mobile,G13,Ksar Hellal,ENT02,,,carte_bancaire,1,1,64.9,0.0,7.0,71.9,livree,,,False
+CMD0023769,CLI001755,2024-06-11 20:13:35,application_mobile,mobile,G06,Zaghouan,ENT01,,,portefeuille_mobile,1,1,21.9,0.0,7.0,28.9,livree,,,False
+CMD0023770,CLI007906,2024-06-11 20:21:42,site_web,ordinateur,G05,Hammamet,ENT01,,,paiement_a_la_livraison,4,4,419.6,0.0,0.0,419.6,livree,,,False
+CMD0023771,CLI006748,11/06/2024 21:06,site_web,mobile,G01,La Marsa,ENT01,,,virement,1,13,414.7,0.0,0.0,414.7,livree,,,False
+CMD0023772,CLI007438,2024-06-11 21:20:22,site_web,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,26.9,0.0,7.0,33.9,livree,,,False
+CMD0023773,CLI007365,2024-06-11 21:27:21,application_mobile,mobile,G13,Moknine,ENT02,,,carte_bancaire,1,1,35.9,0.0,7.0,42.9,livree,,,False
+CMD0023774,CLI000441,2024-06-11 21:54:48,reseaux_sociaux,mobile,G14,Mahdia,ENT02,,,carte_prepayee,1,1,74.9,0.0,7.0,81.9,livree,,,False
+CMD0023775,CLI008166,2024-06-11 22:02:04,application_mobile,mobile,G14,Mahdia,ENT02,,BIENVENUE10,carte_bancaire,4,4,299.6,29.96,0.0,269.64,partiellement_retournee,,,True
+CMD0023776,CLI007353,2024-06-11 22:31:26,application_mobile,mobile,G03,Ben Arous,ENT01,,,carte_prepayee,1,1,199.9,0.0,0.0,199.9,retournee,,,False
+CMD0023777,CLI001703,2024-06-11 22:41:20,application_mobile,mobile,G02,Raoued,ENT02,,,paiement_a_la_livraison,2,3,271.7,0.0,0.0,271.7,livree,,,False
+CMD0023778,CLI006761,11/06/2024 22:49,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,2,4,1231.6,0.0,0.0,1231.6,livree,,,False
+CMD0023779,CLI001699,2024-06-11 23:59:27,reseaux_sociaux,mobile,G07,Menzel Bourguiba,ENT01,,,carte_bancaire,2,3,194.7,0.0,0.0,194.7,livree,,,False
+CMD0023780,CLI007772,12/06/2024 00:40,application_mobile,mobile,G13,Moknine,ENT02,,BIENVENUE10,carte_bancaire,1,1,103.9,10.39,7.0,100.51,retournee,,,True
+CMD0023781,CLI007958,2024-06-12 07:26:43,site_web,ordinateur,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,1,146.9,0.0,7.0,153.9,livree,,,False
+CMD0023782,CLI006229,2024-06-12 08:20:45,site_web,ordinateur,G16,Haffouz,ENT01,,,paiement_a_la_livraison,1,1,125.9,0.0,7.0,132.9,livree,,,False
+CMD0023783,CLI008175,2024-06-12 08:45:44,application_mobile,mobile,G15,Sfax,ENT03,,,carte_prepayee,2,2,69.8,0.0,7.0,76.8,livree,,,True
+CMD0023784,CLI008172,2024-06-12 10:01:06,,mobile,G14,Mahdia,ENT02,,BIENVENUE10,paiement_a_la_livraison,3,4,440.6,30.0,0.0,410.6,livree,,,True
+CMD0023785,CLI007615,2024-06-12 10:19:57,application_mobile,mobile,G12,Kalâa Kebira,ENT02,,,paiement_a_la_livraison,2,2,453.8,0.0,0.0,453.8,livree,,,False
+CMD0023786,CLI003108,2024-06-12 10:29:10,application_mobile,mobile,G01,Le Bardo,,,,carte_prepayee,1,1,259.9,0.0,0.0,259.9,paiement_echoue,,,False
+CMD0023787,CLI006410,2024-06-12 10:37:52,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,portefeuille_mobile,2,2,209.8,0.0,0.0,209.8,livree,,,False
+CMD0023788,CLI004229,2024-06-12 10:39:27,reseaux_sociaux,mobile,G02,Raoued,ENT01,,,paiement_a_la_livraison,1,1,1201.9,0.0,0.0,1201.9,livree,,,False
+CMD0023789,CLI006707,2024-06-12 10:47:12,application_mobile,mobile,G04,Oued Ellil,ENT01,,,portefeuille_mobile,1,1,594.9,0.0,0.0,594.9,livree,,,False
+CMD0023790,CLI000108,2024-06-12 10:52:32,site_web,ordinateur,G01,Tunis,,,,virement,6,47,2038.3,0.0,0.0,2038.3,annulee,rupture_stock,2024-06-12 11:41:32,False
+CMD0023791,CLI002850,2024-06-12 11:20:09,site_web,ordinateur,G11,Siliana,ENT01,,,paiement_a_la_livraison,2,4,94.6,0.0,7.0,101.6,livree,,,False
+CMD0023792,CLI008178,2024-06-12 11:52:13,application_mobile,mobile,G14,Ksour Essef,ENT02,,BIENVENUE10,paiement_a_la_livraison,1,1,200.9,20.09,0.0,180.81,livree,,,True
+CMD0023793,CLI008174,12/06/2024 12:02,application_mobile,mobile,G01,Carthage,ENT01,,,portefeuille_mobile,2,2,201.8,0.0,0.0,201.8,livree,,,True
+CMD0023794,CLI007365,12/06/2024 12:30,reseaux_sociaux,mobile,G13,Monastir,,,,carte_bancaire,1,1,193.9,0.0,0.0,193.9,paiement_echoue,,,False
+CMD0023795,CLI003536,2024-06-12 12:30:40,site_web,ordinateur,G06,El Fahs,ENT01,,,carte_bancaire,1,1,1180.9,0.0,0.0,1180.9,livree,,,False
+CMD0023796,CLI006951,2024-06-12 12:36:57,site_web,mobile,G04,Oued Ellil,ENT01,,,paiement_a_la_livraison,1,2,43.8,0.0,7.0,50.8,livree,,,False
+CMD0023797,CLI008141,2024-06-12 12:57:37,site_web,ordinateur,G01,La Marsa,ENT01,,,carte_bancaire,1,1,61.9,0.0,7.0,68.9,livree,,,False
+CMD0023798,CLI002115,2024-06-12 13:32:36,site_web,mobile,G15,Sakiet Eddaïer,ENT03,,,portefeuille_mobile,1,2,43.8,0.0,7.0,50.8,livree,,,False
+CMD0023799,CLI006734,2024-06-12 13:34:02,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,,,portefeuille_mobile,3,4,254.6,0.0,0.0,254.6,livree,,,False
+CMD0023800,CLI007627,2024-06-12 13:43:05,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,,,carte_bancaire,2,3,3162.7,0.0,0.0,3162.7,livree,,,False
+CMD0023801,CLI007125,2024-06-12 13:55:57,site_web,ordinateur,G01,Tunis,ENT01,,,paiement_a_la_livraison,3,3,128.7,0.0,7.0,135.7,livree,,,False
+CMD0023802,CLI007915,2024-06-12 13:58:46,site_web,ordinateur,G15,Sakiet Ezzit,ENT03,,,carte_prepayee,1,1,78.9,0.0,7.0,85.9,livree,,,False
+CMD0023803,CLI006678,2024-06-12 14:13:11,reseaux_sociaux,mobile,G17,Sbeïtla,ENT02,,,portefeuille_mobile,3,3,130.7,0.0,7.0,137.7,livree,,,False
+CMD0023804,CLI002396,2024-06-12 15:00:44,application_mobile,mobile,G14,El Jem,ENT02,,,paiement_a_la_livraison,2,3,67.7,0.0,7.0,74.7,livree,,,False
+CMD0023805,CLI007739,2024-06-12 15:39:32,site_web,mobile,G22,Gafsa,ENT03,,,paiement_a_la_livraison,1,1,125.9,0.0,7.0,132.9,livree,,,False
+CMD0023806,CLI001287,2024-06-12 15:47:39,application_mobile,mobile,G19,Gabès,ENT03,,,paiement_a_la_livraison,2,4,126.6,0.0,7.0,133.6,livree,,,False
+CMD0023807,CLI005321,2024-06-12 15:59:06,application_mobile,mobile,G14,El Jem,ENT02,,,carte_bancaire,2,4,249.6,0.0,0.0,249.6,partiellement_retournee,,,False
+CMD0023808,CLI007937,2024-06-12 16:02:08,site_web,ordinateur,G09,Tabarka,ENT01,,,portefeuille_mobile,1,2,67.8,0.0,7.0,74.8,livree,,,False
+CMD0023809,CLI008087,2024-06-12 16:17:34,site_web,ordinateur,G05,Hammamet,ENT02,,BIENVENUE10,carte_prepayee,2,3,221.7,22.17,0.0,199.53,livree,,,True
+CMD0023810,CLI005859,2024-06-12 16:48:35,site_web,mobile,G14,Mahdia,ENT02,,,paiement_a_la_livraison,3,4,527.6,0.0,0.0,527.6,livree,,,False
+CMD0023811,CLI006856,2024-06-12 16:54:48,application_mobile,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,4,7,847.3,0.0,0.0,847.3,livree,,,False
+CMD0023812,CLI007947,2024-06-12 18:07:36,application_mobile,mobile,G24,Douz,ENT03,,,carte_bancaire,1,1,109.9,0.0,7.0,116.9,livree,,,True
+CMD0023813,CLI004832,2024-06-12 18:19:47,application_mobile,mobile,G01,Le Bardo,ENT01,,,carte_prepayee,1,1,146.9,0.0,7.0,153.9,livree,,,False
+CMD0023814,CLI008139,2024-06-12 18:47:08,application_mobile,mobile,G18,Regueb,ENT02,,,paiement_a_la_livraison,1,2,97.8,0.0,7.0,104.8,livree,,,False
+CMD0023815,CLI005715,2024-06-12 19:21:39,site_web,mobile,G16,Haffouz,ENT02,,,paiement_a_la_livraison,1,1,38.9,0.0,7.0,45.9,livree,,,False
+CMD0023816,CLI006396,2024-06-12 19:46:43,site_web,mobile,G04,Den Den,ENT01,,,paiement_a_la_livraison,1,1,7.9,0.0,7.0,14.9,livree,,,False
+CMD0023817,CLI006745,2024-06-12 20:19:57,application_mobile,mobile,G01,Tunis,ENT02,,,paiement_a_la_livraison,3,4,358.6,0.0,0.0,358.6,livree,,,False
+CMD0023818,CLI008176,2024-06-12 20:35:19,application_mobile,mobile,G18,Regueb,ENT02,,,paiement_a_la_livraison,1,1,21.9,0.0,7.0,28.9,livree,,,True
+CMD0023819,CLI006863,2024-06-12 21:42:19,site_web,mobile,G22,Gafsa,ENT03,,,paiement_a_la_livraison,1,1,6.9,0.0,7.0,13.9,livree,,,False
+CMD0023820,CLI003508,12/06/2024 21:49,site_web,ordinateur,G17,Sbeïtla,ENT01,,,paiement_a_la_livraison,3,3,239.7,0.0,0.0,239.7,livree,,,False
+CMD0023821,CLI002304,2024-06-12 22:02:17,application_mobile,mobile,G08,Béja,ENT01,,,paiement_a_la_livraison,2,2,90.8,0.0,7.0,97.8,livree,,,False
+CMD0023822,CLI004644,2024-06-12 22:45:50,site_web,mobile,G19,Gabès,ENT03,,,paiement_a_la_livraison,2,2,3191.8,0.0,0.0,3191.8,livree,,,False
+CMD0023823,CLI003536,2024-06-12 22:55:48,application_mobile,mobile,G06,El Fahs,,,,carte_bancaire,1,1,193.9,0.0,0.0,193.9,paiement_echoue,,,False
+CMD0023824,CLI006209,2024-06-12 23:11:03,application_mobile,mobile,G14,El Jem,ENT02,,,portefeuille_mobile,1,2,49.8,0.0,7.0,56.8,livree,,,False
+CMD0023825,CLI002859,2024-06-12 23:26:49,application_mobile,mobile,G13,Ksar Hellal,ENT02,,,portefeuille_mobile,2,2,34.8,0.0,7.0,41.8,livree,,,False
+CMD0023826,CLI002954,2024-06-12 23:44:29,site_web,ordinateur,G13,Moknine,ENT02,,,portefeuille_mobile,1,1,74.9,0.0,7.0,81.9,livree,,,False
+CMD0023827,CLI006156,2024-06-13 01:35:44,application_mobile,mobile,G07,Menzel Bourguiba,ENT01,CMP0097,,paiement_a_la_livraison,2,4,153.6,0.0,0.0,153.6,livree,,,False
+CMD0023828,CLI007318,2024-06-13 01:52:39,reseaux_sociaux,mobile,G18,Sidi Bouzid,ENT02,CMP0097,,paiement_a_la_livraison,1,1,15.9,0.0,7.0,22.9,livree,,,False
+CMD0023829,CLI004718,2024-06-13 06:07:23,application_mobile,mobile,G05,Hammamet,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,1,1,223.9,10.0,0.0,213.9,retournee,,,False
+CMD0023830,CLI007948,2024-06-13 07:54:36,application_mobile,mobile,G22,Métlaoui,ENT03,,,paiement_a_la_livraison,4,4,903.6,0.0,0.0,903.6,livree,,,False
+CMD0023831,CLI008131,2024-06-13 08:41:41,site_web,mobile,G20,Djerba Houmt Souk,ENT03,CMP0097,,paiement_a_la_livraison,1,1,22.9,0.0,7.0,29.9,livree,,,True
+CMD0023832,CLI003845,2024-06-13 09:13:54,reseaux_sociaux,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,1,1,255.9,0.0,0.0,255.9,livrée,,,False
+CMD0023833,CLI008188,2024-06-13 09:17:42,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,2,2,631.8,0.0,0.0,631.8,livree,,,True
+CMD0023834,CLI008183,2024-06-13 09:38:26,site_web,mobile,G14,Ksour Essef,ENT02,,,paiement_a_la_livraison,1,2,67.8,0.0,7.0,74.8,livree,,,True
+CMD0023835,CLI005136,2024-06-13 09:40:05,site_web,mobile,G13,Monastir,ENT02,,,carte_bancaire,1,1,42.9,0.0,7.0,49.9,livree,,,False
+CMD0023836,CLI006864,2024-06-13 10:07:50,site_web,ordinateur,G09,Tabarka,ENT01,CMP0097,,portefeuille_mobile,1,1,50.9,0.0,7.0,57.9,retournee,,,False
+CMD0023837,CLI008185,2024-06-13 10:11:39,reseaux_sociaux,mobile,G05,Nabeul,ENT01,CMP0097,,paiement_a_la_livraison,1,2,41.8,0.0,7.0,48.8,livree,,,True
+CMD0023838,CLI004380,2024-06-13 10:16:24,site_web,mobile,G02,Raoued,ENT01,,,paiement_a_la_livraison,1,1,172.9,0.0,0.0,172.9,livree,,,False
+CMD0023839,CLI008182,2024-06-13 11:06:47,application_mobile,mobile,G22,Métlaoui,ENT03,,,paiement_a_la_livraison,1,1,36.9,0.0,7.0,43.9,livree,,,True
+CMD0023840,CLI007966,2024-06-13 11:31:55,application_mobile,mobile,G17,Kasserine,ENT02,,,virement,1,2,461.8,0.0,0.0,461.8,livree,,,False
+CMD0023841,CLI002978,2024-06-13 11:49:13,application_mobile,mobile,G08,Béja,ENT01,,,virement,3,23,787.7,0.0,0.0,787.7,livraison_echouee,,,False
+CMD0023842,CLI007738,2024-06-13 11:57:18,site_web,mobile,G01,Carthage,ENT01,CMP0097,,carte_prepayee,1,2,83.8,0.0,7.0,90.8,livree,,,True
+CMD0023843,CLI005882,2024-06-13 12:02:42,application_mobile,mobile,G02,Ariana Ville,ENT01,,,carte_bancaire,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0023844,CLI007538,2024-06-13 12:15:53,site_web,mobile,G12,Kalâa Kebira,ENT02,CMP0097,,paiement_a_la_livraison,1,1,35.9,0.0,7.0,42.9,livraison_echouee,,,False
+CMD0023845,CLI007627,2024-06-13 12:17:01,application_mobile,mobile,G15,Sfax,ENT01,,,carte_prepayee,1,1,285.9,0.0,0.0,285.9,livree,,,False
+CMD0023846,CLI004403,2024-06-13 12:23:08,application_mobile,mobile,G19,Gabès,ENT03,CMP0097,,paiement_a_la_livraison,1,1,46.9,0.0,7.0,53.9,livree,,,False
+CMD0023847,CLI000441,2024-06-13 12:56:14,site_web,mobile,G14,El Jem,ENT02,,,carte_bancaire,1,1,31.9,0.0,7.0,38.9,livree,,,False
+CMD0023848,CLI004401,2024-06-13 14:06:44,site_web,mobile,G17,Kasserine,ENT02,,,paiement_a_la_livraison,1,3,233.7,0.0,0.0,233.7,partiellement_retournee,,,False
+CMD0023849,CLI005675,2024-06-13 14:13:37,site_web,mobile,G03,Ezzahra,ENT01,,,paiement_a_la_livraison,2,2,105.8,0.0,7.0,112.8,livree,,,False
+CMD0023850,CLI007445,2024-06-13 14:19:19,site_web,mobile,G01,Carthage,ENT01,,,portefeuille_mobile,4,5,273.5,0.0,0.0,273.5,livree,,,False
+CMD0023851,CLI006068,13/06/2024 14:20,application_mobile,mobile,G20,Zarzis,ENT03,,,portefeuille_mobile,2,2,139.8,0.0,7.0,146.8,livree,,,False
+CMD0023852,CLI005915,2024-06-13 14:26:45,application_mobile,mobile,G04,Den Den,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,2,4,211.6,10.0,0.0,201.6,livree,,,False
+CMD0023853,CLI007957,2024-06-13 14:37:43,application_mobile,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,1,1,37.9,0.0,7.0,44.9,annulee,annulation_client,2024-06-13 18:18:29,False
+CMD0023854,CLI006737,2024-06-13 14:47:27,application_mobile,mobile,G02,La Soukra,ENT01,CMP0097,,carte_prepayee,3,3,379.7,0.0,0.0,379.7,livree,,,False
+CMD0023855,CLI002903,2024-06-13 15:27:57,reseaux_sociaux,mobile,G20,Zarzis,ENT03,,,paiement_a_la_livraison,1,1,29.9,0.0,7.0,36.9,livree,,,False
+CMD0023856,CLI004667,2024-06-13 16:20:34,site_web,tablette,G22,Métlaoui,ENT03,,,carte_bancaire,1,5,29.5,0.0,7.0,36.5,livree,,,False
+CMD0023857,CLI006295,2024-06-13 16:23:07,application_mobile,mobile,G03,Radès,ENT01,,,paiement_a_la_livraison,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0023858,CLI007389,2024-06-13 16:58:05,application_mobile,mobile,G12,Kalâa Kebira,ENT02,,,carte_prepayee,1,1,121.9,0.0,7.0,128.9,livree,,,False
+CMD0023859,CLI007360,2024-06-13 17:09:40,site_web,ordinateur,G16,Kairouan,ENT02,,,paiement_a_la_livraison,1,1,20.9,0.0,7.0,27.9,livree,,,False
+CMD0023860,CLI007624,2024-06-13 17:12:57,site_web,mobile,G09,Jendouba,ENT01,,,carte_bancaire,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0023861,CLI007276,2024-06-13 17:15:31,application_mobile,mobile,G16,Kairouan,ENT02,,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0023862,CLI008187,2024-06-13 17:35:39,site_web,mobile,G01,Tunis,ENT01,,,portefeuille_mobile,1,1,53.9,0.0,7.0,60.9,livree,,,True
+CMD0023863,CLI006495,2024-06-13 18:56:03,application_mobile,mobile,G07,Menzel Bourguiba,ENT01,,,portefeuille_mobile,5,5,466.5,0.0,0.0,466.5,livree,,,False
+CMD0023864,CLI007045,2024-06-13 19:18:19,site_web,ordinateur,G01,Le Bardo,,,,carte_bancaire,1,1,221.9,0.0,0.0,221.9,paiement_echoue,,,False
+CMD0023865,CLI003612,2024-06-13 20:01:36,application_mobile,mobile,G10,Le Kef,ENT02,CMP0097,PROMO24FA2,carte_bancaire,2,4,1323.6,10.0,0.0,1313.6,livree,,,False
+CMD0023866,CLI006229,2024-06-13 20:14:46,application_mobile,mobile,G01,La Marsa,ENT01,CMP0097,,paiement_a_la_livraison,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0023867,CLI008186,13/06/2024 20:33,application_mobile,mobile,G05,Hammamet,ENT01,CMP0097,,paiement_a_la_livraison,3,6,210.4,0.0,0.0,210.4,livree,,,True
+CMD0023868,CLI006174,2024-06-13 20:48:09,application_mobile,mobile,G02,Raoued,ENT01,,,paiement_a_la_livraison,3,4,149.6,0.0,7.0,156.6,livree,,,False
+CMD0023869,CLI007240,2024-06-13 20:54:03,site_web,mobile,G11,Siliana,ENT01,,,paiement_a_la_livraison,2,2,129.8,0.0,7.0,136.8,livree,,,False
+CMD0023870,CLI008184,2024-06-13 21:03:41,site_web,ordinateur,G04,Den Den,ENT01,CMP0097,PROMO24FA2,portefeuille_mobile,1,1,121.9,10.0,7.0,118.9,livree,,,True
+CMD0023871,CLI007683,2024-06-13 21:10:09,site_web,ordinateur,G05,Hammamet,ENT01,,,paiement_a_la_livraison,2,4,102.6,0.0,7.0,109.6,livree,,,False
+CMD0023872,CLI006928,2024-06-13 21:17:25,site_web,ordinateur,G23,Nefta,ENT03,,,virement,2,15,229.5,0.0,0.0,229.5,livree,,,False
+CMD0023873,CLI004400,2024-06-13 21:32:30,reseaux_sociaux,mobile,G15,Sakiet Eddaïer,ENT03,,,portefeuille_mobile,1,2,413.8,0.0,0.0,413.8,livree,,,False
+CMD0023874,CLI005012,2024-06-13 22:05:47,site_web,ordinateur,G15,Sfax,ENT03,,,paiement_a_la_livraison,1,1,15.9,0.0,7.0,22.9,livree,,,False
+CMD0023875,CLI007057,2024-06-13 22:17:59,site_web,mobile,G17,Kasserine,ENT01,,,virement,2,14,1122.6,0.0,0.0,1122.6,livree,,,False
+CMD0023876,CLI006910,2024-06-13 22:40:40,application_mobile,mobile,G21,Ghomrassen,ENT03,,,carte_bancaire,2,2,329.8,0.0,0.0,329.8,livree,,,False
+CMD0023877,CLI006647,2024-06-13 22:49:40,application_mobile,mobile,G13,Monastir,ENT02,,,carte_prepayee,1,1,49.9,0.0,7.0,56.9,livree,,,False
+CMD0023878,CLI002357,2024-06-13 23:10:30,application_mobile,mobile,G02,La Soukra,,,,carte_bancaire,1,1,267.9,0.0,0.0,267.9,paiement_echoue,,,False
+CMD0023879,CLI007627,2024-06-13 23:53:23,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,CMP0097,PROMO24FA2,carte_bancaire,3,4,349.6,10.0,0.0,339.6,livree,,,False
+CMD0023880,CLI006909,2024-06-14 04:46:23,application_mobile,mobile,G01,Tunis,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,1,1,157.9,10.0,7.0,154.9,livree,,,False
+CMD0023881,CLI000781,2024-06-14 05:00:21,reseaux_sociaux,mobile,G12,Sousse,ENT02,,,paiement_a_la_livraison,6,9,944.1,0.0,0.0,944.1,partiellement_retournee,,,False
+CMD0023882,CLI005403,2024-06-14 06:27:28,application_mobile,mobile,G04,Oued Ellil,ENT01,,,carte_bancaire,2,2,2796.8,0.0,0.0,2796.8,livree,,,False
+CMD0023883,CLI003173,2024-06-14 09:23:10,site_web,ordinateur,G05,Hammamet,ENT03,,,virement,1,15,148.5,0.0,7.0,155.5,livree,,,False
+CMD0023884,CLI007093,2024-06-14 09:40:16,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,carte_bancaire,1,1,277.9,0.0,0.0,277.9,retournee,,,False
+CMD0023885,CLI003879,2024-06-14 10:24:46,application_mobile,mobile,G01,Le Bardo,ENT01,CMP0097,,virement,1,5,44.5,0.0,7.0,51.5,livree,,,False
+CMD0023886,CLI002854,2024-06-14 10:25:41,reseaux_sociaux,mobile,G17,Sbeïtla,ENT02,CMP0097,,paiement_a_la_livraison,1,2,83.8,0.0,7.0,90.8,livree,,,False
+CMD0023887,CLI006720,2024-06-14 11:14:08,site_web,mobile,G24,Kébili,ENT03,,,paiement_a_la_livraison,1,2,203.8,0.0,0.0,203.8,livree,,,False
+CMD0023888,CLI006723,2024-06-14 11:19:00,site_web,mobile,G15,Sakiet Ezzit,ENT03,CMP0097,,portefeuille_mobile,1,1,36.9,0.0,7.0,43.9,livree,,,False
+CMD0023889,CLI000515,2024-06-14 11:40:50,site_web,mobile,G15,Sakiet Ezzit,ENT03,CMP0097,PROMO24FA2,paiement_a_la_livraison,2,3,131.7,10.0,7.0,128.7,livree,,,False
+CMD0023890,CLI002862,2024-06-14 13:04:29,application_mobile,mobile,G08,Béja,ENT01,,,paiement_a_la_livraison,1,1,79.9,0.0,7.0,86.9,livree,,,False
+CMD0023891,CLI003051,2024-06-14 13:14:40,site_web,ordinateur,G02,La Soukra,ENT01,,,carte_bancaire,1,1,496.9,0.0,0.0,496.9,livree,,,False
+CMD0023892,CLI003911,2024-06-14 13:19:52,site_web,ordinateur,G22,Métlaoui,ENT03,,,paiement_a_la_livraison,2,2,514.8,0.0,0.0,514.8,livree,,,False
+CMD0023893,CLI001475,2024-06-14 15:05:25,application_mobile,mobile,G19,Gabès,ENT03,,,paiement_a_la_livraison,1,3,47.7,0.0,7.0,54.7,livree,,,False
+CMD0023894,CLI004453,2024-06-14 15:05:49,site_web,mobile,G12,Kalâa Kebira,ENT02,CMP0097,PROMO24FA2,paiement_a_la_livraison,3,4,194.6,10.0,0.0,184.6,livree,,,False
+CMD0023895,CLI006452,2024-06-14 15:49:13,reseaux_sociaux,mobile,G15,Sakiet Eddaïer,ENT01,CMP0097,PROMO24FA2,carte_bancaire,1,1,715.9,10.0,0.0,705.9,livree,,,False
+CMD0023896,CLI003344,2024-06-14 16:04:49,site_web,ordinateur,G19,El Hamma,ENT03,CMP0097,,paiement_a_la_livraison,1,1,19.9,0.0,7.0,26.9,livree,,,False
+CMD0023897,CLI004894,2024-06-14 17:15:21,application_mobile,mobile,G15,Sfax,ENT03,,,carte_bancaire,2,3,503.7,0.0,0.0,503.7,livree,,,False
+CMD0023898,CLI002547,2024-06-14 17:50:00,application_mobile,mobile,G20,Djerba Houmt Souk,,CMP0097,,carte_bancaire,1,1,48.9,0.0,7.0,55.9,paiement_echoue,,,False
+CMD0023899,CLI005063,2024-06-14 17:51:54,site_web,mobile,G12,Kalâa Kebira,ENT02,CMP0097,,portefeuille_mobile,2,2,215.8,0.0,0.0,215.8,livree,,,False
+CMD0023900,CLI004670,2024-06-14 18:27:21,reseaux_sociaux,mobile,G15,Sakiet Eddaïer,ENT03,CMP0097,,carte_bancaire,3,4,586.6,0.0,0.0,586.6,livree,,,False
+CMD0023901,CLI004552,2024-06-14 18:53:44,site_web,ordinateur,G05,Kélibia,ENT01,CMP0097,,carte_prepayee,1,1,71.9,0.0,7.0,78.9,livree,,,False
+CMD0023902,CLI007781,2024-06-14 19:14:30,site_web,mobile,G18,Sidi Bouzid,ENT02,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0023903,CLI003535,2024-06-14 19:35:09,application_mobile,mobile,G05,Hammamet,ENT01,,,paiement_a_la_livraison,2,2,142.8,0.0,7.0,149.8,livree,,,False
+CMD0023904,CLI007492,14/06/2024 19:56,site_web,mobile,G02,Ariana Ville,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,1,1,127.9,10.0,7.0,124.9,livree,,,False
+CMD0023905,CLI008191,2024-06-14 20:05:52,site_web,tablette,G05,Hammamet,ENT01,,BIENVENUE10,paiement_a_la_livraison,1,1,236.9,23.69,0.0,213.21,livree,,,True
+CMD0023906,CLI008195,2024-06-14 20:09:21,site_web,ordinateur,G17,Sbeïtla,ENT02,CMP0097,,portefeuille_mobile,1,3,17.7,0.0,7.0,24.7,livree,,,True
+CMD0023907,CLI005738,2024-06-14 20:11:31,reseaux_sociaux,mobile,G02,Raoued,ENT01,,,virement,3,22,1038.8,0.0,0.0,1038.8,livree,,,False
+CMD0023908,CLI007537,2024-06-14 20:38:17,site_web,ordinateur,G03,Radès,ENT01,CMP0097,,paiement_a_la_livraison,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0023909,CLI008190,2024-06-14 20:47:20,application_mobile,mobile,G12,Hammam Sousse,ENT02,,BIENVENUE10,carte_bancaire,4,5,392.5,30.0,0.0,362.5,livree,,,True
+CMD0023910,CLI005053,2024-06-14 20:47:53,reseaux_sociaux,mobile,G03,Mégrine,ENT01,,,carte_bancaire,3,6,162.4,0.0,0.0,162.4,livree,,,False
+CMD0023911,CLI007789,2024-06-14 21:30:08,application_mobile,mobile,G09,Aïn Draham,ENT01,,,portefeuille_mobile,3,4,120.6,0.0,7.0,127.6,livree,,,False
+CMD0023912,CLI006867,2024-06-14 21:42:38,application_mobile,mobile,G15,Sfax,ENT03,CMP0097,PROMO24FA2,carte_bancaire,2,3,512.7,10.0,0.0,502.7,livree,,,False
+CMD0023913,CLI004761,2024-06-14 21:53:23,site_web,mobile,G08,Béja,ENT01,,,carte_bancaire,1,2,289.8,0.0,0.0,289.8,livree,,,False
+CMD0023914,CLI008193,2024-06-14 21:56:45,site_web,mobile,G01,Le Bardo,ENT01,,,carte_bancaire,1,1,72.9,0.0,7.0,79.9,livree,,,True
+CMD0023915,CLI007159,2024-06-14 22:20:52,site_web,ordinateur,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,1,1,98.9,0.0,7.0,105.9,livree,,,False
+CMD0023916,CLI006723,2024-06-14 22:38:09,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,portefeuille_mobile,2,2,239.8,0.0,0.0,239.8,livree,,,False
+CMD0023917,CLI000678,2024-06-14 22:43:15,application_mobile,mobile,G19,El Hamma,ENT03,CMP0097,PROMO24FA2,paiement_a_la_livraison,2,2,328.8,10.0,0.0,318.8,livree,,,False
+CMD0023918,CLI007843,14/06/2024 22:47,reseaux_sociaux,mobile,G09,Aïn Draham,ENT01,CMP0097,PROMO24FA2,carte_bancaire,3,3,328.7,10.0,0.0,318.7,partiellement_retournee,,,False
+CMD0023919,CLI006835,2024-06-15 00:00:39,site_web,mobile,G07,Bizerte,ENT01,,,paiement_a_la_livraison,1,1,146.9,0.0,7.0,153.9,livree,,,False
+CMD0023920,CLI002115,15/06/2024 00:45,application_mobile,mobile,G15,Sfax,ENT03,CMP0097,,paiement_a_la_livraison,2,2,149.8,0.0,7.0,156.8,annulee,annulation_client,2024-06-15 04:49:55,False
+CMD0023921,CLI005769,2024-06-15 02:05:38,application_mobile,mobile,G14,Mahdia,ENT02,,,carte_bancaire,1,1,56.9,0.0,7.0,63.9,livree,,,False
+CMD0023922,CLI005344,2024-06-15 02:08:40,site_web,ordinateur,G08,Béja,ENT03,,,virement,2,15,1030.5,0.0,0.0,1030.5,livree,,,False
+CMD0023923,CLI002943,2024-06-15 03:11:41,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,carte_bancaire,1,1,116.9,0.0,7.0,123.9,livree,,,False
+CMD0023924,CLI007340,2024-06-15 05:11:28,application_mobile,mobile,G13,Monastir,ENT02,,,paiement_a_la_livraison,1,1,157.9,0.0,0.0,157.9,livree,,,False
+CMD0023925,CLI008196,2024-06-15 07:57:38,site_web,ordinateur,G05,Nabeul,ENT01,CMP0097,,portefeuille_mobile,2,2,77.8,0.0,7.0,84.8,livree,,,True
+CMD0023926,CLI007374,2024-06-15 08:22:24,application_mobile,mobile,G02,La Soukra,ENT01,,,carte_bancaire,1,1,28.9,0.0,7.0,35.9,livree,,,False
+CMD0023927,CLI008114,2024-06-15 08:31:37,application_mobile,mobile,G01,La Marsa,ENT01,CMP0097,PROMO24FA2,carte_bancaire,2,2,280.8,10.0,0.0,270.8,livree,,,True
+CMD0023928,CLI006426,2024-06-15 08:50:43,application_mobile,mobile,G08,Béja,ENT01,CMP0097,,paiement_a_la_livraison,4,6,291.4,0.0,0.0,291.4,livraison_echouee,,,False
+CMD0023929,CLI000196,2024-06-15 09:33:48,application_mobile,mobile,G02,Raoued,ENT01,,,virement,1,10,419.0,0.0,0.0,419.0,livree,,,False
+CMD0023930,CLI007258,2024-06-15 09:59:58,site_web,mobile,G07,Menzel Bourguiba,ENT01,,,portefeuille_mobile,3,4,335.6,0.0,0.0,335.6,partiellement_retournee,,,False
+CMD0023931,CLI007635,2024-06-15 10:22:57,application_mobile,mobile,G17,Kasserine,ENT02,,,paiement_a_la_livraison,2,2,61.8,0.0,7.0,68.8,annulee,annulation_client,2024-06-15 10:52:11,False
+CMD0023932,CLI008161,2024-06-15 10:27:01,application_mobile,mobile,G07,Mateur,ENT01,CMP0097,,paiement_a_la_livraison,2,3,45.7,0.0,7.0,52.7,partiellement_retournee,,,True
+CMD0023933,CLI005054,2024-06-15 10:33:36,application_mobile,mobile,G02,Ariana Ville,ENT02,,,paiement_a_la_livraison,2,3,123.7,0.0,7.0,130.7,livree,,,False
+CMD0023934,CLI007907,2024-06-15 11:22:15,application_mobile,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,3,3,566.7,0.0,0.0,566.7,livree,,,False
+CMD0023935,CLI006788,2024-06-15 11:30:01,application_mobile,mobile,G05,Hammamet,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,3,4,172.6,10.0,0.0,162.6,livree,,,False
+CMD0023936,CLI006122,2024-06-15 12:04:17,site_web,mobile,G07,Bizerte,ENT01,,,paiement_a_la_livraison,1,1,19.9,0.0,7.0,26.9,livree,,,False
+CMD0023937,CLI006638,2024-06-15 13:01:25,application_mobile,mobile,G05,Nabeul,ENT01,,,carte_bancaire,1,1,36.9,0.0,7.0,43.9,livree,,,False
+CMD0023938,CLI005914,2024-06-15 13:24:02,application_mobile,mobile,G13,Monastir,ENT02,,,carte_prepayee,1,1,43.9,0.0,7.0,50.9,livree,,,False
+CMD0023939,CLI005153,2024-06-15 13:43:37,site_web,mobile,G03,Radès,ENT01,CMP0097,,portefeuille_mobile,2,2,92.8,0.0,7.0,99.8,livree,,,False
+CMD0023940,CLI007240,2024-06-15 13:45:52,site_web,mobile,G11,Makthar,ENT01,,,carte_bancaire,1,1,174.9,0.0,0.0,174.9,livree,,,False
+CMD0023941,CLI008201,2024-06-15 14:13:01,site_web,mobile,G09,Jendouba,ENT01,,,paiement_a_la_livraison,1,1,79.9,0.0,7.0,86.9,livree,,,True
+CMD0023942,CLI000921,2024-06-15 14:24:06,application_mobile,mobile,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,4,5,370.5,0.0,0.0,370.5,livree,,,False
+CMD0023943,CLI007618,2024-06-15 14:34:38,application_mobile,mobile,G23,Nefta,ENT03,,,paiement_a_la_livraison,1,2,535.8,0.0,0.0,535.8,livree,,,False
+CMD0023944,CLI008202,2024-06-15 14:57:58,reseaux_sociaux,mobile,G18,Sidi Bouzid,ENT02,CMP0097,BIENVENUE10,paiement_a_la_livraison,2,3,90.7,9.07,7.0,88.63,livree,,,True
+CMD0023945,CLI000340,2024-06-15 15:11:35,site_web,ordinateur,G20,Djerba Houmt Souk,ENT03,,,carte_bancaire,2,2,320.8,0.0,0.0,320.8,livree,,,False
+CMD0023946,CLI002076,2024-06-15 15:37:11,application_mobile,mobile,G19,El Hamma,ENT03,,,carte_bancaire,1,2,59.8,0.0,7.0,66.8,livree,,,False
+CMD0023947,CLI006741,2024-06-15 15:51:38,site_web,mobile,G05,Kélibia,ENT03,,,carte_prepayee,1,1,145.9,0.0,7.0,152.9,livree,,,False
+CMD0023948,CLI007435,2024-06-15 16:17:11,application_mobile,mobile,G11,Makthar,ENT01,,,paiement_a_la_livraison,1,1,27.9,0.0,7.0,34.9,livree,,,False
+CMD0023949,CLI004667,2024-06-15 16:50:33,reseaux_sociaux,mobile,G22,Redeyef,ENT03,,,carte_bancaire,2,3,150.7,0.0,0.0,150.7,livree,,,False
+CMD0023950,CLI006522,2024-06-15 16:56:26,application_mobile,mobile,G06,El Fahs,ENT01,,,portefeuille_mobile,3,6,166.4,0.0,0.0,166.4,livree,,,False
+CMD0023951,CLI006229,2024-06-15 17:12:44,application_mobile,mobile,G16,Haffouz,ENT02,,,paiement_a_la_livraison,4,4,270.6,0.0,0.0,270.6,livree,,,False
+CMD0023952,CLI001153,2024-06-15 17:18:54,site_web,tablette,G01,Tunis,ENT01,,,paiement_a_la_livraison,1,1,220.9,0.0,0.0,220.9,livree,,,False
+CMD0023953,CLI007223,2024-06-15 17:24:31,application_mobile,mobile,G10,Le Kef,ENT01,,,paiement_a_la_livraison,1,2,97.8,0.0,7.0,104.8,livree,,,False
+CMD0023954,CLI007687,2024-06-15 17:31:05,site_web,mobile,G06,Zaghouan,ENT01,,,carte_bancaire,2,3,110.7,0.0,7.0,117.7,livree,,,False
+CMD0023955,CLI006364,2024-06-15 17:39:09,site_web,ordinateur,G01,La Marsa,ENT01,,,carte_bancaire,1,1,738.9,0.0,0.0,738.9,livree,,,False
+CMD0023956,CLI006512,2024-06-15 18:15:08,reseaux_sociaux,mobile,G19,Gabès,ENT03,CMP0097,,portefeuille_mobile,1,3,65.7,0.0,7.0,72.7,livree,,,False
+CMD0023957,CLI007441,2024-06-15 18:16:54,reseaux_sociaux,mobile,G15,Sakiet Ezzit,ENT03,,,carte_bancaire,1,1,8.9,0.0,7.0,15.9,livree,,,False
+CMD0023958,CLI001697,2024-06-15 18:27:53,site_web,ordinateur,G15,Sfax,ENT03,CMP0097,,carte_prepayee,2,2,14.8,0.0,7.0,21.8,livree,,,False
+CMD0023959,CLI008200,2024-06-15 18:29:40,application_mobile,mobile,G04,Manouba,ENT01,,,virement,7,55,2307.5,0.0,0.0,2307.5,annulee,annulation_client,2024-06-17 14:39:03,True
+CMD0023960,CLI003984,15/06/2024 18:34,site_web,ordinateur,G12,Msaken,ENT02,,,carte_bancaire,1,1,7.9,0.0,7.0,14.9,livree,,,False
+CMD0023961,CLI004586,2024-06-15 18:50:26,site_web,ordinateur,G11,Siliana,ENT01,,,carte_bancaire,3,3,276.7,0.0,0.0,276.7,partiellement_retournee,,,False
+CMD0023962,CLI007880,2024-06-15 19:08:47,site_web,ordinateur,G07,Mateur,ENT01,,BIENVENUE10,paiement_a_la_livraison,2,3,125.7,12.57,7.0,120.13,livraison_echouee,,,True
+CMD0023963,CLI008110,2024-06-15 19:16:10,application_mobile,mobile,G05,Kélibia,ENT01,,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,livree,,,True
+CMD0023964,CLI000583,2024-06-15 19:50:54,reseaux_sociaux,mobile,G01,La Marsa,ENT01,,,portefeuille_mobile,1,1,2835.9,0.0,0.0,2835.9,livree,,,False
+CMD0023965,CLI001342,2024-06-15 20:07:36,site_web,mobile,G15,Sakiet Eddaïer,ENT03,,,carte_bancaire,5,5,522.5,0.0,0.0,522.5,livree,,,False
+CMD0023966,CLI007215,2024-06-15 20:23:36,application_mobile,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,2,3,184.7,0.0,0.0,184.7,livree,,,False
+CMD0023967,CLI003562,2024-06-15 20:41:54,site_web,ordinateur,G24,Douz,ENT03,CMP0097,,paiement_a_la_livraison,1,1,14.9,0.0,7.0,21.9,livree,,,False
+CMD0023968,CLI000760,15/06/2024 20:53,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,CMP0097,PROMO24FA2,carte_bancaire,1,1,126.9,10.0,7.0,123.9,livree,,,False
+CMD0023969,CLI005840,2024-06-15 21:03:17,site_web,ordinateur,G06,Zaghouan,ENT01,,,carte_bancaire,2,3,98.7,0.0,7.0,105.7,livree,,,False
+CMD0023970,CLI007212,2024-06-15 21:10:41,site_web,ordinateur,G13,Monastir,ENT02,,,paiement_a_la_livraison,1,1,26.9,0.0,7.0,33.9,livree,,,False
+CMD0023971,CLI001855,2024-06-15 21:15:32,site_web,mobile,G13,Monastir,ENT02,,,carte_bancaire,4,5,400.5,0.0,0.0,400.5,livree,,,False
+CMD0023972,CLI007811,2024-06-15 21:24:00,site_web,mobile,G13,Moknine,ENT02,CMP0097,PROMO24FA2,carte_bancaire,3,4,382.6,10.0,0.0,372.6,livree,,,False
+CMD0023973,CLI007165,2024-06-15 21:29:52,application_mobile,mobile,G12,Msaken,ENT02,,,portefeuille_mobile,2,2,61.8,0.0,7.0,68.8,livree,,,False
+CMD0023974,CLI007980,2024-06-15 21:49:31,reseaux_sociaux,mobile,G09,Tabarka,ENT01,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0023975,CLI002329,2024-06-15 22:00:18,application_mobile,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,1,2,115.8,0.0,7.0,122.8,livree,,,False
+CMD0023976,CLI004592,2024-06-15 22:05:34,site_web,mobile,G16,Haffouz,,CMP0097,PROMO24FA2,paiement_a_la_livraison,7,70,3169.0,10.0,0.0,3159.0,annulee,rupture_stock,2024-06-16 00:15:34,False
+CMD0023977,CLI003605,2024-06-15 22:10:03,site_web,mobile,G03,Ben Arous,ENT01,CMP0097,,carte_bancaire,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0023978,CLI007336,2024-06-15 22:16:31,application_mobile,mobile,G03,Mégrine,,,,carte_bancaire,2,25,689.5,0.0,0.0,689.5,annulee,rupture_stock,2024-06-15 23:39:31,False
+CMD0023979,CLI001982,2024-06-15 22:26:05,reseaux_sociaux,mobile,G07,Mateur,ENT01,CMP0097,,portefeuille_mobile,1,1,41.9,0.0,7.0,48.9,livree,,,False
+CMD0023980,CLI006548,2024-06-15 22:32:30,site_web,mobile,G06,Zaghouan,ENT01,,,paiement_a_la_livraison,6,8,446.2,0.0,0.0,446.2,livree,,,False
+CMD0023981,CLI006332,2024-06-15 22:48:08,site_web,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,3,4,214.6,0.0,0.0,214.6,partiellement_retournee,,,False
+CMD0023982,CLI007049,2024-06-15 22:53:46,application_mobile,mobile,G18,Regueb,ENT02,,,carte_bancaire,1,1,2191.9,0.0,0.0,2191.9,livree,,,False
+CMD0023983,CLI000408,2024-06-15 22:54:19,reseaux_sociaux,mobile,G18,Regueb,ENT02,,,paiement_a_la_livraison,1,2,1155.8,0.0,0.0,1155.8,livree,,,False
+CMD0023984,CLI006336,2024-06-15 22:54:19,site_web,ordinateur,G22,Redeyef,ENT03,,BIENVENUE10,carte_bancaire,5,6,321.4,30.0,0.0,291.4,partiellement_retournee,,,True
+CMD0023985,CLI004985,2024-06-15 23:18:12,site_web,ordinateur,G03,Ezzahra,ENT01,CMP0097,,paiement_a_la_livraison,1,1,7.9,0.0,7.0,14.9,livree,,,False
+CMD0023986,CLI007045,2024-06-15 23:36:44,application_mobile,mobile,G01,Tunis,ENT01,CMP0097,PROMO24FA2,carte_bancaire,2,2,125.8,10.0,7.0,122.8,livree,,,False
+CMD0023987,CLI007916,2024-06-15 23:48:59,site_web,mobile,G05,Nabeul,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,2,4,122.6,10.0,7.0,119.6,livree,,,False
+CMD0023988,CLI000325,2024-06-16 00:44:51,site_web,ordinateur,G14,Ksour Essef,ENT02,,,paiement_a_la_livraison,1,1,278.9,0.0,0.0,278.9,annulee,annulation_client,2024-06-17 17:25:21,False
+CMD0023989,CLI006524,2024-06-16 08:50:27,application_mobile,mobile,G22,Redeyef,ENT03,,,carte_bancaire,1,1,93.9,0.0,7.0,100.9,livree,,,False
+CMD0023990,CLI008139,2024-06-16 09:16:48,site_web,ordinateur,G18,Sidi Bouzid,ENT02,,,paiement_a_la_livraison,1,1,64.9,0.0,7.0,71.9,livree,,,False
+CMD0023991,CLI003378,2024-06-16 12:17:28,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,,,carte_bancaire,2,2,108.8,0.0,7.0,115.8,livree,,,False
+CMD0023992,CLI004507,2024-06-16 13:27:54,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,carte_prepayee,2,3,253.7,0.0,0.0,253.7,livree,,,False
+CMD0023993,CLI006910,2024-06-16 13:42:57,reseaux_sociaux,mobile,G21,Ghomrassen,ENT03,,,paiement_a_la_livraison,3,3,297.7,0.0,0.0,297.7,livree,,,False
+CMD0023994,CLI008072,2024-06-16 13:53:57,reseaux_sociaux,mobile,G20,Médenine,ENT03,,,paiement_a_la_livraison,1,1,38.9,0.0,7.0,45.9,livree,,,True
+CMD0023995,CLI000165,2024-06-16 14:03:48,application_mobile,mobile,G05,Nabeul,ENT01,,,virement,2,11,463.9,0.0,0.0,463.9,livree,,,False
+CMD0023996,CLI006626,2024-06-16 14:56:18,application_mobile,mobile,G19,El Hamma,ENT03,CMP0097,,paiement_a_la_livraison,2,2,87.8,0.0,7.0,94.8,partiellement_retournee,,,False
+CMD0023997,CLI007115,2024-06-16 16:34:53,site_web,ordinateur,G22,Redeyef,ENT03,,,paiement_a_la_livraison,4,23,1088.7,0.0,0.0,1088.7,livree,,,False
+CMD0023998,CLI005669,2024-06-16 16:57:32,site_web,mobile,G20,Zarzis,ENT03,,,paiement_a_la_livraison,2,2,64.8,0.0,7.0,71.8,livree,,,False
+CMD0023999,CLI008203,2024-06-16 17:01:11,site_web,ordinateur,G01,La Marsa,ENT01,CMP0097,BIENVENUE10,paiement_a_la_livraison,1,1,290.9,29.09,0.0,261.81,livree,,,True
+CMD0024000,CLI005793,2024-06-16 17:23:35,site_web,ordinateur,G12,Msaken,ENT02,,,paiement_a_la_livraison,1,1,8.9,0.0,7.0,15.9,livree,,,False
+CMD0024001,CLI008057,2024-06-16 17:41:04,application_mobile,mobile,G05,Nabeul,ENT01,CMP0097,,paiement_a_la_livraison,2,2,270.8,0.0,0.0,270.8,livree,,,True
+CMD0024002,CLI005160,2024-06-16 18:28:48,reseaux_sociaux,mobile,G05,Nabeul,ENT01,,,carte_bancaire,1,1,9.9,0.0,7.0,16.9,livree,,,False
+CMD0024003,CLI000333,2024-06-16 18:37:37,site_web,ordinateur,G12,Sousse,ENT02,,,virement,2,17,326.3,0.0,0.0,326.3,livree,,,False
+CMD0024004,CLI007674,2024-06-16 18:46:57,application_mobile,mobile,G12,Hammam Sousse,ENT02,,,carte_bancaire,1,1,300.9,0.0,0.0,300.9,livree,,,False
+CMD0024005,CLI001797,2024-06-16 19:19:36,site_web,ordinateur,G02,Ariana Ville,ENT01,,,paiement_a_la_livraison,4,6,897.4,0.0,0.0,897.4,livree,,,False
+CMD0024006,CLI005215,2024-06-16 20:20:47,reseaux_sociaux,mobile,G19,Gabès,ENT03,,,paiement_a_la_livraison,2,2,278.8,0.0,0.0,278.8,partiellement_retournee,,,False
+CMD0024007,CLI003853,2024-06-16 20:53:30,site_web,ordinateur,G05,Hammamet,ENT01,,,carte_bancaire,4,4,516.6,0.0,0.0,516.6,livree,,,False
+CMD0024008,CLI007899,2024-06-16 21:37:57,reseaux_sociaux,mobile,G01,La Marsa,ENT01,,,paiement_a_la_livraison,6,9,543.1,0.0,0.0,543.1,livraison_echouee,,,False
+CMD0024009,CLI007413,2024-06-16 22:05:37,site_web,ordinateur,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,1,396.9,0.0,0.0,396.9,livree,,,False
+CMD0024010,CLI005627,2024-06-16 23:24:49,application_mobile,mobile,G12,Hammam Sousse,ENT02,CMP0097,,paiement_a_la_livraison,1,1,9.9,0.0,7.0,16.9,livree,,,False
+CMD0024011,CLI004398,2024-06-16 23:38:52,application_mobile,mobile,G12,Kalâa Kebira,ENT02,,,carte_bancaire,2,2,245.8,0.0,0.0,245.8,livree,,,False
+CMD0024012,CLI008097,2024-06-17 01:45:06,site_web,ordinateur,G02,La Soukra,ENT01,,,carte_bancaire,1,1,39.9,0.0,7.0,46.9,livree,,,False
+CMD0024013,CLI008094,2024-06-17 07:52:46,application_mobile,mobile,G15,Sfax,ENT03,,,carte_bancaire,3,3,1209.7,0.0,0.0,1209.7,livree,,,False
+CMD0024014,CLI005707,2024-06-17 09:15:03,site_web,ordinateur,G17,Kasserine,ENT02,,,carte_bancaire,1,1,50.9,0.0,7.0,57.9,livraison_echouee,,,True
+CMD0024015,CLI004561,2024-06-17 09:26:10,reseaux_sociaux,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,2,2,46.8,0.0,7.0,53.8,livree,,,False
+CMD0024016,CLI006426,2024-06-17 10:05:50,application_mobile,mobile,G08,Béja,ENT01,CMP0097,,paiement_a_la_livraison,1,1,49.9,0.0,7.0,56.9,livree,,,False
+CMD0024017,CLI003280,2024-06-17 11:03:06,application_mobile,mobile,G22,Redeyef,ENT03,CMP0097,PROMO24FA2,paiement_a_la_livraison,3,4,550.6,10.0,0.0,540.6,livree,,,False
+CMD0024018,CLI006158,2024-06-17 12:16:40,site_web,ordinateur,G05,Kélibia,ENT01,,,paiement_a_la_livraison,1,1,396.9,0.0,0.0,396.9,livree,,,False
+CMD0024019,CLI004541,2024-06-17 12:18:24,reseaux_sociaux,mobile,G19,Gabès,ENT03,CMP0097,,paiement_a_la_livraison,2,2,265.8,0.0,0.0,265.8,livree,,,False
+CMD0024020,CLI006165,2024-06-17 12:34:05,site_web,mobile,G01,La Marsa,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,6,6,442.4,10.0,0.0,432.4,livree,,,False
+CMD0024021,CLI004157,2024-06-17 13:55:20,site_web,mobile,G03,Radès,ENT01,CMP0097,PROMO24FA2,portefeuille_mobile,1,1,144.9,10.0,7.0,141.9,livree,,,False
+CMD0024022,CLI004690,17/06/2024 15:27,site_web,mobile,G13,Monastir,,CMP0077,ETE24TI,carte_bancaire,1,1,241.9,48.38,0.0,193.52,paiement_echoue,,,False
+CMD0024023,CLI001878,2024-06-17 15:48:23,application_mobile,mobile,G03,Ben Arous,ENT01,CMP0097,PROMO24FA2,carte_bancaire,3,4,508.6,10.0,0.0,498.6,livree,,,False
+CMD0024024,CLI003137,2024-06-17 16:25:47,site_web,ordinateur,G22,Redeyef,ENT03,CMP0097,,paiement_a_la_livraison,1,1,58.9,0.0,7.0,65.9,livraison_echouee,,,False
+CMD0024025,CLI007039,2024-06-17 16:27:00,site_web,mobile,G03,Mégrine,ENT01,,BIENVENUE10,portefeuille_mobile,1,1,116.9,11.69,7.0,112.21,livree,,,True
+CMD0024026,CLI006924,2024-06-17 17:04:06,application_mobile,mobile,G18,Sidi Bouzid,ENT02,CMP0097,PROMO24FA2,paiement_a_la_livraison,2,2,2663.8,10.0,0.0,2653.8,livree,,,False
+CMD0024027,CLI006214,2024-06-17 18:22:50,reseaux_sociaux,mobile,G13,Monastir,ENT02,,,paiement_a_la_livraison,2,4,136.6,0.0,7.0,143.6,livree,,,False
+CMD0024028,CLI003629,2024-06-17 18:49:40,site_web,ordinateur,G03,Ezzahra,ENT01,,,carte_bancaire,6,6,394.4,0.0,0.0,394.4,livree,,,False
+CMD0024029,CLI004642,17/06/2024 18:55,reseaux_sociaux,mobile,G09,Tabarka,ENT01,CMP0097,,carte_bancaire,3,4,286.6,0.0,0.0,286.6,partiellement_retournee,,,False
+CMD0024030,CLI008009,2024-06-17 19:50:12,application_mobile,mobile,G16,Kairouan,ENT02,,,paiement_a_la_livraison,1,1,241.9,0.0,0.0,241.9,livree,,,False
+CMD0024031,CLI005436,2024-06-17 20:19:57,site_web,mobile,G05,Nabeul,ENT01,CMP0077,,paiement_a_la_livraison,3,3,52.7,0.0,7.0,59.7,livree,,,False
+CMD0024032,CLI006710,2024-06-17 20:21:14,application_mobile,mobile,G08,Béja,ENT01,CMP0097,BIENVENUE10,carte_bancaire,2,2,88.8,8.88,7.0,86.92,livree,,,True
+CMD0024033,CLI006159,2024-06-17 20:28:10,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,2,77.8,0.0,7.0,84.8,livree,,,False
+CMD0024034,CLI001399,2024-06-17 20:30:23,site_web,mobile,G10,Le Kef,ENT01,,,paiement_a_la_livraison,3,5,337.5,0.0,0.0,337.5,partiellement_retournee,,,False
+CMD0024035,CLI005437,2024-06-17 20:45:04,application_mobile,mobile,G20,Djerba Houmt Souk,,,,carte_prepayee,2,2,345.8,0.0,0.0,345.8,paiement_echoue,,,False
+CMD0024036,CLI007093,2024-06-17 21:20:51,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,CMP0097,,carte_bancaire,1,1,33.9,0.0,7.0,40.9,livree,,,False
+CMD0024037,CLI006981,2024-06-17 21:35:27,site_web,ordinateur,G22,Gafsa,ENT03,,,carte_bancaire,2,2,63.8,0.0,7.0,70.8,livree,,,False
+CMD0024038,CLI007018,2024-06-17 21:43:36,site_web,mobile,G01,Le Bardo,ENT01,,,carte_bancaire,1,1,199.9,0.0,0.0,199.9,livree,,,False
+CMD0024039,CLI006714,2024-06-17 21:47:29,site_web,ordinateur,G15,Sakiet Ezzit,ENT03,CMP0097,,paiement_a_la_livraison,1,1,43.9,0.0,7.0,50.9,livree,,,False
+CMD0024040,CLI008125,2024-06-17 22:07:40,application_mobile,mobile,G01,Carthage,ENT01,,BIENVENUE10,carte_prepayee,1,1,51.9,5.19,7.0,53.71,annulee,annulation_client,2024-06-18 01:37:38,True
+CMD0024041,CLI007547,2024-06-17 22:11:05,site_web,mobile,G05,Hammamet,ENT01,,,portefeuille_mobile,1,1,22.9,0.0,7.0,29.9,livree,,,False
+CMD0024042,CLI001797,2024-06-17 22:44:53,application_mobile,mobile,G06,Zaghouan,ENT01,CMP0097,,carte_bancaire,1,2,31.8,0.0,7.0,38.8,livree,,,False
+CMD0024043,CLI004105,2024-06-17 22:54:44,application_mobile,mobile,G08,Medjez el-Bab,ENT01,,,paiement_a_la_livraison,2,2,296.8,0.0,0.0,296.8,livree,,,False
+CMD0024044,CLI006872,2024-06-17 23:00:17,site_web,mobile,G01,Tunis,ENT01,CMP0097,,paiement_a_la_livraison,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024045,CLI003535,2024-06-17 23:20:06,application_mobile,mobile,G05,Kélibia,ENT01,,,paiement_a_la_livraison,1,2,37.8,0.0,7.0,44.8,partiellement_retournee,,,False
+CMD0024046,CLI005187,2024-06-17 23:26:44,site_web,mobile,G15,Sakiet Ezzit,ENT03,,,carte_bancaire,1,1,80.9,0.0,7.0,87.9,livree,,,False
+CMD0024047,CLI007765,2024-06-18 00:45:40,reseaux_sociaux,mobile,G01,Le Bardo,ENT01,,,paiement_a_la_livraison,1,2,15.8,0.0,7.0,22.8,livraison_echouee,,,True
+CMD0024048,CLI001639,2024-06-18 08:04:05,site_web,ordinateur,G16,Haffouz,ENT02,,,paiement_a_la_livraison,1,1,37.9,0.0,7.0,44.9,livree,,,False
+CMD0024049,CLI004477,2024-06-18 08:10:39,application_mobile,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,1,1,32.9,0.0,7.0,39.9,livree,,,False
+CMD0024050,CLI003300,2024-06-18 08:49:16,application_mobile,mobile,G04,Den Den,ENT01,,,carte_bancaire,1,1,2102.9,0.0,0.0,2102.9,livree,,,False
+CMD0024051,CLI008209,2024-06-18 09:40:12,site_web,mobile,G01,Tunis,ENT01,,BIENVENUE10,paiement_a_la_livraison,2,2,200.8,20.08,0.0,180.72,livree,,,True
+CMD0024052,CLI005641,2024-06-18 10:15:45,application_mobile,mobile,G01,Tunis,ENT01,CMP0097,,virement,1,15,1123.5,0.0,0.0,1123.5,annulee,annulation_client,2024-06-18 10:22:55,False
+CMD0024053,CLI007698,2024-06-18 10:49:14,application_mobile,mobile,G13,Moknine,ENT02,CMP0097,PROMO24FA2,carte_bancaire,1,1,608.9,10.0,0.0,598.9,livree,,,False
+CMD0024054,CLI001190,2024-06-18 13:56:15,site_web,mobile,G01,Tunis,ENT01,CMP0097,,carte_bancaire,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024055,CLI007892,2024-06-18 14:33:36,site_web,mobile,G02,La Soukra,ENT01,,,paiement_a_la_livraison,2,3,1691.7,0.0,0.0,1691.7,partiellement_retournee,,,False
+CMD0024056,CLI006952,2024-06-18 14:35:55,application_mobile,mobile,G16,Haffouz,ENT02,,,carte_bancaire,1,1,30.9,0.0,7.0,37.9,annulee,annulation_client,2024-06-18 17:12:34,False
+CMD0024057,CLI006158,2024-06-18 15:37:40,application_mobile,mobile,G05,Kélibia,ENT01,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0024058,CLI003985,2024-06-18 16:01:30,application_mobile,mobile,G04,Manouba,ENT01,,,carte_bancaire,1,1,34.9,0.0,7.0,41.9,livree,,,False
+CMD0024059,CLI007125,2024-06-18 16:27:44,application_mobile,mobile,G01,Tunis,ENT01,,,carte_bancaire,2,3,142.7,0.0,7.0,149.7,livree,,,False
+CMD0024060,CLI003527,2024-06-18 16:49:11,application_mobile,mobile,G05,Hammamet,ENT01,,,virement,2,24,141.6,0.0,7.0,148.6,livree,,,False
+CMD0024061,CLI006853,2024-06-18 17:16:01,site_web,tablette,G24,Douz,ENT03,,,paiement_a_la_livraison,1,1,80.9,0.0,7.0,87.9,livree,,,False
+CMD0024062,CLI008208,2024-06-18 17:29:16,site_web,tablette,G05,Nabeul,ENT01,,,carte_bancaire,1,1,21.9,0.0,7.0,28.9,LIVREE,,,True
+CMD0024063,CLI003062,18/06/2024 18:03,site_web,ordinateur,G16,Haffouz,ENT02,,,carte_bancaire,1,1,267.9,0.0,0.0,267.9,retournee,,,False
+CMD0024064,CLI008207,2024-06-18 18:51:00,site_web,mobile,G12,Hammam Sousse,ENT02,,BIENVENUE10,carte_bancaire,1,1,1607.9,30.0,0.0,1577.9,livree,,,True
+CMD0024065,CLI005527,2024-06-18 20:03:28,site_web,ordinateur,G13,Ksar Hellal,ENT02,CMP0097,,portefeuille_mobile,1,3,239.7,0.0,0.0,239.7,partiellement_retournee,,,False
+CMD0024066,CLI007572,2024-06-18 20:16:57,application_mobile,mobile,G07,Bizerte,ENT01,CMP0097,,paiement_a_la_livraison,2,3,70.7,0.0,7.0,77.7,livree,,,False
+CMD0024067,CLI000750,2024-06-18 20:27:10,site_web,mobile,G12,Kalâa Kebira,ENT02,CMP0097,,paiement_a_la_livraison,3,3,81.7,0.0,7.0,88.7,livree,,,False
+CMD0024068,CLI003505,18/06/2024 20:42,site_web,ordinateur,G15,Sakiet Ezzit,ENT03,CMP0097,PROMO24FA2,paiement_a_la_livraison,1,1,125.9,10.0,7.0,122.9,livree,,,False
+CMD0024069,CLI003280,2024-06-18 20:44:30,application_mobile,mobile,G22,Gafsa,ENT03,,,carte_bancaire,1,1,1254.9,0.0,0.0,1254.9,livree,,,False
+CMD0024070,CLI001615,2024-06-18 21:12:36,site_web,mobile,G06,Zaghouan,,,,carte_prepayee,1,1,84.9,0.0,7.0,91.9,paiement_echoue,,,False
+CMD0024071,CLI005831,2024-06-18 21:27:15,application_mobile,mobile,G07,Mateur,ENT01,CMP0077,,carte_bancaire,1,1,107.9,0.0,7.0,114.9,livree,,,False
+CMD0024072,CLI003346,2024-06-18 21:29:23,site_web,ordinateur,G01,Carthage,ENT01,CMP0097,PROMO24FA2,carte_prepayee,3,3,306.7,10.0,0.0,296.7,livree,,,False
+CMD0024073,CLI004385,2024-06-18 22:02:06,site_web,mobile,G01,La Marsa,ENT01,CMP0097,,portefeuille_mobile,1,1,35.9,0.0,7.0,42.9,retournee,,,False
+CMD0024074,CLI001876,2024-06-18 22:35:05,site_web,mobile,G09,Jendouba,ENT01,CMP0097,PROMO24FA2,carte_bancaire,1,2,161.8,10.0,0.0,151.8,livree,,,False
+CMD0024075,CLI005484,2024-06-18 23:15:53,application_mobile,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,4,8,661.2,0.0,0.0,661.2,partiellement_retournee,,,False
+CMD0024076,CLI008024,2024-06-18 23:38:15,reseaux_sociaux,mobile,G03,Radès,ENT01,,,portefeuille_mobile,1,1,34.9,0.0,7.0,41.9,livree,,,False
+CMD0024077,CLI007378,2024-06-18 23:44:49,site_web,ordinateur,G05,Hammamet,ENT01,CMP0097,,portefeuille_mobile,1,1,116.9,0.0,7.0,123.9,livree,,,False
+CMD0024078,CLI000459,2024-06-19 01:41:18,site_web,ordinateur,G18,Sidi Bouzid,ENT02,,,paiement_a_la_livraison,3,4,251.6,0.0,0.0,251.6,livree,,,False
+CMD0024079,CLI005534,2024-06-19 03:48:56,reseaux_sociaux,mobile,G02,Raoued,ENT01,,,carte_bancaire,1,1,50.9,0.0,7.0,57.9,retournee,,,False
+CMD0024080,CLI004229,2024-06-19 08:04:58,site_web,ordinateur,G02,La Soukra,ENT01,CMP0097,PROMO24FA2,carte_bancaire,2,2,203.8,10.0,0.0,193.8,livree,,,False
+CMD0024081,CLI001538,2024-06-19 09:23:38,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,CMP0097,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,livraison_echouee,,,False
+CMD0024082,CLI008212,2024-06-19 10:27:18,application_mobile,mobile,G05,Kélibia,ENT01,CMP0097,,carte_bancaire,3,4,114.6,0.0,7.0,121.6,partiellement_retournee,,,True
+CMD0024083,CLI007389,2024-06-19 10:30:57,site_web,mobile,G12,Hammam Sousse,ENT02,CMP0097,,paiement_a_la_livraison,3,3,103.7,0.0,7.0,110.7,livree,,,False
+CMD0024084,CLI003093,2024-06-19 11:16:29,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,1,115.9,0.0,7.0,122.9,livree,,,False
+CMD0024085,CLI007242,2024-06-19 11:46:04,application_mobile,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,1,1,41.9,0.0,7.0,48.9,annulee,annulation_client,2024-06-19 12:58:59,False
+CMD0024086,CLI008198,2024-06-19 12:34:16,reseaux_sociaux,mobile,G22,Gafsa,ENT03,,,carte_prepayee,1,1,5.9,0.0,7.0,12.9,livree,,,True
+CMD0024087,CLI008180,2024-06-19 12:40:27,site_web,mobile,G14,Ksour Essef,ENT02,,BIENVENUE10,paiement_a_la_livraison,4,4,525.6,30.0,0.0,495.6,livree,,,True
+CMD0024088,CLI008215,2024-06-19 13:17:16,site_web,ordinateur,G05,Kélibia,ENT01,CMP0097,PROMO24FA2,carte_bancaire,2,3,217.7,10.0,0.0,207.7,livree,,,True
+CMD0024089,CLI007004,2024-06-19 13:56:37,application_mobile,mobile,G04,Manouba,ENT01,,,carte_bancaire,2,3,176.7,0.0,0.0,176.7,livree,,,False
+CMD0024090,CLI008103,2024-06-19 15:05:55,application_mobile,mobile,G11,Makthar,ENT01,CMP0097,,paiement_a_la_livraison,1,1,22.9,0.0,7.0,29.9,livree,,,True
+CMD0024091,CLI001697,2024-06-19 15:41:24,reseaux_sociaux,mobile,G15,Sakiet Eddaïer,ENT03,,,carte_prepayee,2,3,581.7,0.0,0.0,581.7,livree,,,False
+CMD0024092,CLI005382,2024-06-19 16:36:45,site_web,tablette,G03,Radès,ENT01,,,portefeuille_mobile,2,2,131.8,0.0,7.0,138.8,livree,,,False
+CMD0024093,CLI005799,2024-06-19 16:37:05,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,80.9,0.0,7.0,87.9,livree,,,False
+CMD0024094,CLI007932,2024-06-19 17:15:47,site_web,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,1,39.9,0.0,7.0,46.9,livree,,,False
+CMD0024095,CLI007841,2024-06-19 17:19:57,application_mobile,mobile,G01,Tunis,ENT01,,,paiement_a_la_livraison,1,2,57.8,0.0,7.0,64.8,livree,,,False
+CMD0024096,CLI002085,2024-06-19 18:09:18,application_mobile,mobile,G03,Ezzahra,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,2,2,482.8,10.0,0.0,472.8,livree,,,False
+CMD0024097,CLI003612,2024-06-19 18:18:38,site_web,mobile,G02,Ariana Ville,ENT01,,,carte_prepayee,1,1,48.9,0.0,7.0,55.9,livree,,,False
+CMD0024098,CLI002959,2024-06-19 18:28:42,site_web,ordinateur,G03,Ben Arous,ENT01,,,carte_bancaire,1,1,188.9,0.0,0.0,188.9,livree,,,False
+CMD0024099,CLI007899,2024-06-19 18:51:10,application_mobile,mobile,G12,Hammam Sousse,ENT02,,,carte_bancaire,1,1,157.9,0.0,0.0,157.9,livree,,,False
+CMD0024099,CLI007899,2024-06-19 18:51:10,application_mobile,mobile,G12,Hammam Sousse,ENT02,,,carte_bancaire,1,1,157.9,0.0,0.0,157.9,livree,,,False
+CMD0024100,CLI006399,2024-06-19 18:52:02,application_mobile,mobile,G11,Makthar,ENT01,,,paiement_a_la_livraison,2,2,236.8,0.0,0.0,236.8,livree,,,False
+CMD0024101,CLI003114,2024-06-19 18:52:49,site_web,ordinateur,G05,Hammamet,,,,carte_bancaire,1,1,95.9,0.0,7.0,102.9,paiement_echoue,,,False
+CMD0024102,CLI006664,2024-06-19 19:16:38,application_mobile,mobile,G24,Kébili,ENT03,,,carte_bancaire,3,4,385.6,0.0,0.0,385.6,livree,,,False
+CMD0024103,CLI008127,2024-06-19 19:47:14,application_mobile,mobile,G02,Raoued,ENT01,CMP0077,,carte_bancaire,1,1,22.9,0.0,7.0,29.9,livree,,,False
+CMD0024104,CLI006673,2024-06-19 20:39:23,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,portefeuille_mobile,1,1,101.9,0.0,7.0,108.9,livree,,,False
+CMD0024105,CLI008127,2024-06-19 20:42:09,site_web,mobile,G02,La Soukra,ENT01,,,paiement_a_la_livraison,2,2,371.8,0.0,0.0,371.8,livree,,,False
+CMD0024106,CLI006818,2024-06-19 21:01:16,site_web,ordinateur,G05,Nabeul,ENT01,CMP0097,,paiement_a_la_livraison,2,2,78.8,0.0,7.0,85.8,annulee,annulation_client,2024-06-20 01:49:36,False
+CMD0024107,CLI004602,2024-06-19 21:01:22,application_mobile,mobile,G03,Mégrine,ENT01,CMP0077,,paiement_a_la_livraison,1,3,47.7,0.0,7.0,54.7,livree,,,False
+CMD0024108,CLI007856,2024-06-19 21:39:14,site_web,ordinateur,G01,La Marsa,ENT01,,,carte_bancaire,1,1,35.9,0.0,7.0,42.9,livree,,,True
+CMD0024109,CLI002859,2024-06-19 21:53:50,site_web,ordinateur,G13,Monastir,ENT02,CMP0097,,carte_bancaire,1,1,2209.9,0.0,0.0,2209.9,livree,,,False
+CMD0024110,CLI004988,2024-06-19 22:33:14,application_mobile,mobile,G05,Hammamet,ENT01,,,carte_bancaire,2,5,96.5,0.0,7.0,103.5,livree,,,False
+CMD0024111,CLI007079,2024-06-19 22:52:02,application_mobile,mobile,G13,Ksar Hellal,ENT02,,,portefeuille_mobile,6,6,438.4,0.0,0.0,438.4,livree,,,False
+CMD0024112,CLI006169,2024-06-19 23:03:17,application_mobile,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,3,4,168.6,0.0,0.0,168.6,livree,,,False
+CMD0024113,CLI005078,2024-06-19 23:20:28,site_web,ordinateur,G23,Nefta,ENT03,,,carte_bancaire,1,1,286.9,0.0,0.0,286.9,livree,,,False
+CMD0024114,CLI006068,2024-06-19 23:54:54,application_mobile,mobile,G20,Zarzis,ENT03,CMP0097,,paiement_a_la_livraison,2,2,90.8,0.0,7.0,97.8,partiellement_retournee,,,False
+CMD0024115,CLI003411,2024-06-20 00:19:34,application_mobile,mobile,G09,Tabarka,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,1,1,373.9,10.0,0.0,363.9,livree,,,False
+CMD0024116,CLI008217,20/06/2024 01:00,site_web,mobile,G09,Aïn Draham,ENT01,,,paiement_a_la_livraison,2,4,76.6,0.0,7.0,83.6,livree,,,True
+CMD0024117,CLI007527,2024-06-20 07:42:32,application_mobile,mobile,G09,Jendouba,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,4,4,487.6,10.0,0.0,477.6,livraison_echouee,,,False
+CMD0024118,CLI001680,2024-06-20 10:01:31,reseaux_sociaux,mobile,G08,Medjez el-Bab,ENT01,,,carte_bancaire,1,4,323.6,0.0,0.0,323.6,livree,,,False
+CMD0024119,CLI006715,2024-06-20 10:08:34,site_web,ordinateur,G08,Medjez el-Bab,ENT01,,,paiement_a_la_livraison,1,2,19.8,0.0,7.0,26.8,livree,,,False
+CMD0024120,CLI004982,2024-06-20 10:36:01,site_web,ordinateur,G15,Sfax,ENT03,,,virement,2,27,464.3,0.0,0.0,464.3,livree,,,False
+CMD0024121,CLI006274,2024-06-20 11:24:44,application_mobile,mobile,G08,Medjez el-Bab,ENT01,CMP0097,,paiement_a_la_livraison,1,1,37.9,0.0,7.0,44.9,livraison_echouee,,,False
+CMD0024122,CLI001876,2024-06-20 11:28:48,site_web,ordinateur,G10,Le Kef,ENT01,,,portefeuille_mobile,3,5,403.5,0.0,0.0,403.5,livree,,,False
+CMD0024123,CLI007949,2024-06-20 12:19:42,site_web,mobile,G22,Métlaoui,ENT03,CMP0097,PROMO24FA2,carte_bancaire,3,3,453.7,10.0,0.0,443.7,partiellement_retournee,,,False
+CMD0024124,CLI007420,2024-06-20 12:41:13,application_mobile,mobile,G13,Moknine,ENT02,CMP0097,,paiement_a_la_livraison,1,1,48.9,0.0,7.0,55.9,livree,,,False
+CMD0024125,CLI005215,2024-06-20 12:43:07,site_web,mobile,G19,Gabès,ENT03,,,carte_bancaire,4,4,343.6,0.0,0.0,343.6,annulee,annulation_client,2024-06-20 13:25:17,False
+CMD0024126,CLI007797,2024-06-20 12:50:34,application_mobile,mobile,G05,Nabeul,ENT01,,,carte_bancaire,2,2,167.8,0.0,0.0,167.8,livree,,,True
+CMD0024127,CLI008219,2024-06-20 13:19:25,site_web,mobile,G15,Sakiet Ezzit,ENT03,,BIENVENUE10,carte_bancaire,2,2,88.8,8.88,7.0,86.92,partiellement_retournee,,,True
+CMD0024128,CLI008220,2024-06-20 14:00:06,site_web,ordinateur,G04,Manouba,ENT01,,,portefeuille_mobile,2,2,81.8,0.0,7.0,88.8,livree,,,True
+CMD0024129,CLI005501,2024-06-20 14:00:08,application_mobile,mobile,G01,Tunis,ENT01,CMP0077,ETE24TI,paiement_a_la_livraison,2,2,217.8,43.56,0.0,174.24,livraison_echouee,,,False
+CMD0024130,CLI004728,2024-06-20 15:32:17,site_web,mobile,G03,Ezzahra,ENT01,,,carte_bancaire,1,1,51.9,0.0,7.0,58.9,livree,,,False
+CMD0024131,CLI005364,2024-06-20 15:36:24,site_web,mobile,G01,Le Bardo,ENT01,,,carte_bancaire,4,6,1211.4,0.0,0.0,1211.4,livree,,,False
+CMD0024132,CLI004261,2024-06-20 15:46:18,reseaux_sociaux,mobile,G01,Le Bardo,ENT02,CMP0077,ETE24TI,carte_prepayee,4,5,1727.5,60.0,0.0,1667.5,livree,,,False
+CMD0024133,CLI006274,2024-06-20 16:02:23,site_web,mobile,G08,Medjez el-Bab,ENT01,CMP0097,,carte_bancaire,1,1,32.9,0.0,7.0,39.9,livree,,,False
+CMD0024134,CLI005739,2024-06-20 17:00:07,application_mobile,mobile,G02,La Soukra,ENT01,CMP0097,,paiement_a_la_livraison,1,1,1633.9,0.0,0.0,1633.9,livree,,,False
+CMD0024135,CLI008221,2024-06-20 17:02:32,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,25.9,0.0,7.0,32.9,retournee,,,True
+CMD0024136,CLI007504,2024-06-20 17:29:58,site_web,ordinateur,G14,Mahdia,ENT02,,BIENVENUE10,carte_bancaire,2,2,92.8,9.28,7.0,90.52,livree,,,True
+CMD0024137,CLI007996,2024-06-20 17:37:35,site_web,mobile,G12,Sousse,ENT02,,,paiement_a_la_livraison,2,2,160.8,0.0,0.0,160.8,livree,,,True
+CMD0024138,CLI006344,2024-06-20 17:51:07,site_web,ordinateur,G05,Hammamet,ENT01,,,carte_bancaire,1,2,231.8,0.0,0.0,231.8,livree,,,False
+CMD0024139,CLI001827,2024-06-20 18:38:23,site_web,ordinateur,G06,El Fahs,ENT01,,,carte_bancaire,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0024140,CLI003861,2024-06-20 19:38:56,site_web,tablette,G01,Le Bardo,ENT01,,,carte_prepayee,3,3,2300.7,0.0,0.0,2300.7,livree,,,False
+CMD0024141,CLI004081,2024-06-20 19:57:50,site_web,mobile,G10,Dahmani,ENT02,,,virement,2,28,637.2,0.0,0.0,637.2,livree,,,False
+CMD0024142,CLI005915,2024-06-20 20:09:42,site_web,mobile,G04,Manouba,ENT01,CMP0097,PROMO24FA2,carte_bancaire,1,1,594.9,10.0,0.0,584.9,livree,,,False
+CMD0024143,CLI004535,2024-06-20 20:14:17,reseaux_sociaux,mobile,G15,Sakiet Ezzit,ENT03,,,virement,1,14,894.6,0.0,0.0,894.6,livree,,,False
+CMD0024144,CLI008216,2024-06-20 20:54:54,application_mobile,mobile,G02,La Soukra,ENT01,,BIENVENUE10,paiement_a_la_livraison,2,3,364.7,30.0,0.0,334.7,livree,,,True
+CMD0024145,CLI004646,2024-06-20 21:11:20,application_mobile,mobile,G11,Siliana,ENT01,,,paiement_a_la_livraison,1,1,20.9,0.0,7.0,27.9,livree,,,False
+CMD0024146,CLI004374,2024-06-20 21:13:03,site_web,ordinateur,G05,Kélibia,,,,carte_bancaire,1,1,29.9,0.0,7.0,36.9,paiement_echoue,,,False
+CMD0024147,CLI008024,2024-06-20 22:06:31,site_web,mobile,G03,Ezzahra,ENT01,,,paiement_a_la_livraison,1,3,17.7,0.0,7.0,24.7,livree,,,False
+CMD0024148,CLI003747,2024-06-20 22:16:40,application_mobile,mobile,G17,Sbeïtla,ENT02,,,portefeuille_mobile,2,2,2802.8,0.0,0.0,2802.8,livree,,,False
+CMD0024149,CLI007862,2024-06-20 22:48:30,application_mobile,mobile,G02,Raoued,ENT01,,,carte_prepayee,2,2,382.8,0.0,0.0,382.8,livree,,,False
+CMD0024150,CLI006723,2024-06-21 00:01:07,site_web,mobile,G15,Sfax,ENT03,CMP0097,,paiement_a_la_livraison,1,1,286.9,0.0,0.0,286.9,livree,,,False
+CMD0024151,CLI005718,2024-06-21 00:32:13,site_web,mobile,G01,Tunis,ENT01,CMP0097,,paiement_a_la_livraison,1,1,9.9,0.0,7.0,16.9,livree,,,False
+CMD0024152,CLI007336,2024-06-21 00:33:53,application_mobile,mobile,G03,Radès,ENT01,CMP0077,ETE24TI,paiement_a_la_livraison,7,32,1448.8,60.0,0.0,1388.8,livree,,,False
+CMD0024153,CLI008193,2024-06-21 01:56:11,site_web,ordinateur,G19,Gabès,ENT03,CMP0077,,carte_bancaire,2,2,84.8,0.0,7.0,91.8,livree,,,False
+CMD0024154,CLI004958,2024-06-21 08:29:17,application_mobile,mobile,G09,Jendouba,ENT01,,,carte_bancaire,1,1,42.9,0.0,7.0,49.9,livree,,,False
+CMD0024155,CLI008228,2024-06-21 09:19:45,site_web,ordinateur,G15,Sakiet Ezzit,ENT03,,,carte_bancaire,1,2,31.8,0.0,7.0,38.8,livree,,,True
+CMD0024156,CLI002372,2024-06-21 09:21:20,application_mobile,mobile,G08,Medjez el-Bab,ENT01,,,portefeuille_mobile,2,3,204.7,0.0,0.0,204.7,livree,,,False
+CMD0024157,CLI002600,2024-06-21 09:56:11,application_mobile,mobile,G01,Carthage,ENT01,CMP0097,PROMO24FA2,paiement_a_la_livraison,1,1,267.9,10.0,0.0,257.9,retournee,,,False
+CMD0024158,CLI002990,2024-06-21 10:30:30,application_mobile,mobile,G22,Redeyef,ENT03,,,paiement_a_la_livraison,3,4,60.6,0.0,7.0,67.6,livree,,,False
+CMD0024159,CLI006804,2024-06-21 10:45:10,application_mobile,mobile,G13,Monastir,ENT02,CMP0077,,carte_bancaire,2,4,197.6,0.0,0.0,197.6,livree,,,False
+CMD0024160,CLI007017,2024-06-21 10:47:01,reseaux_sociaux,mobile,G12,Msaken,ENT02,,,carte_prepayee,2,3,219.7,0.0,0.0,219.7,livree,,,False
+CMD0024161,CLI008023,2024-06-21 11:16:37,site_web,ordinateur,G16,Kairouan,ENT02,CMP0097,PROMO24FA2,paiement_a_la_livraison,2,3,218.7,10.0,0.0,208.7,partiellement_retournee,,,False
+CMD0024162,CLI006529,2024-06-21 11:53:21,application_mobile,mobile,G14,Mahdia,ENT02,,,paiement_a_la_livraison,1,1,39.9,0.0,7.0,46.9,livree,,,False
+CMD0024163,CLI008226,2024-06-21 12:15:46,site_web,mobile,G17,Kasserine,ENT02,CMP0097,,carte_bancaire,1,1,19.9,0.0,7.0,26.9,livree,,,True
+CMD0024164,CLI003553,2024-06-21 12:21:32,site_web,mobile,G20,Zarzis,ENT03,CMP0097,PROMO24FA2,carte_prepayee,1,1,178.9,10.0,0.0,168.9,livree,,,False
+CMD0024165,CLI008140,2024-06-21 14:14:47,site_web,mobile,G17,Sbeïtla,ENT02,,,carte_bancaire,1,2,203.8,0.0,0.0,203.8,livree,,,False
+CMD0024166,CLI007683,2024-06-21 14:22:23,application_mobile,mobile,G05,Kélibia,ENT01,,,paiement_a_la_livraison,2,2,261.8,0.0,0.0,261.8,partiellement_retournee,,,False
+CMD0024167,CLI007867,2024-06-21 16:48:25,site_web,mobile,G04,Oued Ellil,ENT01,CMP0097,,paiement_a_la_livraison,3,5,163.5,0.0,0.0,163.5,livree,,,False
+CMD0024168,CLI002076,2024-06-21 17:02:41,application_mobile,mobile,G19,El Hamma,ENT03,,,paiement_a_la_livraison,1,1,44.9,0.0,7.0,51.9,livraison_echouee,,,False
+CMD0024169,CLI004235,2024-06-21 17:18:37,site_web,ordinateur,G08,Medjez el-Bab,ENT01,,,paiement_a_la_livraison,1,1,20.9,0.0,7.0,27.9,livree,,,False
+CMD0024170,CLI007320,2024-06-21 17:42:49,site_web,tablette,G08,Medjez el-Bab,,CMP0097,,carte_bancaire,1,1,79.9,0.0,7.0,86.9,paiement_echoue,,,False
+CMD0024171,CLI008230,2024-06-21 17:45:32,application_mobile,mobile,G05,Kélibia,ENT01,,,paiement_a_la_livraison,1,2,241.8,0.0,0.0,241.8,retournee,,,True
+CMD0024172,CLI005546,2024-06-21 18:14:11,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,carte_bancaire,2,2,105.8,0.0,7.0,112.8,livree,,,False
+CMD0024173,CLI007865,2024-06-21 19:10:56,site_web,mobile,G03,Radès,ENT02,,,portefeuille_mobile,1,2,369.8,0.0,0.0,369.8,livree,,,False
+CMD0024174,CLI004791,2024-06-21 20:17:31,site_web,mobile,G02,Ariana Ville,ENT01,CMP0078,,paiement_a_la_livraison,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024175,CLI008229,2024-06-21 20:19:41,site_web,mobile,G07,Mateur,ENT01,,BIENVENUE10,paiement_a_la_livraison,1,1,1201.9,30.0,0.0,1171.9,livree,,,True
+CMD0024176,CLI007951,2024-06-21 20:21:57,reseaux_sociaux,mobile,G12,Hammam Sousse,ENT02,,,paiement_a_la_livraison,5,6,403.4,0.0,0.0,403.4,partiellement_retournee,,,False
+CMD0024177,CLI003729,21/06/2024 21:38,site_web,mobile,G05,Nabeul,ENT01,CMP0097,,portefeuille_mobile,1,1,39.9,0.0,7.0,46.9,livree,,,False
+CMD0024178,CLI007175,2024-06-21 21:49:44,site_web,ordinateur,G07,Bizerte,ENT01,,,paiement_a_la_livraison,2,2,206.8,0.0,0.0,206.8,partiellement_retournee,,,False
+CMD0024179,CLI005279,2024-06-21 22:38:30,reseaux_sociaux,mobile,G15,Sakiet Eddaïer,ENT01,,,carte_prepayee,1,1,286.9,0.0,0.0,286.9,livree,,,False
+CMD0024180,CLI004791,2024-06-21 23:21:05,site_web,ordinateur,G02,Ariana Ville,ENT01,,,paiement_a_la_livraison,1,1,236.9,0.0,0.0,236.9,livree,,,False
+CMD0024181,CLI001368,2024-06-21 23:48:09,reseaux_sociaux,mobile,G12,Msaken,ENT02,,,carte_bancaire,3,14,395.6,0.0,0.0,395.6,partiellement_retournee,,,False
+CMD0024182,CLI002230,2024-06-22 00:43:30,site_web,mobile,G04,Oued Ellil,ENT01,,,paiement_a_la_livraison,1,1,144.9,0.0,7.0,151.9,livree,,,False
+CMD0024183,CLI003629,2024-06-22 01:15:23,site_web,ordinateur,G03,Radès,ENT01,CMP0079,,paiement_a_la_livraison,1,1,109.9,0.0,7.0,116.9,livree,,,False
+CMD0024184,CLI008232,22/06/2024 06:10,reseaux_sociaux,mobile,G04,Den Den,ENT01,,BIENVENUE10,paiement_a_la_livraison,1,1,74.9,7.49,7.0,74.41,livraison_echouee,,,True
+CMD0024185,CLI008242,2024-06-22 06:47:44,site_web,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,1,1,351.9,0.0,0.0,351.9,livree,,,True
+CMD0024186,CLI008245,2024-06-22 07:33:38,site_web,mobile,G15,Sakiet Eddaïer,ENT03,CMP0079,BIENVENUE10,paiement_a_la_livraison,1,2,63.8,6.38,7.0,64.42,livree,,,True
+CMD0024187,CLI007471,2024-06-22 09:08:02,reseaux_sociaux,mobile,G15,Sakiet Eddaïer,ENT03,,,carte_bancaire,1,1,69.9,0.0,7.0,76.9,livree,,,False
+CMD0024188,CLI008241,2024-06-22 09:59:36,site_web,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,1,2,91.8,0.0,7.0,98.8,annulee,annulation_client,2024-06-22 10:37:40,True
+CMD0024189,CLI006167,2024-06-22 10:08:43,application_mobile,mobile,G08,Béja,ENT01,CMP0078,ETE24SM,paiement_a_la_livraison,2,3,193.7,30.0,0.0,163.7,livree,,,False
+CMD0024190,CLI005124,2024-06-22 10:16:33,application_mobile,mobile,G13,Moknine,ENT02,,,carte_bancaire,1,1,32.9,0.0,7.0,39.9,livree,,,False
+CMD0024191,CLI008243,2024-06-22 10:41:56,site_web,ordinateur,G03,Mégrine,ENT01,,BIENVENUE10,paiement_a_la_livraison,4,4,2374.6,30.0,0.0,2344.6,livraison_echouee,,,True
+CMD0024192,CLI008130,2024-06-22 11:47:46,site_web,mobile,G20,Zarzis,ENT03,,,paiement_a_la_livraison,2,4,165.6,0.0,0.0,165.6,livree,,,False
+CMD0024193,CLI005424,2024-06-22 12:06:43,site_web,tablette,G02,Ariana Ville,ENT01,CMP0079,,paiement_a_la_livraison,2,2,459.8,0.0,0.0,459.8,livree,,,False
+CMD0024194,CLI002044,2024-06-22 12:19:56,application_mobile,mobile,G07,Bizerte,ENT03,,,carte_bancaire,2,2,2070.8,0.0,0.0,2070.8,livree,,,False
+CMD0024195,CLI001971,2024-06-22 12:29:52,application_mobile,mobile,G06,Zaghouan,ENT01,,,carte_bancaire,2,2,80.8,0.0,7.0,87.8,livree,,,False
+CMD0024196,CLI008073,2024-06-22 12:53:20,site_web,tablette,G07,Bizerte,ENT01,,,portefeuille_mobile,3,5,61.5,0.0,7.0,68.5,livree,,,False
+CMD0024197,CLI007364,2024-06-22 13:20:12,application_mobile,mobile,G15,Sfax,ENT03,,,carte_prepayee,2,2,273.8,0.0,0.0,273.8,livree,,,False
+CMD0024198,CLI005637,2024-06-22 13:35:48,site_web,mobile,G21,Tataouine,ENT03,,,carte_bancaire,1,2,45.8,0.0,7.0,52.8,livree,,,False
+CMD0024199,CLI007002,2024-06-22 14:02:06,site_web,ordinateur,G20,Médenine,ENT03,CMP0079,,paiement_a_la_livraison,1,1,260.9,0.0,0.0,260.9,livree,,,False
+CMD0024200,CLI008151,2024-06-22 14:33:01,site_web,ordinateur,G08,Béja,ENT01,,BIENVENUE10,paiement_a_la_livraison,1,1,113.9,11.39,7.0,109.51,livree,,,True
+CMD0024201,CLI008233,2024-06-22 15:14:03,site_web,mobile,G12,Msaken,ENT02,,,paiement_a_la_livraison,6,7,1041.3,0.0,0.0,1041.3,livraison_echouee,,,True
+CMD0024202,CLI006971,2024-06-22 15:25:05,reseaux_sociaux,mobile,G09,Jendouba,ENT01,,,paiement_a_la_livraison,1,1,26.9,0.0,7.0,33.9,livree,,,False
+CMD0024203,CLI005868,2024-06-22 15:57:16,reseaux_sociaux,mobile,G15,Sakiet Ezzit,ENT03,,,portefeuille_mobile,1,1,65.9,0.0,7.0,72.9,livree,,,True
+CMD0024204,CLI006719,2024-06-22 16:53:09,application_mobile,mobile,G04,Den Den,ENT01,,,paiement_a_la_livraison,1,1,29.9,0.0,7.0,36.9,livree,,,False
+CMD0024205,CLI006709,2024-06-22 16:54:43,reseaux_sociaux,mobile,G22,Redeyef,ENT03,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0024206,CLI008246,2024-06-22 17:15:45,application_mobile,mobile,G12,Kalâa Kebira,ENT02,CMP0079,BIENVENUE10,paiement_a_la_livraison,2,2,238.8,23.88,0.0,214.92,livree,,,True
+CMD0024207,CLI007874,2024-06-22 18:00:21,application_mobile,mobile,G01,Le Bardo,ENT01,,,carte_prepayee,1,1,233.9,0.0,0.0,233.9,retournee,,,False
+CMD0024208,CLI008238,2024-06-22 18:03:03,application_mobile,mobile,G03,Ezzahra,ENT01,CMP0079,,paiement_a_la_livraison,6,6,361.4,0.0,0.0,361.4,partiellement_retournee,,,True
+CMD0024209,CLI007065,2024-06-22 18:09:15,site_web,mobile,G07,Mateur,ENT01,,,carte_prepayee,1,1,36.9,0.0,7.0,43.9,livree,,,False
+CMD0024210,CLI002243,2024-06-22 18:23:44,application_mobile,mobile,G11,Siliana,ENT01,,,paiement_a_la_livraison,1,1,1254.9,0.0,0.0,1254.9,livree,,,False
+CMD0024211,CLI007559,2024-06-22 18:37:54,application_mobile,mobile,G13,Monastir,ENT01,,BIENVENUE10,carte_prepayee,2,3,153.7,15.37,7.0,145.33,livree,,,True
+CMD0024212,CLI006323,2024-06-22 19:14:11,application_mobile,mobile,G10,Le Kef,ENT01,,,paiement_a_la_livraison,1,1,38.9,0.0,7.0,45.9,livree,,,False
+CMD0024213,CLI007239,2024-06-22 19:23:36,reseaux_sociaux,mobile,G17,Sbeïtla,ENT02,,,paiement_a_la_livraison,1,1,7.9,0.0,7.0,14.9,livree,,,False
+CMD0024214,CLI006364,2024-06-22 20:05:20,site_web,ordinateur,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,1,1,98.9,0.0,7.0,105.9,livree,,,False
+CMD0024215,CLI008235,2024-06-22 20:15:30,application_mobile,mobile,G17,Kasserine,ENT02,,,carte_bancaire,2,4,223.6,0.0,0.0,223.6,livree,,,True
+CMD0024216,CLI004644,2024-06-22 20:43:54,site_web,ordinateur,G19,El Hamma,ENT03,CMP0079,,paiement_a_la_livraison,2,2,131.8,0.0,7.0,138.8,livree,,,False
+CMD0024217,CLI006425,2024-06-22 21:13:33,application_mobile,mobile,G03,Ezzahra,ENT01,CMP0079,,paiement_a_la_livraison,2,2,64.8,0.0,7.0,71.8,livree,,,False
+CMD0024218,CLI003188,2024-06-22 21:40:26,site_web,mobile,G18,Regueb,ENT02,,,carte_prepayee,1,1,198.9,0.0,0.0,198.9,livree,,,False
+CMD0024219,CLI008220,2024-06-22 21:42:31,reseaux_sociaux,mobile,G04,Manouba,ENT01,,,paiement_a_la_livraison,1,2,315.8,0.0,0.0,315.8,livree,,,False
+CMD0024220,CLI008231,2024-06-22 22:14:36,application_mobile,mobile,G08,Béja,ENT01,,,virement,2,14,596.6,0.0,0.0,596.6,livree,,,True
+CMD0024221,CLI002681,2024-06-22 22:26:57,application_mobile,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,1,1,84.9,0.0,7.0,91.9,livree,,,False
+CMD0024222,CLI006205,2024-06-22 22:46:48,site_web,mobile,G14,El Jem,ENT02,,,paiement_a_la_livraison,1,2,29.8,0.0,7.0,36.8,livree,,,False
+CMD0024223,CLI006888,2024-06-22 23:05:49,application_mobile,mobile,G08,Béja,ENT01,CMP0079,,carte_prepayee,1,1,15.9,0.0,7.0,22.9,livree,,,False
+CMD0024224,CLI007446,2024-06-23 00:30:38,application_mobile,mobile,G19,El Hamma,ENT01,CMP0079,,paiement_a_la_livraison,3,7,211.3,0.0,0.0,211.3,livree,,,False
+CMD0024225,CLI008253,2024-06-23 00:36:28,application_mobile,mobile,G01,Tunis,ENT01,,BIENVENUE10,paiement_a_la_livraison,1,1,107.9,10.79,7.0,104.11,retournee,,,True
+CMD0024226,CLI000937,2024-06-23 00:44:59,application_mobile,mobile,G22,Redeyef,ENT03,,,carte_bancaire,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0024227,CLI008256,2024-06-23 07:12:54,application_mobile,mobile,G03,Ezzahra,ENT01,,,paiement_a_la_livraison,2,4,39.6,0.0,7.0,46.6,livree,,,True
+CMD0024228,CLI000029,23/06/2024 08:10,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,39.9,0.0,7.0,46.9,retournee,,,False
+CMD0024229,CLI008248,2024-06-23 09:00:24,site_web,mobile,G02,Ariana Ville,ENT01,,,carte_bancaire,6,7,240.3,0.0,0.0,240.3,partiellement_retournee,,,True
+CMD0024230,CLI007420,2024-06-23 09:18:06,application_mobile,mobile,G13,Monastir,ENT02,,,carte_bancaire,3,4,248.6,0.0,0.0,248.6,livree,,,False
+CMD0024231,CLI007545,2024-06-23 09:35:40,application_mobile,mobile,G20,Zarzis,ENT03,CMP0079,,paiement_a_la_livraison,1,1,41.9,0.0,7.0,48.9,livree,,,False
+CMD0024232,CLI005021,2024-06-23 09:37:41,site_web,mobile,G07,Bizerte,ENT01,CMP0079,BIENVENUE10,paiement_a_la_livraison,2,3,206.7,20.67,0.0,186.03,livree,,,True
+CMD0024233,CLI004918,2024-06-23 09:37:47,application_mobile,mobile,G19,Gabès,ENT03,CMP0079,,paiement_a_la_livraison,1,1,7.9,0.0,7.0,14.9,livree,,,False
+CMD0024234,CLI001823,23/06/2024 10:22,application_mobile,mobile,G21,Ghomrassen,ENT03,CMP0079,,carte_bancaire,1,1,71.9,0.0,7.0,78.9,livree,,,False
+CMD0024235,CLI007222,2024-06-23 10:55:06,site_web,mobile,G03,Mégrine,ENT01,,,paiement_a_la_livraison,1,2,19.8,0.0,7.0,26.8,annulee,annulation_client,2024-06-23 16:36:24,False
+CMD0024236,CLI005916,2024-06-23 10:55:55,site_web,mobile,G13,Moknine,ENT02,,,carte_prepayee,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0024237,CLI006501,2024-06-23 11:20:03,site_web,ordinateur,G14,Ksour Essef,ENT02,,,carte_bancaire,5,7,128.3,0.0,7.0,135.3,livree,,,False
+CMD0024238,CLI005106,2024-06-23 11:36:30,application_mobile,mobile,G05,Kélibia,ENT01,,,paiement_a_la_livraison,2,2,292.8,0.0,0.0,292.8,livree,,,False
+CMD0024239,CLI008247,2024-06-23 12:27:39,site_web,ordinateur,G16,Kairouan,ENT02,,,paiement_a_la_livraison,1,1,125.9,0.0,7.0,132.9,livraison_echouee,,,True
+CMD0024240,CLI008249,2024-06-23 13:19:36,application_mobile,mobile,G12,Msaken,ENT02,CMP0079,,paiement_a_la_livraison,1,1,39.9,0.0,7.0,46.9,livree,,,True
+CMD0024241,CLI006169,23/06/2024 13:19,site_web,ordinateur,G16,Haffouz,ENT02,CMP0079,,paiement_a_la_livraison,2,2,169.8,0.0,0.0,169.8,livree,,,False
+CMD0024242,CLI007102,2024-06-23 13:21:13,site_web,ordinateur,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,2,3,51.7,0.0,7.0,58.7,livree,,,False
+CMD0024243,CLI006811,2024-06-23 13:49:07,application_mobile,mobile,G09,Jendouba,ENT01,,,portefeuille_mobile,2,2,186.8,0.0,0.0,186.8,livree,,,False
+CMD0024244,CLI005114,2024-06-23 13:55:24,application_mobile,mobile,G03,Ezzahra,ENT01,,,paiement_a_la_livraison,2,3,156.7,0.0,0.0,156.7,livree,,,False
+CMD0024245,CLI007838,2024-06-23 14:08:51,application_mobile,mobile,G15,Sfax,ENT03,,,carte_bancaire,2,2,101.8,0.0,7.0,108.8,livree,,,False
+CMD0024246,CLI002163,2024-06-23 14:25:32,site_web,ordinateur,G07,Mateur,ENT01,CMP0077,,paiement_a_la_livraison,2,2,98.8,0.0,7.0,105.8,livree,,,False
+CMD0024247,CLI003108,2024-06-23 14:45:50,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024248,CLI007258,2024-06-23 14:53:56,site_web,mobile,G07,Mateur,,CMP0079,,carte_bancaire,1,1,38.9,0.0,7.0,45.9,paiement_echoue,,,False
+CMD0024249,CLI005963,2024-06-23 15:17:03,site_web,ordinateur,G19,El Hamma,ENT03,,,paiement_a_la_livraison,2,3,57.7,0.0,7.0,64.7,livree,,,False
+CMD0024250,CLI008252,2024-06-23 15:23:34,site_web,mobile,G08,Béja,ENT01,,,paiement_a_la_livraison,2,2,122.8,0.0,7.0,129.8,livree,,,True
+CMD0024251,CLI001599,2024-06-23 15:33:47,site_web,mobile,G12,Msaken,ENT02,CMP0079,,paiement_a_la_livraison,3,3,179.7,0.0,0.0,179.7,livree,,,False
+CMD0024252,CLI006183,2024-06-23 16:05:58,site_web,mobile,G12,Hammam Sousse,ENT02,CMP0079,,paiement_a_la_livraison,4,5,3980.5,0.0,0.0,3980.5,annulee,annulation_client,2024-06-23 23:24:33,False
+CMD0024253,CLI007840,2024-06-23 16:42:12,site_web,ordinateur,G02,Raoued,ENT01,CMP0079,,paiement_a_la_livraison,1,1,198.9,0.0,0.0,198.9,livree,,,False
+CMD0024254,CLI004129,2024-06-23 16:57:47,reseaux_sociaux,mobile,G06,Zaghouan,ENT01,,,paiement_a_la_livraison,1,1,1318.9,0.0,0.0,1318.9,livree,,,False
+CMD0024255,CLI007417,2024-06-23 17:56:39,application_mobile,mobile,G22,Gafsa,ENT03,CMP0079,,paiement_a_la_livraison,3,3,742.7,0.0,0.0,742.7,annulee,annulation_client,2024-06-23 23:02:46,False
+CMD0024256,CLI007758,2024-06-23 18:37:51,application_mobile,mobile,G23,Tozeur,ENT03,,,carte_bancaire,2,2,87.8,0.0,7.0,94.8,livree,,,True
+CMD0024257,CLI008257,2024-06-23 19:04:29,application_mobile,mobile,G12,Sousse,ENT02,,,carte_bancaire,1,1,35.9,0.0,7.0,42.9,livree,,,True
+CMD0024258,CLI007996,2024-06-23 19:12:54,reseaux_sociaux,mobile,G12,Sousse,ENT02,CMP0079,,paiement_a_la_livraison,4,4,698.6,0.0,0.0,698.6,livree,,,False
+CMD0024259,CLI006554,2024-06-23 19:19:10,application_mobile,mobile,G17,Kasserine,ENT02,CMP0079,,portefeuille_mobile,3,3,620.7,0.0,0.0,620.7,livree,,,False
+CMD0024260,CLI004335,2024-06-23 19:21:00,application_mobile,mobile,G21,Ghomrassen,ENT03,,,carte_bancaire,6,6,2809.4,0.0,0.0,2809.4,livree,,,False
+CMD0024261,CLI007009,2024-06-23 19:35:49,reseaux_sociaux,mobile,G12,Msaken,ENT02,CMP0079,,portefeuille_mobile,1,1,79.9,0.0,7.0,86.9,annulee,annulation_client,2024-06-24 09:06:49,False
+CMD0024262,CLI006637,2024-06-23 19:50:51,site_web,mobile,G12,Sousse,,,,virement,4,28,1549.2,0.0,0.0,1549.2,annulee,rupture_stock,2024-06-23 19:59:51,False
+CMD0024263,CLI005663,2024-06-23 19:52:59,site_web,mobile,G22,Redeyef,ENT03,CMP0079,,paiement_a_la_livraison,1,4,87.6,0.0,7.0,94.6,livree,,,False
+CMD0024264,CLI007483,2024-06-23 19:58:31,application_mobile,mobile,G09,Jendouba,ENT01,CMP0079,,carte_prepayee,1,1,15.9,0.0,7.0,22.9,livree,,,False
+CMD0024265,CLI005527,2024-06-23 20:03:46,site_web,ordinateur,G13,Moknine,ENT02,CMP0079,,portefeuille_mobile,1,1,201.9,0.0,0.0,201.9,livree,,,False
+CMD0024266,CLI007651,2024-06-23 20:11:49,site_web,ordinateur,G12,Sousse,ENT02,,,virement,1,2,225.8,0.0,0.0,225.8,livree,,,False
+CMD0024267,CLI007188,2024-06-23 20:13:46,site_web,ordinateur,G05,Kélibia,ENT02,,,virement,2,11,544.9,0.0,0.0,544.9,livree,,,False
+CMD0024268,CLI003338,2024-06-23 20:21:48,application_mobile,mobile,G12,Hammam Sousse,ENT02,CMP0079,,paiement_a_la_livraison,1,1,32.9,0.0,7.0,39.9,livree,,,False
+CMD0024269,CLI003984,2024-06-23 20:35:03,site_web,ordinateur,G12,Hammam Sousse,ENT02,CMP0079,,paiement_a_la_livraison,2,3,121.7,0.0,7.0,128.7,livree,,,False
+CMD0024270,CLI005718,2024-06-23 20:47:30,site_web,mobile,G01,Tunis,ENT01,CMP0079,,carte_bancaire,1,1,245.9,0.0,0.0,245.9,livree,,,False
+CMD0024271,CLI007238,2024-06-23 21:07:31,site_web,ordinateur,G16,Haffouz,ENT02,CMP0079,BIENVENUE10,carte_bancaire,2,2,115.8,11.58,7.0,111.22,livree,,,True
+CMD0024272,CLI007059,23/06/2024 21:13,site_web,ordinateur,G12,Kalâa Kebira,ENT02,,,carte_bancaire,1,1,22.9,0.0,7.0,29.9,livree,,,False
+CMD0024273,CLI006332,2024-06-23 21:14:08,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,CMP0079,,paiement_a_la_livraison,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024274,CLI002812,2024-06-23 21:40:33,application_mobile,mobile,G04,Den Den,ENT01,,,carte_prepayee,2,5,104.5,0.0,7.0,111.5,livree,,,False
+CMD0024275,CLI007441,2024-06-23 21:53:55,site_web,tablette,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,2,4,178.6,0.0,0.0,178.6,livree,,,False
+CMD0024276,CLI007509,2024-06-23 22:06:14,reseaux_sociaux,mobile,G13,Monastir,ENT02,,,paiement_a_la_livraison,1,1,79.9,0.0,7.0,86.9,livree,,,False
+CMD0024277,CLI002944,2024-06-23 22:40:06,site_web,ordinateur,G03,Ben Arous,ENT01,CMP0079,,carte_bancaire,3,5,684.5,0.0,0.0,684.5,livree,,,False
+CMD0024278,CLI003856,2024-06-23 23:47:44,site_web,mobile,G07,Menzel Bourguiba,ENT01,,,paiement_a_la_livraison,2,2,505.8,0.0,0.0,505.8,livree,,,False
+CMD0024279,CLI006867,2024-06-24 00:44:18,application_mobile,mobile,G15,Sfax,ENT03,CMP0079,,carte_bancaire,1,1,101.9,0.0,7.0,108.9,livree,,,False
+CMD0024280,CLI005828,2024-06-24 00:52:15,application_mobile,mobile,G02,La Soukra,ENT01,,,paiement_a_la_livraison,5,9,171.1,0.0,0.0,171.1,livree,,,False
+CMD0024281,CLI008259,2024-06-24 04:50:48,application_mobile,mobile,G16,Haffouz,ENT02,CMP0079,,paiement_a_la_livraison,1,1,2393.9,0.0,0.0,2393.9,livree,,,True
+CMD0024282,CLI006726,2024-06-24 05:52:03,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,portefeuille_mobile,4,8,424.2,0.0,0.0,424.2,livree,,,False
+CMD0024283,CLI004157,2024-06-24 06:19:26,reseaux_sociaux,mobile,G07,Bizerte,ENT01,,,carte_bancaire,2,3,348.7,0.0,0.0,348.7,livree,,,False
+CMD0024284,CLI006103,2024-06-24 07:03:45,site_web,ordinateur,G02,Ariana Ville,ENT01,CMP0078,,paiement_a_la_livraison,1,2,53.8,0.0,7.0,60.8,livree,,,False
+CMD0024285,CLI004263,2024-06-24 08:04:17,site_web,mobile,G15,Sakiet Ezzit,ENT03,CMP0078,ETE24SM,carte_bancaire,1,1,79.9,30.0,7.0,56.9,livree,,,False
+CMD0024286,CLI001597,2024-06-24 08:18:35,site_web,mobile,G05,Hammamet,ENT01,,,portefeuille_mobile,2,2,61.8,0.0,7.0,68.8,livree,,,False
+CMD0024287,CLI000196,2024-06-24 08:47:06,site_web,ordinateur,G02,La Soukra,ENT01,,,carte_bancaire,2,3,388.7,0.0,0.0,388.7,livree,,,False
+CMD0024288,CLI008009,2024-06-24 08:54:59,site_web,tablette,G16,Haffouz,ENT02,,,paiement_a_la_livraison,2,2,106.8,0.0,7.0,113.8,livree,,,False
+CMD0024289,CLI004785,2024-06-24 09:19:01,application_mobile,mobile,G21,Ghomrassen,ENT03,CMP0079,,paiement_a_la_livraison,3,4,129.6,0.0,7.0,136.6,livree,,,False
+CMD0024290,CLI000858,2024-06-24 10:45:28,site_web,ordinateur,G24,Kébili,ENT03,,,paiement_a_la_livraison,1,1,15.9,0.0,7.0,22.9,livree,,,False
+CMD0024291,CLI006912,2024-06-24 11:23:57,site_web,mobile,G19,Gabès,ENT03,CMP0079,,portefeuille_mobile,1,1,7.9,0.0,7.0,14.9,livree,,,True
+CMD0024292,CLI006430,2024-06-24 12:06:46,site_web,ordinateur,G12,Hammam Sousse,ENT02,CMP0079,,paiement_a_la_livraison,1,2,39.8,0.0,7.0,46.8,livree,,,False
+CMD0024293,CLI005106,2024-06-24 12:17:47,application_mobile,mobile,G05,Nabeul,ENT01,,,carte_prepayee,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0024294,CLI005810,2024-06-24 12:18:34,application_mobile,mobile,G07,Menzel Bourguiba,ENT01,,,carte_bancaire,3,5,113.5,0.0,7.0,120.5,livree,,,False
+CMD0024295,CLI007048,2024-06-24 12:49:54,site_web,mobile,G12,Sousse,ENT02,,,carte_bancaire,1,1,192.9,0.0,0.0,192.9,annulee,annulation_client,2024-06-24 13:56:13,False
+CMD0024296,CLI006981,2024-06-24 12:51:40,application_mobile,mobile,G22,Gafsa,ENT03,,,paiement_a_la_livraison,1,1,152.9,0.0,0.0,152.9,livree,,,False
+CMD0024297,CLI007608,2024-06-24 12:54:20,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,CMP0079,,paiement_a_la_livraison,1,1,93.9,0.0,7.0,100.9,livree,,,False
+CMD0024298,CLI008261,2024-06-24 12:58:41,site_web,ordinateur,G04,Manouba,ENT01,,,paiement_a_la_livraison,3,4,1036.6,0.0,0.0,1036.6,livree,,,True
+CMD0024299,CLI007711,2024-06-24 13:19:31,application_mobile,mobile,G03,Ben Arous,ENT01,CMP0079,,carte_bancaire,1,1,22.9,0.0,7.0,29.9,livree,,,False
+CMD0024300,CLI006622,2024-06-24 13:24:01,application_mobile,mobile,G13,Moknine,ENT02,CMP0079,,carte_bancaire,1,1,51.9,0.0,7.0,58.9,livree,,,False
+CMD0024301,CLI006553,2024-06-24 14:06:43,application_mobile,mobile,G01,Carthage,ENT01,,,carte_bancaire,1,1,22.9,0.0,7.0,29.9,livree,,,False
+CMD0024302,CLI007165,2024-06-24 14:11:14,site_web,ordinateur,G12,Hammam Sousse,ENT02,,,carte_prepayee,1,2,157.8,0.0,0.0,157.8,annulee,annulation_client,2024-06-24 18:44:04,False
+CMD0024303,CLI001348,2024-06-24 14:37:04,application_mobile,mobile,G03,Ben Arous,ENT02,,,carte_bancaire,1,9,539.1,0.0,0.0,539.1,livree,,,False
+CMD0024304,CLI007392,2024-06-24 14:41:27,site_web,ordinateur,G13,Monastir,ENT02,,,carte_bancaire,1,9,53.1,0.0,7.0,60.1,livree,,,True
+CMD0024305,CLI008266,2024-06-24 15:08:34,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,CMP0079,,paiement_a_la_livraison,1,1,88.9,0.0,7.0,95.9,livree,,,True
+CMD0024306,CLI001342,2024-06-24 15:30:48,application_mobile,mobile,G15,Sfax,ENT03,CMP0079,,paiement_a_la_livraison,1,1,234.9,0.0,0.0,234.9,livree,,,False
+CMD0024307,CLI003951,2024-06-24 15:31:14,application_mobile,mobile,G22,Redeyef,ENT03,,,paiement_a_la_livraison,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0024308,CLI000166,2024-06-24 15:35:13,site_web,mobile,G21,Ghomrassen,ENT03,CMP0079,,carte_bancaire,3,5,68.5,0.0,7.0,75.5,livree,,,False
+CMD0024309,CLI006664,2024-06-24 15:54:32,site_web,ordinateur,G10,Le Kef,ENT01,CMP0079,,paiement_a_la_livraison,3,5,302.5,0.0,0.0,302.5,partiellement_retournee,,,False
+CMD0024310,CLI004836,2024-06-24 16:03:03,application_mobile,mobile,G17,Kasserine,ENT02,,,paiement_a_la_livraison,2,2,190.8,0.0,0.0,190.8,partiellement_retournee,,,False
+CMD0024311,CLI005565,2024-06-24 16:09:02,site_web,ordinateur,G20,Djerba Houmt Souk,ENT03,,,paiement_a_la_livraison,4,5,283.5,0.0,0.0,283.5,livree,,,False
+CMD0024312,CLI002459,2024-06-24 17:00:26,reseaux_sociaux,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,2,3,786.7,0.0,0.0,786.7,livree,,,False
+CMD0024313,CLI004498,2024-06-24 17:10:12,application_mobile,mobile,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,2,3,151.7,0.0,0.0,151.7,livree,,,False
+CMD0024314,CLI007527,2024-06-24 17:11:07,site_web,ordinateur,G09,Tabarka,ENT01,CMP0079,,carte_bancaire,1,2,17.8,0.0,7.0,24.8,livree,,,False
+CMD0024315,CLI000506,2024-06-24 17:11:25,application_mobile,mobile,G22,Gafsa,ENT03,,,paiement_a_la_livraison,1,1,79.9,0.0,7.0,86.9,livree,,,False
+CMD0024316,CLI006233,24/06/2024 17:24,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,2,2,69.8,0.0,7.0,76.8,livree,,,False
+CMD0024317,CLI008264,2024-06-24 17:55:34,application_mobile,mobile,G05,Hammamet,ENT01,,,paiement_a_la_livraison,1,2,15.8,0.0,7.0,22.8,livree,,,True
+CMD0024318,CLI008263,2024-06-24 18:45:09,site_web,ordinateur,G05,Hammamet,ENT01,CMP0079,BIENVENUE10,carte_bancaire,4,4,236.6,23.66,0.0,212.94,livree,,,True
+CMD0024319,CLI002527,2024-06-24 19:16:37,site_web,mobile,G14,Ksour Essef,ENT02,CMP0079,,carte_bancaire,2,3,285.7,0.0,0.0,285.7,livree,,,False
+CMD0024320,CLI006612,2024-06-24 19:36:22,application_mobile,mobile,G16,Haffouz,ENT02,,,portefeuille_mobile,2,3,97.7,0.0,7.0,104.7,livree,,,False
+CMD0024321,CLI005931,2024-06-24 20:58:51,reseaux_sociaux,mobile,G15,Sakiet Eddaïer,ENT03,CMP0079,,portefeuille_mobile,1,1,149.9,0.0,7.0,156.9,livree,,,False
+CMD0024322,CLI007126,2024-06-24 21:39:41,site_web,mobile,G14,Ksour Essef,ENT02,CMP0079,,carte_bancaire,1,1,37.9,0.0,7.0,44.9,annulee,annulation_client,2024-06-24 23:31:50,False
+CMD0024323,CLI008267,2024-06-24 21:48:05,reseaux_sociaux,mobile,G08,Medjez el-Bab,ENT01,,,paiement_a_la_livraison,2,2,235.8,0.0,0.0,235.8,livree,,,True
+CMD0024324,CLI000201,2024-06-24 22:17:32,application_mobile,mobile,G05,Kélibia,ENT01,,,carte_bancaire,1,2,71.8,0.0,7.0,78.8,livree,,,False
+CMD0024325,CLI004631,2024-06-24 22:17:56,site_web,ordinateur,G13,Monastir,ENT02,,,paiement_a_la_livraison,1,1,19.9,0.0,7.0,26.9,livree,,,False
+CMD0024326,CLI000506,24/06/2024 22:25,reseaux_sociaux,mobile,G22,Métlaoui,ENT03,,,paiement_a_la_livraison,3,3,355.7,0.0,0.0,355.7,livree,,,False
+CMD0024327,CLI007889,2024-06-24 22:33:25,site_web,mobile,G12,Sousse,ENT01,,BIENVENUE10,paiement_a_la_livraison,3,4,136.6,13.66,7.0,129.94,livraison_echouee,,,True
+CMD0024328,CLI003691,2024-06-24 22:55:03,site_web,ordinateur,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,1,1,103.9,0.0,7.0,110.9,livree,,,False
+CMD0024329,CLI005761,2024-06-24 22:56:58,site_web,mobile,G20,Zarzis,ENT03,CMP0079,,portefeuille_mobile,3,3,825.7,0.0,0.0,825.7,livree,,,False
+CMD0024330,CLI005697,2024-06-24 23:09:09,application_mobile,mobile,G22,Gafsa,ENT03,,,carte_bancaire,3,3,487.7,0.0,0.0,487.7,livree,,,False
+CMD0024331,CLI008262,2024-06-24 23:18:29,site_web,ordinateur,G16,Kairouan,ENT02,,,virement,6,43,3878.7,0.0,0.0,3878.7,partiellement_retournee,,,True
+CMD0024332,CLI006412,24/06/2024 23:25,site_web,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,2,2,58.8,0.0,7.0,65.8,annulee,annulation_client,2024-06-25 00:32:06,False
+CMD0024333,CLI006640,2024-06-24 23:40:40,application_mobile,mobile,G01,Le Bardo,ENT02,,,carte_bancaire,1,1,22.9,0.0,7.0,29.9,livree,,,False
+CMD0024334,CLI002954,2024-06-25 00:34:15,application_mobile,mobile,G13,Moknine,ENT02,,,carte_prepayee,1,1,116.9,0.0,7.0,123.9,annulee,annulation_client,2024-06-25 07:06:52,False
+CMD0024335,CLI006485,2024-06-25 01:55:16,site_web,ordinateur,G01,La Marsa,ENT01,CMP0079,,carte_prepayee,2,2,133.8,0.0,7.0,140.8,livree,,,False
+CMD0024336,CLI007081,2024-06-25 08:19:51,site_web,tablette,G05,Hammamet,ENT01,,,paiement_a_la_livraison,1,1,59.9,0.0,7.0,66.9,annulee,annulation_client,2024-06-25 09:06:24,False
+CMD0024337,CLI007848,2024-06-25 10:42:59,site_web,mobile,G12,Kalâa Kebira,ENT02,,,carte_bancaire,2,10,59.0,0.0,7.0,66.0,livree,,,False
+CMD0024338,CLI003923,2024-06-25 10:44:34,site_web,ordinateur,G05,Nabeul,ENT01,,,portefeuille_mobile,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0024339,CLI007943,2024-06-25 10:55:46,site_web,mobile,G19,Gabès,ENT03,CMP0079,,paiement_a_la_livraison,1,1,82.9,0.0,7.0,89.9,livree,,,False
+CMD0024340,CLI006237,2024-06-25 11:29:21,application_mobile,mobile,G18,Sidi Bouzid,ENT02,,,carte_bancaire,3,7,519.3,0.0,0.0,519.3,livree,,,False
+CMD0024341,CLI000165,2024-06-25 11:52:21,reseaux_sociaux,mobile,G05,Kélibia,ENT01,,,virement,3,21,290.9,0.0,0.0,290.9,livree,,,False
+CMD0024342,CLI000678,2024-06-25 12:57:42,application_mobile,mobile,G14,Mahdia,ENT02,,,paiement_a_la_livraison,3,5,371.5,0.0,0.0,371.5,livree,,,False
+CMD0024343,CLI006535,2024-06-25 14:08:15,site_web,mobile,G03,Mégrine,ENT01,,,carte_bancaire,1,1,46.9,0.0,7.0,53.9,livree,,,False
+CMD0024344,CLI000805,2024-06-25 15:34:51,site_web,mobile,G01,Le Bardo,ENT01,CMP0079,,portefeuille_mobile,2,2,64.8,0.0,7.0,71.8,livree,,,False
+CMD0024345,CLI007377,2024-06-25 15:43:58,reseaux_sociaux,mobile,G15,Sakiet Eddaïer,ENT01,,,carte_bancaire,4,5,157.5,0.0,0.0,157.5,livree,,,False
+CMD0024346,CLI003847,25/06/2024 15:52,application_mobile,mobile,G09,Jendouba,ENT01,CMP0079,,paiement_a_la_livraison,1,1,40.9,0.0,7.0,47.9,livree,,,False
+CMD0024347,CLI003778,2024-06-25 16:00:53,site_web,mobile,G15,Sakiet Ezzit,ENT03,,,portefeuille_mobile,2,3,819.7,0.0,0.0,819.7,livree,,,False
+CMD0024348,CLI005612,2024-06-25 16:03:09,application_mobile,mobile,G16,Kairouan,ENT02,CMP0079,,paiement_a_la_livraison,5,6,702.4,0.0,0.0,702.4,livree,,,False
+CMD0024349,CLI005663,2024-06-25 16:58:49,application_mobile,mobile,G22,Métlaoui,ENT03,,,paiement_a_la_livraison,1,1,236.9,0.0,0.0,236.9,livree,,,False
+CMD0024350,CLI007728,2024-06-25 17:42:13,site_web,mobile,G20,Zarzis,ENT03,CMP0079,,portefeuille_mobile,1,1,34.9,0.0,7.0,41.9,livree,,,True
+CMD0024351,CLI003629,2024-06-25 17:48:20,application_mobile,mobile,G03,Radès,ENT01,,,paiement_a_la_livraison,3,3,129.7,0.0,7.0,136.7, livree,,,False
+CMD0024352,CLI006736,2024-06-25 18:07:04,application_mobile,mobile,G20,Djerba Houmt Souk,ENT03,CMP0079,,portefeuille_mobile,2,2,169.8,0.0,0.0,169.8,livree,,,False
+CMD0024353,CLI008133,2024-06-25 18:28:11,site_web,mobile,G04,Den Den,ENT01,,,portefeuille_mobile,1,1,88.9,0.0,7.0,95.9,retournee,,,True
+CMD0024354,CLI005641,2024-06-25 18:39:39,site_web,mobile,G01,Carthage,ENT01,CMP0079,,virement,1,1,209.9,0.0,0.0,209.9,annulee,annulation_client,2024-06-26 03:23:25,False
+CMD0024355,CLI004779,2024-06-25 19:18:42,site_web,mobile,G01,Le Bardo,ENT01,,,carte_bancaire,2,2,129.8,0.0,7.0,136.8,livree,,,False
+CMD0024356,CLI005418,2024-06-25 20:32:14,reseaux_sociaux,mobile,G03,Ezzahra,ENT01,,,paiement_a_la_livraison,2,5,236.5,0.0,0.0,236.5,livree,,,False
+CMD0024357,CLI008269,2024-06-25 20:55:27,application_mobile,mobile,G20,Médenine,ENT03,CMP0079,BIENVENUE10,paiement_a_la_livraison,4,4,225.6,22.56,0.0,203.04,livree,,,True
+CMD0024358,CLI008073,2024-06-25 21:13:12,application_mobile,mobile,G07,Mateur,ENT01,,,paiement_a_la_livraison,1,1,68.9,0.0,7.0,75.9,livree,,,False
+CMD0024359,CLI008244,2024-06-25 21:43:31,site_web,mobile,G20,Zarzis,ENT03,,BIENVENUE10,paiement_a_la_livraison,4,5,207.5,20.75,0.0,186.75,livree,,,True
+CMD0024360,CLI002721,2024-06-25 21:56:31,reseaux_sociaux,mobile,G13,Moknine,ENT02,CMP0079,,carte_prepayee,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024361,CLI007081,2024-06-25 22:00:50,site_web,ordinateur,G05,Hammamet,ENT01,CMP0079,,paiement_a_la_livraison,2,2,237.8,0.0,0.0,237.8,livraison_echouee,,,False
+CMD0024362,CLI008114,2024-06-25 22:15:22,application_mobile,mobile,G01,Tunis,ENT01,CMP0079,,carte_bancaire,1,1,598.9,0.0,0.0,598.9,livree,,,False
+CMD0024363,CLI008118,2024-06-25 22:17:21,site_web,mobile,G19,El Hamma,ENT03,,,paiement_a_la_livraison,1,1,595.9,0.0,0.0,595.9,livree,,,False
+CMD0024364,CLI005568,2024-06-25 22:54:16,application_mobile,mobile,G12,Hammam Sousse,ENT02,,,portefeuille_mobile,1,2,75.8,0.0,7.0,82.8,livree,,,False
+CMD0024365,CLI006375,2024-06-26 00:10:41,application_mobile,mobile,G13,Ksar Hellal,ENT02,,,portefeuille_mobile,3,3,130.7,0.0,7.0,137.7,livree,,,False
+CMD0024365,CLI006375,2024-06-26 00:10:41,application_mobile,mobile,G13,Ksar Hellal,ENT02,,,portefeuille_mobile,3,3,130.7,0.0,7.0,137.7,livree,,,False
+CMD0024366,CLI007125,2024-06-26 00:22:18,site_web,ordinateur,G01,Le Bardo,ENT01,,,carte_prepayee,1,1,234.9,0.0,0.0,234.9,livree,,,False
+CMD0024367,CLI008280,2024-06-26 07:08:18,site_web,mobile,G12,Msaken,ENT02,CMP0079,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,True
+CMD0024368,CLI003101,2024-06-26 10:13:30,reseaux_sociaux,mobile,G05,Kélibia,ENT01,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0024369,CLI008290,2024-06-26 10:15:06,site_web,ordinateur,G20,Djerba Houmt Souk,ENT03,,,paiement_a_la_livraison,1,1,37.9,0.0,7.0,44.9,livree,,,True
+CMD0024370,CLI008287,2024-06-26 10:24:27,application_mobile,mobile,G07,Bizerte,ENT01,,BIENVENUE10,carte_prepayee,3,5,333.5,30.0,0.0,303.5,livree,,,True
+CMD0024371,CLI001075,2024-06-26 10:38:04,application_mobile,mobile,G24,Douz,ENT03,CMP0079,,paiement_a_la_livraison,1,1,47.9,0.0,7.0,54.9,livree,,,False
+CMD0024372,CLI007753,2024-06-26 11:04:18,site_web,ordinateur,G22,Gafsa,ENT03,,,paiement_a_la_livraison,1,1,56.9,0.0,7.0,63.9,livree,,,True
+CMD0024373,CLI002115,2024-06-26 11:10:21,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,121.9,0.0,7.0,128.9,livree,,,False
+CMD0024374,CLI006971,2024-06-26 11:11:12,application_mobile,mobile,G09,Jendouba,ENT01,,,carte_bancaire,1,1,36.9,0.0,7.0,43.9,livree,,,False
+CMD0024375,CLI006175,2024-06-26 11:13:47,site_web,mobile,G14,Ksour Essef,ENT02,CMP0079,,paiement_a_la_livraison,1,1,21.9,0.0,7.0,28.9,annulee,annulation_client,2024-06-26 11:19:29,False
+CMD0024376,CLI004923,2024-06-26 11:24:30,site_web,ordinateur,G22,Métlaoui,ENT03,CMP0079,,carte_bancaire,1,2,67.8,0.0,7.0,74.8,livree,,,False
+CMD0024377,CLI008284,2024-06-26 11:24:44,site_web,mobile,G10,Le Kef,ENT01,,,paiement_a_la_livraison,1,1,43.9,0.0,7.0,50.9,livree,,,True
+CMD0024378,CLI005020,2024-06-26 11:45:13,site_web,ordinateur,G14,Mahdia,ENT02,,,paiement_a_la_livraison,2,3,153.7,0.0,0.0,153.7,livree,,,False
+CMD0024379,CLI005136,2024-06-26 11:46:25,site_web,mobile,G13,Monastir,ENT02,CMP0077,,carte_bancaire,2,2,144.8,0.0,7.0,151.8,partiellement_retournee,,,False
+CMD0024380,CLI008293,2024-06-26 12:05:55,application_mobile,mobile,G02,La Soukra,ENT01,,,portefeuille_mobile,1,1,58.9,0.0,7.0,65.9,livree,,,True
+CMD0024381,CLI008292,2024-06-26 12:36:58,application_mobile,mobile,G07,Mateur,ENT01,CMP0079,,paiement_a_la_livraison,1,1,5.9,0.0,7.0,12.9,livree,,,True
+CMD0024382,CLI007123,2024-06-26 12:50:18,site_web,ordinateur,G07,Bizerte,ENT01,,,paiement_a_la_livraison,1,1,144.9,0.0,7.0,151.9,retournee,,,False
+CMD0024383,CLI008009,2024-06-26 13:19:14,site_web,ordinateur,G16,Haffouz,ENT02,,,carte_bancaire,1,1,63.9,0.0,7.0,70.9,livree,,,False
+CMD0024384,CLI006737,2024-06-26 13:25:48,site_web,ordinateur,G02,Ariana Ville,ENT01,,,paiement_a_la_livraison,2,2,2375.8,0.0,0.0,2375.8,livree,,,False
+CMD0024385,CLI005433,2024-06-26 13:34:01,application_mobile,mobile,G07,Menzel Bourguiba,ENT01,,,carte_prepayee,5,5,3034.5,0.0,0.0,3034.5,partiellement_retournee,,,False
+CMD0024386,CLI008283,2024-06-26 13:44:29,application_mobile,mobile,G12,Sousse,ENT02,CMP0079,,carte_bancaire,4,4,603.6,0.0,0.0,603.6,livree,,,True
+CMD0024387,CLI008276,2024-06-26 13:48:13,site_web,mobile,G03,Radès,ENT01,,,carte_bancaire,2,2,96.8,0.0,7.0,103.8,livree,,,True
+CMD0024388,CLI008281,2024-06-26 14:39:52,site_web,ordinateur,G19,El Hamma,ENT03,,,carte_prepayee,1,1,37.9,0.0,7.0,44.9,livree,,,True
+CMD0024389,CLI007694,2024-06-26 15:01:19,site_web,mobile,G13,Moknine,ENT02,,,carte_prepayee,2,3,357.7,0.0,0.0,357.7,livree,,,False
+CMD0024390,CLI001128,2024-06-26 15:10:35,site_web,ordinateur,G01,Carthage,ENT01,CMP0079,,paiement_a_la_livraison,3,3,252.7,0.0,0.0,252.7,partiellement_retournee,,,False
+CMD0024391,CLI007649,2024-06-26 16:05:54,application_mobile,mobile,G01,Le Bardo,ENT01,,,paiement_a_la_livraison,1,2,157.8,0.0,0.0,157.8,livraison_echouee,,,False
+CMD0024392,CLI008277,2024-06-26 16:21:08,application_mobile,mobile,G02,La Soukra,ENT01,,,paiement_a_la_livraison,2,2,190.8,0.0,0.0,190.8,livree,,,True
+CMD0024393,CLI003186,2024-06-26 16:24:06,reseaux_sociaux,mobile,G22,Métlaoui,ENT03,CMP0079,,paiement_a_la_livraison,1,3,350.7,0.0,0.0,350.7,livree,,,False
+CMD0024394,CLI003137,2024-06-26 17:58:42,application_mobile,mobile,G22,Métlaoui,ENT03,,,paiement_a_la_livraison,4,7,283.3,0.0,0.0,283.3,livree,,,False
+CMD0024395,CLI003419,2024-06-26 18:20:50,site_web,mobile,G14,Mahdia,ENT02,,,portefeuille_mobile,1,1,33.9,0.0,7.0,40.9,livree,,,False
+CMD0024396,CLI007584,2024-06-26 18:38:09,application_mobile,mobile,G22,Métlaoui,ENT03,,,carte_bancaire,2,2,40.8,0.0,7.0,47.8,livree,,,False
+CMD0024397,CLI006124,2024-06-26 19:36:40,site_web,mobile,G19,Gabès,ENT03,,,carte_bancaire,1,1,52.9,0.0,7.0,59.9,livree,,,False
+CMD0024398,CLI008087,2024-06-26 20:21:45,site_web,ordinateur,G05,Hammamet,ENT01,,,portefeuille_mobile,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0024399,CLI005165,2024-06-26 20:56:59,site_web,ordinateur,G13,Moknine,ENT02,,,carte_prepayee,1,1,125.9,0.0,7.0,132.9,livree,,,False
+CMD0024400,CLI001755,2024-06-26 21:02:43,application_mobile,mobile,G06,Zaghouan,ENT01,,,carte_prepayee,2,3,528.7,0.0,0.0,528.7,livree,,,False
+CMD0024401,CLI006830,2024-06-26 21:08:48,site_web,ordinateur,G05,Kélibia,ENT01,,,carte_bancaire,3,3,265.7,0.0,0.0,265.7,livree,,,False
+CMD0024402,CLI005103,2024-06-26 21:40:14,site_web,mobile,G12,Hammam Sousse,ENT02,,,paiement_a_la_livraison,3,9,681.1,0.0,0.0,681.1,livree,,,False
+CMD0024403,CLI004861,2024-06-26 21:57:33,application_mobile,mobile,G02,La Soukra,ENT01,,,carte_prepayee,1,1,36.9,0.0,7.0,43.9,livree,,,False
+CMD0024404,CLI006565,2024-06-26 21:59:30,application_mobile,mobile,G01,Carthage,ENT01,CMP0079,,portefeuille_mobile,2,2,777.8,0.0,0.0,777.8,livree,,,False
+CMD0024405,CLI007686,2024-06-26 22:09:31,application_mobile,mobile,G01,Le Bardo,ENT01,CMP0079,,carte_bancaire,1,2,117.8,0.0,7.0,124.8,livree,,,False
+CMD0024406,CLI007734,2024-06-26 22:17:04,site_web,ordinateur,G07,Mateur,ENT01,,,carte_bancaire,1,1,125.9,0.0,7.0,132.9,livree,,,False
+CMD0024407,CLI000664,2024-06-26 22:29:46,site_web,ordinateur,G10,Le Kef,ENT01,CMP0079,,carte_bancaire,1,1,286.9,0.0,0.0,286.9,livree,,,False
+CMD0024408,CLI003964,2024-06-26 22:36:21,application_mobile,mobile,G16,Kairouan,ENT02,,,carte_bancaire,3,3,79.7,0.0,7.0,86.7,livree,,,False
+CMD0024409,CLI004007,2024-06-26 22:56:04,application_mobile,mobile,G09,Aïn Draham,ENT01,,,carte_prepayee,2,2,173.8,0.0,0.0,173.8,livree,,,False
+CMD0024410,CLI006720,2024-06-26 23:11:20,site_web,ordinateur,G24,Douz,ENT01,,,carte_prepayee,2,3,147.7,0.0,7.0,154.7,partiellement_retournee,,,False
+CMD0024411,CLI005913,2024-06-26 23:47:03,application_mobile,mobile,G10,Le Kef,ENT01,,,portefeuille_mobile,4,4,431.6,0.0,0.0,431.6,livraison_echouee,,,False
+CMD0024412,CLI007650,2024-06-26 23:53:56,site_web,mobile,G01,La Marsa,ENT01,,,carte_prepayee,1,1,333.9,0.0,0.0,333.9,livree,,,False
+CMD0024413,CLI003879,2024-06-27 00:57:41,site_web,mobile,G01,La Marsa,ENT02,CMP0079,,paiement_a_la_livraison,2,10,323.0,0.0,0.0,323.0,livree,,,False
+CMD0024414,CLI003505,2024-06-27 01:36:53,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,carte_bancaire,1,1,112.9,0.0,7.0,119.9,livree,,,False
+CMD0024415,CLI004538,27/06/2024 01:59,application_mobile,mobile,G05,Hammamet,ENT01,CMP0079,,carte_bancaire,2,2,1182.8,0.0,0.0,1182.8,partiellement_retournee,,,False
+CMD0024416,CLI008303,2024-06-27 02:09:59,site_web,ordinateur,G18,Sidi Bouzid,ENT02,,BIENVENUE10,carte_bancaire,2,4,416.6,30.0,0.0,386.6,livree,,,True
+CMD0024417,CLI008299,2024-06-27 08:06:55,site_web,mobile,G22,Redeyef,ENT03,,,paiement_a_la_livraison,2,2,177.8,0.0,0.0,177.8,livree,,,True
+CMD0024418,CLI006649,2024-06-27 08:47:56,application_mobile,mobile,G10,Dahmani,ENT01,,,paiement_a_la_livraison,3,3,616.7,0.0,0.0,616.7,livree,,,False
+CMD0024419,CLI004703,2024-06-27 09:22:11,application_mobile,mobile,G05,Nabeul,,,,carte_prepayee,1,1,21.9,0.0,7.0,28.9,paiement_echoue,,,False
+CMD0024420,CLI006715,2024-06-27 09:25:09,site_web,ordinateur,G08,Béja,ENT01,,,paiement_a_la_livraison,1,1,241.9,0.0,0.0,241.9,livree,,,False
+CMD0024421,CLI007050,2024-06-27 10:03:55,site_web,mobile,G12,Kalâa Kebira,ENT02,,,paiement_a_la_livraison,1,3,29.7,0.0,7.0,36.7,annulee,annulation_client,2024-06-27 12:30:54,False
+CMD0024422,CLI005445,2024-06-27 10:32:15,site_web,mobile,G01,Carthage,ENT01,CMP0079,,paiement_a_la_livraison,1,1,99.9,0.0,7.0,106.9,retournee,,,False
+CMD0024423,CLI003046,2024-06-27 11:23:01,site_web,mobile,G05,Nabeul,ENT01,CMP0079,,paiement_a_la_livraison,2,3,292.7,0.0,0.0,292.7,livree,,,False
+CMD0024424,CLI004476,2024-06-27 11:45:02,application_mobile,mobile,G12,Kalâa Kebira,ENT01,CMP0079,,virement,1,10,199.0,0.0,0.0,199.0,livree,,,False
+CMD0024425,CLI006640,2024-06-27 12:04:04,site_web,mobile,G01,Tunis,ENT01,,,paiement_a_la_livraison,3,3,390.7,0.0,0.0,390.7,livree,,,False
+CMD0024426,CLI005703,2024-06-27 12:22:45,application_mobile,mobile,G09,Jendouba,ENT01,CMP0079,,paiement_a_la_livraison,1,1,127.9,0.0,7.0,134.9,livree,,,False
+CMD0024427,CLI007462,2024-06-27 13:27:33,application_mobile,mobile,G13,Ksar Hellal,,,,carte_bancaire,2,2,196.8,0.0,0.0,196.8,paiement_echoue,,,False
+CMD0024428,CLI005326,2024-06-27 13:37:53,reseaux_sociaux,mobile,G03,Ben Arous,ENT02,,,carte_bancaire,2,3,286.7,0.0,0.0,286.7,livree,,,False
+CMD0024429,CLI007958,2024-06-27 13:50:50,site_web,tablette,G15,Sakiet Eddaïer,ENT03,CMP0079,,carte_bancaire,1,1,348.9,0.0,0.0,348.9,annulee,annulation_client,2024-06-27 14:01:17,False
+CMD0024430,CLI006169,2024-06-27 14:44:57,application_mobile,mobile,G16,Kairouan,ENT02,CMP0078,ETE24SM,portefeuille_mobile,2,3,165.7,30.0,7.0,142.7,partiellement_retournee,,,False
+CMD0024431,CLI008296,2024-06-27 15:20:01,application_mobile,mobile,G14,El Jem,ENT02,,,paiement_a_la_livraison,1,2,293.8,0.0,0.0,293.8,livraison_echouee,,,True
+CMD0024432,CLI008281,27/06/2024 15:28,reseaux_sociaux,mobile,G19,El Hamma,ENT03,,,paiement_a_la_livraison,1,1,29.9,0.0,7.0,36.9,livree,,,False
+CMD0024433,CLI003629,2024-06-27 15:34:20,site_web,mobile,G03,Ben Arous,ENT01,CMP0079,,carte_bancaire,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024434,CLI008036,2024-06-27 15:54:11,site_web,ordinateur,G12,Hammam Sousse,ENT02,,,paiement_a_la_livraison,1,1,34.9,0.0,7.0,41.9,livree,,,False
+CMD0024435,CLI007613,2024-06-27 15:57:57,application_mobile,mobile,G13,Moknine,ENT02,CMP0079,,carte_prepayee,2,3,934.7,0.0,0.0,934.7,livree,,,False
+CMD0024436,CLI002199,2024-06-27 17:09:10,application_mobile,mobile,G03,Ben Arous,ENT01,CMP0079,,carte_bancaire,2,4,141.6,0.0,7.0,148.6,livree,,,False
+CMD0024437,CLI007462,2024-06-27 17:13:41,site_web,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,1,1,21.9,0.0,7.0,28.9,livree,,,False
+CMD0024438,CLI008236,2024-06-27 17:32:34,application_mobile,mobile,G04,Den Den,ENT01,,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,livree,,,True
+CMD0024439,CLI006673,27/06/2024 17:39,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,CMP0079,,carte_bancaire,4,4,392.6,0.0,0.0,392.6,livree,,,False
+CMD0024440,CLI000858,2024-06-27 18:16:03,site_web,ordinateur,G24,Douz,ENT03,,,paiement_a_la_livraison,2,2,88.8,0.0,7.0,95.8,livree,,,False
+CMD0024441,CLI000921,2024-06-27 18:41:26,application_mobile,mobile,G03,Ben Arous,ENT02,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,False
+CMD0024442,CLI005739,2024-06-27 18:47:07,application_mobile,mobile,G02,Raoued,ENT01,CMP0079,,carte_bancaire,1,1,25.9,0.0,7.0,32.9,livree,,,False
+CMD0024443,CLI002628,2024-06-27 19:08:37,site_web,ordinateur,G05,Nabeul,ENT01,CMP0079,,portefeuille_mobile,1,1,79.9,0.0,7.0,86.9,livree,,,False
+CMD0024444,CLI007720,2024-06-27 19:23:09,site_web,ordinateur,G04,Oued Ellil,ENT01,CMP0079,,portefeuille_mobile,1,2,73.8,0.0,7.0,80.8,livree,,,False
+CMD0024445,CLI008295,2024-06-27 19:26:39,site_web,mobile,G17,Sbeïtla,ENT02,CMP0079,,paiement_a_la_livraison,1,1,49.9,0.0,7.0,56.9,livree,,,True
+CMD0024446,CLI006432,2024-06-27 20:06:19,site_web,mobile,G22,Métlaoui,ENT03,CMP0079,,carte_bancaire,1,1,202.9,0.0,0.0,202.9,livree,,,False
+CMD0024447,CLI006948,2024-06-27 20:11:51,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,carte_prepayee,2,2,534.8,0.0,0.0,534.8,livree,,,False
+CMD0024448,CLI006113,2024-06-27 20:11:55,site_web,mobile,G02,Ariana Ville,ENT01,CMP0079,,portefeuille_mobile,1,2,11.8,0.0,7.0,18.8,annulee,annulation_client,2024-06-27 22:14:52,False
+CMD0024449,CLI008036,2024-06-27 20:48:11,application_mobile,mobile,G12,Msaken,ENT02,,,portefeuille_mobile,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024450,CLI007949,2024-06-27 20:54:55,reseaux_sociaux,mobile,G22,Gafsa,ENT03,,,paiement_a_la_livraison,1,2,293.8,0.0,0.0,293.8,livree,,,False
+CMD0024451,CLI004747,2024-06-27 21:14:29,reseaux_sociaux,mobile,G12,Kalâa Kebira,ENT01,CMP0078,,virement,2,8,247.2,0.0,0.0,247.2,livree,,,False
+CMD0024452,CLI008041,2024-06-27 21:19:49,site_web,ordinateur,G19,Gabès,ENT01,,,portefeuille_mobile,1,1,5.9,0.0,7.0,12.9,livree,,,True
+CMD0024453,CLI004954,2024-06-27 21:27:04,application_mobile,mobile,G04,Den Den,ENT01,,,portefeuille_mobile,1,1,59.9,0.0,7.0,66.9,retournee,,,False
+CMD0024454,CLI005140,2024-06-27 21:28:53,application_mobile,mobile,G17,Kasserine,ENT02,,,paiement_a_la_livraison,1,2,47.8,0.0,7.0,54.8,livree,,,False
+CMD0024455,CLI007048,2024-06-27 21:38:43,application_mobile,mobile,G12,Hammam Sousse,ENT02,CMP0079,,paiement_a_la_livraison,1,1,84.9,0.0,7.0,91.9,livree,,,False
+CMD0024457,CLI000098,2024-06-27 23:30:47,application_mobile,mobile,G05,Kélibia,ENT01,CMP0079,,carte_bancaire,1,3,62.7,0.0,7.0,69.7,livree,,,False
+CMD0024458,CLI002527,2024-06-27 23:50:07,reseaux_sociaux,mobile,G14,El Jem,ENT02,,,paiement_a_la_livraison,2,3,557.7,0.0,0.0,557.7,livree,,,False
+CMD0024459,CLI005373,2024-06-27 23:56:47,site_web,mobile,G03,Ezzahra,ENT01,,,paiement_a_la_livraison,1,1,65.9,0.0,7.0,72.9,livree,,,False
+CMD0024460,CLI006555,2024-06-28 08:06:49,site_web,mobile,G04,Oued Ellil,ENT01,CMP0079,,portefeuille_mobile,1,1,153.9,0.0,0.0,153.9,livree,,,False
+CMD0024461,CLI006555,2024-06-28 08:14:42,application_mobile,mobile,G12,Hammam Sousse,ENT02,,,carte_bancaire,1,1,24.9,0.0,7.0,31.9,livree,,,False
+CMD0024462,CLI006947,2024-06-28 08:32:42,site_web,mobile,G12,Msaken,ENT02,,,paiement_a_la_livraison,2,2,217.8,0.0,0.0,217.8,livree,,,False
+CMD0024463,CLI003454,2024-06-28 10:12:34,,ordinateur,G16,Haffouz,ENT02,CMP0079,,carte_bancaire,1,2,71.8,0.0,7.0,78.8,livree,,,False
+CMD0024464,CLI002959,2024-06-28 11:30:33,site_web,mobile,G03,Ben Arous,ENT01,,,carte_bancaire,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0024465,CLI006740,2024-06-28 11:53:15,site_web,mobile,G03,Ben Arous,ENT01,,,carte_prepayee,1,1,34.9,0.0,7.0,41.9,livree,,,False
+CMD0024466,CLI006237,2024-06-28 12:06:11,reseaux_sociaux,mobile,G18,Regueb,ENT02,,,portefeuille_mobile,1,1,98.9,0.0,7.0,105.9,livree,,,False
+CMD0024467,CLI005785,2024-06-28 13:07:01,site_web,mobile,G03,Ezzahra,ENT01,CMP0079,,paiement_a_la_livraison,2,2,88.8,0.0,7.0,95.8,livree,,,False
+CMD0024468,CLI007156,2024-06-28 13:29:55,site_web,ordinateur,G15,Sfax,ENT01,CMP0079,,portefeuille_mobile,1,1,286.9,0.0,0.0,286.9,livree,,,False
+CMD0024469,CLI008188,2024-06-28 13:40:14,site_web,mobile,G15,Sakiet Ezzit,ENT03,CMP0077,ETE24TI,portefeuille_mobile,1,1,290.9,58.18,0.0,232.72,livree,,,False
+CMD0024470,CLI008232,2024-06-28 13:59:34,application_mobile,mobile,G04,Den Den,ENT01,,,paiement_a_la_livraison,1,3,47.7,0.0,7.0,54.7,livree,,,False
+CMD0024471,CLI007483,2024-06-28 14:50:23,reseaux_sociaux,mobile,G09,Aïn Draham,ENT01,,,paiement_a_la_livraison,1,1,43.9,0.0,7.0,50.9,retournee,,,False
+CMD0024472,CLI003213,2024-06-28 15:29:09,site_web,mobile,G17,Kasserine,ENT02,,,portefeuille_mobile,1,1,144.9,0.0,7.0,151.9,livree,,,False
+CMD0024473,CLI007616,2024-06-28 15:44:31,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,CMP0079,,portefeuille_mobile,2,3,135.7,0.0,7.0,142.7,livree,,,False
+CMD0024474,CLI006662,2024-06-28 16:15:46,application_mobile,mobile,G03,Radès,ENT01,,,carte_bancaire,2,3,688.7,0.0,0.0,688.7,livree,,,False
+CMD0024475,CLI004584,2024-06-28 16:16:03,reseaux_sociaux,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,2,2,620.8,0.0,0.0,620.8,livree,,,False
+CMD0024476,CLI005403,2024-06-28 16:36:20,site_web,mobile,G04,Manouba,ENT01,CMP0079,,paiement_a_la_livraison,1,1,7.9,0.0,7.0,14.9,livree,,,False
+CMD0024477,CLI006613,2024-06-28 16:50:34,application_mobile,mobile,G03,Mégrine,ENT02,,,portefeuille_mobile,3,6,418.4,0.0,0.0,418.4,livree,,,False
+CMD0024478,CLI007217,2024-06-28 17:41:41,site_web,mobile,G12,Sousse,ENT02,,,carte_bancaire,2,3,337.7,0.0,0.0,337.7,livree,,,False
+CMD0024479,CLI008310,2024-06-28 17:44:35,application_mobile,mobile,G18,Regueb,ENT02,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,True
+CMD0024480,CLI007510,2024-06-28 17:46:48,site_web,mobile,G10,Le Kef,ENT01,,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0024481,CLI006242,2024-06-28 18:03:59,site_web,mobile,G04,Oued Ellil,ENT01,CMP0079,,carte_bancaire,3,3,2988.7,0.0,0.0,2988.7,livree,,,False
+CMD0024482,CLI008139,2024-06-28 18:52:48,site_web,mobile,G18,Sidi Bouzid,ENT02,,,paiement_a_la_livraison,5,8,188.2,0.0,0.0,188.2,livraison_echouee,,,False
+CMD0024483,CLI005653,2024-06-28 18:55:46,site_web,mobile,G05,Kélibia,ENT01,,,carte_bancaire,1,1,125.9,0.0,7.0,132.9,livree,,,False
+CMD0024484,CLI006460,2024-06-28 19:16:06,site_web,ordinateur,G01,Le Bardo,ENT01,CMP0079,BIENVENUE10,portefeuille_mobile,3,5,578.5,30.0,0.0,548.5,livree,,,True
+CMD0024485,CLI004432,2024-06-28 19:24:27,application_mobile,mobile,G02,Raoued,ENT01,,,paiement_a_la_livraison,1,1,26.9,0.0,7.0,33.9,livree,,,False
+CMD0024486,CLI008030,2024-06-28 19:36:25,application_mobile,mobile,G09,Tabarka,ENT01,CMP0079,,carte_bancaire,1,1,351.9,0.0,0.0,351.9,livree,,,False
+CMD0024487,CLI006583,2024-06-28 19:46:30,site_web,mobile,G02,La Soukra,ENT01,CMP0079,,portefeuille_mobile,2,2,372.8,0.0,0.0,372.8,partiellement_retournee,,,False
+CMD0024488,CLI001349,28/06/2024 20:12,application_mobile,mobile,G01,La Marsa,ENT01,CMP0079,,paiement_a_la_livraison,1,1,5.9,0.0,7.0,12.9,livraison_echouee,,,False
+CMD0024489,CLI008305,2024-06-28 20:16:49,site_web,ordinateur,G03,Mégrine,ENT01,CMP0079,,carte_bancaire,1,1,33.9,0.0,7.0,40.9,livree,,,True
+CMD0024490,CLI008312,2024-06-28 20:20:54,application_mobile,mobile,G01,Tunis,ENT01,,,paiement_a_la_livraison,1,2,69.8,0.0,7.0,76.8,annulee,annulation_client,2024-06-28 23:12:06,True
+CMD0024491,CLI004791,2024-06-28 20:23:32,application_mobile,mobile,G02,La Soukra,ENT01,CMP0079,,portefeuille_mobile,1,1,58.9,0.0,7.0,65.9,livree,,,False
+CMD0024492,CLI007919,2024-06-28 20:37:50,site_web,mobile,G03,Radès,ENT01,,,paiement_a_la_livraison,1,1,37.9,0.0,7.0,44.9,livree,,,False
+CMD0024493,CLI007377,2024-06-28 20:45:49,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,carte_prepayee,1,1,28.9,0.0,7.0,35.9,livree,,,False
+CMD0024494,CLI005921,2024-06-28 20:48:02,reseaux_sociaux,mobile,G05,Nabeul,ENT01,,,paiement_a_la_livraison,1,1,153.9,0.0,0.0,153.9,livree,,,False
+CMD0024495,CLI006761,2024-06-28 21:01:14,application_mobile,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,1,1,38.9,0.0,7.0,45.9,livree,,,False
+CMD0024496,CLI001855,2024-06-28 21:44:46,reseaux_sociaux,mobile,G13,Ksar Hellal,ENT02,,,carte_bancaire,1,1,121.9,0.0,7.0,128.9,livree,,,False
+CMD0024497,CLI006385,2024-06-28 21:54:56,application_mobile,mobile,G05,Nabeul,ENT01,,,portefeuille_mobile,1,1,9.9,0.0,7.0,16.9,livree,,,False
+CMD0024498,CLI007618,2024-06-28 22:04:23,site_web,ordinateur,G23,Nefta,ENT03,,,carte_bancaire,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024499,CLI008110,2024-06-28 22:04:27,site_web,ordinateur,G18,Sidi Bouzid,ENT02,,,paiement_a_la_livraison,2,3,2185.7,0.0,0.0,2185.7,livree,,,False
+CMD0024500,CLI008308,2024-06-28 22:11:22,site_web,mobile,G13,Ksar Hellal,ENT02,CMP0079,,carte_bancaire,1,1,9.9,0.0,7.0,16.9,livree,,,True
+CMD0024501,CLI007075,2024-06-28 22:16:15,application_mobile,mobile,G12,Sousse,ENT02,,,carte_prepayee,2,4,97.6,0.0,7.0,104.6,livree,,,False
+CMD0024502,CLI007937,2024-06-28 22:16:54,application_mobile,mobile,G09,Tabarka,ENT01,,,paiement_a_la_livraison,1,3,350.7,0.0,0.0,350.7,livree,,,False
+CMD0024503,CLI008304,2024-06-28 22:23:19,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,CMP0078,,paiement_a_la_livraison,1,1,80.9,0.0,7.0,87.9,livree,,,True
+CMD0024504,CLI004802,2024-06-28 22:46:41,application_mobile,mobile,G13,Moknine,ENT02,CMP0079,,paiement_a_la_livraison,2,2,2185.8,0.0,0.0,2185.8,livraison_echouee,,,False
+CMD0024505,CLI006929,2024-06-28 22:57:02,site_web,mobile,G05,Hammamet,ENT01,,,portefeuille_mobile,2,3,54.7,0.0,7.0,61.7,livree,,,False
+CMD0024506,CLI006498,2024-06-28 23:08:24,application_mobile,mobile,G15,Sfax,ENT03,CMP0079,,paiement_a_la_livraison,2,2,188.8,0.0,0.0,188.8,livree,,,False
+CMD0024507,CLI006429,2024-06-28 23:19:54,application_mobile,mobile,G03,Ben Arous,ENT01,,,paiement_a_la_livraison,1,1,33.9,0.0,7.0,40.9,livree,,,False
+CMD0024508,CLI004953,2024-06-28 23:29:52,site_web,tablette,G09,Tabarka,ENT01,,,paiement_a_la_livraison,1,2,17.8,0.0,7.0,24.8,livree,,,False
+CMD0024509,CLI008313,2024-06-28 23:34:04,site_web,ordinateur,G07,Mateur,ENT01,,,carte_bancaire,2,4,423.6,0.0,0.0,423.6,livree,,,True
+CMD0024510,CLI007842,2024-06-28 23:35:47,reseaux_sociaux,mobile,G15,Sakiet Ezzit,ENT03,,,paiement_a_la_livraison,1,1,32.9,0.0,7.0,39.9,livree,,,False
+CMD0024511,CLI007703,2024-06-28 23:53:41,site_web,mobile,G08,Béja,ENT01,CMP0079,,paiement_a_la_livraison,2,2,448.8,0.0,0.0,448.8,livree,,,False
+CMD0024512,CLI007822,2024-06-29 00:17:31,application_mobile,mobile,G21,Tataouine,ENT03,CMP0079,,paiement_a_la_livraison,1,1,93.9,0.0,7.0,100.9,livree,,,False
+CMD0024513,CLI008214,2024-06-29 00:37:26,application_mobile,mobile,G08,Medjez el-Bab,ENT01,,BIENVENUE10,paiement_a_la_livraison,1,2,87.8,8.78,7.0,86.02,livree,,,True
+CMD0024514,CLI007115,2024-06-29 08:04:18,application_mobile,mobile,G22,Redeyef,ENT01,,,paiement_a_la_livraison,4,39,2160.1,0.0,0.0,2160.1,livree,,,False
+CMD0024515,CLI007052,2024-06-29 08:55:50,application_mobile,mobile,G02,Ariana Ville,ENT01,,,carte_bancaire,1,1,7.9,0.0,7.0,14.9,livree,,,False
+CMD0024516,CLI004488,2024-06-29 10:13:48,reseaux_sociaux,mobile,G12,Sousse,ENT02,,,paiement_a_la_livraison,1,1,178.9,0.0,0.0,178.9,livree,,,False
+CMD0024517,CLI006812,2024-06-29 10:36:30,application_mobile,mobile,G18,Sidi Bouzid,ENT02,CMP0078,,paiement_a_la_livraison,1,1,50.9,0.0,7.0,57.9,retournee,,,False
+CMD0024518,CLI008324,2024-06-29 11:28:40,application_mobile,mobile,G20,Médenine,ENT03,,BIENVENUE10,portefeuille_mobile,1,1,51.9,5.19,7.0,53.71,livree,,,True
+CMD0024519,CLI005529,2024-06-29 12:40:20,application_mobile,mobile,G13,Ksar Hellal,ENT02,,,carte_bancaire,1,1,168.9,0.0,0.0,168.9,livree,,,False
+CMD0024520,CLI004827,2024-06-29 12:41:30,site_web,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,144.9,0.0,7.0,151.9,annulee,annulation_client,2024-06-29 15:35:38,False
+CMD0024521,CLI007909,2024-06-29 12:51:17,site_web,mobile,G07,Bizerte,ENT01,,BIENVENUE10,carte_bancaire,3,5,331.5,30.0,0.0,301.5,livree,,,True
+CMD0024522,CLI008316,29/06/2024 13:04,site_web,mobile,G03,Ezzahra,ENT01,CMP0078,,carte_prepayee,1,1,56.9,0.0,7.0,63.9,livree,,,True
+CMD0024523,CLI006581,2024-06-29 13:20:08,reseaux_sociaux,mobile,G01,Tunis,ENT01,CMP0079,,carte_bancaire,2,2,140.8,0.0,7.0,147.8,livree,,,False
+CMD0024524,CLI008320,2024-06-29 15:27:54,site_web,ordinateur,G01,Le Bardo,ENT01,,BIENVENUE10,paiement_a_la_livraison,1,1,436.9,30.0,0.0,406.9,livree,,,True
+CMD0024525,CLI005054,2024-06-29 15:30:48,application_mobile,mobile,G02,Raoued,ENT01,CMP0079,,carte_bancaire,3,3,237.7,0.0,0.0,237.7,livree,,,False
+CMD0024526,CLI007825,2024-06-29 15:54:30,application_mobile,mobile,G03,Mégrine,ENT01,,,paiement_a_la_livraison,2,2,109.8,0.0,7.0,116.8,livree,,,False
+CMD0024527,CLI008323,2024-06-29 16:07:42,reseaux_sociaux,mobile,G01,Tunis,ENT01,,BIENVENUE10,paiement_a_la_livraison,2,2,72.8,7.28,7.0,72.52,livree,,,True
+CMD0024528,CLI005788,2024-06-29 16:25:52,reseaux_sociaux,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,1,1,38.9,0.0,7.0,45.9,livree,,,False
+CMD0024529,CLI008314,2024-06-29 16:28:35,site_web,mobile,G05,Kélibia,ENT01,,,carte_bancaire,1,1,23.9,0.0,7.0,30.9,livree,,,True
+CMD0024530,CLI006522,2024-06-29 16:58:55,application_mobile,mobile,G06,Zaghouan,ENT01,,,carte_bancaire,1,1,33.9,0.0,7.0,40.9,livree,,,False
+CMD0024531,CLI006349,2024-06-29 17:09:34,site_web,ordinateur,G03,Radès,ENT01,CMP0079,,paiement_a_la_livraison,2,3,55.7,0.0,7.0,62.7,annulee,annulation_client,2024-06-30 23:52:27,False
+CMD0024532,CLI002641,2024-06-29 17:38:55,application_mobile,mobile,G21,Ghomrassen,ENT03,CMP0079,,carte_bancaire,1,1,50.9,0.0,7.0,57.9,livree,,,False
+CMD0024533,CLI005799,2024-06-29 17:41:10,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,2,2,158.8,0.0,0.0,158.8,livree,,,False
+CMD0024534,CLI003434,2024-06-29 17:42:41,application_mobile,mobile,G18,Regueb,ENT02,,,carte_bancaire,1,3,101.7,0.0,7.0,108.7,livree,,,False
+CMD0024535,CLI003300,2024-06-29 17:55:13,site_web,mobile,G04,Manouba,ENT01,,,carte_bancaire,1,1,33.9,0.0,7.0,40.9,livree,,,False
+CMD0024536,CLI005161,2024-06-29 17:57:32,application_mobile,mobile,G14,El Jem,ENT02,,,paiement_a_la_livraison,3,5,86.5,0.0,7.0,93.5,livree,,,False
+CMD0024537,CLI008250,2024-06-29 18:10:08,site_web,tablette,G07,Bizerte,ENT01,,,paiement_a_la_livraison,1,2,11.8,0.0,7.0,18.8,livree,,,True
+CMD0024538,CLI003834,2024-06-29 18:45:10,application_mobile,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,2,2,320.8,0.0,0.0,320.8,livree,,,False
+CMD0024539,CLI002871,2024-06-29 19:21:02,site_web,mobile,G05,Kélibia,ENT02,CMP0079,,virement,3,32,1939.8,0.0,0.0,1939.8,livree,,,False
+CMD0024540,CLI008235,2024-06-29 19:31:56,site_web,mobile,G17,Sbeïtla,ENT02,CMP0079,,portefeuille_mobile,1,1,598.9,0.0,0.0,598.9,livree,,,False
+CMD0024541,CLI006910,2024-06-29 19:56:17,reseaux_sociaux,mobile,G21,Ghomrassen,ENT03,,,carte_prepayee,3,3,289.7,0.0,0.0,289.7,livree,,,False
+CMD0024542,CLI002085,2024-06-29 20:18:16,application_mobile,mobile,G02,Ariana Ville,ENT01,CMP0079,,paiement_a_la_livraison,1,1,7.9,0.0,7.0,14.9,livree,,,False
+CMD0024543,CLI005122,2024-06-29 20:37:31,site_web,ordinateur,G03,Ben Arous,ENT01,CMP0079,,paiement_a_la_livraison,2,2,1613.8,0.0,0.0,1613.8,livree,,,False
+CMD0024544,CLI001923,2024-06-29 20:47:22,site_web,ordinateur,G02,Raoued,ENT01,CMP0079,,paiement_a_la_livraison,6,7,516.3,0.0,0.0,516.3,livree,,,False
+CMD0024545,CLI004983,2024-06-29 21:15:51,application_mobile,mobile,G20,Djerba Houmt Souk,ENT03,,,paiement_a_la_livraison,1,1,40.9,0.0,7.0,47.9,livree,,,False
+CMD0024546,CLI008114,2024-06-29 21:41:21,site_web,mobile,G01,Tunis,ENT01,,,portefeuille_mobile,1,1,74.9,0.0,7.0,81.9,livree,,,False
+CMD0024547,CLI007811,2024-06-29 21:46:27,application_mobile,mobile,G13,Moknine,ENT02,,,paiement_a_la_livraison,2,2,2616.8,0.0,0.0,2616.8,livree,,,False
+CMD0024548,CLI007834,2024-06-29 21:48:03,application_mobile,mobile,G02,La Soukra,ENT01,,,paiement_a_la_livraison,1,1,84.9,0.0,7.0,91.9,livree,,,False
+CMD0024549,CLI006517,2024-06-29 21:53:40,reseaux_sociaux,mobile,G03,Mégrine,ENT01,CMP0079,,carte_bancaire,1,1,598.9,0.0,0.0,598.9,livree,,,False
+CMD0024550,CLI006251,2024-06-29 22:15:17,site_web,ordinateur,G15,Sakiet Ezzit,ENT03,,,portefeuille_mobile,1,1,1254.9,0.0,0.0,1254.9,retournee,,,False
+CMD0024551,CLI005427,2024-06-29 22:19:16,site_web,ordinateur,G14,Ksour Essef,ENT02,,,paiement_a_la_livraison,1,1,2835.9,0.0,0.0,2835.9,livree,,,False
+CMD0024552,CLI006068,2024-06-29 23:02:52,site_web,ordinateur,G20,Djerba Houmt Souk,ENT03,,,portefeuille_mobile,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024553,CLI008317,2024-06-29 23:26:55,reseaux_sociaux,mobile,G12,Msaken,ENT02,,BIENVENUE10,carte_bancaire,1,1,2209.9,30.0,0.0,2179.9,livree,,,True
+CMD0024554,CLI005790,29/06/2024 23:42,application_mobile,mobile,G19,Gabès,ENT03,,,paiement_a_la_livraison,3,4,312.6,0.0,0.0,312.6,livree,,,False
+CMD0024555,CLI006827,2024-06-30 00:53:32,site_web,mobile,G01,Tunis,ENT01,,,paiement_a_la_livraison,1,2,205.8,0.0,0.0,205.8,livree,,,False
+CMD0024556,CLI000449,2024-06-30 03:27:39,reseaux_sociaux,mobile,G19,El Hamma,ENT03,,,paiement_a_la_livraison,1,1,23.9,0.0,7.0,30.9,livree,,,False
+CMD0024557,CLI007478,2024-06-30 08:21:51,site_web,mobile,G24,Douz,ENT03,,,carte_bancaire,1,2,43.8,0.0,7.0,50.8,livree,,,False
+CMD0024558,CLI008328,2024-06-30 08:33:14,site_web,ordinateur,G21,Tataouine,ENT03,CMP0077,BIENVENUE10,paiement_a_la_livraison,1,1,738.9,30.0,0.0,708.9,livree,,,True
+CMD0024559,CLI005318,2024-06-30 09:15:46,site_web,mobile,G02,La Soukra,ENT01,,,carte_bancaire,1,1,496.9,0.0,0.0,496.9,livree,,,False
+CMD0024560,CLI005119,2024-06-30 10:03:14,site_web,mobile,G05,Nabeul,ENT01,CMP0079,,carte_bancaire,3,3,150.7,0.0,0.0,150.7,livree,,,False
+CMD0024561,CLI005914,2024-06-30 10:47:47,reseaux_sociaux,mobile,G13,Ksar Hellal,ENT02,CMP0077,ETE24TI,carte_bancaire,3,3,243.7,48.74,0.0,194.96,partiellement_retournee,,,False
+CMD0024562,CLI003529,2024-06-30 10:53:25,site_web,ordinateur,G05,Hammamet,ENT02,,,portefeuille_mobile,3,4,184.6,0.0,0.0,184.6,livree,,,False
+CMD0024563,CLI001683,2024-06-30 10:55:58,site_web,ordinateur,G07,Menzel Bourguiba,ENT01,,,paiement_a_la_livraison,1,1,41.9,0.0,7.0,48.9,livree,,,False
+CMD0024564,CLI006869,2024-06-30 11:27:56,reseaux_sociaux,mobile,G01,Le Bardo,ENT01,,,carte_bancaire,1,1,202.9,0.0,0.0,202.9,livree,,,False
+CMD0024565,CLI006453,2024-06-30 11:44:50,reseaux_sociaux,mobile,G08,Medjez el-Bab,ENT01,,,paiement_a_la_livraison,1,1,52.9,0.0,7.0,59.9,livree,,,False
+CMD0024566,CLI007635,2024-06-30 11:55:44,site_web,tablette,G17,Kasserine,ENT02,,,carte_prepayee,1,1,146.9,0.0,7.0,153.9,livree,,,False
+CMD0024567,CLI000663,2024-06-30 12:19:17,application_mobile,mobile,G15,Sfax,ENT03,CMP0079,,paiement_a_la_livraison,1,1,15.9,0.0,7.0,22.9,livree,,,False
+CMD0024568,CLI004448,2024-06-30 12:32:50,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,CMP0079,,paiement_a_la_livraison,1,1,198.9,0.0,0.0,198.9,livree,,,False
+CMD0024569,CLI000098,2024-06-30 12:36:10,reseaux_sociaux,mobile,G05,Kélibia,ENT02,,,portefeuille_mobile,3,4,636.6,0.0,0.0,636.6,livree,,,False
+CMD0024570,CLI008340,2024-06-30 12:46:50,application_mobile,mobile,G07,Mateur,ENT01,,,portefeuille_mobile,1,1,34.9,0.0,7.0,41.9,livree,,,True
+CMD0024571,CLI000449,2024-06-30 13:45:09,application_mobile,mobile,G19,Gabès,ENT03,,,carte_bancaire,1,2,85.8,0.0,7.0,92.8,livree,,,False
+CMD0024572,CLI007423,2024-06-30 13:48:02,application_mobile,mobile,G03,Radès,ENT01,,,carte_bancaire,2,2,601.8,0.0,0.0,601.8,livree,,,False
+CMD0024573,CLI000302,2024-06-30 13:59:26,site_web,ordinateur,G02,Ariana Ville,ENT01,,,paiement_a_la_livraison,2,2,157.8,0.0,0.0,157.8,livree,,,False
+CMD0024574,CLI008326,2024-06-30 14:08:22,application_mobile,mobile,G16,Kairouan,ENT02,,,paiement_a_la_livraison,3,4,223.6,0.0,0.0,223.6,livree,,,True
+CMD0024575,CLI008332,2024-06-30 14:46:29,application_mobile,mobile,G07,Mateur,ENT01,CMP0079,,paiement_a_la_livraison,1,2,113.8,0.0,7.0,120.8,annulee,annulation_client,2024-07-01 09:24:58,True
+CMD0024576,CLI002790,2024-06-30 14:55:41,application_mobile,mobile,G01,Le Bardo,ENT01,,,virement,1,7,188.3,0.0,0.0,188.3,livree,,,False
+CMD0024577,CLI007336,2024-06-30 15:03:23,site_web,ordinateur,G03,Ezzahra,,,,carte_bancaire,3,22,1065.8,0.0,0.0,1065.8,paiement_echoue,,,False
+CMD0024578,CLI005603,2024-06-30 15:29:21,site_web,tablette,G15,Sakiet Ezzit,ENT03,CMP0079,,paiement_a_la_livraison,1,1,58.9,0.0,7.0,65.9,livree,,,False
+CMD0024579,CLI002695,2024-06-30 15:53:19,application_mobile,mobile,G04,Den Den,ENT01,,,carte_prepayee,1,1,95.9,0.0,7.0,102.9,livree,,,False
+CMD0024580,CLI003817,2024-06-30 16:13:35,application_mobile,mobile,G16,Haffouz,ENT02,,,paiement_a_la_livraison,1,1,54.9,0.0,7.0,61.9,livraison_echouee,,,False
+CMD0024581,CLI007258,2024-06-30 16:39:35,application_mobile,mobile,G07,Bizerte,,,,carte_bancaire,1,2,95.8,0.0,7.0,102.8,paiement_echoue,,,False
+CMD0024582,CLI005627,2024-06-30 16:47:04,application_mobile,mobile,G12,Hammam Sousse,ENT02,CMP0077,,paiement_a_la_livraison,2,2,87.8,0.0,7.0,94.8,livree,,,False
+CMD0024583,CLI003232,2024-06-30 17:12:43,site_web,mobile,G22,Métlaoui,ENT03,,,paiement_a_la_livraison,1,1,43.9,0.0,7.0,50.9,livree,,,False
+CMD0024584,CLI008277,2024-06-30 17:43:00,reseaux_sociaux,mobile,G02,La Soukra,ENT01,,,carte_bancaire,1,1,142.9,0.0,7.0,149.9,retournee,,,False
+CMD0024585,CLI008329,2024-06-30 18:24:10,site_web,mobile,G01,Le Bardo,ENT01,,,paiement_a_la_livraison,1,1,68.9,0.0,7.0,75.9,livraison_echouee,,,True
+CMD0024586,CLI008342,2024-06-30 18:27:40,site_web,mobile,G20,Zarzis,ENT03,,BIENVENUE10,paiement_a_la_livraison,3,3,74.7,7.47,7.0,74.23,livree,,,True
+CMD0024587,CLI005158,2024-06-30 18:44:04,application_mobile,mobile,G23,Tozeur,ENT03,,,virement,1,2,289.8,0.0,0.0,289.8,livree,,,False
+CMD0024588,CLI004105,2024-06-30 18:45:00,site_web,mobile,G08,Medjez el-Bab,ENT01,,,carte_bancaire,1,1,58.9,0.0,7.0,65.9,livree,,,False
+CMD0024589,CLI004888,2024-06-30 18:56:25,reseaux_sociaux,mobile,G24,Douz,ENT03,,,paiement_a_la_livraison,3,3,359.7,0.0,0.0,359.7,livree,,,False
+CMD0024590,CLI006887,2024-06-30 19:30:11,site_web,ordinateur,G15,Sakiet Eddaïer,ENT03,CMP0079,,carte_bancaire,2,3,250.7,0.0,0.0,250.7,livree,,,False
+CMD0024591,CLI005018,2024-06-30 19:30:32,application_mobile,mobile,G09,Tabarka,ENT01,CMP0079,,carte_bancaire,1,2,3215.8,0.0,0.0,3215.8,livree,,,False
+CMD0024592,CLI008341,2024-06-30 19:40:00,site_web,mobile,G14,Mahdia,ENT02,CMP0079,,carte_prepayee,2,2,125.8,0.0,7.0,132.8,partiellement_retournee,,,True
+CMD0024593,CLI006872,2024-06-30 19:55:04,reseaux_sociaux,mobile,G01,Tunis,ENT01,,,carte_bancaire,1,2,15.8,0.0,7.0,22.8,livree,,,False
+CMD0024594,CLI007328,2024-06-30 20:03:12,site_web,ordinateur,G14,Ksour Essef,ENT02,CMP0079,,paiement_a_la_livraison,1,1,202.9,0.0,0.0,202.9,livraison_echouee,,,False
+CMD0024595,CLI008246,2024-06-30 20:12:43,site_web,ordinateur,G12,Sousse,ENT02,,,paiement_a_la_livraison,1,1,2924.9,0.0,0.0,2924.9,livree,,,False
+CMD0024596,CLI008238,2024-06-30 20:17:03,reseaux_sociaux,mobile,G05,Nabeul,ENT01,,,paiement_a_la_livraison,2,2,264.8,0.0,0.0,264.8,livree,,,False
+CMD0024597,CLI006867,2024-06-30 20:21:35,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,CMP0079,,carte_prepayee,1,1,41.9,0.0,7.0,48.9,livree,,,False
+CMD0024598,CLI007134,2024-06-30 20:22:10,site_web,tablette,G03,Mégrine,ENT01,,,carte_prepayee,1,1,598.9,0.0,0.0,598.9,livree,,,False
+CMD0024599,CLI005917,2024-06-30 20:24:52,site_web,mobile,G15,Sfax,ENT03,,,paiement_a_la_livraison,1,1,121.9,0.0,7.0,128.9,livree,,,False
+CMD0024600,CLI006911,2024-06-30 20:35:15,application_mobile,mobile,G20,Zarzis,ENT03,,,paiement_a_la_livraison,2,2,473.8,0.0,0.0,473.8,livree,,,False
+CMD0024601,CLI005997,2024-06-30 20:49:48,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,paiement_a_la_livraison,1,1,35.9,0.0,7.0,42.9,livree,,,False
+CMD0024602,CLI002076,2024-06-30 21:00:42,application_mobile,mobile,G19,Gabès,,,,carte_bancaire,3,5,286.5,0.0,0.0,286.5,paiement_echoue,,,False
+CMD0024603,CLI005447,2024-06-30 21:12:31,application_mobile,mobile,G05,Kélibia,ENT01,,,carte_bancaire,2,2,95.8,0.0,7.0,102.8,livree,,,False
+CMD0024604,CLI001256,2024-06-30 21:14:19,application_mobile,mobile,G08,Béja,ENT01,,,carte_bancaire,5,18,748.2,0.0,0.0,748.2,partiellement_retournee,,,False
+CMD0024605,CLI002233,2024-06-30 21:21:55,application_mobile,mobile,G16,Haffouz,ENT02,CMP0079,,paiement_a_la_livraison,4,6,184.4,0.0,0.0,184.4,livree,,,False
+CMD0024606,CLI005550,2024-06-30 21:23:08,application_mobile,mobile,G13,Moknine,ENT02,,,carte_prepayee,2,2,46.8,0.0,7.0,53.8,livree,,,False
+CMD0024607,CLI005141,2024-06-30 21:26:39,site_web,tablette,G02,La Soukra,ENT01,,,paiement_a_la_livraison,1,1,57.9,0.0,7.0,64.9,livree,,,False
+CMD0024608,CLI007892,2024-06-30 21:57:13,reseaux_sociaux,mobile,G02,Ariana Ville,ENT01,,,portefeuille_mobile,1,1,20.9,0.0,7.0,27.9,livree,,,False
+CMD0024609,CLI007316,2024-06-30 21:57:21,site_web,ordinateur,G07,Mateur,ENT01,CMP0079,,portefeuille_mobile,1,1,5.9,0.0,7.0,12.9,livree,,,False
+CMD0024610,CLI008343,2024-06-30 22:25:02,reseaux_sociaux,mobile,G01,Carthage,ENT01,,,paiement_a_la_livraison,1,1,125.9,0.0,7.0,132.9,livree,,,True
+CMD0024611,CLI006492,30/06/2024 22:40,application_mobile,mobile,G01,La Marsa,ENT01,,,carte_bancaire,1,1,237.9,0.0,0.0,237.9,livree,,,False
+CMD0024612,CLI005012,2024-06-30 23:13:25,application_mobile,mobile,G15,Sakiet Eddaïer,ENT03,,,portefeuille_mobile,1,2,521.8,0.0,0.0,521.8,retournee,,,False
+CMD0024613,CLI008333,2024-06-30 23:32:08,reseaux_sociaux,mobile,G12,Msaken,ENT02,,BIENVENUE10,paiement_a_la_livraison,5,9,719.1,30.0,0.0,689.1,partiellement_retournee,,,True
+CMD0024614,CLI008245,2024-06-30 23:43:11,application_mobile,mobile,G15,Sakiet Ezzit,ENT03,,,carte_bancaire,4,6,6300.4,0.0,0.0,6300.4,livree,,,False

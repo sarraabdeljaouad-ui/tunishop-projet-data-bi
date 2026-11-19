@@ -1,0 +1,151 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "631eab3416a4851c7931",
+  "position": {
+    "x": 220,
+    "y": 236,
+    "z": 4000,
+    "height": 474,
+    "width": 519,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fournisseur"
+                    }
+                  },
+                  "Property": "Fournisseur"
+                }
+              },
+              "queryRef": "Fournisseur.Fournisseur",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Achats"
+                    }
+                  },
+                  "Property": "Montant Achat HT"
+                }
+              },
+              "queryRef": "Achats.Montant Achat HT",
+              "nativeQueryRef": "Montant Achat HT"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Taux Service Fournisseur"
+                }
+              },
+              "queryRef": "Measures.Taux Service Fournisseur",
+              "nativeQueryRef": "Taux Service Fournisseur"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Taux Rupture Fournisseur"
+                }
+              },
+              "queryRef": "Measures.Taux Rupture Fournisseur",
+              "nativeQueryRef": "Taux Rupture Fournisseur"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Delai Moyen Appro J"
+                }
+              },
+              "queryRef": "Measures.Delai Moyen Appro J",
+              "nativeQueryRef": "Delai Moyen Appro J"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Retard Moyen Appro J"
+                }
+              },
+              "queryRef": "Measures.Retard Moyen Appro J",
+              "nativeQueryRef": "Retard Moyen Appro J"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Achats"
+                  }
+                },
+                "Property": "Montant Achat HT"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fournisseurs : montant, service, rupture, délai, retard'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

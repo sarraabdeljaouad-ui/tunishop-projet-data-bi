@@ -1,0 +1,5 @@
+﻿table;lignes;colonnes;lignes apprentissage;lignes test;cible;taux cible apprentissage;taux cible test
+clients;43488;28;24074;19414;churn;0,6171388219656061;0,6431956320181312
+commandes;66268;33;36233;30035;—;;
+produits_mois;18357;25;11365;6992;—;;
+expeditions;58776;21;32186;26590;en_retard;0,12216491642328962;0,17333584054155698

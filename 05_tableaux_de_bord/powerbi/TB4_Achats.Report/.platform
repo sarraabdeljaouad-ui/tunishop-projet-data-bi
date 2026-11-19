@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TB4_Achats"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "26d26bda-92f2-5e02-9327-caf0f4cb77f3"
+  }
+}

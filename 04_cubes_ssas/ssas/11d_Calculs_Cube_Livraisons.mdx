@@ -1,0 +1,243 @@
+﻿/* =====================================================================
+   11d_Calculs_Cube_Livraisons.mdx — TuniShop — script de calcul du cube [Livraisons]
+   ---------------------------------------------------------------------
+   Cube 4 — Livraisons : délais, ponctualité, coûts, retours et avis clients.
+   Où le coller : Visual Studio → cube Livraisons → onglet « Calculs »
+   → « Affichage du script » → Ctrl+A → coller → Ctrl+S → Déployer.
+   Mesures de base attendues dans ce cube : groupes Livraisons (Nb Livraisons, Nb Livrees, Nb Livrees A Temps, Nb Livrees En Retard, Nb Livrees 1er Passage, Somme Delai Livraison J, Somme Retard J, Cout Transport HT), Remboursements (Nb Retours, Nb Rembourses, Nb Delais Rembourses, Montant Rembourse TTC, Somme Delai Remboursement J) et Avis (Nb Avis, Nb Avis Notes, Nb Avis Negatifs, Somme Notes)
+   Règles : Dictionnaire_KPI.xlsx (partie 4). Divisions protégées (NULL si dénominateur vide).
+   ===================================================================== */
+CALCULATE;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[OTD] AS
+    IIF([Measures].[Nb Livrees] = 0, NULL, [Measures].[Nb Livrees A Temps] / [Measures].[Nb Livrees]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Retard] AS
+    IIF([Measures].[Nb Livrees] = 0, NULL, [Measures].[Nb Livrees En Retard] / [Measures].[Nb Livrees]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Delai Moyen Livraison J] AS
+    IIF([Measures].[Nb Livrees] = 0, NULL, [Measures].[Somme Delai Livraison J] / [Measures].[Nb Livrees]),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Retard Moyen J] AS
+    IIF([Measures].[Nb Livrees En Retard] = 0, NULL, [Measures].[Somme Retard J] / [Measures].[Nb Livrees En Retard]),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Livraison 1er Passage] AS
+    IIF([Measures].[Nb Livrees] = 0, NULL, [Measures].[Nb Livrees 1er Passage] / [Measures].[Nb Livrees]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Cout Transport Moyen HT] AS
+    IIF([Measures].[Nb Livraisons] = 0, NULL, [Measures].[Cout Transport HT] / [Measures].[Nb Livraisons]),
+    FORMAT_STRING = "#,##0.00", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+
+-- Retours acceptés ou en cours (type « retour », statut différent de « refuse ») par livraison livrée
+-- Attention : indicateur par livraison, différent du taux de retour par ligne du dictionnaire (S01)
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Retours] AS
+    IIF([Measures].[Nb Livrees] = 0, NULL, [Measures].[Nb Retours] / [Measures].[Nb Livrees]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\SAV', VISIBLE = 1;
+
+-- Moyenne sur les seuls remboursements dont le délai est renseigné (comme AVERAGE / mean())
+CREATE MEMBER CURRENTCUBE.[Measures].[Delai Moyen Remboursement J] AS
+    IIF([Measures].[Nb Delais Rembourses] = 0, NULL, [Measures].[Somme Delai Remboursement J] / [Measures].[Nb Delais Rembourses]),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'KPI\SAV', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Note Moyenne] AS
+    IIF([Measures].[Nb Avis Notes] = 0, NULL, [Measures].[Somme Notes] / [Measures].[Nb Avis Notes]),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'KPI\SAV', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Part Avis Negatifs] AS
+    IIF([Measures].[Nb Avis] = 0, NULL, [Measures].[Nb Avis Negatifs] / [Measures].[Nb Avis]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\SAV', VISIBLE = 1;
+
+/* =====================================================================
+   v2 (29/10/2026) — comparaison à l'année précédente et feux de tendance (même règle que le cube Direction)
+   A-1 : même KPI sur la période parallèle de l'année précédente (hiérarchie Calendrier).
+   Evolution : variation relative ; Ecart : différence en points de pourcentage (taux).
+   Statut : 1 favorable, 0 stable (|évolution| < 2 % ou |écart| < 0,5 point), -1 défavorable ; NULL sans année précédente.
+   Couleur : #1E7B4F, #5B6B7C, #B42318. Pas de feu pour les KPI sans sens favorable (volumes, parts, remises, valeur du stock).
+   ===================================================================== */
+
+/* ---------- Année précédente ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[OTD A-1] AS
+    ([Measures].[OTD],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Retard A-1] AS
+    ([Measures].[Taux Retard],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Delai Moyen Livraison J A-1] AS
+    ([Measures].[Delai Moyen Livraison J],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Retard Moyen J A-1] AS
+    ([Measures].[Retard Moyen J],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Livraison 1er Passage A-1] AS
+    ([Measures].[Taux Livraison 1er Passage],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Cout Transport Moyen HT A-1] AS
+    ([Measures].[Cout Transport Moyen HT],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Retours A-1] AS
+    ([Measures].[Taux Retours],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Delai Moyen Remboursement J A-1] AS
+    ([Measures].[Delai Moyen Remboursement J],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Montant Rembourse TTC A-1] AS
+    ([Measures].[Montant Rembourse TTC],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Note Moyenne A-1] AS
+    ([Measures].[Note Moyenne],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Part Avis Negatifs A-1] AS
+    ([Measures].[Part Avis Negatifs],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+
+/* ---------- Évolutions et écarts ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart OTD] AS
+    IIF(IsEmpty([Measures].[OTD]) OR IsEmpty([Measures].[OTD A-1]), NULL,
+        ([Measures].[OTD] - [Measures].[OTD A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Retard] AS
+    IIF(IsEmpty([Measures].[Taux Retard]) OR IsEmpty([Measures].[Taux Retard A-1]), NULL,
+        ([Measures].[Taux Retard] - [Measures].[Taux Retard A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Delai Moyen Livraison J] AS
+    IIF(IsEmpty([Measures].[Delai Moyen Livraison J]) OR IsEmpty([Measures].[Delai Moyen Livraison J A-1]) OR [Measures].[Delai Moyen Livraison J A-1] = 0, NULL,
+        ([Measures].[Delai Moyen Livraison J] - [Measures].[Delai Moyen Livraison J A-1]) / [Measures].[Delai Moyen Livraison J A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Retard Moyen J] AS
+    IIF(IsEmpty([Measures].[Retard Moyen J]) OR IsEmpty([Measures].[Retard Moyen J A-1]) OR [Measures].[Retard Moyen J A-1] = 0, NULL,
+        ([Measures].[Retard Moyen J] - [Measures].[Retard Moyen J A-1]) / [Measures].[Retard Moyen J A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Livraison 1er Passage] AS
+    IIF(IsEmpty([Measures].[Taux Livraison 1er Passage]) OR IsEmpty([Measures].[Taux Livraison 1er Passage A-1]), NULL,
+        ([Measures].[Taux Livraison 1er Passage] - [Measures].[Taux Livraison 1er Passage A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Cout Transport Moyen HT] AS
+    IIF(IsEmpty([Measures].[Cout Transport Moyen HT]) OR IsEmpty([Measures].[Cout Transport Moyen HT A-1]) OR [Measures].[Cout Transport Moyen HT A-1] = 0, NULL,
+        ([Measures].[Cout Transport Moyen HT] - [Measures].[Cout Transport Moyen HT A-1]) / [Measures].[Cout Transport Moyen HT A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Retours] AS
+    IIF(IsEmpty([Measures].[Taux Retours]) OR IsEmpty([Measures].[Taux Retours A-1]), NULL,
+        ([Measures].[Taux Retours] - [Measures].[Taux Retours A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Delai Moyen Remboursement J] AS
+    IIF(IsEmpty([Measures].[Delai Moyen Remboursement J]) OR IsEmpty([Measures].[Delai Moyen Remboursement J A-1]) OR [Measures].[Delai Moyen Remboursement J A-1] = 0, NULL,
+        ([Measures].[Delai Moyen Remboursement J] - [Measures].[Delai Moyen Remboursement J A-1]) / [Measures].[Delai Moyen Remboursement J A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Montant Rembourse TTC] AS
+    IIF(IsEmpty([Measures].[Montant Rembourse TTC]) OR IsEmpty([Measures].[Montant Rembourse TTC A-1]) OR [Measures].[Montant Rembourse TTC A-1] = 0, NULL,
+        ([Measures].[Montant Rembourse TTC] - [Measures].[Montant Rembourse TTC A-1]) / [Measures].[Montant Rembourse TTC A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Note Moyenne] AS
+    IIF(IsEmpty([Measures].[Note Moyenne]) OR IsEmpty([Measures].[Note Moyenne A-1]) OR [Measures].[Note Moyenne A-1] = 0, NULL,
+        ([Measures].[Note Moyenne] - [Measures].[Note Moyenne A-1]) / [Measures].[Note Moyenne A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Part Avis Negatifs] AS
+    IIF(IsEmpty([Measures].[Part Avis Negatifs]) OR IsEmpty([Measures].[Part Avis Negatifs A-1]), NULL,
+        ([Measures].[Part Avis Negatifs] - [Measures].[Part Avis Negatifs A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+
+/* ---------- Feux de tendance ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut OTD] AS
+    IIF(IsEmpty([Measures].[Ecart OTD]), NULL,
+        IIF([Measures].[Ecart OTD] > 0.5, 1, IIF([Measures].[Ecart OTD] < -0.5, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Retard] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Retard]), NULL,
+        IIF([Measures].[Ecart Taux Retard] > 0.5, -1, IIF([Measures].[Ecart Taux Retard] < -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Delai Moyen Livraison J] AS
+    IIF(IsEmpty([Measures].[Evolution Delai Moyen Livraison J]), NULL,
+        IIF([Measures].[Evolution Delai Moyen Livraison J] > 0.02, -1, IIF([Measures].[Evolution Delai Moyen Livraison J] < -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Retard Moyen J] AS
+    IIF(IsEmpty([Measures].[Evolution Retard Moyen J]), NULL,
+        IIF([Measures].[Evolution Retard Moyen J] > 0.02, -1, IIF([Measures].[Evolution Retard Moyen J] < -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Livraison 1er Passage] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Livraison 1er Passage]), NULL,
+        IIF([Measures].[Ecart Taux Livraison 1er Passage] > 0.5, 1, IIF([Measures].[Ecart Taux Livraison 1er Passage] < -0.5, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Cout Transport Moyen HT] AS
+    IIF(IsEmpty([Measures].[Evolution Cout Transport Moyen HT]), NULL,
+        IIF([Measures].[Evolution Cout Transport Moyen HT] > 0.02, -1, IIF([Measures].[Evolution Cout Transport Moyen HT] < -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Retours] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Retours]), NULL,
+        IIF([Measures].[Ecart Taux Retours] > 0.5, -1, IIF([Measures].[Ecart Taux Retours] < -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Delai Moyen Remboursement J] AS
+    IIF(IsEmpty([Measures].[Evolution Delai Moyen Remboursement J]), NULL,
+        IIF([Measures].[Evolution Delai Moyen Remboursement J] > 0.02, -1, IIF([Measures].[Evolution Delai Moyen Remboursement J] < -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Montant Rembourse TTC] AS
+    IIF(IsEmpty([Measures].[Evolution Montant Rembourse TTC]), NULL,
+        IIF([Measures].[Evolution Montant Rembourse TTC] > 0.02, -1, IIF([Measures].[Evolution Montant Rembourse TTC] < -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Note Moyenne] AS
+    IIF(IsEmpty([Measures].[Evolution Note Moyenne]), NULL,
+        IIF([Measures].[Evolution Note Moyenne] > 0.02, 1, IIF([Measures].[Evolution Note Moyenne] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Part Avis Negatifs] AS
+    IIF(IsEmpty([Measures].[Ecart Part Avis Negatifs]), NULL,
+        IIF([Measures].[Ecart Part Avis Negatifs] > 0.5, -1, IIF([Measures].[Ecart Part Avis Negatifs] < -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur OTD] AS
+    IIF(IsEmpty([Measures].[Statut OTD]), "#5B6B7C",
+        IIF([Measures].[Statut OTD] = 1, "#1E7B4F", IIF([Measures].[Statut OTD] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Retard] AS
+    IIF(IsEmpty([Measures].[Statut Taux Retard]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Retard] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Retard] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Delai Moyen Livraison J] AS
+    IIF(IsEmpty([Measures].[Statut Delai Moyen Livraison J]), "#5B6B7C",
+        IIF([Measures].[Statut Delai Moyen Livraison J] = 1, "#1E7B4F", IIF([Measures].[Statut Delai Moyen Livraison J] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Retard Moyen J] AS
+    IIF(IsEmpty([Measures].[Statut Retard Moyen J]), "#5B6B7C",
+        IIF([Measures].[Statut Retard Moyen J] = 1, "#1E7B4F", IIF([Measures].[Statut Retard Moyen J] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Livraison 1er Passage] AS
+    IIF(IsEmpty([Measures].[Statut Taux Livraison 1er Passage]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Livraison 1er Passage] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Livraison 1er Passage] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Cout Transport Moyen HT] AS
+    IIF(IsEmpty([Measures].[Statut Cout Transport Moyen HT]), "#5B6B7C",
+        IIF([Measures].[Statut Cout Transport Moyen HT] = 1, "#1E7B4F", IIF([Measures].[Statut Cout Transport Moyen HT] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Retours] AS
+    IIF(IsEmpty([Measures].[Statut Taux Retours]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Retours] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Retours] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Delai Moyen Remboursement J] AS
+    IIF(IsEmpty([Measures].[Statut Delai Moyen Remboursement J]), "#5B6B7C",
+        IIF([Measures].[Statut Delai Moyen Remboursement J] = 1, "#1E7B4F", IIF([Measures].[Statut Delai Moyen Remboursement J] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Montant Rembourse TTC] AS
+    IIF(IsEmpty([Measures].[Statut Montant Rembourse TTC]), "#5B6B7C",
+        IIF([Measures].[Statut Montant Rembourse TTC] = 1, "#1E7B4F", IIF([Measures].[Statut Montant Rembourse TTC] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Note Moyenne] AS
+    IIF(IsEmpty([Measures].[Statut Note Moyenne]), "#5B6B7C",
+        IIF([Measures].[Statut Note Moyenne] = 1, "#1E7B4F", IIF([Measures].[Statut Note Moyenne] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Part Avis Negatifs] AS
+    IIF(IsEmpty([Measures].[Statut Part Avis Negatifs]), "#5B6B7C",
+        IIF([Measures].[Statut Part Avis Negatifs] = 1, "#1E7B4F", IIF([Measures].[Statut Part Avis Negatifs] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;

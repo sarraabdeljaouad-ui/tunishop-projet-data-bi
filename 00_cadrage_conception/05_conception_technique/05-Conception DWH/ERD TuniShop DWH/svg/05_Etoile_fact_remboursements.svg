@@ -1,0 +1,301 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1670" height="1417.0" viewBox="0 0 1670 1417.0">
+<rect width="1670" height="1417.0" fill="#FAFBFD"/>
+<text x="40" y="52" font-family="DejaVu Sans" font-size="28" font-weight="bold" fill="#1F3864">Modèle en étoile — fact_remboursements</text>
+<text x="40" y="82" font-family="DejaVu Sans" font-size="14" fill="#595959">Retours et remboursements</text>
+<rect x="40" y="100" width="1590" height="82" rx="8" fill="#FFFFFF" stroke="#D0D7E5"/><text x="56" y="124" font-family="DejaVu Sans" font-size="12" fill="#1F3864" xml:space="preserve"><tspan font-weight="bold">Type : </tspan>Fait transactionnel    |    <tspan font-weight="bold">Grain : </tspan>1 ligne par remboursement    |    <tspan font-weight="bold">Dimensions : </tspan>4    |    <tspan font-weight="bold">Clés étrangères : </tspan>5</text><text x="56" y="148" font-family="DejaVu Sans" font-size="11" fill="#333"><tspan font-weight="bold">Mesures : </tspan>quantite, montant_demande_ttc, montant_rembourse_ttc, delai_traitement_j</text><text x="56" y="170" font-family="DejaVu Sans" font-size="11" fill="#333" xml:space="preserve"><tspan font-weight="bold">Indicateurs (drapeaux) : </tspan>—    |    <tspan font-weight="bold">Source : </tspan>integ.remboursement, integ.commande</text><path d="M670 402.0 C535.0 402.0 505.0 274.5 370 274.5" fill="none" stroke="#2E75B6" stroke-width="1.8" opacity="0.85"/>
+<path d="M656 402.0 L670 396.0 M656 402.0 L670 402.0 M656 402.0 L670 408.0" stroke="#2E75B6" stroke-width="1.6" fill="none"/>
+<path d="M378 268.5 L378 280.5" stroke="#2E75B6" stroke-width="1.8"/>
+<path d="M383 268.5 L383 280.5" stroke="#2E75B6" stroke-width="1.8"/>
+<rect x="549.2409600000001" y="374.49312000000003" width="77.6" height="13" rx="3" fill="#FFFFFF" stroke="#2E75B6" stroke-width="0.6"/><text x="588.04096" y="384.49312000000003" font-family="DejaVu Sans" font-size="9" fill="#2E75B6" text-anchor="middle" font-style="italic">date_demande</text>
+<path d="M670 421.0 C535.0 421.0 505.0 274.5 370 274.5" fill="none" stroke="#2E75B6" stroke-width="1.8" opacity="0.85"/>
+<path d="M656 421.0 L670 415.0 M656 421.0 L670 421.0 M656 421.0 L670 427.0" stroke="#2E75B6" stroke-width="1.6" fill="none"/>
+<path d="M378 268.5 L378 280.5" stroke="#2E75B6" stroke-width="1.8"/>
+<path d="M383 268.5 L383 280.5" stroke="#2E75B6" stroke-width="1.8"/>
+<rect x="531.84096" y="390.735232" width="112.39999999999999" height="13" rx="3" fill="#FFFFFF" stroke="#2E75B6" stroke-width="0.6"/><text x="588.04096" y="400.735232" font-family="DejaVu Sans" font-size="9" fill="#2E75B6" text-anchor="middle" font-style="italic">date_remboursement</text>
+<path d="M1000 440.0 C1135.0 440.0 1165.0 255.5 1300 255.5" fill="none" stroke="#548235" stroke-width="1.8" opacity="0.85"/>
+<path d="M1014 440.0 L1000 434.0 M1014 440.0 L1000 440.0 M1014 440.0 L1000 446.0" stroke="#548235" stroke-width="1.6" fill="none"/>
+<path d="M1292 249.5 L1292 261.5" stroke="#548235" stroke-width="1.8"/>
+<path d="M1287 249.5 L1287 261.5" stroke="#548235" stroke-width="1.8"/>
+<path d="M670 459.0 C535.0 459.0 505.0 679.5 370 679.5" fill="none" stroke="#C55A11" stroke-width="1.8" opacity="0.85"/>
+<path d="M656 459.0 L670 453.0 M656 459.0 L670 459.0 M656 459.0 L670 465.0" stroke="#C55A11" stroke-width="1.6" fill="none"/>
+<path d="M378 673.5 L378 685.5" stroke="#C55A11" stroke-width="1.8"/>
+<path d="M383 673.5 L383 685.5" stroke="#C55A11" stroke-width="1.8"/>
+<path d="M1000 478.0 C1135.0 478.0 1165.0 755.5 1300 755.5" fill="none" stroke="#C00000" stroke-width="1.8" opacity="0.85"/>
+<path d="M1014 478.0 L1000 472.0 M1014 478.0 L1000 478.0 M1014 478.0 L1000 484.0" stroke="#C00000" stroke-width="1.6" fill="none"/>
+<path d="M1292 749.5 L1292 761.5" stroke="#C00000" stroke-width="1.8"/>
+<path d="M1287 749.5 L1287 761.5" stroke="#C00000" stroke-width="1.8"/>
+<g><rect x="674" y="322.5" width="330" height="346" rx="8" fill="#000" opacity="0.10"/>
+<rect x="670" y="318.5" width="330" height="346" rx="8" fill="#FFFFFF" stroke="#1F3864" stroke-width="2"/>
+<path d="M670 354.5 V326.5 Q670 318.5 678 318.5 H992 Q1000 318.5 1000 326.5 V354.5 Z" fill="#1F3864"/>
+<text x="682" y="341.5" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFFFFF">dw.fact_remboursements</text>
+<text x="990" y="341.5" font-family="DejaVu Sans" font-size="10" fill="#FFFFFF" text-anchor="end" opacity="0.9">FAIT</text>
+<rect x="672" y="354.5" width="326" height="19" fill="#FFF2CC"/>
+<rect x="679" y="357.5" width="34" height="13" rx="3" fill="#BF8F00"/><text x="696.0" y="368.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="728" y="368.0" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">remboursement_id</text>
+<text x="990" y="368.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(10) ●</text>
+<rect x="672" y="373.5" width="326" height="19" fill="#F7F7F7"/>
+<rect x="679" y="376.5" width="34" height="13" rx="3" fill="#7F7F7F"/><text x="696.0" y="387.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">DD</text>
+<text x="728" y="387.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">commande_id</text>
+<text x="990" y="387.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(10) ●</text>
+<rect x="672" y="392.5" width="326" height="19" fill="#DDEBF7"/><rect x="672" y="392.5" width="5" height="19" fill="#2E75B6"/>
+<rect x="679" y="395.5" width="34" height="13" rx="3" fill="#2E75B6"/><text x="696.0" y="406.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">FK</text>
+<text x="728" y="406.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_demande_sk</text>
+<text x="990" y="406.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<rect x="672" y="411.5" width="326" height="19" fill="#DDEBF7"/><rect x="672" y="411.5" width="5" height="19" fill="#2E75B6"/>
+<rect x="679" y="414.5" width="34" height="13" rx="3" fill="#2E75B6"/><text x="696.0" y="425.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">FK</text>
+<text x="728" y="425.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_remboursement_sk</text>
+<text x="990" y="425.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<rect x="672" y="430.5" width="326" height="19" fill="#E2EFDA"/><rect x="672" y="430.5" width="5" height="19" fill="#548235"/>
+<rect x="679" y="433.5" width="34" height="13" rx="3" fill="#548235"/><text x="696.0" y="444.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">FK</text>
+<text x="728" y="444.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">client_sk</text>
+<text x="990" y="444.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<rect x="672" y="449.5" width="326" height="19" fill="#FBE5D6"/><rect x="672" y="449.5" width="5" height="19" fill="#C55A11"/>
+<rect x="679" y="452.5" width="34" height="13" rx="3" fill="#C55A11"/><text x="696.0" y="463.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">FK</text>
+<text x="728" y="463.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">produit_sk</text>
+<text x="990" y="463.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<rect x="672" y="468.5" width="326" height="19" fill="#F8D7D7"/><rect x="672" y="468.5" width="5" height="19" fill="#C00000"/>
+<rect x="679" y="471.5" width="34" height="13" rx="3" fill="#C00000"/><text x="696.0" y="482.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">FK</text>
+<text x="728" y="482.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">motif_retour_sk</text>
+<text x="990" y="482.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<rect x="672" y="487.5" width="326" height="19" fill="#F7F7F7"/>
+<text x="728" y="501.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">mode_remboursement</text>
+<text x="990" y="501.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(30) ●</text>
+<text x="728" y="520.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">statut</text>
+<text x="990" y="520.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(15) ●</text>
+<rect x="672" y="525.5" width="326" height="19" fill="#F7F7F7"/>
+<text x="728" y="539.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">etat_article</text>
+<text x="990" y="539.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(20)</text>
+<text x="728" y="558.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">quantite</text>
+<text x="990" y="558.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<rect x="672" y="563.5" width="326" height="19" fill="#F7F7F7"/>
+<text x="728" y="577.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">montant_demande_ttc</text>
+<text x="990" y="577.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DECIMAL(14,3) ●</text>
+<text x="728" y="596.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">montant_rembourse_ttc</text>
+<text x="990" y="596.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DECIMAL(14,3) ●</text>
+<rect x="672" y="601.5" width="326" height="19" fill="#F7F7F7"/>
+<text x="728" y="615.0" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">delai_traitement_j</text>
+<text x="990" y="615.0" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DECIMAL(8,2)</text>
+<text x="728" y="634.0" font-family="DejaVu Sans" font-size="10.5" font-style="italic" fill="#9A9A9A">id_chargement</text>
+<text x="990" y="634.0" font-family="DejaVu Sans" font-size="9" fill="#B0B0B0" text-anchor="end">INT ●</text>
+<rect x="672" y="639.5" width="326" height="19" fill="#F7F7F7"/>
+<text x="728" y="653.0" font-family="DejaVu Sans" font-size="10.5" font-style="italic" fill="#9A9A9A">date_maj</text>
+<text x="990" y="653.0" font-family="DejaVu Sans" font-size="9" fill="#B0B0B0" text-anchor="end">DATETIME2(0) ●</text>
+</g>
+<g><rect x="44" y="233.0" width="330" height="365" rx="8" fill="#000" opacity="0.10"/>
+<rect x="40" y="229.0" width="330" height="365" rx="8" fill="#FFFFFF" stroke="#2E75B6" stroke-width="2"/>
+<path d="M40 265.0 V237.0 Q40 229.0 48 229.0 H362 Q370 229.0 370 237.0 V265.0 Z" fill="#2E75B6"/>
+<text x="52" y="252.0" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFFFFF">dw.dim_date</text>
+<text x="360" y="252.0" font-family="DejaVu Sans" font-size="10" fill="#FFFFFF" text-anchor="end" opacity="0.9">DIMENSION</text>
+<rect x="42" y="265.0" width="326" height="19" fill="#DDEBF7"/>
+<rect x="49" y="268.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="66.0" y="278.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="98" y="278.5" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">date_sk</text>
+<text x="360" y="278.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<rect x="42" y="284.0" width="326" height="19" fill="#F7F7F7"/>
+<rect x="49" y="287.0" width="34" height="13" rx="3" fill="#2F5597"/><text x="66.0" y="297.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">UK</text>
+<text x="98" y="297.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date</text>
+<text x="360" y="297.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATE ●</text>
+<text x="98" y="316.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">annee</text>
+<text x="360" y="316.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">SMALLINT ●</text>
+<rect x="42" y="322.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="335.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">trimestre</text>
+<text x="360" y="335.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">TINYINT ●</text>
+<text x="98" y="354.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">libelle_trimestre</text>
+<text x="360" y="354.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">CHAR(7) ●</text>
+<rect x="42" y="360.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="373.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">mois</text>
+<text x="360" y="373.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">TINYINT ●</text>
+<text x="98" y="392.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nom_mois</text>
+<text x="360" y="392.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(10) ●</text>
+<rect x="42" y="398.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="411.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">annee_mois</text>
+<text x="360" y="411.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">CHAR(7) ●</text>
+<text x="98" y="430.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">semaine_iso</text>
+<text x="360" y="430.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">TINYINT ●</text>
+<rect x="42" y="436.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="449.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">jour_mois</text>
+<text x="360" y="449.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">TINYINT ●</text>
+<text x="98" y="468.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">jour_semaine</text>
+<text x="360" y="468.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">TINYINT ●</text>
+<rect x="42" y="474.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="487.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nom_jour</text>
+<text x="360" y="487.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(10) ●</text>
+<text x="98" y="506.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">est_weekend</text>
+<text x="360" y="506.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIT ●</text>
+<rect x="42" y="512.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="525.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">est_jour_ferie</text>
+<text x="360" y="525.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIT ●</text>
+<text x="98" y="544.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nom_jour_ferie</text>
+<text x="360" y="544.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(50)</text>
+<rect x="42" y="550.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="563.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">est_ramadan</text>
+<text x="360" y="563.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIT ●</text>
+<text x="98" y="582.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">periode_commerciale</text>
+<text x="360" y="582.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(20) ●</text>
+</g>
+<g><rect x="44" y="638.0" width="330" height="441" rx="8" fill="#000" opacity="0.10"/>
+<rect x="40" y="634.0" width="330" height="441" rx="8" fill="#FFFFFF" stroke="#C55A11" stroke-width="2"/>
+<path d="M40 670.0 V642.0 Q40 634.0 48 634.0 H362 Q370 634.0 370 642.0 V670.0 Z" fill="#C55A11"/>
+<text x="52" y="657.0" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFFFFF">dw.dim_produit</text>
+<text x="360" y="657.0" font-family="DejaVu Sans" font-size="10" fill="#FFFFFF" text-anchor="end" opacity="0.9">DIMENSION</text>
+<rect x="42" y="670.0" width="326" height="19" fill="#FBE5D6"/>
+<rect x="49" y="673.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="66.0" y="683.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="98" y="683.5" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">produit_sk</text>
+<text x="360" y="683.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT IDENTITY ●</text>
+<rect x="42" y="689.0" width="326" height="19" fill="#F7F7F7"/>
+<rect x="49" y="692.0" width="34" height="13" rx="3" fill="#2F5597"/><text x="66.0" y="702.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">NK</text>
+<text x="98" y="702.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">produit_id</text>
+<text x="360" y="702.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(10) ●</text>
+<text x="98" y="721.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">prix_id</text>
+<text x="360" y="721.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(10)</text>
+<rect x="42" y="727.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="740.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">sku</text>
+<text x="360" y="740.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(15) ●</text>
+<text x="98" y="759.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nom_produit</text>
+<text x="360" y="759.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(100) ●</text>
+<rect x="42" y="765.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="778.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">marque</text>
+<text x="360" y="778.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(50) ●</text>
+<text x="98" y="797.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">categorie</text>
+<text x="360" y="797.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(50) ●</text>
+<rect x="42" y="803.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="816.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">sous_categorie</text>
+<text x="360" y="816.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(50) ●</text>
+<text x="98" y="835.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">fournisseur_id</text>
+<text x="360" y="835.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(10) ●</text>
+<rect x="42" y="841.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="854.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">taux_tva</text>
+<text x="360" y="854.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">TINYINT ●</text>
+<text x="98" y="873.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">gamme_prix</text>
+<text x="360" y="873.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(15) ●</text>
+<rect x="42" y="879.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="892.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">statut_produit</text>
+<text x="360" y="892.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(10) ●</text>
+<text x="98" y="911.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">prix_catalogue_ttc</text>
+<text x="360" y="911.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DECIMAL(14,3) ●</text>
+<rect x="42" y="917.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="930.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">cout_achat_unitaire_ht</text>
+<text x="360" y="930.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DECIMAL(14,3) ●</text>
+<text x="98" y="949.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">taux_retour_cible</text>
+<text x="360" y="949.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DECIMAL(5,2) ●</text>
+<rect x="42" y="955.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="968.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">marge_brute_cible</text>
+<text x="360" y="968.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DECIMAL(5,2) ●</text>
+<text x="98" y="987.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_debut_validite</text>
+<text x="360" y="987.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATE ●</text>
+<rect x="42" y="993.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="1006.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_fin_validite</text>
+<text x="360" y="1006.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATE ●</text>
+<text x="98" y="1025.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">est_courant</text>
+<text x="360" y="1025.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIT ●</text>
+<rect x="42" y="1031.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="98" y="1044.5" font-family="DejaVu Sans" font-size="10.5" font-style="italic" fill="#9A9A9A">id_chargement</text>
+<text x="360" y="1044.5" font-family="DejaVu Sans" font-size="9" fill="#B0B0B0" text-anchor="end">INT ●</text>
+<text x="98" y="1063.5" font-family="DejaVu Sans" font-size="10.5" font-style="italic" fill="#9A9A9A">date_maj</text>
+<text x="360" y="1063.5" font-family="DejaVu Sans" font-size="9" fill="#B0B0B0" text-anchor="end">DATETIME2(0) ●</text>
+</g>
+<g><rect x="1304" y="214.0" width="330" height="460" rx="8" fill="#000" opacity="0.10"/>
+<rect x="1300" y="210.0" width="330" height="460" rx="8" fill="#FFFFFF" stroke="#548235" stroke-width="2"/>
+<path d="M1300 246.0 V218.0 Q1300 210.0 1308 210.0 H1622 Q1630 210.0 1630 218.0 V246.0 Z" fill="#548235"/>
+<text x="1312" y="233.0" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFFFFF">dw.dim_client</text>
+<text x="1620" y="233.0" font-family="DejaVu Sans" font-size="10" fill="#FFFFFF" text-anchor="end" opacity="0.9">DIMENSION</text>
+<rect x="1302" y="246.0" width="326" height="19" fill="#E2EFDA"/>
+<rect x="1309" y="249.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="1326.0" y="259.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="1358" y="259.5" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">client_sk</text>
+<text x="1620" y="259.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT IDENTITY ●</text>
+<rect x="1302" y="265.0" width="326" height="19" fill="#F7F7F7"/>
+<rect x="1309" y="268.0" width="34" height="13" rx="3" fill="#2F5597"/><text x="1326.0" y="278.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">NK</text>
+<text x="1358" y="278.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">client_id</text>
+<text x="1620" y="278.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(12) ●</text>
+<text x="1358" y="297.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">type_client</text>
+<text x="1620" y="297.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(15) ●</text>
+<rect x="1302" y="303.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="316.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nom_complet</text>
+<text x="1620" y="316.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(150)</text>
+<text x="1358" y="335.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">genre</text>
+<text x="1620" y="335.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">CHAR(1)</text>
+<rect x="1302" y="341.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="354.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">tranche_age</text>
+<text x="1620" y="354.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(10)</text>
+<text x="1358" y="373.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">gouvernorat_id</text>
+<text x="1620" y="373.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(5) ●</text>
+<rect x="1302" y="379.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="392.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">gouvernorat</text>
+<text x="1620" y="392.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(50) ●</text>
+<text x="1358" y="411.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">region</text>
+<text x="1620" y="411.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(50) ●</text>
+<rect x="1302" y="417.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="430.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">ville</text>
+<text x="1620" y="430.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(50)</text>
+<text x="1358" y="449.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">canal_inscription</text>
+<text x="1620" y="449.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(30)</text>
+<rect x="1302" y="455.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="468.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_inscription</text>
+<text x="1620" y="468.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATE ●</text>
+<text x="1358" y="487.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">cohorte_inscription</text>
+<text x="1620" y="487.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">CHAR(7) ●</text>
+<rect x="1302" y="493.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="506.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">opt_in_email</text>
+<text x="1620" y="506.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIT ●</text>
+<text x="1358" y="525.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">opt_in_sms</text>
+<text x="1620" y="525.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIT ●</text>
+<rect x="1302" y="531.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="544.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">segment_fidelite</text>
+<text x="1620" y="544.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(10) ●</text>
+<text x="1358" y="563.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">hash_scd2</text>
+<text x="1620" y="563.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BINARY(32) ●</text>
+<rect x="1302" y="569.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="582.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_debut_validite</text>
+<text x="1620" y="582.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATE ●</text>
+<text x="1358" y="601.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_fin_validite</text>
+<text x="1620" y="601.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATE ●</text>
+<rect x="1302" y="607.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="620.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">est_courant</text>
+<text x="1620" y="620.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIT ●</text>
+<text x="1358" y="639.5" font-family="DejaVu Sans" font-size="10.5" font-style="italic" fill="#9A9A9A">id_chargement</text>
+<text x="1620" y="639.5" font-family="DejaVu Sans" font-size="9" fill="#B0B0B0" text-anchor="end">INT ●</text>
+<rect x="1302" y="645.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="658.5" font-family="DejaVu Sans" font-size="10.5" font-style="italic" fill="#9A9A9A">date_maj</text>
+<text x="1620" y="658.5" font-family="DejaVu Sans" font-size="9" fill="#B0B0B0" text-anchor="end">DATETIME2(0) ●</text>
+</g>
+<g><rect x="1304" y="714.0" width="330" height="175" rx="8" fill="#000" opacity="0.10"/>
+<rect x="1300" y="710.0" width="330" height="175" rx="8" fill="#FFFFFF" stroke="#C00000" stroke-width="2"/>
+<path d="M1300 746.0 V718.0 Q1300 710.0 1308 710.0 H1622 Q1630 710.0 1630 718.0 V746.0 Z" fill="#C00000"/>
+<text x="1312" y="733.0" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFFFFF">dw.dim_motif_retour</text>
+<text x="1620" y="733.0" font-family="DejaVu Sans" font-size="10" fill="#FFFFFF" text-anchor="end" opacity="0.9">DIMENSION</text>
+<rect x="1302" y="746.0" width="326" height="19" fill="#F8D7D7"/>
+<rect x="1309" y="749.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="1326.0" y="759.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="1358" y="759.5" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">motif_retour_sk</text>
+<text x="1620" y="759.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT IDENTITY ●</text>
+<rect x="1302" y="765.0" width="326" height="19" fill="#F7F7F7"/>
+<rect x="1309" y="768.0" width="34" height="13" rx="3" fill="#2F5597"/><text x="1326.0" y="778.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">NK</text>
+<text x="1358" y="778.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">type_remboursement</text>
+<text x="1620" y="778.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(20) ●</text>
+<rect x="1309" y="787.0" width="34" height="13" rx="3" fill="#2F5597"/><text x="1326.0" y="797.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">NK</text>
+<text x="1358" y="797.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">motif</text>
+<text x="1620" y="797.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(50) ●</text>
+<rect x="1302" y="803.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="816.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">libelle_motif</text>
+<text x="1620" y="816.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(60) ●</text>
+<text x="1358" y="835.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">responsabilite</text>
+<text x="1620" y="835.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(15) ●</text>
+<rect x="1302" y="841.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="1358" y="854.5" font-family="DejaVu Sans" font-size="10.5" font-style="italic" fill="#9A9A9A">id_chargement</text>
+<text x="1620" y="854.5" font-family="DejaVu Sans" font-size="9" fill="#B0B0B0" text-anchor="end">INT ●</text>
+<text x="1358" y="873.5" font-family="DejaVu Sans" font-size="10.5" font-style="italic" fill="#9A9A9A">date_maj</text>
+<text x="1620" y="873.5" font-family="DejaVu Sans" font-size="9" fill="#B0B0B0" text-anchor="end">DATETIME2(0) ●</text>
+</g>
+<rect x="670" y="1115.0" width="330" height="282" rx="8" fill="#FFFFFF" stroke="#BFBFBF"/>
+<text x="682" y="1137.0" font-family="DejaVu Sans" font-size="13" font-weight="bold" fill="#1F3864">Légende</text>
+<rect x="682" y="1147.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="699" y="1157.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text><text x="724" y="1157.0" font-family="DejaVu Sans" font-size="10">Clé primaire (clé de substitution *_sk)</text>
+<rect x="682" y="1165.0" width="34" height="13" rx="3" fill="#555555"/><text x="699" y="1175.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">FK</text><text x="724" y="1175.0" font-family="DejaVu Sans" font-size="10">Clé étrangère (couleur de la dimension)</text>
+<rect x="682" y="1183.0" width="34" height="13" rx="3" fill="#2F5597"/><text x="699" y="1193.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">NK</text><text x="724" y="1193.0" font-family="DejaVu Sans" font-size="10">Clé naturelle / UK : unicité</text>
+<rect x="682" y="1201.0" width="34" height="13" rx="3" fill="#7F7F7F"/><text x="699" y="1211.0" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">DD</text><text x="724" y="1211.0" font-family="DejaVu Sans" font-size="10">Dimension dégénérée (n° de document)</text>
+<text x="682" y="1229.0" font-family="DejaVu Sans" font-size="10">● colonne NOT NULL — <tspan font-style="italic" fill="#9A9A9A">gris : colonne technique</tspan></text>
+<path d="M696 1243.0 L682 1237.0 M696 1243.0 L682 1243.0 M696 1243.0 L682 1249.0 M696 1243.0 H730 M722 1237.0 V1249.0 M726 1237.0 V1249.0" stroke="#333" stroke-width="1.5" fill="none"/><text x="738" y="1247.0" font-family="DejaVu Sans" font-size="10">plusieurs faits → une seule dimension</text>
+<text x="682" y="1265.0" font-family="DejaVu Sans" font-size="10">Membres spéciaux : -1 inconnu, -2 non applicable</text>
+<rect x="682" y="1278.0" width="16" height="13" rx="2" fill="#2E75B6"/><text x="706" y="1289.0" font-family="DejaVu Sans" font-size="10">dim_date</text>
+<rect x="682" y="1296.0" width="16" height="13" rx="2" fill="#548235"/><text x="706" y="1307.0" font-family="DejaVu Sans" font-size="10">dim_client</text>
+<rect x="682" y="1314.0" width="16" height="13" rx="2" fill="#C55A11"/><text x="706" y="1325.0" font-family="DejaVu Sans" font-size="10">dim_produit</text>
+<rect x="682" y="1332.0" width="16" height="13" rx="2" fill="#C00000"/><text x="706" y="1343.0" font-family="DejaVu Sans" font-size="10">dim_motif_retour</text>
+<text x="1630" y="1399.0" font-family="DejaVu Sans" font-size="10" fill="#9A9A9A" text-anchor="end">TuniShop_DWH — schéma dw — généré depuis le modèle de métadonnées du projet</text>
+</svg>

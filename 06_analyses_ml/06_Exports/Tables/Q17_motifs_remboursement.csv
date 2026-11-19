@@ -1,0 +1,13 @@
+﻿;responsabilite;motif;demandes;taux_refus;delai_moy_j;rembourse_ttc
+0;client;taille_inadaptee;1899;0,048973143759;7,5401;190927,947
+1;tunishop;ne_correspond_pas_a_la_description;1270;0,077952755905;7,522864;173274,976
+2;client;changement_d_avis;1270;0,040157480314;7,436196;170632,927
+3;client;annulation_client;781;0,0;2,524358;225138,615
+4;tunishop;produit_defectueux;752;0,073138297872;7,445906;108062,438
+5;tunishop;erreur_de_preparation;750;0,073333333333;7,51098;117814,463
+6;transporteur;colis_endommage;705;0,080851063829;7,478125;101498,699
+7;tunishop;qualite_decevante;606;0,085808580858;7,643636;53601,242
+8;transporteur;echec_livraison;286;0,0;6,496453;77320,965
+9;tunishop;rupture_stock;271;0,0;1,996309;273236,27
+10;transporteur;retard_livraison;169;0,0;0,0;2560,0
+11;transporteur;livraison_trop_tardive;56;0,160714285714;7,804347;4245,026

@@ -1,0 +1,77 @@
+/// Demande réelle / prévue par produit et par mois (test 2025)
+table v_ml_demande
+	lineageTag: 43d78142-3362-4307-9def-e7a0e1f06067
+
+	column produit_id
+		dataType: string
+		isHidden
+		lineageTag: cf0db3ab-2801-4507-ac06-e8986ed61fb0
+		summarizeBy: none
+		sourceColumn: produit_id
+
+	column mois
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: cc97aec9-4724-4cc0-87a5-aea4ad74248f
+		summarizeBy: none
+		sourceColumn: mois
+
+	column categorie
+		dataType: string
+		lineageTag: 1028ca20-b204-4ec1-91c2-b72e5f8f9431
+		summarizeBy: none
+		sourceColumn: categorie
+
+	column quantite_reelle
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 6c652e0d-0729-42ec-b18a-4db3e662fac4
+		summarizeBy: none
+		sourceColumn: quantite_reelle
+
+	column quantite_prevue
+		dataType: double
+		formatString: #,0.00
+		lineageTag: c634716c-bf69-4e99-86a8-19678394feec
+		summarizeBy: none
+		sourceColumn: quantite_prevue
+
+	column quantite_gb_poisson
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 5a54fcbe-e0e5-4e45-9a6a-b5ba86c2624e
+		summarizeBy: none
+		sourceColumn: quantite_gb_poisson
+
+	column quantite_naif
+		dataType: double
+		formatString: #,0.00
+		lineageTag: ef333b0e-766f-4aea-aa6a-c72688df62f3
+		summarizeBy: none
+		sourceColumn: quantite_naif
+
+	column erreur_absolue
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 920c4bf9-a2b7-4293-bdfc-602726dfe5c0
+		summarizeBy: none
+		sourceColumn: erreur_absolue
+
+	column quantite_reference
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 7c865bfe-44be-44d9-a3c0-588d261b01e0
+		summarizeBy: none
+		sourceColumn: quantite_reference
+
+	partition v_ml_demande = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_ml_demande"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"produit_id", "mois", "categorie", "quantite_reelle", "quantite_prevue", "quantite_gb_poisson", "quantite_naif", "erreur_absolue", "quantite_reference"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"produit_id", type text}, {"mois", type datetime}, {"categorie", type text}, {"quantite_reelle", type number}, {"quantite_prevue", type number}, {"quantite_gb_poisson", type number}, {"quantite_naif", type number}, {"erreur_absolue", type number}, {"quantite_reference", type number}})
+				in
+				    Types
+

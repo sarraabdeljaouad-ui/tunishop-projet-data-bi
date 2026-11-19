@@ -1,0 +1,79 @@
+﻿/* =====================================================================
+   12e_Recette_Cube_Marketing_Clients.mdx — TuniShop — recette du cube [Marketing Clients]
+   ---------------------------------------------------------------------
+   SSMS → Se connecter → Analysis Services → localhost\DEV → clic droit sur
+   TuniShop_OLAP → Nouvelle requête → MDX → coller → sélectionner UNE requête → F5.
+   Valeurs attendues : calcul Python des KPI sur le DWH (kpi_reference.xlsx).
+   Écart toléré : arrondi d'affichage.
+
+   Mesure                         Total              2023              2024              2025
+   Depense HT             1 890 653,177       479 721,857       621 817,085       789 114,235
+   CPC                            0,415             0,358             0,444             0,435
+   CPM                            4,913             4,736             4,718             5,200
+   Taux Clic                    1,183 %           1,325 %           1,062 %           1,195 %
+   Taux Conversion              0,418 %           0,323 %           0,425 %           0,482 %
+   CAC                          531,829           439,708           586,620           562,047
+   ROAS                           2,636             2,364             2,571             2,853
+   Nouveaux Clients              12 473             4 034             3 662             4 777
+   Clients Actifs                12 413             4 015             5 520             7 366
+   Taux Reachat                71,272 %          68,717 %          66,594 %          69,169 %
+   ===================================================================== */
+
+-- Requête 1 : les KPI du cube par année (la ligne « All » = Total)
+SELECT
+    { [Measures].[Depense HT],
+        [Measures].[CPC],
+        [Measures].[CPM],
+        [Measures].[Taux Clic],
+        [Measures].[Taux Conversion],
+        [Measures].[CAC],
+        [Measures].[ROAS],
+        [Measures].[Nouveaux Clients],
+        [Measures].[Clients Actifs],
+        [Measures].[Taux Reachat] } ON COLUMNS,
+    NON EMPTY { [Date].[Calendrier].[All], [Date].[Calendrier].[Année].MEMBERS } ON ROWS
+FROM [Marketing Clients];
+
+-- Requête 2 : ROAS par canal média
+-- Attendu : emailing 5,874 · facebook_ads 3,339 · sms 3,195 · google_ads 3,073 · instagram_ads 2,947 · influence 2,091 · tiktok_ads 1,614
+SELECT
+    { [Measures].[Depense HT], [Measures].[CA Attribue TTC], [Measures].[ROAS] } ON COLUMNS,
+    NON EMPTY [Campagne].[Canal Média].[Canal Média].MEMBERS ON ROWS
+FROM [Marketing Clients];
+
+-- Requête comparaison (v2, 29/10/2026) : évolutions et feux par année
+-- Attendu (calcul sur les valeurs de référence des requêtes ci-dessus) :   2024   ·   2025
+--   Evolution Depense HT                 +29,6 %  statut  —      +26,9 %  statut  —
+--   Evolution ROAS                        +8,8 %  statut  1      +11,0 %  statut  1
+--   Evolution CAC                        +33,4 %  statut -1       -4,2 %  statut  1
+--   Evolution CPC                        +24,0 %  statut -1       -2,0 %  statut  1 (≈ seuil)
+--   Evolution Taux Conversion            +31,6 %  statut  1      +13,4 %  statut  1
+--   Evolution Clients Actifs             +37,5 %  statut  1      +33,4 %  statut  1
+--   Evolution Nouveaux Clients            -9,2 %  statut -1      +30,4 %  statut  1
+--   Ecart Taux Reachat                  -2,12 pt  statut -1     +2,58 pt  statut  1
+-- Ligne 2023 : vide (pas d'année 2022). Les KPI absents de la liste n'ont pas de valeur de référence annuelle : contrôle visuel.
+-- Écart d'arrondi possible pour les KPI à écart E1 à E3.
+SELECT
+    { [Measures].[Evolution Depense HT],
+      [Measures].[Evolution ROAS],
+      [Measures].[Statut ROAS],
+      [Measures].[Evolution CAC],
+      [Measures].[Statut CAC],
+      [Measures].[Evolution CPC],
+      [Measures].[Statut CPC],
+      [Measures].[Evolution Taux Conversion],
+      [Measures].[Statut Taux Conversion],
+      [Measures].[Evolution CA Reconnu],
+      [Measures].[Statut CA Reconnu],
+      [Measures].[Evolution Clients Actifs],
+      [Measures].[Statut Clients Actifs],
+      [Measures].[Evolution Nouveaux Clients],
+      [Measures].[Statut Nouveaux Clients],
+      [Measures].[Evolution CA Par Client Actif],
+      [Measures].[Statut CA Par Client Actif],
+      [Measures].[Evolution Clients Fideles],
+      [Measures].[Statut Clients Fideles],
+      [Measures].[Ecart Taux Reachat],
+      [Measures].[Statut Taux Reachat] } ON COLUMNS,
+    NON EMPTY [Date].[Calendrier].[Année].MEMBERS ON ROWS
+FROM [Marketing Clients];

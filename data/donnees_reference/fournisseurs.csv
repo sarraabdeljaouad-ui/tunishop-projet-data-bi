@@ -1,0 +1,41 @@
+fournisseur_id,nom_fournisseur,pays,delai_appro_moyen_j,conditions_paiement,fiabilite_livraison,email_contact
+FRN001,Atlas Distribution,Tunisie,9,30 jours fin de mois,0.93,achats@atlasdistribution.tn
+FRN002,Carthage Import-Export,Tunisie,3,60 jours,0.86,achats@carthageimportexpo.tn
+FRN003,Medina Textiles,Tunisie,5,45 jours,0.85,achats@medinatextiles.tn
+FRN004,Zitouna Foods,Tunisie,3,45 jours,0.93,achats@zitounafoods.tn
+FRN005,Sahel Industries,Tunisie,8,45 jours,0.84,achats@sahelindustries.tn
+FRN006,Jasmin Cosmetics,Tunisie,9,comptant,0.89,achats@jasmincosmetics.tn
+FRN007,Kairouan Artisanat,Tunisie,8,comptant,0.91,achats@kairouanartisanat.tn
+FRN008,Bizerte Plast,Tunisie,8,30 jours fin de mois,0.84,achats@bizerteplast.tn
+FRN009,Nabeul Céramique,Tunisie,9,60 jours,0.94,achats@nabeulceramique.tn
+FRN010,Djerba Trading,Tunisie,3,45 jours,0.9,achats@djerbatrading.tn
+FRN011,Cap Bon Agro,Tunisie,4,comptant,0.92,achats@capbonagro.tn
+FRN012,Tunis Papeterie,Tunisie,8,comptant,0.87,achats@tunispapeterie.tn
+FRN013,Sfax Electro Distribution,Tunisie,5,60 jours,0.88,achats@sfaxelectrodistrib.tn
+FRN014,Monastir Confection,Tunisie,7,comptant,0.89,achats@monastirconfection.tn
+FRN015,Golfe Sport,Tunisie,3,60 jours,0.89,achats@golfesport.tn
+FRN016,Oasis Bio,Tunisie,8,comptant,0.93,achats@oasisbio.tn
+FRN017,El Jem Maison,Tunisie,8,45 jours,0.91,achats@eljemmaison.tn
+FRN018,Hammamet Linge,Tunisie,6,45 jours,0.88,achats@hammametlinge.tn
+FRN019,Gafsa Négoce,Tunisie,4,45 jours,0.8,achats@gafsanegoce.tn
+FRN020,Tabarka Distribution,Tunisie,4,30 jours fin de mois,0.95,achats@tabarkadistributio.tn
+FRN021,Mahdia Fashion,Tunisie,9,60 jours,0.9,achats@mahdiafashion.tn
+FRN022,Ariana Kids,Tunisie,3,45 jours,0.86,achats@arianakids.tn
+FRN023,Manouba Electro,Tunisie,5,60 jours,0.89,achats@manoubaelectro.tn
+FRN024,Sousse Shoes,Tunisie,9,30 jours fin de mois,0.82,achats@sousseshoes.tn
+FRN025,Shenzhen Bright Tech,Chine,32,30% acompte / 70% à expédition,0.97,achats@shenzhenbrighttech.com
+FRN026,Guangzhou Home Appliances,Chine,45,30% acompte / 70% à expédition,0.99,achats@guangzhouhomeappli.com
+FRN027,Ningbo Accessories Co.,Chine,25,paiement à la commande,0.81,achats@ningboaccessoriesc.com
+FRN028,Yiwu Global Toys,Chine,32,30% acompte / 70% à expédition,0.87,achats@yiwuglobaltoys.com
+FRN029,Istanbul Moda Tekstil,Turquie,29,30% acompte / 70% à expédition,0.94,achats@istanbulmodateksti.com
+FRN030,Ankara Beyaz Eşya,Turquie,37,paiement à la commande,0.86,achats@ankarabeyazesya.com
+FRN031,Bursa Home,Turquie,45,paiement à la commande,0.91,achats@bursahome.com
+FRN032,Lyon Distribution Pro,France,44,lettre de crédit 60 jours,0.88,achats@lyondistributionpr.com
+FRN033,Marseille Cosmétiques,France,44,lettre de crédit 60 jours,0.95,achats@marseillecosmetiqu.com
+FRN034,Milano Calzature,Italie,34,30% acompte / 70% à expédition,0.98,achats@milanocalzature.com
+FRN035,Torino Elettro,Italie,26,30% acompte / 70% à expédition,0.97,achats@torinoelettro.com
+FRN036,Hangzhou Smart Devices,Chine,32,lettre de crédit 60 jours,0.92,achats@hangzhousmartdevic.com
+FRN037,Izmir Sport,Turquie,40,30% acompte / 70% à expédition,0.83,achats@izmirsport.com
+FRN038,Paris Audio Pro,France,35,30% acompte / 70% à expédition,0.98,achats@parisaudiopro.com
+FRN039,Dongguan Climatech,Chine,31,lettre de crédit 60 jours,0.8,achats@dongguanclimatech.com
+FRN040,Valencia Kids,Espagne,21,paiement à la commande,0.86,achats@valenciakids.com

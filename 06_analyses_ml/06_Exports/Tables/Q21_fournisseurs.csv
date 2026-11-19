@@ -1,0 +1,41 @@
+﻿nom_fournisseur;lignes;taux_retard;fiabilite_annoncee;local
+Ankara Beyaz Eşya;208;0,5528846153846154;0,86;False
+Ariana Kids;252;0,4126984126984127;0,86;True
+Atlas Distribution;319;0,3949843260188088;0,93;True
+Bizerte Plast;183;0,5245901639344263;0,84;True
+Bursa Home;118;0,4406779661016949;0,91;False
+Cap Bon Agro;476;0,33613445378151263;0,92;True
+Carthage Import-Export;270;0,34814814814814815;0,86;True
+Djerba Trading;283;0,3674911660777385;0,9;True
+Dongguan Climatech;216;0,5462962962962963;0,8;False
+El Jem Maison;276;0,4746376811594203;0,91;True
+Gafsa Négoce;387;0,4702842377260982;0,8;True
+Golfe Sport;471;0,3609341825902335;0,89;True
+Guangzhou Home Appliances;264;0,49242424242424243;0,99;False
+Hammamet Linge;448;0,5424107142857143;0,88;True
+Hangzhou Smart Devices;248;0,47580645161290325;0,92;False
+Istanbul Moda Tekstil;100;0,5;0,94;False
+Izmir Sport;155;0,5225806451612903;0,83;False
+Jasmin Cosmetics;500;0,504;0,89;True
+Kairouan Artisanat;451;0,4501108647450111;0,91;True
+Lyon Distribution Pro;155;0,5096774193548387;0,88;False
+Mahdia Fashion;377;0,47480106100795755;0,9;True
+Manouba Electro;222;0,44594594594594594;0,89;True
+Marseille Cosmétiques;165;0,5333333333333333;0,95;False
+Medina Textiles;280;0,475;0,85;True
+Milano Calzature;236;0,4491525423728814;0,98;False
+Monastir Confection;252;0,42857142857142855;0,89;True
+Nabeul Céramique;395;0,4835443037974684;0,94;True
+Ningbo Accessories Co.;255;0,5490196078431373;0,81;False
+Oasis Bio;325;0,40307692307692305;0,93;True
+Paris Audio Pro;128;0,4375;0,98;False
+Sahel Industries;511;0,4461839530332681;0,84;True
+Sfax Electro Distribution;214;0,4719626168224299;0,88;True
+Shenzhen Bright Tech;887;0,5186020293122886;0,97;False
+Sousse Shoes;152;0,5855263157894737;0,82;True
+Tabarka Distribution;322;0,391304347826087;0,95;True
+Torino Elettro;125;0,456;0,97;False
+Tunis Papeterie;269;0,45353159851301117;0,87;True
+Valencia Kids;215;0,4930232558139535;0,86;False
+Yiwu Global Toys;184;0,5815217391304348;0,87;False
+Zitouna Foods;245;0,2857142857142857;0,93;True

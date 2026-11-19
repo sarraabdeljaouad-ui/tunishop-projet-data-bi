@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="f0291a49-5a99-4a2d-9bbb-4273ed92f357">
+  <ID>Client</ID>
+  <Name>Client</Name>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="03af079f-5659-43fd-b92c-c324d359e3a1">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="38f266fa-0d53-4c59-a9ab-23acf3ff7fcb">
+      <ID>Client</ID>
+      <Name>Client</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7a1f00a5-21c8-47dc-92b9-6b06f0efedd7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c6b2b187-86dd-4bbc-b7dc-d2adef60e3ee">
+            <TableID>olap_v_dim_client</TableID>
+            <ColumnID>client_sk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3ded027e-9663-45d8-9fb1-565a667bd26e">
+        <DataType>WChar</DataType>
+        <DataSize>150</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f8b55c35-8724-40a7-ab44-a7a0268f4544">
+          <TableID>olap_v_dim_client</TableID>
+          <ColumnID>nom_complet</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="045ef6de-96d5-419c-b96e-9cb4198abf44">
+          <AttributeID>Gouvernorat</AttributeID>
+          <Name>Gouvernorat</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1a959313-53c7-4b0c-84f1-af505090c30e">
+          <AttributeID>Segment Fidelite</AttributeID>
+          <Name>Segment fidélité</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="de0db533-85a1-442e-87c8-f9ff18b6007c">
+          <AttributeID>Type Client</AttributeID>
+          <Name>Type client</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a6651793-d806-4d36-8bea-e0cb633a23e5">
+          <AttributeID>Tranche Age</AttributeID>
+          <Name>Tranche âge</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7ef6c172-7341-4fbe-a904-186afb6b3288">
+          <AttributeID>Canal Inscription</AttributeID>
+          <Name>Canal inscription</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d6e69f3f-3084-4c59-b1a0-4c34ded55ca2">
+          <AttributeID>Cohorte Inscription</AttributeID>
+          <Name>Cohorte inscription</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="d62a3e43-5179-42d9-bd63-60d71af90019">
+      <ID>Gouvernorat</ID>
+      <Name>Gouvernorat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3cfd0516-5650-4c95-9f55-58fcc952067b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="eeb9f9ab-fdb5-4c6b-b113-40b16cb381cd">
+            <TableID>olap_v_dim_client</TableID>
+            <ColumnID>region</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="23cda6ba-3eb3-4aa8-9798-9af785a1bf5f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="12135468-2024-46d2-a1dc-4193898e1a00">
+            <TableID>olap_v_dim_client</TableID>
+            <ColumnID>gouvernorat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0a13bb6e-e8ae-4a24-bbf2-2e7b6c77ff82">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="972997a2-56d7-4978-97d1-9c00b14b6828">
+          <TableID>olap_v_dim_client</TableID>
+          <ColumnID>gouvernorat</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="8c77d00f-77d8-4643-974f-4159ed665283">
+          <AttributeID>Region</AttributeID>
+          <Name>Région</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="61f02b52-d2ac-44af-97f8-450319c5c0c7">
+      <ID>Region</ID>
+      <Name>Région</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b37a3379-1d3e-474e-9d4e-e14e3259751e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="13fd5f40-7555-4bef-ba32-a2b8dc2e5d33">
+            <TableID>olap_v_dim_client</TableID>
+            <ColumnID>region</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="8739fb55-e64b-4652-a3fc-891dd1a73a4c">
+      <ID>Segment Fidelite</ID>
+      <Name>Segment fidélité</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="83603d17-50f2-4359-9766-c02106cd4eb9">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="17ccd7c6-df7c-4377-bf14-542714faadfc">
+            <TableID>olap_v_dim_client</TableID>
+            <ColumnID>segment_fidelite</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="fa4501f8-e3de-441b-83a3-827b71705d01">
+      <ID>Type Client</ID>
+      <Name>Type client</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f47538e7-2901-4bdc-89ca-cc80aade21ab">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d8181881-5c88-40bc-96ab-efee658db876">
+            <TableID>olap_v_dim_client</TableID>
+            <ColumnID>type_client</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="c5db55ee-3923-4ea2-931f-d7c8dddbbaa7">
+      <ID>Tranche Age</ID>
+      <Name>Tranche âge</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="206d8494-9ee5-4f5f-bba5-0131c332de42">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="026d55b7-1825-432b-8ed2-b86f29c5a18a">
+            <TableID>olap_v_dim_client</TableID>
+            <ColumnID>tranche_age</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="f4f19516-98c2-49b3-aceb-9af153f23b74">
+      <ID>Canal Inscription</ID>
+      <Name>Canal inscription</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="16691b75-fdae-49a0-8fea-c9ae35977365">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ec9e499e-4627-45fc-901a-64d2e7450315">
+            <TableID>olap_v_dim_client</TableID>
+            <ColumnID>canal_inscription</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="80b3edca-b8bc-4d80-80e2-a2d3567d363c">
+      <ID>Cohorte Inscription</ID>
+      <Name>Cohorte inscription</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3c615973-4f16-491a-b105-7c2c40a3f448">
+          <DataType>WChar</DataType>
+          <DataSize>7</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d4678cb1-e842-4382-a212-d291e7318ed5">
+            <TableID>olap_v_dim_client</TableID>
+            <ColumnID>cohorte_inscription</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="513fa541-d595-41c0-ba5f-7b2e7d3c4026">
+      <ID>Geographie Client</ID>
+      <Name>Géographie client</Name>
+      <Levels>
+        <Level dwd:design-time-name="74bee1bc-d47a-484f-a9e6-c431395af99a">
+          <ID>Region</ID>
+          <Name>Région</Name>
+          <SourceAttributeID>Region</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="3a5a1f0c-1473-4a2e-9090-1863c4931198">
+          <ID>Gouvernorat</ID>
+          <Name>Gouvernorat</Name>
+          <SourceAttributeID>Gouvernorat</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="f5f6b82f-b6e7-4212-9666-6da7e2ea06f6">
+          <ID>Client</ID>
+          <Name>Client</Name>
+          <SourceAttributeID>Client</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

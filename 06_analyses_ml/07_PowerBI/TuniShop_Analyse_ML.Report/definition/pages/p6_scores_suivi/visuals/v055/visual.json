@@ -1,0 +1,180 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v055",
+  "position": {
+    "x": 639.829403639712,
+    "y": 422.08641287227078,
+    "z": 55000,
+    "height": 281.39094191484719,
+    "width": 624.19657353333173,
+    "tabOrder": 55000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_registre"
+                    }
+                  },
+                  "Property": "nom"
+                }
+              },
+              "queryRef": "v_ml_registre.nom",
+              "nativeQueryRef": "nom",
+              "displayName": "Modèle"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_registre"
+                    }
+                  },
+                  "Property": "cas"
+                }
+              },
+              "queryRef": "v_ml_registre.cas",
+              "nativeQueryRef": "cas",
+              "displayName": "Cas"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_registre"
+                    }
+                  },
+                  "Property": "version"
+                }
+              },
+              "queryRef": "v_ml_registre.version",
+              "nativeQueryRef": "version",
+              "displayName": "Version"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_registre"
+                    }
+                  },
+                  "Property": "periode_apprentissage"
+                }
+              },
+              "queryRef": "v_ml_registre.periode_apprentissage",
+              "nativeQueryRef": "periode_apprentissage",
+              "displayName": "Apprentissage"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_registre"
+                    }
+                  },
+                  "Property": "seuil"
+                }
+              },
+              "queryRef": "v_ml_registre.seuil",
+              "nativeQueryRef": "seuil",
+              "displayName": "Seuil"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "v_ml_registre"
+                  }
+                },
+                "Property": "cas"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Registre des modèles'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F4E79'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9E1EA'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

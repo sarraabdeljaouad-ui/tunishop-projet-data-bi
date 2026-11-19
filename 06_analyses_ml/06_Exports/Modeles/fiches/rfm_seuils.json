@@ -1,0 +1,28 @@
+{
+ "nom": "rfm_seuils",
+ "cas": "segmentation",
+ "role": "production",
+ "version": "2026.11.13.2348",
+ "appris_le": "2026-11-13 23:48:07",
+ "periode_apprentissage": "photos d'apprentissage 2023-2024",
+ "lignes_apprentissage": null,
+ "taux_cible": null,
+ "empreinte_donnees": null,
+ "variables": [
+  "recence_j",
+  "frequence",
+  "montant_reconnu_ttc"
+ ],
+ "nb_variables": 3,
+ "reglages": "{\"recence_j\": [21.0, 50.0, 106.0, 198.0], \"montant_reconnu_ttc\": [93.8, 244.31, 540.6, 1370.91], \"frequence\": [1.0, 2.0, 3.0, 6.0]}",
+ "seuil": null,
+ "mesures": {},
+ "versions": {
+  "python": "3.13.1",
+  "scikit-learn": "1.9.1",
+  "pandas": "3.1.0"
+ },
+ "source": "TuniShop_DWH",
+ "fichier": "",
+ "notes": "seuils des scores R, F, M"
+}

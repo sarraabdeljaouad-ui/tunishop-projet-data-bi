@@ -1,0 +1,44 @@
+# --- TuniShop : ce qui ne va jamais dans Git ---
+
+# Secrets
+.env
+*.env
+!.env.example
+airflow.cfg
+**/Alter_*_mdp.sql
+
+# Données : corrigés et base SQLite non publiés (voir data/README.md)
+data/solutions/
+*.sqlite
+
+# Python et Jupyter
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Visual Studio (SSIS, SSAS)
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# Power BI (.pbip) : cache et réglages locaux
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Airflow
+07_automatisation/mode_b_airflow_docker/logs/*
+!07_automatisation/mode_b_airflow_docker/logs/.gitkeep
+
+# Notes personnelles et fichiers temporaires Office
++*.txt
+~$*
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
+data/tunishop_dataset/

@@ -1,0 +1,80 @@
+/// Comparaison des modèles
+table v_ml_modeles
+	lineageTag: a91a4e28-3c3b-4e98-8a55-78c74b88eb71
+
+	column cas
+		dataType: string
+		lineageTag: af3028e7-5f95-4da9-81a9-65d2a0529f9c
+		summarizeBy: none
+		sourceColumn: cas
+
+	column modele
+		dataType: string
+		lineageTag: a5caa276-d920-43b7-8baa-b8fbc1a0f99f
+		summarizeBy: none
+		sourceColumn: modele
+
+	column role
+		dataType: string
+		lineageTag: 57b3849e-36ca-41f9-aebb-2b7c4fe4a30f
+		summarizeBy: none
+		sourceColumn: role
+
+	column mesure
+		dataType: string
+		lineageTag: d57044fd-f4ec-4eaa-a9bb-f4ae36a2c71f
+		summarizeBy: none
+		sourceColumn: mesure
+
+	column sens
+		dataType: string
+		lineageTag: 77dac9d8-9fc7-423c-ad0c-df04ea314353
+		summarizeBy: none
+		sourceColumn: sens
+
+	column valeur_validation
+		dataType: double
+		formatString: 0.000
+		lineageTag: 2358d89f-20cc-465c-b507-be1f0054e7c0
+		summarizeBy: none
+		sourceColumn: valeur_validation
+
+	column valeur_test
+		dataType: double
+		formatString: 0.000
+		lineageTag: 85bb452c-f03f-474d-bccd-2da7d86b3e50
+		summarizeBy: none
+		sourceColumn: valeur_test
+
+	column gain_vs_reference
+		dataType: double
+		formatString: 0.000
+		lineageTag: ce8d0645-4cf2-4b84-99f9-cfad01c75c11
+		summarizeBy: none
+		sourceColumn: gain_vs_reference
+
+	column retenu
+		dataType: boolean
+		lineageTag: a7515822-e8ab-43b6-b4be-2a8bf009f221
+		summarizeBy: none
+		sourceColumn: retenu
+
+	column retenu_oui_non
+		dataType: string
+		lineageTag: 174ba6c7-777b-4054-aed9-e276dd655968
+		summarizeBy: none
+		sourceColumn: retenu_oui_non
+
+	partition v_ml_modeles = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_ml_modeles"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"cas", "modele", "role", "mesure", "sens", "valeur_validation", "valeur_test", "gain_vs_reference", "retenu"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"cas", type text}, {"modele", type text}, {"role", type text}, {"mesure", type text}, {"sens", type text}, {"valeur_validation", type number}, {"valeur_test", type number}, {"gain_vs_reference", type number}, {"retenu", type logical}})
+				,
+				    OuiNon = Table.AddColumn(Types, "retenu_oui_non", each if [retenu] then "Oui" else "Non", type text)
+				in
+				    OuiNon
+

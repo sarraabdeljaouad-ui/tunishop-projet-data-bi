@@ -1,0 +1,16 @@
+{
+  "name": "TuniShop",
+  "dataColors": [
+    "#1F4E79",
+    "#E07B39",
+    "#2E8B57",
+    "#7B4F9E",
+    "#2A9D8F",
+    "#D4A017",
+    "#C0392B",
+    "#8C8C8C"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#252423",
+  "tableAccent": "#1F4E79"
+}

@@ -1,0 +1,237 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "57122371b416282e25f5",
+  "position": {
+    "x": 220,
+    "y": 562,
+    "z": 4004,
+    "height": 148,
+    "width": 1048,
+    "tabOrder": 4004
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date"
+                        }
+                      },
+                      "Hierarchy": "Calendrier"
+                    }
+                  },
+                  "Level": "Année"
+                }
+              },
+              "queryRef": "Date.Calendrier.Année",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "CA Reconnu TTC"
+                }
+              },
+              "queryRef": "Measures.CA Reconnu TTC",
+              "nativeQueryRef": "CA Reconnu TTC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Evolution CA Reconnu"
+                }
+              },
+              "queryRef": "Measures.Evolution CA Reconnu",
+              "nativeQueryRef": "Evolution CA Reconnu"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Taux Marge Brute"
+                }
+              },
+              "queryRef": "Measures.Taux Marge Brute",
+              "nativeQueryRef": "Taux Marge Brute"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Panier Moyen TTC"
+                }
+              },
+              "queryRef": "Measures.Panier Moyen TTC",
+              "nativeQueryRef": "Panier Moyen TTC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Clients Actifs"
+                }
+              },
+              "queryRef": "Measures.Clients Actifs",
+              "nativeQueryRef": "Clients Actifs"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "ROAS"
+                }
+              },
+              "queryRef": "Measures.ROAS",
+              "nativeQueryRef": "ROAS"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Stock mensuel"
+                    }
+                  },
+                  "Property": "Valeur Stock HT"
+                }
+              },
+              "queryRef": "Stock mensuel.Valeur Stock HT",
+              "nativeQueryRef": "Valeur Stock HT"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Taux Rupture Stock"
+                }
+              },
+              "queryRef": "Measures.Taux Rupture Stock",
+              "nativeQueryRef": "Taux Rupture Stock"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Achats"
+                    }
+                  },
+                  "Property": "Montant Achat HT"
+                }
+              },
+              "queryRef": "Achats.Montant Achat HT",
+              "nativeQueryRef": "Montant Achat HT"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Taux Service Fournisseur"
+                }
+              },
+              "queryRef": "Measures.Taux Service Fournisseur",
+              "nativeQueryRef": "Taux Service Fournisseur"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "OTD"
+                }
+              },
+              "queryRef": "Measures.OTD",
+              "nativeQueryRef": "OTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Note Moyenne"
+                }
+              },
+              "queryRef": "Measures.Note Moyenne",
+              "nativeQueryRef": "Note Moyenne"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Les KPI de direction par année'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,88 @@
+/// Clients (versions), repris de TuniShop_DWH.bi.v_dim_client
+table v_dim_client
+	lineageTag: 4aa3a660-7c2a-49ac-9235-7223c5fae0fa
+
+	column client_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 52111c55-25be-4acc-bcc5-3762fef66065
+		summarizeBy: none
+		sourceColumn: client_sk
+
+	column client_id
+		dataType: string
+		lineageTag: 50e11bc0-c2b3-48eb-8644-0c3f119a33ee
+		summarizeBy: none
+		sourceColumn: client_id
+
+	column type_client
+		dataType: string
+		lineageTag: 04ad5570-93d2-4aeb-8683-f773f117a5d3
+		summarizeBy: none
+		sourceColumn: type_client
+
+	column genre
+		dataType: string
+		lineageTag: 5e2b3c17-0b85-49df-818b-f0cf44793228
+		summarizeBy: none
+		sourceColumn: genre
+
+	column tranche_age
+		dataType: string
+		lineageTag: 682077c7-092a-4ad8-9d67-8504d85750ff
+		summarizeBy: none
+		sourceColumn: tranche_age
+
+	column gouvernorat
+		dataType: string
+		lineageTag: 7d70cb7a-f87a-41a1-838e-9709f1f18164
+		summarizeBy: none
+		sourceColumn: gouvernorat
+
+	column region
+		dataType: string
+		lineageTag: 871a2ef0-8fc4-4fb4-b75a-f410650eb5db
+		summarizeBy: none
+		sourceColumn: region
+
+	column ville
+		dataType: string
+		lineageTag: 546c36b5-adf1-4e0b-ac04-c41c7a4bc22c
+		summarizeBy: none
+		sourceColumn: ville
+
+	column canal_inscription
+		dataType: string
+		lineageTag: dde4a9a6-994d-4bdd-a46b-f36cb75f1c75
+		summarizeBy: none
+		sourceColumn: canal_inscription
+
+	column cohorte_inscription
+		dataType: string
+		lineageTag: 6ed4fdde-6982-41ea-a767-0223c45a71c1
+		summarizeBy: none
+		sourceColumn: cohorte_inscription
+
+	column segment_fidelite
+		dataType: string
+		lineageTag: db9d6786-45aa-4a2a-9444-71c8d53c70df
+		summarizeBy: none
+		sourceColumn: segment_fidelite
+
+	column est_courant
+		dataType: boolean
+		lineageTag: bbdf828b-0796-4f3a-86d0-c8153d129c20
+		summarizeBy: none
+		sourceColumn: est_courant
+
+	partition v_dim_client = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_dim_client"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"client_sk", "client_id", "type_client", "genre", "tranche_age", "gouvernorat", "region", "ville", "canal_inscription", "cohorte_inscription", "segment_fidelite", "est_courant"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"client_sk", Int64.Type}, {"client_id", type text}, {"type_client", type text}, {"genre", type text}, {"tranche_age", type text}, {"gouvernorat", type text}, {"region", type text}, {"ville", type text}, {"canal_inscription", type text}, {"cohorte_inscription", type text}, {"segment_fidelite", type text}, {"est_courant", type logical}})
+				in
+				    Types
+

@@ -1,0 +1,71 @@
+/// Indicateurs annuels 2023-2025
+table v_eda_vue_ensemble
+	lineageTag: 265af758-05f4-4bc4-b6c2-5e31d43a1e10
+
+	column annee
+		dataType: int64
+		formatString: 0
+		lineageTag: 5793d4f1-59fb-4a0d-bd83-fe93cc99203a
+		summarizeBy: none
+		sourceColumn: annee
+
+	column commandes_passees
+		dataType: int64
+		formatString: #,0
+		lineageTag: 21a3008e-a2db-423b-af77-c2d8cce6bb10
+		summarizeBy: none
+		sourceColumn: commandes_passees
+
+	column commandes_reconnues
+		dataType: int64
+		formatString: #,0
+		lineageTag: ac8cca1f-768f-4455-b3ff-6c0c98a76799
+		summarizeBy: none
+		sourceColumn: commandes_reconnues
+
+	column ca_reconnu_ttc
+		dataType: double
+		formatString: #,0.00
+		lineageTag: be250c2a-a8f0-4e7d-a33a-d3e11d72547a
+		summarizeBy: none
+		sourceColumn: ca_reconnu_ttc
+
+	column clients_actifs
+		dataType: int64
+		formatString: 0
+		lineageTag: 5edd4591-6a16-4a7e-8b7a-a588eaa7ac09
+		summarizeBy: none
+		sourceColumn: clients_actifs
+
+	column panier_moyen_ttc
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e497a0e9-d8b4-4306-be6b-ea4466a15dd2
+		summarizeBy: none
+		sourceColumn: panier_moyen_ttc
+
+	column taux_retard
+		dataType: double
+		formatString: 0.000
+		lineageTag: f23519db-327f-4175-9adc-b883018f65dd
+		summarizeBy: none
+		sourceColumn: taux_retard
+
+	column note_moyenne
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 642695d4-550b-41d1-b21c-c24803f80e8a
+		summarizeBy: none
+		sourceColumn: note_moyenne
+
+	partition v_eda_vue_ensemble = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_eda_vue_ensemble"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"annee", "commandes_passees", "commandes_reconnues", "ca_reconnu_ttc", "clients_actifs", "panier_moyen_ttc", "taux_retard", "note_moyenne"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"annee", Int64.Type}, {"commandes_passees", Int64.Type}, {"commandes_reconnues", Int64.Type}, {"ca_reconnu_ttc", type number}, {"clients_actifs", Int64.Type}, {"panier_moyen_ttc", type number}, {"taux_retard", type number}, {"note_moyenne", type number}})
+				in
+				    Types
+

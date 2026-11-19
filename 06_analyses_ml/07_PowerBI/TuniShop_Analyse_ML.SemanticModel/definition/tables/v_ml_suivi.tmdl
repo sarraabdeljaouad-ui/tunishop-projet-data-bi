@@ -1,0 +1,59 @@
+/// Suivi des modèles : indicateur par période et statut OK / ALERTE (v1.2)
+table v_ml_suivi
+	lineageTag: 00271397-f002-4c26-ada2-1164cff597bc
+
+	column cas
+		dataType: string
+		lineageTag: 87aa40aa-5d53-4e9f-89fd-af6c9fac3ba4
+		summarizeBy: none
+		sourceColumn: cas
+
+	column objet
+		dataType: string
+		lineageTag: 72ddc7c3-4360-4aea-bde1-dc91cf85ead1
+		summarizeBy: none
+		sourceColumn: objet
+
+	column periode
+		dataType: string
+		lineageTag: ee9f1d3f-8e14-4508-825d-738a4251331a
+		summarizeBy: none
+		sourceColumn: periode
+
+	column indicateur
+		dataType: string
+		lineageTag: 265033cf-fcbd-4384-8cc7-3420ed58e9ea
+		summarizeBy: none
+		sourceColumn: indicateur
+
+	column valeur
+		dataType: double
+		formatString: 0.000
+		lineageTag: 3f96a13e-9710-4653-9419-b0aef253e591
+		summarizeBy: none
+		sourceColumn: valeur
+
+	column seuil
+		dataType: double
+		formatString: 0.000
+		lineageTag: eb4e535a-040c-4753-af59-ff8f39d9f837
+		summarizeBy: none
+		sourceColumn: seuil
+
+	column statut
+		dataType: string
+		lineageTag: 311b075e-2356-4b48-9447-4c8e8b96d200
+		summarizeBy: none
+		sourceColumn: statut
+
+	partition v_ml_suivi = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_ml_suivi"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"cas", "objet", "periode", "indicateur", "valeur", "seuil", "statut"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"cas", type text}, {"objet", type text}, {"periode", type text}, {"indicateur", type text}, {"valeur", type number}, {"seuil", type number}, {"statut", type text}})
+				in
+				    Types
+

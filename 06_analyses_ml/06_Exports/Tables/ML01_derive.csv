@@ -1,0 +1,79 @@
+﻿cas;variable;psi;niveau;statut
+ventes;t;8,639329485305703;forte dérive;ÉCART
+ventes;part_jours_black_friday;1,87381958886836;forte dérive;ÉCART
+ventes;part_jours_pre_aid_idha;1,6872833154140823;forte dérive;ÉCART
+ventes;part_jours_pre_aid_fitr;1,313944732535958;forte dérive;ÉCART
+ventes;part_jours_ramadan;1,313944732535958;forte dérive;ÉCART
+ventes;part_jours_soldes_hiver;0,5677227817938233;forte dérive;ÉCART
+ventes;ca_ttc;0,4253312728227883;forte dérive;ÉCART
+ventes;part_jours_rentree_scolaire;0,0;stable;OK
+ventes;part_jours_soldes_ete;0,0;stable;OK
+ventes;part_jours_fin_annee;0,0;stable;OK
+ventes;categorie;0,0;stable;OK
+churn;anciennete_j;0,21273008222978923;dérive modérée;INFO
+churn;retard_max_j;0,13694087170728825;dérive modérée;INFO
+churn;canal_inscription;0,12089514355123118;dérive modérée;INFO
+churn;part_mobile;0,1025405128545177;dérive modérée;INFO
+churn;nb_livraisons;0,0780399943887528;stable;OK
+churn;frequence;0,07122312930666409;stable;OK
+churn;part_livraisons_retard;0,0695241363119033;stable;OK
+churn;nb_avis;0,06088020331764288;stable;OK
+churn;nb_categories;0,060557485858611065;stable;OK
+churn;nb_demandes_remboursement;0,05447822886784;stable;OK
+churn;score_f;0,04982099374617524;stable;OK
+churn;segment_rfm;0,04124682912335338;stable;OK
+churn;montant_reconnu_ttc;0,040929485614092126;stable;OK
+churn;cluster;0,031918996041700655;stable;OK
+churn;score_m;0,030740660195322914;stable;OK
+churn;recence_j;0,029832116909255225;stable;OK
+churn;part_paiement_livraison;0,023437083017927816;stable;OK
+churn;note_moyenne;0,022084225160311974;stable;OK
+churn;a_donne_avis;0,021235591921149488;stable;OK
+churn;nb_articles_moyen;0,019806799691051258;stable;OK
+churn;score_r;0,01819596255829748;stable;OK
+churn;panier_moyen_ttc;0,0047993483399536;stable;OK
+churn;taux_aboutie;0,0038226256839803104;stable;OK
+churn;churn;0,002914187237994775;stable;OK
+churn;nb_commandes_90j;0,00281712631358514;stable;OK
+churn;region;0,002623426074164859;stable;OK
+churn;part_coupon;0,0017325283868449169;stable;OK
+churn;taux_annulation;0,0008429839482933766;stable;OK
+churn;tranche_age;0,0007428204247792705;stable;OK
+churn;type_client;0,0005330271696574152;stable;OK
+churn;genre;4,658608884527103e-06;stable;OK
+demande;moy_categorie_annee_prec;14,394091267589921;forte dérive;ÉCART
+demande;part_jours_black_friday;2,3435003634359926;forte dérive;ÉCART
+demande;part_jours_pre_aid_idha;1,6757754630301065;forte dérive;ÉCART
+demande;part_jours_pre_aid_fitr;1,6311751695228982;forte dérive;ÉCART
+demande;part_jours_ramadan;1,07861149723818;forte dérive;ÉCART
+demande;part_jours_soldes_hiver;0,5374375015096706;forte dérive;ÉCART
+demande;mois_vendus_annee_prec;0,40929318566453565;forte dérive;ÉCART
+demande;part_rupture_annee_prec;0,13323533949460492;dérive modérée;INFO
+demande;moy_3_derniers_mois;0,04686600037539644;stable;OK
+demande;moy_annee_prec;0,04285530393129482;stable;OK
+demande;quantite;0,016738453046474186;stable;OK
+demande;nouveau_produit;0,015760140961511106;stable;OK
+demande;meme_mois_annee_prec;0,014398103863846606;stable;OK
+demande;prix_catalogue_ttc;0,0023289097927017503;stable;OK
+demande;categorie;0,0021796210329840765;stable;OK
+demande;gamme_prix;0,001141383640072819;stable;OK
+demande;mois_num;0,0005275110025515463;stable;OK
+demande;part_jours_fin_annee;0,00016389123576299004;stable;OK
+demande;part_jours_rentree_scolaire;3,912891029013355e-06;stable;OK
+demande;part_jours_soldes_ete;5,867510285674797e-07;stable;OK
+retard;mois;0,05285350874716835;stable;OK
+retard;canal;0,04583069969145766;stable;OK
+retard;periode_commerciale;0,025331668033054946;stable;OK
+retard;en_retard;0,02097594980924359;stable;OK
+retard;mode_paiement;0,010328798883872283;stable;OK
+retard;est_ramadan;0,005608011199890827;stable;OK
+retard;poids_kg;0,0031708774424510427;stable;OK
+retard;montant_total_ttc;0,0027025339659460293;stable;OK
+retard;nb_articles;0,0018582899645229886;stable;OK
+retard;region;0,0018136588716499158;stable;OK
+retard;delai_preparation_h;0,0012478889176634502;stable;OK
+retard;zone_livraison;0,00109586773942129;stable;OK
+retard;jour_semaine;0,0002102120865276886;stable;OK
+retard;transporteur;0,00013833118271178591;stable;OK
+retard;entrepot;5,9341378601467885e-05;stable;OK
+retard;est_weekend;2,066845663228515e-06;stable;OK

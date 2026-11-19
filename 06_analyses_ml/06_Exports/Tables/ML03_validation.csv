@@ -1,0 +1,7 @@
+﻿modele;AUC validation
+Gradient boosting (lent);0,8215088753308106
+Régression logistique (C=1);0,8213721603332156
+Régression logistique (C=0,1);0,8213101549332629
+Forêt aléatoire;0,8202888265912676
+Gradient boosting (rapide);0,8167791916831637
+Règle « récence » (référence);0,8033886775732576

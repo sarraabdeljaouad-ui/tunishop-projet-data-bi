@@ -1,0 +1,1 @@
+EXEC msdb.dbo.sp_update_schedule @name = N'TuniShop - Chaque nuit', @enabled = 0;

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="3ad4133b-bf95-4e14-937f-e8a070deda35">
+  <ID>Statut Commande</ID>
+  <Name>Statut Commande</Name>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="085d669b-95af-4fd4-b447-bc9d68b714be">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="cc3fbda0-4523-44e9-9bad-784c8177d265">
+      <ID>Libelle</ID>
+      <Name>Libellé</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="08468399-cc84-4985-99de-1b3dc8cbca14">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a92b5127-f058-49d7-89d6-d1b18a20a936">
+            <TableID>olap_v_dim_statut_commande</TableID>
+            <ColumnID>statut_commande_sk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="9b095b6a-b860-40e2-a119-cabea430bb2c">
+        <DataType>WChar</DataType>
+        <DataSize>40</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="35924ea1-ca87-4b92-bb89-0188bdba63e1">
+          <TableID>olap_v_dim_statut_commande</TableID>
+          <ColumnID>libelle_statut</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9ecd9081-9962-4860-8d10-0dc8525f56bf">
+          <AttributeID>Famille Statut</AttributeID>
+          <Name>Famille Statut</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ca98552e-f3c0-4fba-bfe1-e10e147acb71">
+          <AttributeID>Statut</AttributeID>
+          <Name>Statut</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="a6cd76e2-9c02-44fd-bd73-4107ed9fa66d">
+      <ID>Famille Statut</ID>
+      <Name>Famille Statut</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3aa018c8-c7e3-4d17-bfc8-cc06f65902fd">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c776fd1f-6279-440d-a7b5-0cae8deb4aef">
+            <TableID>olap_v_dim_statut_commande</TableID>
+            <ColumnID>famille_statut</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="798d27e9-56b0-4b59-8bbf-43b3755d27c2">
+      <ID>Statut</ID>
+      <Name>Statut</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="48abc035-5dd4-4b51-913e-631248c06d08">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5ffc1f6e-3004-451d-8cf7-c7f1f0d5e4f8">
+            <TableID>olap_v_dim_statut_commande</TableID>
+            <ColumnID>statut_commande</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="bff8f475-5ea8-49ef-8181-026b5580009a">
+      <ID>Familles</ID>
+      <Name>Familles</Name>
+      <Levels>
+        <Level dwd:design-time-name="01070deb-2e7c-4034-8e74-605dcc2d12bc">
+          <ID>Famille Statut</ID>
+          <Name>Famille Statut</Name>
+          <SourceAttributeID>Famille Statut</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="e20a6589-9abc-4386-ba37-665ae8df61e1">
+          <ID>Libelle</ID>
+          <Name>Libellé</Name>
+          <SourceAttributeID>Libelle</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

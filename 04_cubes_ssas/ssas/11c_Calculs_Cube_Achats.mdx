@@ -1,0 +1,121 @@
+﻿/* =====================================================================
+   11c_Calculs_Cube_Achats.mdx — TuniShop — script de calcul du cube [Achats]
+   ---------------------------------------------------------------------
+   Cube 3 — Achats : achats fournisseurs, réceptions, délais et retards.
+   Où le coller : Visual Studio → cube Achats → onglet « Calculs »
+   → « Affichage du script » → Ctrl+A → coller → Ctrl+S → Déployer.
+   Mesures de base attendues dans ce cube : groupe Achats (Montant Achat HT, Quantite Commandee, Quantite Commandee Recue, Quantite Recue, Nb Lignes Achat, Nb Lignes Recues, Nb Receptions Partielles, Somme Delai Appro J, Somme Retard Appro J)
+   Règles : Dictionnaire_KPI.xlsx (partie 4). Divisions protégées (NULL si dénominateur vide).
+   ===================================================================== */
+CALCULATE;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Rupture Fournisseur] AS
+    IIF([Measures].[Nb Lignes Recues] = 0, NULL, [Measures].[Nb Receptions Partielles] / [Measures].[Nb Lignes Recues]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Stock et achats', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Service Fournisseur] AS
+    IIF([Measures].[Quantite Commandee Recue] = 0, NULL, [Measures].[Quantite Recue] / [Measures].[Quantite Commandee Recue]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Stock et achats', VISIBLE = 1;
+
+-- Délai entre la commande fournisseur et sa réception, par ligne réceptionnée
+CREATE MEMBER CURRENTCUBE.[Measures].[Delai Moyen Appro J] AS
+    IIF([Measures].[Nb Lignes Recues] = 0, NULL, [Measures].[Somme Delai Appro J] / [Measures].[Nb Lignes Recues]),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'KPI\Achats', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Retard Moyen Appro J] AS
+    IIF([Measures].[Nb Lignes Recues] = 0, NULL, [Measures].[Somme Retard Appro J] / [Measures].[Nb Lignes Recues]),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'KPI\Achats', VISIBLE = 1;
+
+/* =====================================================================
+   v2 (29/10/2026) — comparaison à l'année précédente et feux de tendance (même règle que le cube Direction)
+   A-1 : même KPI sur la période parallèle de l'année précédente (hiérarchie Calendrier).
+   Evolution : variation relative ; Ecart : différence en points de pourcentage (taux).
+   Statut : 1 favorable, 0 stable (|évolution| < 2 % ou |écart| < 0,5 point), -1 défavorable ; NULL sans année précédente.
+   Couleur : #1E7B4F, #5B6B7C, #B42318. Pas de feu pour les KPI sans sens favorable (volumes, parts, remises, valeur du stock).
+   ===================================================================== */
+
+/* ---------- Année précédente ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Montant Achat HT A-1] AS
+    ([Measures].[Montant Achat HT],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Quantite Commandee A-1] AS
+    ([Measures].[Quantite Commandee],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Service Fournisseur A-1] AS
+    ([Measures].[Taux Service Fournisseur],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Delai Moyen Appro J A-1] AS
+    ([Measures].[Delai Moyen Appro J],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Retard Moyen Appro J A-1] AS
+    ([Measures].[Retard Moyen Appro J],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Rupture Fournisseur A-1] AS
+    ([Measures].[Taux Rupture Fournisseur],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+
+/* ---------- Évolutions et écarts ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Montant Achat] AS
+    IIF(IsEmpty([Measures].[Montant Achat HT]) OR IsEmpty([Measures].[Montant Achat HT A-1]) OR [Measures].[Montant Achat HT A-1] = 0, NULL,
+        ([Measures].[Montant Achat HT] - [Measures].[Montant Achat HT A-1]) / [Measures].[Montant Achat HT A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Quantite Commandee] AS
+    IIF(IsEmpty([Measures].[Quantite Commandee]) OR IsEmpty([Measures].[Quantite Commandee A-1]) OR [Measures].[Quantite Commandee A-1] = 0, NULL,
+        ([Measures].[Quantite Commandee] - [Measures].[Quantite Commandee A-1]) / [Measures].[Quantite Commandee A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Service Fournisseur] AS
+    IIF(IsEmpty([Measures].[Taux Service Fournisseur]) OR IsEmpty([Measures].[Taux Service Fournisseur A-1]), NULL,
+        ([Measures].[Taux Service Fournisseur] - [Measures].[Taux Service Fournisseur A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Delai Moyen Appro J] AS
+    IIF(IsEmpty([Measures].[Delai Moyen Appro J]) OR IsEmpty([Measures].[Delai Moyen Appro J A-1]) OR [Measures].[Delai Moyen Appro J A-1] = 0, NULL,
+        ([Measures].[Delai Moyen Appro J] - [Measures].[Delai Moyen Appro J A-1]) / [Measures].[Delai Moyen Appro J A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Retard Moyen Appro J] AS
+    IIF(IsEmpty([Measures].[Retard Moyen Appro J]) OR IsEmpty([Measures].[Retard Moyen Appro J A-1]) OR [Measures].[Retard Moyen Appro J A-1] = 0, NULL,
+        ([Measures].[Retard Moyen Appro J] - [Measures].[Retard Moyen Appro J A-1]) / [Measures].[Retard Moyen Appro J A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Rupture Fournisseur] AS
+    IIF(IsEmpty([Measures].[Taux Rupture Fournisseur]) OR IsEmpty([Measures].[Taux Rupture Fournisseur A-1]), NULL,
+        ([Measures].[Taux Rupture Fournisseur] - [Measures].[Taux Rupture Fournisseur A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+
+/* ---------- Feux de tendance ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Service Fournisseur] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Service Fournisseur]), NULL,
+        IIF([Measures].[Ecart Taux Service Fournisseur] > 0.5, 1, IIF([Measures].[Ecart Taux Service Fournisseur] < -0.5, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Delai Moyen Appro J] AS
+    IIF(IsEmpty([Measures].[Evolution Delai Moyen Appro J]), NULL,
+        IIF([Measures].[Evolution Delai Moyen Appro J] > 0.02, -1, IIF([Measures].[Evolution Delai Moyen Appro J] < -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Retard Moyen Appro J] AS
+    IIF(IsEmpty([Measures].[Evolution Retard Moyen Appro J]), NULL,
+        IIF([Measures].[Evolution Retard Moyen Appro J] > 0.02, -1, IIF([Measures].[Evolution Retard Moyen Appro J] < -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Rupture Fournisseur] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Rupture Fournisseur]), NULL,
+        IIF([Measures].[Ecart Taux Rupture Fournisseur] > 0.5, -1, IIF([Measures].[Ecart Taux Rupture Fournisseur] < -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Service Fournisseur] AS
+    IIF(IsEmpty([Measures].[Statut Taux Service Fournisseur]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Service Fournisseur] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Service Fournisseur] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Delai Moyen Appro J] AS
+    IIF(IsEmpty([Measures].[Statut Delai Moyen Appro J]), "#5B6B7C",
+        IIF([Measures].[Statut Delai Moyen Appro J] = 1, "#1E7B4F", IIF([Measures].[Statut Delai Moyen Appro J] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Retard Moyen Appro J] AS
+    IIF(IsEmpty([Measures].[Statut Retard Moyen Appro J]), "#5B6B7C",
+        IIF([Measures].[Statut Retard Moyen Appro J] = 1, "#1E7B4F", IIF([Measures].[Statut Retard Moyen Appro J] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Rupture Fournisseur] AS
+    IIF(IsEmpty([Measures].[Statut Taux Rupture Fournisseur]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Rupture Fournisseur] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Rupture Fournisseur] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;

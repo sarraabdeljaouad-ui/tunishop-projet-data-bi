@@ -1,0 +1,153 @@
+﻿/* =====================================================================
+   12f_Recette_Cube_Direction.mdx — TuniShop — recette du cube [Direction] (v2)
+   ---------------------------------------------------------------------
+   SSMS → Se connecter → Analysis Services → localhost\DEV → clic droit sur
+   TuniShop_OLAP → Nouvelle requête → MDX → coller → sélectionner UNE requête → F5.
+   Valeurs attendues : les MÊMES que dans les cubes métier (recettes 12a à 12e,
+   elles-mêmes issues du calcul Python des KPI sur le DWH, kpi_reference.xlsx).
+   Écart toléré : arrondi d'affichage.
+
+   Mesure (cube d'origine)                  Total              2023              2024              2025
+   CA Reconnu TTC (Ventes)          15 541 665,655     3 384 688,310     5 022 224,580     7 134 752,765
+   Taux Marge Brute (Ventes)              31,170 %          30,775 %          31,282 %          31,278 %
+   Panier Moyen TTC (Ventes)               264,422           253,820           265,754           268,800
+   Clients Actifs (Marketing Clients)       12 413             4 015             5 520             7 366
+   Valeur Stock HT (Stock)           2 093 374,696     1 346 821,147     1 652 137,207     2 093 374,696
+   Taux Rupture Stock (Stock)              2,716 %           2,303 %           2,615 %           3,129 %
+   Montant Achat HT (Achats)         8 999 975,580     1 874 945,057     2 943 552,147     4 181 478,376
+   Taux Service Fournisseur (Achats)      97,905 %          97,817 %          97,603 %          98,167 %
+   OTD (Livraisons)                       85,469 %          90,426 %          85,929 %          82,666 %
+   Note Moyenne (Livraisons)                 4,053             4,091             4,050             4,037
+   ROAS (Marketing Clients)                  2,636             2,364             2,571             2,853
+   Evolution CA Reconnu (Ventes)                 –                 –           +48,4 %           +42,1 %
+   ===================================================================== */
+
+-- Requête 1 : les 12 KPI de direction par année (la ligne « All » = Total)
+SELECT
+    { [Measures].[CA Reconnu TTC],
+        [Measures].[Evolution CA Reconnu],
+        [Measures].[Taux Marge Brute],
+        [Measures].[Panier Moyen TTC],
+        [Measures].[Clients Actifs],
+        [Measures].[Valeur Stock HT],
+        [Measures].[Taux Rupture Stock],
+        [Measures].[Montant Achat HT],
+        [Measures].[Taux Service Fournisseur],
+        [Measures].[OTD],
+        [Measures].[Note Moyenne],
+        [Measures].[ROAS] } ON COLUMNS,
+    NON EMPTY { [Date].[Calendrier].[All], [Date].[Calendrier].[Année].MEMBERS } ON ROWS
+FROM [Direction];
+
+-- Requête 2 : preuve automatique « Direction = cubes métier ».
+-- LookupCube relit la même mesure dans le cube d'origine, pour la même période.
+-- Attendu : 0 dans TOUTES les cellules (ou un écart d'arrondi en 10^-6).
+WITH
+MEMBER [Measures].[Ecart 01 CA Reconnu TTC] AS
+    [Measures].[CA Reconnu TTC]
+    - LookupCube("Ventes", "([Measures].[CA Reconnu TTC], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+MEMBER [Measures].[Ecart 02 Taux Marge Brute] AS
+    [Measures].[Taux Marge Brute]
+    - LookupCube("Ventes", "([Measures].[Taux Marge Brute], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+MEMBER [Measures].[Ecart 03 Panier Moyen TTC] AS
+    [Measures].[Panier Moyen TTC]
+    - LookupCube("Ventes", "([Measures].[Panier Moyen TTC], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+MEMBER [Measures].[Ecart 04 Clients Actifs] AS
+    [Measures].[Clients Actifs]
+    - LookupCube("Marketing Clients", "([Measures].[Clients Actifs], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+MEMBER [Measures].[Ecart 05 Valeur Stock HT] AS
+    [Measures].[Valeur Stock HT]
+    - LookupCube("Stock", "([Measures].[Valeur Stock HT], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+MEMBER [Measures].[Ecart 06 Taux Rupture Stock] AS
+    [Measures].[Taux Rupture Stock]
+    - LookupCube("Stock", "([Measures].[Taux Rupture Stock], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+MEMBER [Measures].[Ecart 07 Montant Achat HT] AS
+    [Measures].[Montant Achat HT]
+    - LookupCube("Achats", "([Measures].[Montant Achat HT], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+MEMBER [Measures].[Ecart 08 Taux Service Fournisseur] AS
+    [Measures].[Taux Service Fournisseur]
+    - LookupCube("Achats", "([Measures].[Taux Service Fournisseur], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+MEMBER [Measures].[Ecart 09 OTD] AS
+    [Measures].[OTD]
+    - LookupCube("Livraisons", "([Measures].[OTD], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+MEMBER [Measures].[Ecart 10 Note Moyenne] AS
+    [Measures].[Note Moyenne]
+    - LookupCube("Livraisons", "([Measures].[Note Moyenne], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+MEMBER [Measures].[Ecart 11 ROAS] AS
+    [Measures].[ROAS]
+    - LookupCube("Marketing Clients", "([Measures].[ROAS], " + [Date].[Calendrier].CurrentMember.UniqueName + ")"),
+    FORMAT_STRING = "#,##0.000000"
+SELECT
+    { [Measures].[Ecart 01 CA Reconnu TTC],
+        [Measures].[Ecart 02 Taux Marge Brute],
+        [Measures].[Ecart 03 Panier Moyen TTC],
+        [Measures].[Ecart 04 Clients Actifs],
+        [Measures].[Ecart 05 Valeur Stock HT],
+        [Measures].[Ecart 06 Taux Rupture Stock],
+        [Measures].[Ecart 07 Montant Achat HT],
+        [Measures].[Ecart 08 Taux Service Fournisseur],
+        [Measures].[Ecart 09 OTD],
+        [Measures].[Ecart 10 Note Moyenne],
+        [Measures].[Ecart 11 ROAS] } ON COLUMNS,
+    { [Date].[Calendrier].[All], [Date].[Calendrier].[Année].MEMBERS } ON ROWS
+FROM [Direction];
+
+-- Requête 3 : comportement des dimensions non liées (IgnoreUnrelatedDimensions = vrai, valeur par défaut)
+-- Filtre sur le canal « application_mobile » : CA Reconnu et Panier Moyen changent ;
+-- Valeur Stock HT, Montant Achat HT, OTD et ROAS restent au total (ces groupes ne sont pas liés au Canal).
+SELECT
+    { [Measures].[CA Reconnu TTC], [Measures].[Panier Moyen TTC],
+      [Measures].[Valeur Stock HT], [Measures].[Montant Achat HT], [Measures].[OTD], [Measures].[ROAS] } ON COLUMNS,
+    { [Canal].[Canal].[All], [Canal].[Canal].&[application_mobile] } ON ROWS
+FROM [Direction]
+WHERE [Date].[Calendrier].[Année].&[2025];
+
+-- Requête 4 (v2, 29/10/2026) : comparaison à l'année précédente et feux de tendance
+-- Attendu (valeurs du cube) :            2024                  2025
+--   Evolution CA Reconnu              +48,4 %   statut 1    +42,1 %   statut 1
+--   Ecart Taux Marge Brute           +0,51 pt   statut 1   -0,00 pt   statut 0   (2024 : juste au-dessus du seuil de 0,5 pt)
+--   Evolution Panier Moyen             +4,7 %   statut 1     +1,1 %   statut 0
+--   Evolution Clients Actifs          +37,5 %   statut 1    +33,4 %   statut 1
+--   Evolution Valeur Stock            +22,7 %   (pas de statut)  +26,7 %
+--   Ecart Taux Rupture Stock         +0,31 pt   statut 0   +0,51 pt   statut -1  (2025 : juste au-dessus du seuil)
+--   Evolution Montant Achat           +57,0 %   (pas de statut)  +42,1 %
+--   Ecart Taux Service Fournisseur   -0,21 pt   statut 0   +0,56 pt   statut 1
+--   Ecart OTD                        -4,50 pt   statut -1  -3,26 pt   statut -1
+--   Evolution Note Moyenne             -1,0 %   statut 0     -0,4 %   statut 0
+--   Evolution ROAS                     +8,8 %   statut 1    +11,0 %   statut 1
+-- Ligne 2023 : A-1, évolutions et statuts vides (pas d'année 2022).
+-- Contrôle des A-1 : chaque « X A-1 » de 2025 doit égaler « X » de 2024 (requête 1).
+SELECT
+    { [Measures].[Evolution CA Reconnu], [Measures].[Statut CA Reconnu],
+      [Measures].[Ecart Taux Marge Brute], [Measures].[Statut Taux Marge Brute],
+      [Measures].[Evolution Panier Moyen], [Measures].[Statut Panier Moyen],
+      [Measures].[Evolution Clients Actifs], [Measures].[Statut Clients Actifs],
+      [Measures].[Evolution Valeur Stock],
+      [Measures].[Ecart Taux Rupture Stock], [Measures].[Statut Taux Rupture Stock],
+      [Measures].[Evolution Montant Achat],
+      [Measures].[Ecart Taux Service Fournisseur], [Measures].[Statut Taux Service Fournisseur],
+      [Measures].[Ecart OTD], [Measures].[Statut OTD],
+      [Measures].[Evolution Note Moyenne], [Measures].[Statut Note Moyenne],
+      [Measures].[Evolution ROAS], [Measures].[Statut ROAS] } ON COLUMNS,
+    NON EMPTY [Date].[Calendrier].[Année].MEMBERS ON ROWS
+FROM [Direction];
+
+-- Couleurs attendues : « Couleur X » = #1E7B4F si statut 1, #B42318 si -1, #5B6B7C sinon (2023 : #5B6B7C partout).
+
+-- Requête 5 : les valeurs A-1 de 2025 (doivent égaler les valeurs 2024 de la requête 1)
+SELECT
+    { [Measures].[CA Reconnu A-1], [Measures].[Taux Marge Brute A-1], [Measures].[Panier Moyen TTC A-1], [Measures].[Clients Actifs A-1],
+      [Measures].[Valeur Stock HT A-1], [Measures].[Taux Rupture Stock A-1], [Measures].[Montant Achat HT A-1],
+      [Measures].[Taux Service Fournisseur A-1], [Measures].[OTD A-1], [Measures].[Note Moyenne A-1], [Measures].[ROAS A-1] } ON COLUMNS,
+    { [Date].[Calendrier].[Année].&[2025] } ON ROWS
+FROM [Direction];

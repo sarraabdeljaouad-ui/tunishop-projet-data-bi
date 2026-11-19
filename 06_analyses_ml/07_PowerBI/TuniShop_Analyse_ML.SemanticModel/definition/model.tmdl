@@ -1,0 +1,37 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Serveur", "Base", "v_dim_client", "v_dim_produit", "v_dim_mois", "v_eda_hypotheses", "v_eda_qualite", "v_eda_vue_ensemble", "v_dm_clients", "v_dm_regles", "v_ml_ventes", "v_ml_churn", "v_ml_demande", "v_ml_retard", "v_ml_modeles", "v_ml_scores_churn", "v_ml_scores_retard", "v_ml_scores_demande", "v_ml_registre", "v_ml_suivi", "v_publications", "Mesures"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table v_dim_client
+ref table v_dim_produit
+ref table v_dim_mois
+ref table v_eda_hypotheses
+ref table v_eda_qualite
+ref table v_eda_vue_ensemble
+ref table v_dm_clients
+ref table v_dm_regles
+ref table v_ml_ventes
+ref table v_ml_churn
+ref table v_ml_demande
+ref table v_ml_retard
+ref table v_ml_modeles
+ref table v_publications
+ref table Mesures
+ref table v_ml_scores_churn
+ref table v_ml_scores_retard
+ref table v_ml_registre
+ref table v_ml_suivi
+ref table v_ml_scores_demande
+
+ref cultureInfo fr-FR
+

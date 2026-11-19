@@ -1,0 +1,70 @@
+/// Scores de churn 2025
+table v_ml_churn
+	lineageTag: 61f9a967-1b37-4c3b-ab00-eca9916586d0
+
+	column client_sk
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6e81f23b-b631-4f5e-94a1-e7d2598bf997
+		summarizeBy: none
+		sourceColumn: client_sk
+
+	column date_observation
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: fb3ca843-3a6e-4efc-aeec-9cbd8a98f471
+		summarizeBy: none
+		sourceColumn: date_observation
+
+	column churn_reel
+		dataType: int64
+		formatString: 0
+		lineageTag: f38e053b-ec8c-4d06-a446-10ce8be51adb
+		summarizeBy: none
+		sourceColumn: churn_reel
+
+	column proba_churn
+		dataType: double
+		formatString: 0.000
+		lineageTag: 51f40a63-73b2-4191-a2dd-a670b9a82aaf
+		summarizeBy: none
+		sourceColumn: proba_churn
+
+	column alerte_churn
+		dataType: int64
+		formatString: 0
+		lineageTag: 5633da53-70e4-4cd5-9018-b7d8c437d0a2
+		summarizeBy: none
+		sourceColumn: alerte_churn
+
+	column decile_risque
+		dataType: int64
+		formatString: 0
+		lineageTag: ca1facbe-abd6-4b42-9766-0d6764c41d8d
+		summarizeBy: none
+		sourceColumn: decile_risque
+
+	column segment_rfm
+		dataType: string
+		lineageTag: bf01ab41-6857-4be8-8d50-411be595cc3a
+		summarizeBy: none
+		sourceColumn: segment_rfm
+
+	column cluster
+		dataType: string
+		lineageTag: fced3810-2b6b-48e3-a016-6052805e10ae
+		summarizeBy: none
+		sourceColumn: cluster
+
+	partition v_ml_churn = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_ml_churn"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"client_sk", "date_observation", "churn_reel", "proba_churn", "alerte_churn", "decile_risque", "segment_rfm", "cluster"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"client_sk", Int64.Type}, {"date_observation", type datetime}, {"churn_reel", Int64.Type}, {"proba_churn", type number}, {"alerte_churn", Int64.Type}, {"decile_risque", Int64.Type}, {"segment_rfm", type text}, {"cluster", type text}})
+				in
+				    Types
+

@@ -1,0 +1,43 @@
+
+USE master;
+GO
+
+-- 1. Supprimer le Data Warehouse
+IF DB_ID('TuniShop_DWH') IS NOT NULL
+BEGIN
+    ALTER DATABASE [TuniShop_DWH]
+    SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+
+    DROP DATABASE [TuniShop_DWH];
+END;
+GO
+
+-- 2. Supprimer le staging intégré
+IF DB_ID('TuniShop_Stg_Integ') IS NOT NULL
+BEGIN
+    ALTER DATABASE [TuniShop_STG_INTEGRATED]
+    SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+
+    DROP DATABASE [TuniShop_STG_INTEGRATED];
+END;
+GO
+
+-- 3. Supprimer le staging nettoyé
+IF DB_ID('TuniShop_Stg_Clean') IS NOT NULL
+BEGIN
+    ALTER DATABASE [TuniShop_STG_CLEAN]
+    SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+
+    DROP DATABASE [TuniShop_STG_CLEAN];
+END;
+GO
+
+-- 4. Supprimer le staging brut
+IF DB_ID('TuniShop_Stg_Raw') IS NOT NULL
+BEGIN
+    ALTER DATABASE [TuniShop_STG_RAW]
+    SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+
+    DROP DATABASE [TuniShop_STG_RAW];
+END;
+GO

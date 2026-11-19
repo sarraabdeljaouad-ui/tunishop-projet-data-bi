@@ -1,0 +1,5 @@
+# Outils de développement (tests, documentation, Git) — en plus de requirements.txt
+-r requirements.txt
+pytest>=8
+pdoc>=14
+nbstripout>=0.7

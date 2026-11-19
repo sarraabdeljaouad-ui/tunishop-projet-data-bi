@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="fb974500-c59b-4cd6-911e-f1253469e189">
+  <ID>Canal</ID>
+  <Name>Canal</Name>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="dac02a4d-9574-4ade-ad0a-c3de19dc8667">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Attributes>
+    <Attribute dwd:design-time-name="b91c6782-1044-473c-aba9-17818a77224a">
+      <ID>Canal Appareil</ID>
+      <Name>Canal et appareil</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c50df5f6-7169-4853-ad52-61e184dae91d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c08e60c8-4310-48e6-ba5d-e5e3e70c97c6">
+            <TableID>olap_v_dim_canal</TableID>
+            <ColumnID>canal_sk</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="003f48f6-6ee3-4bb0-ae1d-dbeebce0fd06">
+        <DataType>WChar</DataType>
+        <DataSize>40</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a3fa1ac1-420d-481f-9392-3093c1ddbba5">
+          <TableID>olap_v_dim_canal</TableID>
+          <ColumnID>libelle_canal</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="fbe7e3f1-f66b-4afb-8a91-f23e75463576">
+          <AttributeID>Canal</AttributeID>
+          <Name>Canal</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="289d4b7e-c0f0-4f2a-8581-dba785e57bb5">
+          <AttributeID>Appareil</AttributeID>
+          <Name>Appareil</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="102ff97c-e303-474e-a1d8-924651b13184">
+      <ID>Canal</ID>
+      <Name>Canal</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="418e6969-6d45-4e37-a3e5-1db3a9c93cf8">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8bf6453b-6375-4561-9711-23b540f8e338">
+            <TableID>olap_v_dim_canal</TableID>
+            <ColumnID>canal</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="6333221b-cf76-4c76-8f57-7bfb6c1a81df">
+      <ID>Appareil</ID>
+      <Name>Appareil</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3f4e5810-9da8-44d4-b26a-97a406f4d128">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="30a4e157-a302-45bd-a025-90ba2835c5cf">
+            <TableID>olap_v_dim_canal</TableID>
+            <ColumnID>appareil</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Name</OrderBy>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="ef4cecf3-0fbf-428a-bc63-d65dee33ee77">
+      <ID>Canaux</ID>
+      <Name>Canaux</Name>
+      <Levels>
+        <Level dwd:design-time-name="0734ff5d-4c7b-45a5-999a-eacaec28906c">
+          <ID>Canal</ID>
+          <Name>Canal</Name>
+          <SourceAttributeID>Canal</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="d20dc78e-6f55-4f2f-aeb4-5dbabcf0aa3d">
+          <ID>Canal Appareil</ID>
+          <Name>Canal et appareil</Name>
+          <SourceAttributeID>Canal Appareil</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

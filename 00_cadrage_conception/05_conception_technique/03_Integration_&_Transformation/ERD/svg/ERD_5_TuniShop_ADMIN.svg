@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990.0" height="1498.0" viewBox="0 0 990.0 1498.0">
+<rect width="990.0" height="1498.0" fill="#FAFBFD"/>
+<text x="40" y="52" font-family="DejaVu Sans" font-size="28" font-weight="bold" fill="#1F3864">TuniShop_ADMIN — ERD (base de contrôle, schéma audit)</text>
+<text x="40" y="82" font-family="DejaVu Sans" font-size="14" fill="#595959">Journal d'exécution de toute la chaîne : un lot (id_chargement) regroupe fichiers, tâches, erreurs et contrôles</text>
+<path d="M600.0 194.5 C496.5 194.5 473.5 562.5 370.0 562.5" fill="none" stroke="#1F3864" stroke-width="1.7" opacity="0.85"/>
+<path d="M586.0 194.5 L600.0 188.5 M586.0 194.5 L600.0 194.5 M586.0 194.5 L600.0 200.5" stroke="#1F3864" stroke-width="1.5" fill="none"/>
+<path d="M378.0 556.5 L378.0 568.5" stroke="#1F3864" stroke-width="1.7"/>
+<path d="M383.0 556.5 L383.0 568.5" stroke="#1F3864" stroke-width="1.7"/>
+<path d="M600.0 439.5 C496.5 439.5 473.5 562.5 370.0 562.5" fill="none" stroke="#1F3864" stroke-width="1.7" opacity="0.85"/>
+<path d="M586.0 439.5 L600.0 433.5 M586.0 439.5 L600.0 439.5 M586.0 439.5 L600.0 445.5" stroke="#1F3864" stroke-width="1.5" fill="none"/>
+<path d="M378.0 556.5 L378.0 568.5" stroke="#1F3864" stroke-width="1.7"/>
+<path d="M383.0 556.5 L383.0 568.5" stroke="#1F3864" stroke-width="1.7"/>
+<path d="M600.0 722.5 C496.5 722.5 473.5 562.5 370.0 562.5" fill="none" stroke="#1F3864" stroke-width="1.7" opacity="0.85" stroke-dasharray="7 5"/>
+<path d="M586.0 722.5 L600.0 716.5 M586.0 722.5 L600.0 722.5 M586.0 722.5 L600.0 728.5" stroke="#1F3864" stroke-width="1.5" fill="none"/>
+<path d="M378.0 556.5 L378.0 568.5" stroke="#1F3864" stroke-width="1.7"/>
+<path d="M383.0 556.5 L383.0 568.5" stroke="#1F3864" stroke-width="1.7"/>
+<path d="M600.0 1005.5 C496.5 1005.5 473.5 562.5 370.0 562.5" fill="none" stroke="#1F3864" stroke-width="1.7" opacity="0.85"/>
+<path d="M586.0 1005.5 L600.0 999.5 M586.0 1005.5 L600.0 1005.5 M586.0 1005.5 L600.0 1011.5" stroke="#1F3864" stroke-width="1.5" fill="none"/>
+<path d="M378.0 556.5 L378.0 568.5" stroke="#1F3864" stroke-width="1.7"/>
+<path d="M383.0 556.5 L383.0 568.5" stroke="#1F3864" stroke-width="1.7"/>
+<rect x="44.0" y="521.0" width="330" height="251" rx="8" fill="#000" opacity="0.10"/>
+<rect x="40.0" y="517.0" width="330" height="251" rx="8" fill="#FFF" stroke="#1F3864" stroke-width="2"/>
+<path d="M40.0 553.0 V525.0 Q40.0 517.0 48.0 517.0 H362.0 Q370.0 517.0 370.0 525.0 V553.0 Z" fill="#1F3864"/>
+<text x="52.0" y="540.0" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFF">audit.execution_lot</text>
+<text x="360.0" y="540.0" font-family="DejaVu Sans" font-size="9.5" fill="#FFF" text-anchor="end" opacity="0.9">EXÉCUTION</text>
+<rect x="42.0" y="553.0" width="326" height="19" fill="#FFF2CC"/>
+<rect x="49.0" y="556.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="66.0" y="566.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="92.0" y="566.5" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">id_chargement</text>
+<text x="360.0" y="566.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT IDENTITY ●</text>
+<rect x="42.0" y="572.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="92.0" y="585.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nom_chaine</text>
+<text x="360.0" y="585.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(100) ●</text>
+<text x="92.0" y="604.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">declencheur</text>
+<text x="360.0" y="604.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(50) ●</text>
+<rect x="42.0" y="610.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="92.0" y="623.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_debut</text>
+<text x="360.0" y="623.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATETIME2(0) ●</text>
+<text x="92.0" y="642.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_fin</text>
+<text x="360.0" y="642.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATETIME2(0)</text>
+<rect x="42.0" y="648.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="92.0" y="661.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">duree_s</text>
+<text x="360.0" y="661.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">calculée</text>
+<text x="92.0" y="680.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">statut</text>
+<text x="360.0" y="680.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(12) ●</text>
+<rect x="42.0" y="686.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="92.0" y="699.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">utilisateur</text>
+<text x="360.0" y="699.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">SYSNAME ●</text>
+<text x="92.0" y="718.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">machine</text>
+<text x="360.0" y="718.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(128) ●</text>
+<rect x="42.0" y="724.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="92.0" y="737.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">execution_ssis_id</text>
+<text x="360.0" y="737.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIGINT</text>
+<text x="92.0" y="756.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">commentaire</text>
+<text x="360.0" y="756.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(400)</text>
+<rect x="604.0" y="134.0" width="330" height="213" rx="8" fill="#000" opacity="0.10"/>
+<rect x="600.0" y="130.0" width="330" height="213" rx="8" fill="#FFF" stroke="#1F3864" stroke-width="2"/>
+<path d="M600.0 166.0 V138.0 Q600.0 130.0 608.0 130.0 H922.0 Q930.0 130.0 930.0 138.0 V166.0 Z" fill="#1F3864"/>
+<text x="612.0" y="153.0" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFF">audit.fichier_source</text>
+<text x="920.0" y="153.0" font-family="DejaVu Sans" font-size="9.5" fill="#FFF" text-anchor="end" opacity="0.9">EXÉCUTION</text>
+<rect x="602.0" y="166.0" width="326" height="19" fill="#FFF2CC"/>
+<rect x="609.0" y="169.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="626.0" y="179.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="652.0" y="179.5" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">id_fichier</text>
+<text x="920.0" y="179.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT IDENTITY ●</text>
+<rect x="602.0" y="185.0" width="326" height="19" fill="#DCE3F0"/><rect x="602.0" y="185.0" width="5" height="19" fill="#1F3864"/>
+<rect x="609.0" y="188.0" width="34" height="13" rx="3" fill="#1F3864"/><text x="626.0" y="198.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">FK</text>
+<text x="652.0" y="198.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">id_chargement</text>
+<text x="920.0" y="198.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<text x="652.0" y="217.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">table_cible</text>
+<text x="920.0" y="217.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">SYSNAME ●</text>
+<rect x="602.0" y="223.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="236.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">chemin_fichier</text>
+<text x="920.0" y="236.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(400) ●</text>
+<text x="652.0" y="255.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">taille_octets</text>
+<text x="920.0" y="255.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIGINT</text>
+<rect x="602.0" y="261.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="274.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">empreinte_sha256</text>
+<text x="920.0" y="274.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">CHAR(64)</text>
+<text x="652.0" y="293.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nb_lignes_fichier</text>
+<text x="920.0" y="293.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<rect x="602.0" y="299.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="312.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nb_lignes_chargees</text>
+<text x="920.0" y="312.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<text x="652.0" y="331.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_chargement</text>
+<text x="920.0" y="331.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATETIME2(0) ●</text>
+<rect x="604.0" y="379.0" width="330" height="251" rx="8" fill="#000" opacity="0.10"/>
+<rect x="600.0" y="375.0" width="330" height="251" rx="8" fill="#FFF" stroke="#1F3864" stroke-width="2"/>
+<path d="M600.0 411.0 V383.0 Q600.0 375.0 608.0 375.0 H922.0 Q930.0 375.0 930.0 383.0 V411.0 Z" fill="#1F3864"/>
+<text x="612.0" y="398.0" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFF">audit.execution_tache</text>
+<text x="920.0" y="398.0" font-family="DejaVu Sans" font-size="9.5" fill="#FFF" text-anchor="end" opacity="0.9">EXÉCUTION</text>
+<rect x="602.0" y="411.0" width="326" height="19" fill="#FFF2CC"/>
+<rect x="609.0" y="414.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="626.0" y="424.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="652.0" y="424.5" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">id_tache</text>
+<text x="920.0" y="424.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIGINT IDENTITY ●</text>
+<rect x="602.0" y="430.0" width="326" height="19" fill="#DCE3F0"/><rect x="602.0" y="430.0" width="5" height="19" fill="#1F3864"/>
+<rect x="609.0" y="433.0" width="34" height="13" rx="3" fill="#1F3864"/><text x="626.0" y="443.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">FK</text>
+<text x="652.0" y="443.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">id_chargement</text>
+<text x="920.0" y="443.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<text x="652.0" y="462.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">couche</text>
+<text x="920.0" y="462.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(20) ●</text>
+<rect x="602.0" y="468.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="481.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">objet</text>
+<text x="920.0" y="481.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(200) ●</text>
+<text x="652.0" y="500.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nb_lus</text>
+<text x="920.0" y="500.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<rect x="602.0" y="506.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="519.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nb_inseres</text>
+<text x="920.0" y="519.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<text x="652.0" y="538.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nb_maj</text>
+<text x="920.0" y="538.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<rect x="602.0" y="544.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="557.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nb_supprimes</text>
+<text x="920.0" y="557.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<text x="652.0" y="576.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">nb_rejetes</text>
+<text x="920.0" y="576.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<rect x="602.0" y="582.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="595.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">statut</text>
+<text x="920.0" y="595.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(12) ●</text>
+<text x="652.0" y="614.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_fin</text>
+<text x="920.0" y="614.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATETIME2(0) ●</text>
+<rect x="604.0" y="662.0" width="330" height="251" rx="8" fill="#000" opacity="0.10"/>
+<rect x="600.0" y="658.0" width="330" height="251" rx="8" fill="#FFF" stroke="#1F3864" stroke-width="2"/>
+<path d="M600.0 694.0 V666.0 Q600.0 658.0 608.0 658.0 H922.0 Q930.0 658.0 930.0 666.0 V694.0 Z" fill="#1F3864"/>
+<text x="612.0" y="681.0" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFF">audit.journal_erreur</text>
+<text x="920.0" y="681.0" font-family="DejaVu Sans" font-size="9.5" fill="#FFF" text-anchor="end" opacity="0.9">EXÉCUTION</text>
+<rect x="602.0" y="694.0" width="326" height="19" fill="#FFF2CC"/>
+<rect x="609.0" y="697.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="626.0" y="707.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="652.0" y="707.5" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">id_erreur</text>
+<text x="920.0" y="707.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIGINT IDENTITY ●</text>
+<rect x="602.0" y="713.0" width="326" height="19" fill="#DCE3F0"/><rect x="602.0" y="713.0" width="5" height="19" fill="#1F3864"/>
+<rect x="609.0" y="716.0" width="34" height="13" rx="3" fill="#1F3864" stroke="#FFF" stroke-dasharray="2 1.5" stroke-width="0.8"/><text x="626.0" y="726.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">LL</text>
+<text x="652.0" y="726.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">id_chargement</text>
+<text x="920.0" y="726.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<text x="652.0" y="745.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">objet</text>
+<text x="920.0" y="745.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(200) ●</text>
+<rect x="602.0" y="751.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="764.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">numero_erreur</text>
+<text x="920.0" y="764.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<text x="652.0" y="783.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">severite</text>
+<text x="920.0" y="783.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<rect x="602.0" y="789.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="802.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">etat</text>
+<text x="920.0" y="802.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<text x="652.0" y="821.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">ligne</text>
+<text x="920.0" y="821.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT</text>
+<rect x="602.0" y="827.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="840.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">procedure_sql</text>
+<text x="920.0" y="840.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(200)</text>
+<text x="652.0" y="859.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">message</text>
+<text x="920.0" y="859.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(4000)</text>
+<rect x="602.0" y="865.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="878.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">source</text>
+<text x="920.0" y="878.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(10) ●</text>
+<text x="652.0" y="897.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_erreur</text>
+<text x="920.0" y="897.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATETIME2(0) ●</text>
+<rect x="44.0" y="390.0" width="330" height="99" rx="8" fill="#000" opacity="0.10"/>
+<rect x="40.0" y="386.0" width="330" height="99" rx="8" fill="#FFF" stroke="#C55A11" stroke-width="2"/>
+<path d="M40.0 422.0 V394.0 Q40.0 386.0 48.0 386.0 H362.0 Q370.0 386.0 370.0 394.0 V422.0 Z" fill="#C55A11"/>
+<text x="52.0" y="409.0" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFF">audit.parametre</text>
+<text x="360.0" y="409.0" font-family="DejaVu Sans" font-size="9.5" fill="#FFF" text-anchor="end" opacity="0.9">CONTRÔLE</text>
+<rect x="42.0" y="422.0" width="326" height="19" fill="#FFF2CC"/>
+<rect x="49.0" y="425.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="66.0" y="435.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="92.0" y="435.5" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">cle</text>
+<text x="360.0" y="435.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(50) ●</text>
+<rect x="42.0" y="441.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="92.0" y="454.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">valeur</text>
+<text x="360.0" y="454.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DECIMAL(18,4) ●</text>
+<text x="92.0" y="473.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">description</text>
+<text x="360.0" y="473.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(200) ●</text>
+<rect x="604.0" y="945.0" width="330" height="251" rx="8" fill="#000" opacity="0.10"/>
+<rect x="600.0" y="941.0" width="330" height="251" rx="8" fill="#FFF" stroke="#C55A11" stroke-width="2"/>
+<path d="M600.0 977.0 V949.0 Q600.0 941.0 608.0 941.0 H922.0 Q930.0 941.0 930.0 949.0 V977.0 Z" fill="#C55A11"/>
+<text x="612.0" y="964.0" font-family="DejaVu Sans" font-size="14" font-weight="bold" fill="#FFF">audit.controle_resultat</text>
+<text x="920.0" y="964.0" font-family="DejaVu Sans" font-size="9.5" fill="#FFF" text-anchor="end" opacity="0.9">CONTRÔLE</text>
+<rect x="602.0" y="977.0" width="326" height="19" fill="#FFF2CC"/>
+<rect x="609.0" y="980.0" width="34" height="13" rx="3" fill="#BF8F00"/><text x="626.0" y="990.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">PK</text>
+<text x="652.0" y="990.5" font-family="DejaVu Sans" font-size="10.5" font-weight="bold" fill="#1A1A1A">id_controle</text>
+<text x="920.0" y="990.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIGINT IDENTITY ●</text>
+<rect x="602.0" y="996.0" width="326" height="19" fill="#DCE3F0"/><rect x="602.0" y="996.0" width="5" height="19" fill="#1F3864"/>
+<rect x="609.0" y="999.0" width="34" height="13" rx="3" fill="#1F3864"/><text x="626.0" y="1009.5" font-family="DejaVu Sans" font-size="8.5" font-weight="bold" fill="#FFF" text-anchor="middle">FK</text>
+<text x="652.0" y="1009.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">id_chargement</text>
+<text x="920.0" y="1009.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">INT ●</text>
+<text x="652.0" y="1028.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">code_controle</text>
+<text x="920.0" y="1028.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(20) ●</text>
+<rect x="602.0" y="1034.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="1047.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">categorie</text>
+<text x="920.0" y="1047.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(20) ●</text>
+<text x="652.0" y="1066.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">objet</text>
+<text x="920.0" y="1066.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(200) ●</text>
+<rect x="602.0" y="1072.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="1085.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">description</text>
+<text x="920.0" y="1085.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">NVARCHAR(400) ●</text>
+<text x="652.0" y="1104.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">valeur_mesuree</text>
+<text x="920.0" y="1104.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DECIMAL(18,4)</text>
+<rect x="602.0" y="1110.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="1123.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">seuil</text>
+<text x="920.0" y="1123.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DECIMAL(18,4)</text>
+<text x="652.0" y="1142.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">resultat</text>
+<text x="920.0" y="1142.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">VARCHAR(12) ●</text>
+<rect x="602.0" y="1148.0" width="326" height="19" fill="#F7F7F7"/>
+<text x="652.0" y="1161.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">bloquant</text>
+<text x="920.0" y="1161.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">BIT ●</text>
+<text x="652.0" y="1180.5" font-family="DejaVu Sans" font-size="10.5" fill="#1A1A1A">date_controle</text>
+<text x="920.0" y="1180.5" font-family="DejaVu Sans" font-size="9" fill="#6B6B6B" text-anchor="end">DATETIME2(0) ●</text>
+<rect x="40" y="1242.0" width="410" height="206" rx="8" fill="#FFF" stroke="#BFBFBF"/>
+<text x="52" y="1264.0" font-family="DejaVu Sans" font-size="13" font-weight="bold" fill="#1F3864">Légende</text>
+<text x="52" y="1284.0" font-family="DejaVu Sans" font-size="10">id_chargement est aussi présent dans toutes les tables des autres bases (colonne technique)</text>
+<text x="52" y="1304.0" font-family="DejaVu Sans" font-size="10"><tspan font-weight="bold">PK</tspan> clé primaire · <tspan font-weight="bold">FK</tspan> clé étrangère (trait plein, contrainte SQL)</text>
+<text x="52" y="1324.0" font-family="DejaVu Sans" font-size="10"><tspan font-weight="bold">LL</tspan> lien logique (pointillés, non contraint en base)</text>
+<text x="52" y="1344.0" font-family="DejaVu Sans" font-size="10">● colonne NOT NULL — <tspan font-style="italic" fill="#9A9A9A">gris : colonne technique</tspan></text>
+<text x="52" y="1364.0" font-family="DejaVu Sans" font-size="10">Patte d'oie : plusieurs lignes → une seule ligne référencée</text>
+<rect x="52" y="1373.0" width="16" height="13" rx="2" fill="#C55A11"/><text x="76" y="1384.0" font-family="DejaVu Sans" font-size="10">Contrôle</text>
+<rect x="52" y="1391.0" width="16" height="13" rx="2" fill="#1F3864"/><text x="76" y="1402.0" font-family="DejaVu Sans" font-size="10">Exécution</text>
+<text x="950.0" y="1480.0" font-family="DejaVu Sans" font-size="10" fill="#9A9A9A" text-anchor="end">TuniShop — TuniShop_ADMIN — généré depuis le modèle de métadonnées du projet</text>
+</svg>

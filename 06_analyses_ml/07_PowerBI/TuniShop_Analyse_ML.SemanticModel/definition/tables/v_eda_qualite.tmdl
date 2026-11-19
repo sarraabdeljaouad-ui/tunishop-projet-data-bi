@@ -1,0 +1,61 @@
+/// Contrôles de qualité C01-C11
+table v_eda_qualite
+	lineageTag: 8d0bd590-30cc-4b64-b2e6-424f4ea6504f
+
+	column controle
+		dataType: string
+		lineageTag: c6d0e308-9864-4341-9742-e06934658644
+		summarizeBy: none
+		sourceColumn: controle
+
+	column libelle
+		dataType: string
+		lineageTag: f790f16d-6018-4ac8-b747-ac2c879aa562
+		summarizeBy: none
+		sourceColumn: libelle
+
+	column verifications
+		dataType: int64
+		formatString: 0
+		lineageTag: 951b3af9-4dc0-4e57-b758-98eab832c78a
+		summarizeBy: none
+		sourceColumn: verifications
+
+	column ok
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b6439cf-3528-4222-80b9-c04fb6bf6886
+		summarizeBy: none
+		sourceColumn: ok
+
+	column ecart
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c616d56-28c4-487b-9c38-64754236d3cc
+		summarizeBy: none
+		sourceColumn: ecart
+
+	column info
+		dataType: int64
+		formatString: 0
+		lineageTag: 863bbff5-32af-4c08-b868-9d98120df36a
+		summarizeBy: none
+		sourceColumn: info
+
+	column statut
+		dataType: string
+		lineageTag: 005f02dc-4c68-4030-9bc0-ad62a1307523
+		summarizeBy: none
+		sourceColumn: statut
+
+	partition v_eda_qualite = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_eda_qualite"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"controle", "libelle", "verifications", "ok", "ecart", "info", "statut"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"controle", type text}, {"libelle", type text}, {"verifications", Int64.Type}, {"ok", Int64.Type}, {"ecart", Int64.Type}, {"info", Int64.Type}, {"statut", type text}})
+				in
+				    Types
+

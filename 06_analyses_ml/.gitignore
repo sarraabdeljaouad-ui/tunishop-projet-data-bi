@@ -1,0 +1,20 @@
+# --- TuniShop · phase analyse : ce qui ne va PAS dans Git ---
+# Données et résultats régénérés à chaque exécution (ils viennent du DWH)
+05_Data/features/
+05_Data/copie_dwh/
+06_Exports/Predictions/
+06_Exports/Modeles/*.joblib
+06_Exports/Journaux/
+# Python et Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+*.tmp
+# Power BI : cache et réglages locaux du projet .pbip
+07_PowerBI/**/.pbi/localSettings.json
+07_PowerBI/**/.pbi/cache.abf
+# Divers
+.env
+*.log
+~$*

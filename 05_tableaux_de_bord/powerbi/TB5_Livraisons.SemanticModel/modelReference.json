@@ -1,0 +1,6 @@
+{
+  "version": "2.0",
+  "connectionString": "Data Source=localhost\\DEV;Initial Catalog=TuniShop_OLAP;Cube=Livraisons",
+  "isMultiDimentional": true,
+  "connectionType": "analysisServicesDatabaseLive"
+}

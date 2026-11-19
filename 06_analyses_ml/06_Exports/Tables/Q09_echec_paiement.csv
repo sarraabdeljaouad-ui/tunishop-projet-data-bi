@@ -1,0 +1,6 @@
+﻿mode_paiement;tentatives;taux_reussite;taux_echec
+carte_bancaire;21838;0,8762707207619745;0,12372927923802546
+carte_prepayee;4452;0,8852201257861635;0,11477987421383651
+paiement_a_la_livraison;28282;1,0;0,0
+portefeuille_mobile;8455;0,8716735659373152;0,12832643406268485
+virement;1464;1,0;0,0

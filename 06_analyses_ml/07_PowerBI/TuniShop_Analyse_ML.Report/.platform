@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TuniShop_Analyse_ML"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7c06497a-85be-4f2b-9c8c-fc838dda1a16"
+  }
+}

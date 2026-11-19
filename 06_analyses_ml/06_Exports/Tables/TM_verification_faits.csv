@@ -1,0 +1,17 @@
+﻿theme;polarite;avis;part_colis_en_retard;part_retour;motifs_lies;part_retour_motif_lie
+Emballage;négatif;205;0,35121951219512193;0,16585365853658537;colis_endommage;0,014634146341463415
+Emballage;positif;577;0,1611785095320624;0,07625649913344887;colis_endommage;0,0
+Fidélité;positif;563;0,14209591474245115;0,055062166962699825;;
+Livraison;négatif;401;0,26683291770573564;0,314214463840399;retard_livraison, livraison_trop_tardive, echec_livraison;0,0024937655860349127
+Livraison;positif;1159;0,13028472821397757;0,07851596203623813;retard_livraison, livraison_trop_tardive, echec_livraison;0,0
+Prix;positif;580;0,16551724137931034;0,06206896551724138;;
+Qualité produit;neutre;180;0,2722222222222222;0,2388888888888889;ne_correspond_pas_a_la_description, produit_defectueux, qualite_decevante;0,12777777777777777
+Qualité produit;négatif;214;0,3037383177570093;0,35046728971962615;ne_correspond_pas_a_la_description, produit_defectueux, qualite_decevante;0,2383177570093458
+Qualité produit;positif;1941;0,17259144770736734;0,0865533230293663;ne_correspond_pas_a_la_description, produit_defectueux, qualite_decevante;0,00927357032457496
+Satisfaction générale;neutre;364;0,3598901098901099;0,1565934065934066;;
+Satisfaction générale;négatif;190;0,2789473684210526;0,3684210526315789;;
+Satisfaction générale;positif;3451;0,14749348015068095;0,07157345696899449;;
+Service client;négatif;104;0,3076923076923077;0,3942307692307692;;
+Taille et retours;négatif;105;0,20952380952380953;0,4;taille_inadaptee;0,01904761904761905
+Tous les avis commentés;toutes;6081;0,18763361289261635;0,12070383160664365;;
+Tous les avis;toutes;9314;0,1847756066136998;0,12035645265192184;;

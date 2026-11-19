@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="ec9d715f-5a05-4a79-81b6-500302c3c1d4">
+  <ID>Marketing Clients</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Marketing</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="180657bf-5597-4df9-abaa-22e3f29e70a8">
+          <ID>Marketing</ID>
+          <Name>Marketing</Name>
+          <Source xsi:type="DsvTableBinding">
+            <DataSourceViewID>TuniShop</DataSourceViewID>
+            <TableID>olap_v_fact_marketing_quotidien</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Commandes</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="ab8dba49-ce74-4216-9440-19887d38dbcc">
+          <ID>Commandes</ID>
+          <Name>Commandes</Name>
+          <Source xsi:type="DsvTableBinding">
+            <DataSourceViewID>TuniShop</DataSourceViewID>
+            <TableID>olap_v_fact_commandes</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Clients distincts</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="fa424e73-a662-4dd6-9d38-4ca766771363">
+          <ID>Clients_distincts</ID>
+          <Name>Clients_distincts</Name>
+          <Source xsi:type="DsvTableBinding">
+            <DataSourceViewID>TuniShop</DataSourceViewID>
+            <TableID>olap_v_fact_commandes</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

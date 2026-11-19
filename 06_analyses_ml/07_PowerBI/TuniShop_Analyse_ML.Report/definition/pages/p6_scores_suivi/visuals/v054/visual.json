@@ -1,0 +1,210 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v054",
+  "position": {
+    "x": 15.6328301063804,
+    "y": 422.08641287227078,
+    "z": 54000,
+    "height": 281.39094191484719,
+    "width": 617.49678920202575,
+    "tabOrder": 54000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_suivi"
+                    }
+                  },
+                  "Property": "statut"
+                }
+              },
+              "queryRef": "v_ml_suivi.statut",
+              "nativeQueryRef": "statut",
+              "displayName": "Statut"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_suivi"
+                    }
+                  },
+                  "Property": "cas"
+                }
+              },
+              "queryRef": "v_ml_suivi.cas",
+              "nativeQueryRef": "cas",
+              "displayName": "Cas"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_suivi"
+                    }
+                  },
+                  "Property": "objet"
+                }
+              },
+              "queryRef": "v_ml_suivi.objet",
+              "nativeQueryRef": "objet",
+              "displayName": "Objet"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_suivi"
+                    }
+                  },
+                  "Property": "periode"
+                }
+              },
+              "queryRef": "v_ml_suivi.periode",
+              "nativeQueryRef": "periode",
+              "displayName": "Période"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_suivi"
+                    }
+                  },
+                  "Property": "indicateur"
+                }
+              },
+              "queryRef": "v_ml_suivi.indicateur",
+              "nativeQueryRef": "indicateur",
+              "displayName": "Indicateur"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_suivi"
+                    }
+                  },
+                  "Property": "valeur"
+                }
+              },
+              "queryRef": "v_ml_suivi.valeur",
+              "nativeQueryRef": "valeur",
+              "displayName": "Valeur"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "v_ml_suivi"
+                    }
+                  },
+                  "Property": "seuil"
+                }
+              },
+              "queryRef": "v_ml_suivi.seuil",
+              "nativeQueryRef": "seuil",
+              "displayName": "Seuil"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "v_ml_suivi"
+                  }
+                },
+                "Property": "statut"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Suivi des modèles (alertes en premier)'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F4E79'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9E1EA'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

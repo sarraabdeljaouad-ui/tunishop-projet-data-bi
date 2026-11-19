@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.4.0/schema.json",
+  "name": "84bb1fd41345812a9509",
+  "displayName": "Produits et marge",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

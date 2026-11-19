@@ -1,0 +1,10 @@
+﻿cas;variable;part_vide_apprentissage;traitement;raison
+churn;note_moyenne;0,624283459333721;médiane;client sans avis -> la variable a_donne_avis porte l'information
+churn;part_livraisons_retard;0,048267840824125614;médiane;aucune livraison reçue à la date d'observation
+churn;retard_max_j;0,048267840824125614;médiane;aucune livraison reçue à la date d'observation
+churn;tranche_age;0,03194317520976988;modalité « inconnu »;clients professionnels (pas d'âge)
+churn;genre;0,0007061560189415968;modalité « inconnu »;
+demande;meme_mois_annee_prec;0,17371042905351117;médiane;produit pas encore vendu ce mois-là l'année précédente
+demande;moy_annee_prec;0,08404306604531576;médiane;produit nouveau (indicateur nouveau_produit)
+demande;moy_3_derniers_mois;0,08404306604531576;médiane;produit non vendu en fin d'année précédente
+demande;part_rupture_annee_prec;0,08404306604531576;médiane;produit nouveau

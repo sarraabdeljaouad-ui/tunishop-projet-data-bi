@@ -1,0 +1,251 @@
+﻿/* =====================================================================
+   11e_Calculs_Cube_Marketing_Clients.mdx — TuniShop — script de calcul du cube [Marketing Clients]
+   ---------------------------------------------------------------------
+   Cube 5 — Marketing et clients : campagnes, acquisition, fidélisation.
+   Où le coller : Visual Studio → cube Marketing Clients → onglet « Calculs »
+   → « Affichage du script » → Ctrl+A → coller → Ctrl+S → Déployer.
+   Mesures de base attendues dans ce cube : groupes Marketing (Depense HT, Impressions, Clics, Commandes Attribuees, Nouveaux Clients Attribues, CA Attribue TTC), Commandes (Nb Commandes, Montant Total TTC, Nb Premieres Commandes) et Clients distincts (Nb Clients)
+   Règles : Dictionnaire_KPI.xlsx (partie 4). Divisions protégées (NULL si dénominateur vide).
+   ===================================================================== */
+CALCULATE;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CPC] AS
+    IIF([Measures].[Clics] = 0, NULL, [Measures].[Depense HT] / [Measures].[Clics]),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'KPI\Marketing', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CPM] AS
+    IIF([Measures].[Impressions] = 0, NULL, [Measures].[Depense HT] * 1000 / [Measures].[Impressions]),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'KPI\Marketing', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Clic] AS
+    IIF([Measures].[Impressions] = 0, NULL, [Measures].[Clics] / [Measures].[Impressions]),
+    FORMAT_STRING = "0.000%", DISPLAY_FOLDER = 'KPI\Marketing', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Conversion] AS
+    IIF([Measures].[Clics] = 0, NULL, [Measures].[Commandes Attribuees] / [Measures].[Clics]),
+    FORMAT_STRING = "0.000%", DISPLAY_FOLDER = 'KPI\Marketing', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CAC] AS
+    IIF([Measures].[Nouveaux Clients Attribues] = 0, NULL, [Measures].[Depense HT] / [Measures].[Nouveaux Clients Attribues]),
+    FORMAT_STRING = "#,##0.00", DISPLAY_FOLDER = 'KPI\Marketing', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[ROAS] AS
+    IIF([Measures].[Depense HT] = 0, NULL, [Measures].[CA Attribue TTC] / [Measures].[Depense HT]),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'KPI\Marketing', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Reconnu TTC] AS
+    ([Measures].[Montant Total TTC], [Statut Commande].[Famille Statut].&[aboutie]),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+-- Clients actifs = clients distincts, hors commandes en échec de paiement
+CREATE MEMBER CURRENTCUBE.[Measures].[Clients Actifs] AS
+    Aggregate(
+        Except([Statut Commande].[Statut].[Statut].MEMBERS, { [Statut Commande].[Statut].&[paiement_echoue] }),
+        [Measures].[Nb Clients]),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'KPI\Clients', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Nouveaux Clients] AS
+    [Measures].[Nb Premieres Commandes],
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'KPI\Clients', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Par Client Actif] AS
+    IIF([Measures].[Clients Actifs] = 0, NULL, [Measures].[CA Reconnu TTC] / [Measures].[Clients Actifs]),
+    FORMAT_STRING = "#,##0.00", DISPLAY_FOLDER = 'KPI\Clients', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Commandes Hors Echec Paiement] AS
+    Aggregate(
+        Except([Statut Commande].[Statut].[Statut].MEMBERS, { [Statut Commande].[Statut].&[paiement_echoue] }),
+        [Measures].[Nb Commandes]),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'KPI\Clients', VISIBLE = 0;
+
+-- Clients ayant passé au moins 2 commandes (hors échec de paiement) sur la période affichée
+CREATE MEMBER CURRENTCUBE.[Measures].[Clients Fideles] AS
+    Count(Filter(EXISTING [Client].[Client].[Client].MEMBERS,
+                 [Measures].[Commandes Hors Echec Paiement] >= 2)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'KPI\Clients', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Reachat] AS
+    IIF([Measures].[Clients Actifs] = 0, NULL, [Measures].[Clients Fideles] / [Measures].[Clients Actifs]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Clients', VISIBLE = 1;
+
+/* =====================================================================
+   v2 (29/10/2026) — comparaison à l'année précédente et feux de tendance (même règle que le cube Direction)
+   A-1 : même KPI sur la période parallèle de l'année précédente (hiérarchie Calendrier).
+   Evolution : variation relative ; Ecart : différence en points de pourcentage (taux).
+   Statut : 1 favorable, 0 stable (|évolution| < 2 % ou |écart| < 0,5 point), -1 défavorable ; NULL sans année précédente.
+   Couleur : #1E7B4F, #5B6B7C, #B42318. Pas de feu pour les KPI sans sens favorable (volumes, parts, remises, valeur du stock).
+   ===================================================================== */
+
+/* ---------- Année précédente ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Depense HT A-1] AS
+    ([Measures].[Depense HT],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[ROAS A-1] AS
+    ([Measures].[ROAS],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[CAC A-1] AS
+    ([Measures].[CAC],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[CPC A-1] AS
+    ([Measures].[CPC],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Conversion A-1] AS
+    ([Measures].[Taux Conversion],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.000%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Reconnu A-1] AS
+    ([Measures].[CA Reconnu TTC],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Clients Actifs A-1] AS
+    ([Measures].[Clients Actifs],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Nouveaux Clients A-1] AS
+    ([Measures].[Nouveaux Clients],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Par Client Actif A-1] AS
+    ([Measures].[CA Par Client Actif],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Clients Fideles A-1] AS
+    ([Measures].[Clients Fideles],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Reachat A-1] AS
+    ([Measures].[Taux Reachat],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+
+/* ---------- Évolutions et écarts ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Depense HT] AS
+    IIF(IsEmpty([Measures].[Depense HT]) OR IsEmpty([Measures].[Depense HT A-1]) OR [Measures].[Depense HT A-1] = 0, NULL,
+        ([Measures].[Depense HT] - [Measures].[Depense HT A-1]) / [Measures].[Depense HT A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution ROAS] AS
+    IIF(IsEmpty([Measures].[ROAS]) OR IsEmpty([Measures].[ROAS A-1]) OR [Measures].[ROAS A-1] = 0, NULL,
+        ([Measures].[ROAS] - [Measures].[ROAS A-1]) / [Measures].[ROAS A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution CAC] AS
+    IIF(IsEmpty([Measures].[CAC]) OR IsEmpty([Measures].[CAC A-1]) OR [Measures].[CAC A-1] = 0, NULL,
+        ([Measures].[CAC] - [Measures].[CAC A-1]) / [Measures].[CAC A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution CPC] AS
+    IIF(IsEmpty([Measures].[CPC]) OR IsEmpty([Measures].[CPC A-1]) OR [Measures].[CPC A-1] = 0, NULL,
+        ([Measures].[CPC] - [Measures].[CPC A-1]) / [Measures].[CPC A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Taux Conversion] AS
+    IIF(IsEmpty([Measures].[Taux Conversion]) OR IsEmpty([Measures].[Taux Conversion A-1]) OR [Measures].[Taux Conversion A-1] = 0, NULL,
+        ([Measures].[Taux Conversion] - [Measures].[Taux Conversion A-1]) / [Measures].[Taux Conversion A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution CA Reconnu] AS
+    IIF(IsEmpty([Measures].[CA Reconnu TTC]) OR IsEmpty([Measures].[CA Reconnu A-1]) OR [Measures].[CA Reconnu A-1] = 0, NULL,
+        ([Measures].[CA Reconnu TTC] - [Measures].[CA Reconnu A-1]) / [Measures].[CA Reconnu A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Clients Actifs] AS
+    IIF(IsEmpty([Measures].[Clients Actifs]) OR IsEmpty([Measures].[Clients Actifs A-1]) OR [Measures].[Clients Actifs A-1] = 0, NULL,
+        ([Measures].[Clients Actifs] - [Measures].[Clients Actifs A-1]) / [Measures].[Clients Actifs A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Nouveaux Clients] AS
+    IIF(IsEmpty([Measures].[Nouveaux Clients]) OR IsEmpty([Measures].[Nouveaux Clients A-1]) OR [Measures].[Nouveaux Clients A-1] = 0, NULL,
+        ([Measures].[Nouveaux Clients] - [Measures].[Nouveaux Clients A-1]) / [Measures].[Nouveaux Clients A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution CA Par Client Actif] AS
+    IIF(IsEmpty([Measures].[CA Par Client Actif]) OR IsEmpty([Measures].[CA Par Client Actif A-1]) OR [Measures].[CA Par Client Actif A-1] = 0, NULL,
+        ([Measures].[CA Par Client Actif] - [Measures].[CA Par Client Actif A-1]) / [Measures].[CA Par Client Actif A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Clients Fideles] AS
+    IIF(IsEmpty([Measures].[Clients Fideles]) OR IsEmpty([Measures].[Clients Fideles A-1]) OR [Measures].[Clients Fideles A-1] = 0, NULL,
+        ([Measures].[Clients Fideles] - [Measures].[Clients Fideles A-1]) / [Measures].[Clients Fideles A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Reachat] AS
+    IIF(IsEmpty([Measures].[Taux Reachat]) OR IsEmpty([Measures].[Taux Reachat A-1]), NULL,
+        ([Measures].[Taux Reachat] - [Measures].[Taux Reachat A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+
+/* ---------- Feux de tendance ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut ROAS] AS
+    IIF(IsEmpty([Measures].[Evolution ROAS]), NULL,
+        IIF([Measures].[Evolution ROAS] > 0.02, 1, IIF([Measures].[Evolution ROAS] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut CAC] AS
+    IIF(IsEmpty([Measures].[Evolution CAC]), NULL,
+        IIF([Measures].[Evolution CAC] > 0.02, -1, IIF([Measures].[Evolution CAC] < -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut CPC] AS
+    IIF(IsEmpty([Measures].[Evolution CPC]), NULL,
+        IIF([Measures].[Evolution CPC] > 0.02, -1, IIF([Measures].[Evolution CPC] < -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Conversion] AS
+    IIF(IsEmpty([Measures].[Evolution Taux Conversion]), NULL,
+        IIF([Measures].[Evolution Taux Conversion] > 0.02, 1, IIF([Measures].[Evolution Taux Conversion] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut CA Reconnu] AS
+    IIF(IsEmpty([Measures].[Evolution CA Reconnu]), NULL,
+        IIF([Measures].[Evolution CA Reconnu] > 0.02, 1, IIF([Measures].[Evolution CA Reconnu] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Clients Actifs] AS
+    IIF(IsEmpty([Measures].[Evolution Clients Actifs]), NULL,
+        IIF([Measures].[Evolution Clients Actifs] > 0.02, 1, IIF([Measures].[Evolution Clients Actifs] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Nouveaux Clients] AS
+    IIF(IsEmpty([Measures].[Evolution Nouveaux Clients]), NULL,
+        IIF([Measures].[Evolution Nouveaux Clients] > 0.02, 1, IIF([Measures].[Evolution Nouveaux Clients] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut CA Par Client Actif] AS
+    IIF(IsEmpty([Measures].[Evolution CA Par Client Actif]), NULL,
+        IIF([Measures].[Evolution CA Par Client Actif] > 0.02, 1, IIF([Measures].[Evolution CA Par Client Actif] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Clients Fideles] AS
+    IIF(IsEmpty([Measures].[Evolution Clients Fideles]), NULL,
+        IIF([Measures].[Evolution Clients Fideles] > 0.02, 1, IIF([Measures].[Evolution Clients Fideles] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Reachat] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Reachat]), NULL,
+        IIF([Measures].[Ecart Taux Reachat] > 0.5, 1, IIF([Measures].[Ecart Taux Reachat] < -0.5, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur ROAS] AS
+    IIF(IsEmpty([Measures].[Statut ROAS]), "#5B6B7C",
+        IIF([Measures].[Statut ROAS] = 1, "#1E7B4F", IIF([Measures].[Statut ROAS] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur CAC] AS
+    IIF(IsEmpty([Measures].[Statut CAC]), "#5B6B7C",
+        IIF([Measures].[Statut CAC] = 1, "#1E7B4F", IIF([Measures].[Statut CAC] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur CPC] AS
+    IIF(IsEmpty([Measures].[Statut CPC]), "#5B6B7C",
+        IIF([Measures].[Statut CPC] = 1, "#1E7B4F", IIF([Measures].[Statut CPC] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Conversion] AS
+    IIF(IsEmpty([Measures].[Statut Taux Conversion]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Conversion] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Conversion] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur CA Reconnu] AS
+    IIF(IsEmpty([Measures].[Statut CA Reconnu]), "#5B6B7C",
+        IIF([Measures].[Statut CA Reconnu] = 1, "#1E7B4F", IIF([Measures].[Statut CA Reconnu] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Clients Actifs] AS
+    IIF(IsEmpty([Measures].[Statut Clients Actifs]), "#5B6B7C",
+        IIF([Measures].[Statut Clients Actifs] = 1, "#1E7B4F", IIF([Measures].[Statut Clients Actifs] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Nouveaux Clients] AS
+    IIF(IsEmpty([Measures].[Statut Nouveaux Clients]), "#5B6B7C",
+        IIF([Measures].[Statut Nouveaux Clients] = 1, "#1E7B4F", IIF([Measures].[Statut Nouveaux Clients] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur CA Par Client Actif] AS
+    IIF(IsEmpty([Measures].[Statut CA Par Client Actif]), "#5B6B7C",
+        IIF([Measures].[Statut CA Par Client Actif] = 1, "#1E7B4F", IIF([Measures].[Statut CA Par Client Actif] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Clients Fideles] AS
+    IIF(IsEmpty([Measures].[Statut Clients Fideles]), "#5B6B7C",
+        IIF([Measures].[Statut Clients Fideles] = 1, "#1E7B4F", IIF([Measures].[Statut Clients Fideles] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Reachat] AS
+    IIF(IsEmpty([Measures].[Statut Taux Reachat]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Reachat] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Reachat] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;

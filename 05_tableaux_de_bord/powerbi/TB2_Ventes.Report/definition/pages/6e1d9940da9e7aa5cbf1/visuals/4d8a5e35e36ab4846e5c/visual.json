@@ -1,0 +1,96 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "4d8a5e35e36ab4846e5c",
+  "position": {
+    "x": 220.0,
+    "y": 236.0,
+    "z": 4000,
+    "height": 232.0,
+    "width": 519.0,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mode Paiement"
+                    }
+                  },
+                  "Property": "Mode Paiement"
+                }
+              },
+              "queryRef": "Mode Paiement.Mode Paiement",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Statut Commande"
+                    }
+                  },
+                  "Property": "Famille Statut"
+                }
+              },
+              "queryRef": "Statut Commande.Famille Statut",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures"
+                    }
+                  },
+                  "Property": "Commandes Passees"
+                }
+              },
+              "queryRef": "Measures.Commandes Passees",
+              "nativeQueryRef": "Commandes Passees"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Commandes passées par mode de paiement et famille de statut'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,1445 @@
+<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d2d8a74a-201f-4f45-be0e-0a4090e47a9e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Livraisons</ID>
+  <Name>Livraisons</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1276" scrolltop="2429" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="24130" y="16531" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_produit" left="6675" top="13906" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3704" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000780e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_produit" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_date" left="12779" top="21306" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3937" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000610f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_date" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_fact_remboursements" left="20" top="10653" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="4255" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00009f10000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_fact_remboursements" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_transporteur" left="19570" top="3153" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3471" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00008f0d000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_transporteur" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_client" left="9885" top="0" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3620" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000240e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_client" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_fact_avis" left="10023" top="7400" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3344" height="4106" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000100d00000a100000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_fact_avis" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_geographie" left="25897" top="9026" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3112" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000280c00006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_geographie" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_entrepot" left="19806" top="15260" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_entrepot" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_fact_livraisons" left="19115" top="7860" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="4382" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00001e11000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_fact_livraisons" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="v_dim_motif_retour" left="189" top="18053" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="3916" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004c0f00006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="olap_v_dim_motif_retour" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3975" top="12853" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="3953" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_remboursements_produit_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="22" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6675" y="16406" />
+              <point x="5475" y="16406" />
+              <point x="5475" y="13153" />
+              <point x="4275" y="13153" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8128" top="11206" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="2767" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_avis_produit_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="6" sourceattachpoint="6" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8527" y="13906" />
+              <point x="8527" y="12706" />
+              <point x="10595" y="12706" />
+              <point x="10595" y="11506" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="16416" top="10060" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="2999" height="13046" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_livraisons_date_expedition_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="9" sourceattachpoint="19" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="16716" y="22706" />
+              <point x="17915" y="22706" />
+              <point x="17915" y="10360" />
+              <point x="19115" y="10360" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="16416" top="11710" logicalid="14" controlid="14" masterid="0" hint1="0" hint2="0" width="2999" height="13046" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_livraisons_date_livraison_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="9" sourceattachpoint="25" destattachpoint="28" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="16716" y="24356" />
+              <point x="17915" y="24356" />
+              <point x="17915" y="12010" />
+              <point x="19115" y="12010" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3975" top="14503" logicalid="15" controlid="15" masterid="0" hint1="0" hint2="0" width="9104" height="9703" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_remboursements_date_demande_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="22" destattachpoint="29" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12779" y="23806" />
+              <point x="8527" y="23806" />
+              <point x="8527" y="14803" />
+              <point x="4275" y="14803" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="11945" top="11206" logicalid="16" controlid="16" masterid="0" hint1="0" hint2="0" width="3202" height="10600" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_avis_date_avis_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="6" sourceattachpoint="6" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14747" y="21306" />
+              <point x="14747" y="16406" />
+              <point x="12245" y="16406" />
+              <point x="12245" y="11506" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3975" top="2101" logicalid="17" controlid="17" masterid="0" hint1="0" hint2="0" width="6210" height="9702" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_remboursements_client_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="3" sourceattachpoint="22" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9885" y="2500" />
+              <point x="7080" y="2500" />
+              <point x="7080" y="11503" />
+              <point x="4275" y="11503" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1748" top="15353" logicalid="18" controlid="18" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_remboursements_motif_retour_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="3" sourceattachpoint="6" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2147" y="18053" />
+              <point x="2147" y="15653" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="20906" top="4961" logicalid="19" controlid="19" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_livraisons_transporteur_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="9" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="21305" y="5460" />
+              <point x="21305" y="6660" />
+              <point x="21306" y="6660" />
+              <point x="21306" y="7860" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13205" top="2101" logicalid="20" controlid="20" masterid="0" hint1="0" hint2="0" width="6210" height="6909" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_livraisons_client_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="9" sourceattachpoint="23" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13505" y="2500" />
+              <point x="16310" y="2500" />
+              <point x="16310" y="8710" />
+              <point x="19115" y="8710" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="11296" top="4501" logicalid="21" controlid="21" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_avis_client_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="6" sourceattachpoint="7" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11695" y="5000" />
+              <point x="11695" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="23197" top="9960" logicalid="22" controlid="22" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_livraisons_geographie_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="9" sourceattachpoint="14" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="25897" y="10359" />
+              <point x="24697" y="10359" />
+              <point x="24697" y="10360" />
+              <point x="23497" y="10360" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="20907" top="12560" logicalid="23" controlid="23" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_v_fact_livraisons_entrepot_sk]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="9" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="21306" y="15260" />
+              <point x="21306" y="12860" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1276</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>2429</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Language>1036</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension dwd:design-time-name="f3238786-e957-430d-a748-fd05feb207c0">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4c5a1e21-06f3-486f-a160-fcaf561571aa">
+          <AttributeID>Jour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="25c663f1-aeff-4959-91e6-34c680e11e30">
+          <AttributeID>Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="28c143f5-0684-4da5-9330-e46fa45dcb4f">
+          <AttributeID>Trimestre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="95bb89a1-a9cd-4ca5-a7e2-b86bacac5a67">
+          <AttributeID>Semestre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="32868792-4f2b-4c9d-adb8-34e21297e9d1">
+          <AttributeID>Annee</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9225556a-de60-40d3-bed3-694b8bb5a65e">
+          <AttributeID>Jour Semaine</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7c4c5d21-af49-4a9d-be31-6d7fbe6f3d78">
+          <AttributeID>Periode Commerciale</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="230becd9-73b2-4d2b-972c-7a4d1cebe378">
+          <AttributeID>Ramadan</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7cc9db06-1b06-4fdf-8a84-833d2e5ec6e5">
+          <AttributeID>Jour Ferie</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="b7530c05-dca7-4ac7-ac6b-ff9d8d244f09">
+          <HierarchyID>Calendrier</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="41f2f453-a375-4292-8774-00c90eb7b6e7">
+      <ID>Date Livraison</ID>
+      <Name>Date Livraison</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="516b94be-d5df-445a-9833-94f4111ac8ed">
+          <AttributeID>Jour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7bb15b8f-ca0f-44bd-a332-94011bf2eb90">
+          <AttributeID>Mois</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7f8ac326-0584-40dd-83b0-9c23b21a83fa">
+          <AttributeID>Trimestre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="55417dd5-aaa4-4a00-bd72-153f66e61b71">
+          <AttributeID>Semestre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="419f29cb-e883-4887-91c1-158b5d89c815">
+          <AttributeID>Annee</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0355df70-5ef2-4984-b8a3-d39ee07a20fa">
+          <AttributeID>Jour Semaine</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bf0ee88b-8c11-4a1d-ac3f-a52bd8decf38">
+          <AttributeID>Periode Commerciale</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aca63f70-ec02-4fe5-bbfe-db2188f6b835">
+          <AttributeID>Ramadan</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2dcb49f9-5540-40b7-8894-2d2c87e08ad1">
+          <AttributeID>Jour Ferie</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="132a614f-247b-4bc5-a2ca-17749a842380">
+          <HierarchyID>Calendrier</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="150b5167-6cc9-4b85-aa5b-3d5e4a988a8d">
+      <ID>Transporteur</ID>
+      <Name>Transporteur</Name>
+      <DimensionID>Transporteur</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="884f9aa8-dad7-48f5-844d-58ccd36778d1">
+          <AttributeID>Transporteur</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e70eb730-61d0-48d0-8741-64c7ec727787">
+          <AttributeID>Couverture</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="09f93f83-f379-4b7d-962d-40e97f34cd8b">
+      <ID>Geographie</ID>
+      <Name>Géographie</Name>
+      <DimensionID>Geographie</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bed13b1e-47d1-4174-aaaf-b1420a9fe2da">
+          <AttributeID>Gouvernorat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68340a72-52ff-42d3-898a-9460cf006603">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="94057186-e3cd-4100-b503-b379629d168d">
+          <AttributeID>Zone Livraison</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="1f3968ac-59d9-4696-a8d1-715f465d6624">
+          <HierarchyID>Regions</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="4da0ca7c-7055-405a-952c-acec24d10b09">
+      <ID>Entrepot</ID>
+      <Name>Entrepôt</Name>
+      <DimensionID>Entrepot</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="820c204f-3194-457d-b271-14990ce8660d">
+          <AttributeID>Entrepot</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68e9b6b5-50bc-4859-9bb6-c9faa4a634c8">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b57292c8-da7d-47fa-8a9a-1da857910ff7">
+      <ID>Client</ID>
+      <Name>Client</Name>
+      <DimensionID>Client</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="adc19ee4-6f56-4993-b944-45dd4722bd42">
+          <AttributeID>Client</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aedc86e9-826a-4de7-9e8a-3a16bb5f95a8">
+          <AttributeID>Gouvernorat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="926517e6-7d3d-432f-9565-db537d401925">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c5c5ca53-9fd8-49ad-afd8-b3ac90528df2">
+          <AttributeID>Segment Fidelite</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="33df6822-2037-4a6b-8aa7-7860cdda99f8">
+          <AttributeID>Type Client</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d596f028-b714-411e-9585-0dd36e3fa13c">
+          <AttributeID>Tranche Age</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="74aa4a1d-9507-4dfc-a014-9a8e48bb5cc5">
+          <AttributeID>Canal Inscription</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d666dd0c-b170-42df-9df6-9e5e8889c481">
+          <AttributeID>Cohorte Inscription</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="d8efd046-862a-4722-a5f2-1cb88dc82b27">
+          <HierarchyID>Geographie Client</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="b1045052-318f-4ac7-afbb-33931b7ff373">
+      <ID>Produit</ID>
+      <Name>Produit</Name>
+      <DimensionID>Produit</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="665a9bd9-45ec-4e30-b55e-d363a0a5ed08">
+          <AttributeID>Produit</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a190e8f4-b3c1-4f6a-b3b3-e047451608d2">
+          <AttributeID>Sous Categorie</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="35b5740b-37bb-4a6d-ba4d-11174903a30a">
+          <AttributeID>Categorie</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="63397db5-e47f-4457-a79e-18d96151f33d">
+          <AttributeID>Marque</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a758911d-2a59-4e8d-a0e3-dcec2418b1fa">
+          <AttributeID>Gamme Prix</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="635e9232-dd2d-4ae1-af1f-44ee91496e4c">
+          <AttributeID>Statut Produit</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="99dee58c-81ea-4787-a0e3-171538689976">
+          <AttributeID>Code Produit</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="40b6cd76-943d-4b0f-9e45-3df7d38033c9">
+          <HierarchyID>Categories</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="fd333278-4dd2-4845-9456-3f4a91820ce7">
+      <ID>Motif Retour</ID>
+      <Name>Motif Retour</Name>
+      <DimensionID>Motif Retour</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8dbb8037-7618-4621-9e57-7563aecf3233">
+          <AttributeID>Motif</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="329d02ab-7f79-45f4-b71f-42e6571a38fb">
+          <AttributeID>Type Remboursement</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="45874efc-6fc7-46ff-9f13-c0ed64015072">
+          <AttributeID>Responsabilite</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="63f0bfba-2467-4c12-9fd2-f79a72007d4e">
+          <HierarchyID>Types</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="d5f71153-9128-41d1-9ac1-08525a703ea9">
+      <ID>Livraisons</ID>
+      <Name>Livraisons</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="a7e94c7f-c544-4c68-a855-579f4ab7fc2e">
+          <ID>Nb Livraisons</ID>
+          <Name>Nb Livraisons</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="e1390674-4dfa-40ff-b00a-70f940c3170f">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e7637520-b759-4ad7-adfd-dc4d659f1849">
+              <TableID>olap_v_fact_livraisons</TableID>
+              <ColumnID>nb_livraisons</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="ebdee2c8-e553-4194-a72a-f64d503f02ec">
+          <ID>Nb Livrees</ID>
+          <Name>Nb Livrees</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="8b47ad26-bf28-49c1-8b7c-d592e03bd9fe">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b175d1c7-0259-46bd-8092-31e1610f135d">
+              <TableID>olap_v_fact_livraisons</TableID>
+              <ColumnID>nb_livrees</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="1ab73fd4-342d-4274-bbdf-b60305e1440d">
+          <ID>Nb Livrees A Temps</ID>
+          <Name>Nb Livrees A Temps</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="f63962ce-3d98-4abe-8922-4466128353b4">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="83924302-9653-4c75-b80f-e50a540d943e">
+              <TableID>olap_v_fact_livraisons</TableID>
+              <ColumnID>nb_livrees_a_temps</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="f8a8703b-2851-4ad6-8382-b2fd50ba9a69">
+          <ID>Nb Livrees En Retard</ID>
+          <Name>Nb Livrees En Retard</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="1d40fd47-efab-4978-ab33-8752fcb709e8">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2d4a1a0c-7b81-4b9c-a6d9-30c951ccf91d">
+              <TableID>olap_v_fact_livraisons</TableID>
+              <ColumnID>nb_livrees_en_retard</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="ea2fc6b0-9918-4aa7-9404-ae3c448a0808">
+          <ID>Nb Livrees 1er Passage</ID>
+          <Name>Nb Livrees 1er Passage</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="f46584e3-8a23-46c3-9e3f-7ba04e2bc868">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e69607c8-bbc2-4ff3-8496-8f7afebb46ca">
+              <TableID>olap_v_fact_livraisons</TableID>
+              <ColumnID>nb_livrees_1er_passage</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="d50bebdb-ea81-4b30-8a73-9649f6fe5607">
+          <ID>Somme Delai Livraison J</ID>
+          <Name>Somme Delai Livraison J</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="4c75d2cc-8ef2-4a19-ac72-89e81e450b59">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cdf2a49d-4f1f-49d6-a965-f80e9d93edf0">
+              <TableID>olap_v_fact_livraisons</TableID>
+              <ColumnID>delai_livraison_j</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0.00</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="430c26a5-cbe4-49c2-8a77-3ef94fb5ffb3">
+          <ID>Somme Retard J</ID>
+          <Name>Somme Retard J</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="924d47e9-f17a-49e0-94c5-c63510a0b911">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7a5862d0-789a-4a0d-835e-18bb17481072">
+              <TableID>olap_v_fact_livraisons</TableID>
+              <ColumnID>retard_j</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="b15707b7-77a6-46e1-a997-218c721f1a73">
+          <ID>Cout Transport HT</ID>
+          <Name>Cout Transport HT</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="61bfa334-823f-416d-b242-e0eb66a08521">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c04346e4-4861-456e-88b4-9c7c09030160">
+              <TableID>olap_v_fact_livraisons</TableID>
+              <ColumnID>cout_transport_ht</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0.000</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="dfd0d2a7-abc8-4449-89a4-0d1ac2ec3d4e">
+          <ID>Poids Kg</ID>
+          <Name>Poids Kg</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="802cc299-9b16-4e41-949b-4a2affb5e33c">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cd7755b3-7d84-4d18-885b-1ca58310ec45">
+              <TableID>olap_v_fact_livraisons</TableID>
+              <ColumnID>poids_kg</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0.00</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="79df04c9-e109-4583-8de4-94ae3db27137">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e0d4811d-fae5-490f-9466-9ecce5bd4a64">
+              <AttributeID>Jour</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8ca3d9a4-3302-4322-ac52-8a993a8b5aa9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1f859095-bc53-42e5-9eb2-f1ba8997f595">
+                    <TableID>olap_v_fact_livraisons</TableID>
+                    <ColumnID>date_expedition_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="019698db-b5f2-49d8-ad72-b17de046600d">
+          <CubeDimensionID>Date Livraison</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1b760be0-21d4-49f9-93e1-dc729e8bb9c7">
+              <AttributeID>Jour</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e9a16db2-3f6f-454a-9147-4d2b5d57b1d5">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b2fa2a3e-a4fb-45b8-ac7e-492c38592ac1">
+                    <TableID>olap_v_fact_livraisons</TableID>
+                    <ColumnID>date_livraison_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b22b308a-782d-4b5f-a387-004627335f78">
+          <CubeDimensionID>Transporteur</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8de15458-5538-4ab0-9a35-c0198813a351">
+              <AttributeID>Transporteur</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8eaa57db-e18b-4f89-adba-bc0c584c9368">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5f263e45-8ff8-4c85-9494-64a18618b44a">
+                    <TableID>olap_v_fact_livraisons</TableID>
+                    <ColumnID>transporteur_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3af84501-f45e-407e-b0e2-abb79e774ebd">
+          <CubeDimensionID>Geographie</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="dfbd94f6-05cf-4ca0-9aa0-aaf38b9d5c66">
+              <AttributeID>Gouvernorat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ff972e7a-d899-4187-a8ff-cee81805379e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="480ad7ad-0faa-4192-a997-6430b0dde2c9">
+                    <TableID>olap_v_fact_livraisons</TableID>
+                    <ColumnID>geographie_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1cfd4504-838a-45d5-b6f4-fdcafdd0158b">
+          <CubeDimensionID>Entrepot</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8ec29645-822d-4c07-b73d-a7f89c36eedd">
+              <AttributeID>Entrepot</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d043dc8c-d7ee-45cf-8274-1674e7a1066d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e545497f-ba9e-4777-bbef-0fa02c842c83">
+                    <TableID>olap_v_fact_livraisons</TableID>
+                    <ColumnID>entrepot_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a56b3f47-1357-45a6-b513-f4d45f8ece5f">
+          <CubeDimensionID>Client</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8949d24e-96e2-413d-a230-5c4494f71259">
+              <AttributeID>Client</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="17d421f4-2305-4c24-8b1e-b8320faa26c7">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9d790e12-fae8-4d8b-9ec5-1c84fc630c8d">
+                    <TableID>olap_v_fact_livraisons</TableID>
+                    <ColumnID>client_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="75a1bfba-c6f3-4e22-a0a2-60e717d366ab">
+      <ID>Remboursements</ID>
+      <Name>Remboursements</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="b61d888a-8a8f-4b32-b922-e8b93b14e042">
+          <ID>Nb Demandes Remboursement</ID>
+          <Name>Nb Demandes Remboursement</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="813aa39a-87da-4a9c-a50d-7204b09553b0">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6ebb7961-8c59-474c-9c7b-3d4a931f0149">
+              <TableID>olap_v_fact_remboursements</TableID>
+              <ColumnID>nb_demandes</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="f616f32b-e0f4-428e-a9db-70e357be0a02">
+          <ID>Nb Retours</ID>
+          <Name>Nb Retours</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="44c0c375-9df2-44be-8571-b94b363a5bad">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2952ef24-5c6e-4e6a-98b5-ca2ba9f21353">
+              <TableID>olap_v_fact_remboursements</TableID>
+              <ColumnID>nb_retours</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="34704b91-1a0f-4506-8bcb-0ed1d3345c18">
+          <ID>Nb Rembourses</ID>
+          <Name>Nb Rembourses</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="d30b27ea-5d75-4fb2-a625-ed17ced141b8">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="41a3f43b-865a-4e07-ab26-e80d51e996dd">
+              <TableID>olap_v_fact_remboursements</TableID>
+              <ColumnID>nb_rembourses</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="349a043a-33c1-4be6-9e39-0873b31ec0ae">
+          <ID>Nb Delais Rembourses</ID>
+          <Name>Nb Delais Rembourses</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="d4458e13-2866-46cc-b5d6-3701668248b5">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5177b808-a53d-4b3b-b93e-86bafd38be3d">
+              <TableID>olap_v_fact_remboursements</TableID>
+              <ColumnID>nb_delais_rembourses</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="d44be8d9-77fd-4984-a6b7-383be5d68bdf">
+          <ID>Quantite Retournee</ID>
+          <Name>Quantite Retournee</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="1c9b16a5-e0fd-4dcc-a976-e163ec41f5f1">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="02e69ad0-d8df-43b9-ad4b-3d68e325eb90">
+              <TableID>olap_v_fact_remboursements</TableID>
+              <ColumnID>quantite</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="8c6e7082-60ff-44e4-a35c-e73a869597cd">
+          <ID>Montant Demande TTC</ID>
+          <Name>Montant Demande TTC</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="c38ea474-666b-4d19-9298-b2e42649b0d0">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8894004a-5468-480f-940e-20cda30bff68">
+              <TableID>olap_v_fact_remboursements</TableID>
+              <ColumnID>montant_demande_ttc</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0.000</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="acff4d9a-822a-46c0-9845-e81ef0e25f78">
+          <ID>Montant Rembourse TTC</ID>
+          <Name>Montant Rembourse TTC</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="8dfaf1ad-3f4f-4572-9316-93f28b61c9bc">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7df8a5f0-a525-41f5-be08-e3595f07a400">
+              <TableID>olap_v_fact_remboursements</TableID>
+              <ColumnID>montant_rembourse_ttc</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0.000</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="ca8071d2-17cb-480f-b944-ffb1b12d64d6">
+          <ID>Somme Delai Remboursement J</ID>
+          <Name>Somme Delai Remboursement J</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="6014b734-322a-47a1-8e37-b87552171234">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3cb48105-ba36-48ae-afad-c0c1f5df1309">
+              <TableID>olap_v_fact_remboursements</TableID>
+              <ColumnID>delai_traitement_j</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0.00</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e8a13688-274c-4b81-ad55-187cfb570261">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b75bd224-677f-41bc-bf0e-5fed8fffc4e9">
+              <AttributeID>Jour</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="47c3042d-30c6-4d75-a0d1-6048d9c844be">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8f65ea56-0a96-4010-bc36-486d3777918f">
+                    <TableID>olap_v_fact_remboursements</TableID>
+                    <ColumnID>date_demande_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c314f8ad-c902-4dab-bd35-3b82bc215ef1">
+          <CubeDimensionID>Client</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1ef1d8e1-8b6e-4bf6-97c0-00521665a3bb">
+              <AttributeID>Client</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a6f86b04-1cf9-4a1a-962f-049dcd9f87d8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dce8b5c1-fe9b-4a8e-b96f-c7f2fc94c984">
+                    <TableID>olap_v_fact_remboursements</TableID>
+                    <ColumnID>client_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ba7e220d-d5ca-4009-a860-741bfe06237e">
+          <CubeDimensionID>Produit</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5374b88a-2f38-4949-b56f-1b63eccd339f">
+              <AttributeID>Produit</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1fc01e7c-a751-4bb3-b40d-f8f8bbb84ef7">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="95c0e7af-13c7-46ed-923a-f614a48e9675">
+                    <TableID>olap_v_fact_remboursements</TableID>
+                    <ColumnID>produit_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b5b63320-a01d-4a06-a0f1-be09bc3d9d91">
+          <CubeDimensionID>Motif Retour</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8b767380-0c55-4eb6-815c-0cbd2de7d7ec">
+              <AttributeID>Motif</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0f268e6e-a31a-482e-8e3c-dda33e4742f6">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ddeb8522-38dd-47d1-8eea-7ef05eadad82">
+                    <TableID>olap_v_fact_remboursements</TableID>
+                    <ColumnID>motif_retour_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="b89c4aab-90b2-4643-8b64-d883160d51db">
+      <ID>Avis</ID>
+      <Name>Avis</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="1f20a4fe-c620-43b8-93ef-fd25eb245f1b">
+          <ID>Nb Avis</ID>
+          <Name>Nb Avis</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="c14745cd-fe5f-41f3-afd2-f2a96a0841ae">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fe68241b-aa90-4896-af4e-58b15d47566f">
+              <TableID>olap_v_fact_avis</TableID>
+              <ColumnID>nb_avis</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="06e5d672-ad6b-4b6f-b36f-0fde3e46a714">
+          <ID>Nb Avis Notes</ID>
+          <Name>Nb Avis Notes</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="70d50f28-9df4-4163-be0f-d4ce3f5a6d1a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e40de8e2-ed73-446b-82e1-3d922d85c26b">
+              <TableID>olap_v_fact_avis</TableID>
+              <ColumnID>nb_avis_notes</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="cad09f03-5271-4d0e-8cd8-5dd08cd93fac">
+          <ID>Nb Avis Negatifs</ID>
+          <Name>Nb Avis Negatifs</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="a8a71bab-9fc0-4bf8-86d1-720805f0caa2">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="92a53a95-a52b-4616-bdec-50110e6e4d9d">
+              <TableID>olap_v_fact_avis</TableID>
+              <ColumnID>nb_avis_negatifs</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="d3caea55-65d3-45b3-aeb4-0900ffacac71">
+          <ID>Somme Notes</ID>
+          <Name>Somme Notes</Name>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="8749fd67-c4c1-4731-8e53-e8f98ebc7671">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7f3fdffb-d1c6-472a-8d36-fd16ef80dc85">
+              <TableID>olap_v_fact_avis</TableID>
+              <ColumnID>note</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,##0</FormatString>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ef62292d-9db2-4137-abdd-34753a190c52">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9bdaf2d7-79b5-41a1-9925-c8cd8548e9b4">
+              <AttributeID>Jour</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0b159800-00e8-41e2-81b0-f29a3d29fc9b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f5686b67-444d-4387-8f96-9470538be602">
+                    <TableID>olap_v_fact_avis</TableID>
+                    <ColumnID>date_avis_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ccf6e586-4346-47f4-b35a-ae4d8c6ed804">
+          <CubeDimensionID>Client</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1692a6d4-f4c4-4bc1-8a21-d55b603118a4">
+              <AttributeID>Client</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="72e31ae9-2469-4c59-8f31-413f5d40b67b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="95a7cc04-9cef-4419-ab03-2c3a7c2b7bb4">
+                    <TableID>olap_v_fact_avis</TableID>
+                    <ColumnID>client_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="886a2532-54bd-41cd-8bfc-60b14f0da9d9">
+          <CubeDimensionID>Produit</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b0d256ca-ffad-4aba-b716-86707ec5707e">
+              <AttributeID>Produit</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2ac94863-27a5-4ac3-b06b-161d120e0182">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="eea849c7-1a21-4c7e-bbfe-1df7d5ef20e9">
+                    <TableID>olap_v_fact_avis</TableID>
+                    <ColumnID>produit_sk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="fdb6f78e-0d86-4e28-a042-631c09edfe84">
+    <DataSourceViewID>TuniShop</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="f6b83f4e-7475-4d4b-9a85-e40f15c94a76">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/* =====================================================================
+   11d_Calculs_Cube_Livraisons.mdx — TuniShop — script de calcul du cube [Livraisons]
+   ---------------------------------------------------------------------
+   Cube 4 — Livraisons : délais, ponctualité, coûts, retours et avis clients.
+   Où le coller : Visual Studio → cube Livraisons → onglet « Calculs »
+   → « Affichage du script » → Ctrl+A → coller → Ctrl+S → Déployer.
+   Mesures de base attendues dans ce cube : groupes Livraisons (Nb Livraisons, Nb Livrees, Nb Livrees A Temps, Nb Livrees En Retard, Nb Livrees 1er Passage, Somme Delai Livraison J, Somme Retard J, Cout Transport HT), Remboursements (Nb Retours, Nb Rembourses, Nb Delais Rembourses, Montant Rembourse TTC, Somme Delai Remboursement J) et Avis (Nb Avis, Nb Avis Notes, Nb Avis Negatifs, Somme Notes)
+   Règles : Dictionnaire_KPI.xlsx (partie 4). Divisions protégées (NULL si dénominateur vide).
+   ===================================================================== */
+CALCULATE;
+CREATE MEMBER CURRENTCUBE.[Measures].[OTD] AS
+    IIF([Measures].[Nb Livrees] = 0, NULL, [Measures].[Nb Livrees A Temps] / [Measures].[Nb Livrees]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Retard] AS
+    IIF([Measures].[Nb Livrees] = 0, NULL, [Measures].[Nb Livrees En Retard] / [Measures].[Nb Livrees]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Delai Moyen Livraison J] AS
+    IIF([Measures].[Nb Livrees] = 0, NULL, [Measures].[Somme Delai Livraison J] / [Measures].[Nb Livrees]),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Retard Moyen J] AS
+    IIF([Measures].[Nb Livrees En Retard] = 0, NULL, [Measures].[Somme Retard J] / [Measures].[Nb Livrees En Retard]),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Livraison 1er Passage] AS
+    IIF([Measures].[Nb Livrees] = 0, NULL, [Measures].[Nb Livrees 1er Passage] / [Measures].[Nb Livrees]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Cout Transport Moyen HT] AS
+    IIF([Measures].[Nb Livraisons] = 0, NULL, [Measures].[Cout Transport HT] / [Measures].[Nb Livraisons]),
+    FORMAT_STRING = "#,##0.00", DISPLAY_FOLDER = 'KPI\Logistique', VISIBLE = 1;
+-- Retours acceptés ou en cours (type « retour », statut différent de « refuse ») par livraison livrée
+-- Attention : indicateur par livraison, différent du taux de retour par ligne du dictionnaire (S01)
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Retours] AS
+    IIF([Measures].[Nb Livrees] = 0, NULL, [Measures].[Nb Retours] / [Measures].[Nb Livrees]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\SAV', VISIBLE = 1;
+-- Moyenne sur les seuls remboursements dont le délai est renseigné (comme AVERAGE / mean())
+CREATE MEMBER CURRENTCUBE.[Measures].[Delai Moyen Remboursement J] AS
+    IIF([Measures].[Nb Delais Rembourses] = 0, NULL, [Measures].[Somme Delai Remboursement J] / [Measures].[Nb Delais Rembourses]),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'KPI\SAV', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Note Moyenne] AS
+    IIF([Measures].[Nb Avis Notes] = 0, NULL, [Measures].[Somme Notes] / [Measures].[Nb Avis Notes]),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'KPI\SAV', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Part Avis Negatifs] AS
+    IIF([Measures].[Nb Avis] = 0, NULL, [Measures].[Nb Avis Negatifs] / [Measures].[Nb Avis]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\SAV', VISIBLE = 1;
+/* =====================================================================
+   v2 (29/10/2026) — comparaison à l'année précédente et feux de tendance (même règle que le cube Direction)
+   A-1 : même KPI sur la période parallèle de l'année précédente (hiérarchie Calendrier).
+   Evolution : variation relative ; Ecart : différence en points de pourcentage (taux).
+   Statut : 1 favorable, 0 stable (|évolution| &lt; 2 % ou |écart| &lt; 0,5 point), -1 défavorable ; NULL sans année précédente.
+   Couleur : #1E7B4F, #5B6B7C, #B42318. Pas de feu pour les KPI sans sens favorable (volumes, parts, remises, valeur du stock).
+   ===================================================================== */
+
+/* ---------- Année précédente ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[OTD A-1] AS
+    ([Measures].[OTD],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Retard A-1] AS
+    ([Measures].[Taux Retard],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Delai Moyen Livraison J A-1] AS
+    ([Measures].[Delai Moyen Livraison J],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Retard Moyen J A-1] AS
+    ([Measures].[Retard Moyen J],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Livraison 1er Passage A-1] AS
+    ([Measures].[Taux Livraison 1er Passage],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Cout Transport Moyen HT A-1] AS
+    ([Measures].[Cout Transport Moyen HT],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Retours A-1] AS
+    ([Measures].[Taux Retours],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Delai Moyen Remboursement J A-1] AS
+    ([Measures].[Delai Moyen Remboursement J],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Montant Rembourse TTC A-1] AS
+    ([Measures].[Montant Rembourse TTC],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Note Moyenne A-1] AS
+    ([Measures].[Note Moyenne],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Part Avis Negatifs A-1] AS
+    ([Measures].[Part Avis Negatifs],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+
+/* ---------- Évolutions et écarts ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart OTD] AS
+    IIF(IsEmpty([Measures].[OTD]) OR IsEmpty([Measures].[OTD A-1]), NULL,
+        ([Measures].[OTD] - [Measures].[OTD A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Retard] AS
+    IIF(IsEmpty([Measures].[Taux Retard]) OR IsEmpty([Measures].[Taux Retard A-1]), NULL,
+        ([Measures].[Taux Retard] - [Measures].[Taux Retard A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Delai Moyen Livraison J] AS
+    IIF(IsEmpty([Measures].[Delai Moyen Livraison J]) OR IsEmpty([Measures].[Delai Moyen Livraison J A-1]) OR [Measures].[Delai Moyen Livraison J A-1] = 0, NULL,
+        ([Measures].[Delai Moyen Livraison J] - [Measures].[Delai Moyen Livraison J A-1]) / [Measures].[Delai Moyen Livraison J A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Retard Moyen J] AS
+    IIF(IsEmpty([Measures].[Retard Moyen J]) OR IsEmpty([Measures].[Retard Moyen J A-1]) OR [Measures].[Retard Moyen J A-1] = 0, NULL,
+        ([Measures].[Retard Moyen J] - [Measures].[Retard Moyen J A-1]) / [Measures].[Retard Moyen J A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Livraison 1er Passage] AS
+    IIF(IsEmpty([Measures].[Taux Livraison 1er Passage]) OR IsEmpty([Measures].[Taux Livraison 1er Passage A-1]), NULL,
+        ([Measures].[Taux Livraison 1er Passage] - [Measures].[Taux Livraison 1er Passage A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Cout Transport Moyen HT] AS
+    IIF(IsEmpty([Measures].[Cout Transport Moyen HT]) OR IsEmpty([Measures].[Cout Transport Moyen HT A-1]) OR [Measures].[Cout Transport Moyen HT A-1] = 0, NULL,
+        ([Measures].[Cout Transport Moyen HT] - [Measures].[Cout Transport Moyen HT A-1]) / [Measures].[Cout Transport Moyen HT A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Retours] AS
+    IIF(IsEmpty([Measures].[Taux Retours]) OR IsEmpty([Measures].[Taux Retours A-1]), NULL,
+        ([Measures].[Taux Retours] - [Measures].[Taux Retours A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Delai Moyen Remboursement J] AS
+    IIF(IsEmpty([Measures].[Delai Moyen Remboursement J]) OR IsEmpty([Measures].[Delai Moyen Remboursement J A-1]) OR [Measures].[Delai Moyen Remboursement J A-1] = 0, NULL,
+        ([Measures].[Delai Moyen Remboursement J] - [Measures].[Delai Moyen Remboursement J A-1]) / [Measures].[Delai Moyen Remboursement J A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Montant Rembourse TTC] AS
+    IIF(IsEmpty([Measures].[Montant Rembourse TTC]) OR IsEmpty([Measures].[Montant Rembourse TTC A-1]) OR [Measures].[Montant Rembourse TTC A-1] = 0, NULL,
+        ([Measures].[Montant Rembourse TTC] - [Measures].[Montant Rembourse TTC A-1]) / [Measures].[Montant Rembourse TTC A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Note Moyenne] AS
+    IIF(IsEmpty([Measures].[Note Moyenne]) OR IsEmpty([Measures].[Note Moyenne A-1]) OR [Measures].[Note Moyenne A-1] = 0, NULL,
+        ([Measures].[Note Moyenne] - [Measures].[Note Moyenne A-1]) / [Measures].[Note Moyenne A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Part Avis Negatifs] AS
+    IIF(IsEmpty([Measures].[Part Avis Negatifs]) OR IsEmpty([Measures].[Part Avis Negatifs A-1]), NULL,
+        ([Measures].[Part Avis Negatifs] - [Measures].[Part Avis Negatifs A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+
+/* ---------- Feux de tendance ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut OTD] AS
+    IIF(IsEmpty([Measures].[Ecart OTD]), NULL,
+        IIF([Measures].[Ecart OTD] &gt; 0.5, 1, IIF([Measures].[Ecart OTD] &lt; -0.5, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Retard] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Retard]), NULL,
+        IIF([Measures].[Ecart Taux Retard] &gt; 0.5, -1, IIF([Measures].[Ecart Taux Retard] &lt; -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Delai Moyen Livraison J] AS
+    IIF(IsEmpty([Measures].[Evolution Delai Moyen Livraison J]), NULL,
+        IIF([Measures].[Evolution Delai Moyen Livraison J] &gt; 0.02, -1, IIF([Measures].[Evolution Delai Moyen Livraison J] &lt; -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Retard Moyen J] AS
+    IIF(IsEmpty([Measures].[Evolution Retard Moyen J]), NULL,
+        IIF([Measures].[Evolution Retard Moyen J] &gt; 0.02, -1, IIF([Measures].[Evolution Retard Moyen J] &lt; -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Livraison 1er Passage] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Livraison 1er Passage]), NULL,
+        IIF([Measures].[Ecart Taux Livraison 1er Passage] &gt; 0.5, 1, IIF([Measures].[Ecart Taux Livraison 1er Passage] &lt; -0.5, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Cout Transport Moyen HT] AS
+    IIF(IsEmpty([Measures].[Evolution Cout Transport Moyen HT]), NULL,
+        IIF([Measures].[Evolution Cout Transport Moyen HT] &gt; 0.02, -1, IIF([Measures].[Evolution Cout Transport Moyen HT] &lt; -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Retours] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Retours]), NULL,
+        IIF([Measures].[Ecart Taux Retours] &gt; 0.5, -1, IIF([Measures].[Ecart Taux Retours] &lt; -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Delai Moyen Remboursement J] AS
+    IIF(IsEmpty([Measures].[Evolution Delai Moyen Remboursement J]), NULL,
+        IIF([Measures].[Evolution Delai Moyen Remboursement J] &gt; 0.02, -1, IIF([Measures].[Evolution Delai Moyen Remboursement J] &lt; -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Montant Rembourse TTC] AS
+    IIF(IsEmpty([Measures].[Evolution Montant Rembourse TTC]), NULL,
+        IIF([Measures].[Evolution Montant Rembourse TTC] &gt; 0.02, -1, IIF([Measures].[Evolution Montant Rembourse TTC] &lt; -0.02, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Note Moyenne] AS
+    IIF(IsEmpty([Measures].[Evolution Note Moyenne]), NULL,
+        IIF([Measures].[Evolution Note Moyenne] &gt; 0.02, 1, IIF([Measures].[Evolution Note Moyenne] &lt; -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Part Avis Negatifs] AS
+    IIF(IsEmpty([Measures].[Ecart Part Avis Negatifs]), NULL,
+        IIF([Measures].[Ecart Part Avis Negatifs] &gt; 0.5, -1, IIF([Measures].[Ecart Part Avis Negatifs] &lt; -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur OTD] AS
+    IIF(IsEmpty([Measures].[Statut OTD]), "#5B6B7C",
+        IIF([Measures].[Statut OTD] = 1, "#1E7B4F", IIF([Measures].[Statut OTD] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Retard] AS
+    IIF(IsEmpty([Measures].[Statut Taux Retard]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Retard] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Retard] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Delai Moyen Livraison J] AS
+    IIF(IsEmpty([Measures].[Statut Delai Moyen Livraison J]), "#5B6B7C",
+        IIF([Measures].[Statut Delai Moyen Livraison J] = 1, "#1E7B4F", IIF([Measures].[Statut Delai Moyen Livraison J] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Retard Moyen J] AS
+    IIF(IsEmpty([Measures].[Statut Retard Moyen J]), "#5B6B7C",
+        IIF([Measures].[Statut Retard Moyen J] = 1, "#1E7B4F", IIF([Measures].[Statut Retard Moyen J] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Livraison 1er Passage] AS
+    IIF(IsEmpty([Measures].[Statut Taux Livraison 1er Passage]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Livraison 1er Passage] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Livraison 1er Passage] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Cout Transport Moyen HT] AS
+    IIF(IsEmpty([Measures].[Statut Cout Transport Moyen HT]), "#5B6B7C",
+        IIF([Measures].[Statut Cout Transport Moyen HT] = 1, "#1E7B4F", IIF([Measures].[Statut Cout Transport Moyen HT] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Retours] AS
+    IIF(IsEmpty([Measures].[Statut Taux Retours]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Retours] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Retours] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Delai Moyen Remboursement J] AS
+    IIF(IsEmpty([Measures].[Statut Delai Moyen Remboursement J]), "#5B6B7C",
+        IIF([Measures].[Statut Delai Moyen Remboursement J] = 1, "#1E7B4F", IIF([Measures].[Statut Delai Moyen Remboursement J] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Montant Rembourse TTC] AS
+    IIF(IsEmpty([Measures].[Statut Montant Rembourse TTC]), "#5B6B7C",
+        IIF([Measures].[Statut Montant Rembourse TTC] = 1, "#1E7B4F", IIF([Measures].[Statut Montant Rembourse TTC] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Note Moyenne] AS
+    IIF(IsEmpty([Measures].[Statut Note Moyenne]), "#5B6B7C",
+        IIF([Measures].[Statut Note Moyenne] = 1, "#1E7B4F", IIF([Measures].[Statut Note Moyenne] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Part Avis Negatifs] AS
+    IIF(IsEmpty([Measures].[Statut Part Avis Negatifs]), "#5B6B7C",
+        IIF([Measures].[Statut Part Avis Negatifs] = 1, "#1E7B4F", IIF([Measures].[Statut Part Avis Negatifs] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+</Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

@@ -1,0 +1,62 @@
+/// Calendrier mensuel 2023-2026, construit depuis TuniShop_DWH.bi.v_dim_date
+table v_dim_mois
+	lineageTag: cdfae237-8602-4995-a212-f3b554c2b960
+
+	column mois
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: b84a0d0c-3f2e-498b-bde2-f3278d52e794
+		summarizeBy: none
+		sourceColumn: mois
+
+	column annee
+		dataType: int64
+		formatString: 0
+		lineageTag: a4c1f8fc-8488-484b-9cf7-4a221b43de50
+		summarizeBy: none
+		sourceColumn: annee
+
+	column trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: 938b9e7b-4181-4e61-be11-03c96a0cf151
+		summarizeBy: none
+		sourceColumn: trimestre
+
+	column numero_mois
+		dataType: int64
+		formatString: 0
+		lineageTag: c0073ddd-b660-4935-bdf8-fe19bd9c848f
+		summarizeBy: none
+		sourceColumn: numero_mois
+
+	column nom_mois
+		dataType: string
+		lineageTag: b495faa9-21e3-42f6-8d5d-6e9e3b76fba3
+		summarizeBy: none
+		sourceColumn: nom_mois
+
+	column annee_mois
+		dataType: string
+		lineageTag: 7f56969f-0b9a-44d9-a285-4a46b878ea43
+		summarizeBy: none
+		sourceColumn: annee_mois
+
+	column jours_ramadan
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d881489-cb93-4bcb-bcea-f7114ef46a53
+		summarizeBy: none
+		sourceColumn: jours_ramadan
+
+	partition v_dim_mois = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_dim_mois"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"mois", "annee", "trimestre", "numero_mois", "nom_mois", "annee_mois", "jours_ramadan"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"mois", type datetime}, {"annee", Int64.Type}, {"trimestre", Int64.Type}, {"numero_mois", Int64.Type}, {"nom_mois", type text}, {"annee_mois", type text}, {"jours_ramadan", Int64.Type}})
+				in
+				    Types
+

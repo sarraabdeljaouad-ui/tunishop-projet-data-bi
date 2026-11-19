@@ -1,0 +1,70 @@
+/// Produits (version courante), repris de TuniShop_DWH.bi.v_dim_produit
+table v_dim_produit
+	lineageTag: 3662d990-ca5a-4a1d-a95b-1b42b07b05fb
+
+	column produit_id
+		dataType: string
+		lineageTag: ba87a3c6-3ca7-485e-bf55-04caa304c82e
+		summarizeBy: none
+		sourceColumn: produit_id
+
+	column sku
+		dataType: string
+		lineageTag: 437c26a1-8eab-4da2-9b5e-e65952bb3ad9
+		summarizeBy: none
+		sourceColumn: sku
+
+	column nom_produit
+		dataType: string
+		lineageTag: c300e065-04d8-4e6d-9dfe-a48c5a80e01c
+		summarizeBy: none
+		sourceColumn: nom_produit
+
+	column marque
+		dataType: string
+		lineageTag: 706b8f01-0d5f-46fa-8b9e-21741909ed3b
+		summarizeBy: none
+		sourceColumn: marque
+
+	column categorie
+		dataType: string
+		lineageTag: 293a0532-8667-4637-a4fe-738d4b352005
+		summarizeBy: none
+		sourceColumn: categorie
+
+	column sous_categorie
+		dataType: string
+		lineageTag: 24ab3f64-dcea-42b2-98df-6ae814aff391
+		summarizeBy: none
+		sourceColumn: sous_categorie
+
+	column gamme_prix
+		dataType: string
+		lineageTag: 62ab7a27-1ff0-45a6-9a51-83db7b413085
+		summarizeBy: none
+		sourceColumn: gamme_prix
+
+	column statut_produit
+		dataType: string
+		lineageTag: 04faae4a-8131-4506-b6df-4423126ce4ef
+		summarizeBy: none
+		sourceColumn: statut_produit
+
+	column prix_catalogue_ttc
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 57edaef1-c021-4a73-9232-1bf4a5f58795
+		summarizeBy: none
+		sourceColumn: prix_catalogue_ttc
+
+	partition v_dim_produit = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_dim_produit"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"produit_id", "sku", "nom_produit", "marque", "categorie", "sous_categorie", "gamme_prix", "statut_produit", "prix_catalogue_ttc"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"produit_id", type text}, {"sku", type text}, {"nom_produit", type text}, {"marque", type text}, {"categorie", type text}, {"sous_categorie", type text}, {"gamme_prix", type text}, {"statut_produit", type text}, {"prix_catalogue_ttc", type number}})
+				in
+				    Types
+

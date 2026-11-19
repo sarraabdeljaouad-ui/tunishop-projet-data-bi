@@ -1,0 +1,9 @@
+﻿segment_rfm;part_clients;part_montant;montant_median_ttc;churn_apprentissage;churn_test;action_recommandee
+Champions;0,2080252554623245;0,4800646457442024;1356,3300000000002;0,2779552715654952;0,29719242182150196;Fidéliser : avantages exclusifs, accès anticipé au Black Friday, programme de parrainage
+Fidèles;0,07186175957464484;0,136500820695746;1127,2500000000002;0,508092485549133;0,559973924380704;Maintenir le lien : recommandations personnalisées, offres sur les catégories déjà achetées
+Fidèles potentiels;0,10999418459749107;0,05734102091809321;288,95;0,4369335347432024;0,4799583550234253;Transformer en habitude : relance 3 à 5 semaines après la commande, 2e catégorie suggérée
+Nouveaux;0,08552795547063222;0,01847926880934805;84,8;0,5318115590092278;0,5607120152574698;Réussir la 2e commande : relance avant 30 jours, livraison soignée de la 1re commande
+À surveiller;0,12490653817396362;0,04110968039511433;159,8;0,6441636182241437;0,6780219780219781;Réactiver tôt : rappel des nouveautés, emailing (canal le plus rentable)
+À risque;0,11040957049098613;0,1744809195311345;940,2499999999999;0,8660647103085026;0,89004914004914;Reconquête prioritaire (forte valeur passée) : offre personnalisée, enquête de satisfaction (retards subis ?)
+Hibernants;0,1378250394616599;0,06416983325940302;258,15999999999997;0,877335744424352;0,8845198675496688;Relance à faible coût : emailing, coupon ciblé uniquement si rentable
+Perdus;0,15144969676829775;0,02785381064695839;80,575;0,8732857926494789;0,8965380023875845;Pas d'investissement individuel : campagnes générales seulement

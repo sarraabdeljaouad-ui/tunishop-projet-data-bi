@@ -1,0 +1,91 @@
+/// Registre des modèles : fiche d'identité de chaque modèle (v1.2)
+table v_ml_registre
+	lineageTag: e364b268-d101-4da6-a816-d4718f964a8e
+
+	column nom
+		dataType: string
+		lineageTag: 4b3903c6-2ef6-45ab-8ba9-c568cb4a28ae
+		summarizeBy: none
+		sourceColumn: nom
+
+	column cas
+		dataType: string
+		lineageTag: d4a2a7f6-9c20-4aa3-a5cb-7dc8a38bd04c
+		summarizeBy: none
+		sourceColumn: cas
+
+	column role
+		dataType: string
+		lineageTag: 8c6b1ded-a102-4e55-bfc4-cc918b25f525
+		summarizeBy: none
+		sourceColumn: role
+
+	column version
+		dataType: string
+		lineageTag: 871f3366-4843-47cc-ac1f-1429dee69ce1
+		summarizeBy: none
+		sourceColumn: version
+
+	column appris_le
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 607f72ac-1976-4819-acd7-005d5bbe823e
+		summarizeBy: none
+		sourceColumn: appris_le
+
+	column periode_apprentissage
+		dataType: string
+		lineageTag: 83233bd2-8974-4b0d-875b-d6360f023dfe
+		summarizeBy: none
+		sourceColumn: periode_apprentissage
+
+	column lignes_apprentissage
+		dataType: double
+		formatString: #,0
+		lineageTag: def45cc7-c66a-4313-8cf1-85b5381504c7
+		summarizeBy: none
+		sourceColumn: lignes_apprentissage
+
+	column nb_variables
+		dataType: int64
+		formatString: 0
+		lineageTag: 18171c78-4b96-4b8c-a400-2d2f0cb4703e
+		summarizeBy: none
+		sourceColumn: nb_variables
+
+	column seuil
+		dataType: double
+		formatString: 0.000
+		lineageTag: 89f028e9-b8c3-484b-8124-6bd1f35c0920
+		summarizeBy: none
+		sourceColumn: seuil
+
+	column empreinte_donnees
+		dataType: string
+		lineageTag: 5658bcc7-81f8-4a63-81c6-c8c58be264dc
+		summarizeBy: none
+		sourceColumn: empreinte_donnees
+
+	column source
+		dataType: string
+		lineageTag: 0ed2aa87-f4ff-46eb-a213-de0146b58e59
+		summarizeBy: none
+		sourceColumn: source
+
+	column notes
+		dataType: string
+		lineageTag: 6d3f0436-e8df-4247-add6-bb6fbbb805ec
+		summarizeBy: none
+		sourceColumn: notes
+
+	partition v_ml_registre = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database(Serveur, Base),
+				    Vue = Source{[Schema = "pbi", Item = "v_ml_registre"]}[Data],
+				    Colonnes = Table.SelectColumns(Vue, {"nom", "cas", "role", "version", "appris_le", "periode_apprentissage", "lignes_apprentissage", "nb_variables", "seuil", "empreinte_donnees", "source", "notes"}),
+				    Types = Table.TransformColumnTypes(Colonnes, {{"nom", type text}, {"cas", type text}, {"role", type text}, {"version", type text}, {"appris_le", type datetime}, {"periode_apprentissage", type text}, {"lignes_apprentissage", type number}, {"nb_variables", Int64.Type}, {"seuil", type number}, {"empreinte_donnees", type text}, {"source", type text}, {"notes", type text}})
+				in
+				    Types
+

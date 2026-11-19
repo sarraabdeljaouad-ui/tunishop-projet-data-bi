@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" dwd:design-time-name="aeff3c4d-bd0f-471a-a0dd-0db07ec4e136">
+  <ID>Ventes</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Ventes</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="711666d3-284b-44e0-b068-44abfec4b942">
+          <ID>Ventes_2023</ID>
+          <Name>Ventes_2023</Name>
+          <Source xsi:type="QueryBinding">
+            <DataSourceID>TuniShop DWH</DataSourceID>
+            <QueryDefinition>SELECT * FROM olap.v_fact_ventes WHERE date_commande_sk BETWEEN 20230101 AND 20231231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="d9a89021-9a24-457b-8d4f-198aab4249db">
+          <ID>Ventes_2024</ID>
+          <Name>Ventes_2024</Name>
+          <Source xsi:type="QueryBinding">
+            <DataSourceID>TuniShop DWH</DataSourceID>
+            <QueryDefinition>SELECT * FROM olap.v_fact_ventes WHERE date_commande_sk BETWEEN 20240101 AND 20241231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="be5ec5cc-1aeb-400b-994c-c4c524729136">
+          <ID>Ventes_2025</ID>
+          <Name>Ventes_2025</Name>
+          <Source xsi:type="QueryBinding">
+            <DataSourceID>TuniShop DWH</DataSourceID>
+            <QueryDefinition>SELECT * FROM olap.v_fact_ventes WHERE date_commande_sk BETWEEN 20250101 AND 20251231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="982e0ade-b11a-46f0-b5e3-94443b0a0f3b">
+          <ID>Ventes_autres</ID>
+          <Name>Ventes_autres</Name>
+          <Source xsi:type="QueryBinding">
+            <DataSourceID>TuniShop DWH</DataSourceID>
+            <QueryDefinition>SELECT * FROM olap.v_fact_ventes WHERE date_commande_sk &lt; 20230101 OR date_commande_sk &gt; 20251231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Commandes</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b9f557bb-1f36-4e59-8e90-afa7ff452df9">
+          <ID>Commandes_2023</ID>
+          <Name>Commandes_2023</Name>
+          <Source xsi:type="QueryBinding">
+            <DataSourceID>TuniShop DWH</DataSourceID>
+            <QueryDefinition>SELECT * FROM olap.v_fact_commandes WHERE date_commande_sk BETWEEN 20230101 AND 20231231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="3a813688-657e-41a5-aa09-d083345620d0">
+          <ID>Commandes_2024</ID>
+          <Name>Commandes_2024</Name>
+          <Source xsi:type="QueryBinding">
+            <DataSourceID>TuniShop DWH</DataSourceID>
+            <QueryDefinition>SELECT * FROM olap.v_fact_commandes WHERE date_commande_sk BETWEEN 20240101 AND 20241231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="3df22179-01d2-46da-8c8a-870267ce9b29">
+          <ID>Commandes_2025</ID>
+          <Name>Commandes_2025</Name>
+          <Source xsi:type="QueryBinding">
+            <DataSourceID>TuniShop DWH</DataSourceID>
+            <QueryDefinition>SELECT * FROM olap.v_fact_commandes WHERE date_commande_sk BETWEEN 20250101 AND 20251231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+        <Partition dwd:design-time-name="63a46aee-23df-4126-9c94-f9a382e1d8b6">
+          <ID>Commandes_autres</ID>
+          <Name>Commandes_autres</Name>
+          <Source xsi:type="QueryBinding">
+            <DataSourceID>TuniShop DWH</DataSourceID>
+            <QueryDefinition>SELECT * FROM olap.v_fact_commandes WHERE date_commande_sk &lt; 20230101 OR date_commande_sk &gt; 20251231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Paiements</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="03e527bd-95bd-435a-95fa-6e779980530e">
+          <ID>Paiements</ID>
+          <Name>Paiements</Name>
+          <Source xsi:type="DsvTableBinding">
+            <DataSourceViewID>TuniShop</DataSourceViewID>
+            <TableID>olap_v_fact_paiements</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

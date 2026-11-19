@@ -1,0 +1,32 @@
+relationship 9c709829-259f-4ad6-bcf4-2ade5fafa4d8
+	fromColumn: v_dm_clients.client_sk
+	toColumn: v_dim_client.client_sk
+
+relationship ba9ccdfa-4872-4c0a-94a9-6aa209d161a2
+	fromColumn: v_ml_churn.client_sk
+	toColumn: v_dim_client.client_sk
+
+relationship f648b191-ff69-44e6-bd56-b911fa5968bd
+	fromColumn: v_ml_demande.produit_id
+	toColumn: v_dim_produit.produit_id
+
+relationship 36672a9e-f6f4-4a44-96e9-5d59f391f6a6
+	fromColumn: v_ml_ventes.mois
+	toColumn: v_dim_mois.mois
+
+relationship b96aff44-50b8-42b5-8b2d-5856d381aae2
+	fromColumn: v_ml_demande.mois
+	toColumn: v_dim_mois.mois
+
+relationship 0f9db292-e97d-4ac3-ad6c-055e92c820cb
+	fromColumn: v_ml_retard.mois
+	toColumn: v_dim_mois.mois
+
+relationship 75e7e75f-02ed-4350-a75e-153ae0f91f11
+	fromColumn: v_ml_scores_demande.produit_id
+	toColumn: v_dim_produit.produit_id
+
+relationship ab1db833-70ea-4a6a-854c-59effb91fa6f
+	fromColumn: v_ml_scores_demande.mois
+	toColumn: v_dim_mois.mois
+

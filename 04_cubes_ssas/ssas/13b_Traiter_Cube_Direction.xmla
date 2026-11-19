@@ -1,0 +1,17 @@
+<!--
+     13b_Traiter_Cube_Direction.xmla - TuniShop - traitement du seul cube Direction
+     Ou l'executer : SSMS, Analysis Services, localhost\DEV, Nouvelle requete XMLA, coller, F5.
+     A lancer juste apres le premier deploiement du cube (Visual Studio ou 18_Creer_Cube_Direction.xmla).
+     Les dimensions etant deja traitees, seul le cube est charge (quelques secondes).
+     Ensuite, 13_Traiter_Cube.xmla (ProcessFull de toute la base) traite aussi Direction : rien a changer.
+-->
+<Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" Transaction="true">
+  <Process xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Object>
+      <DatabaseID>TuniShop_OLAP</DatabaseID>
+      <CubeID>Direction</CubeID>
+    </Object>
+    <Type>ProcessFull</Type>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Process>
+</Batch>

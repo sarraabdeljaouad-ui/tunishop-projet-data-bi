@@ -1,0 +1,330 @@
+﻿/* =====================================================================
+   11a_Calculs_Cube_Ventes.mdx — TuniShop — script de calcul du cube [Ventes]
+   ---------------------------------------------------------------------
+   Cube 1 — Ventes : chiffre d'affaires, marge, panier, canaux, annulations, paiements.
+   Où le coller : Visual Studio → cube Ventes → onglet « Calculs »
+   → « Affichage du script » → Ctrl+A → coller → Ctrl+S → Déployer.
+   Mesures de base attendues dans ce cube : groupes Ventes, Commandes, Paiements (Nb Lignes Vente, Montant Total TTC, Nb Commandes, Montant Ligne HT, Marge Brute HT, Montant Brut TTC, Remise Promo TTC, Nb Articles, Montant Rembourse Commande TTC, Nb Tentatives Paiement, Nb Paiements Reussis…)
+   Règles : Dictionnaire_KPI.xlsx (partie 4). Divisions protégées (NULL si dénominateur vide).
+   ===================================================================== */
+CALCULATE;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Commande TTC] AS
+    [Measures].[Montant Total TTC],
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Commandes Passees] AS
+    [Measures].[Nb Commandes],
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Reconnu TTC] AS
+    ([Measures].[Montant Total TTC], [Statut Commande].[Famille Statut].&[aboutie]),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Commandes Reconnues] AS
+    ([Measures].[Nb Commandes], [Statut Commande].[Famille Statut].&[aboutie]),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Rembourse TTC] AS
+    ([Measures].[Montant Rembourse Commande TTC], [Statut Commande].[Famille Statut].&[aboutie]),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Net TTC] AS
+    [Measures].[CA Reconnu TTC] - [Measures].[Rembourse TTC],
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CA HT Reconnu] AS
+    ([Measures].[Montant Ligne HT], [Statut Commande].[Famille Statut].&[aboutie]),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Marge Brute Reconnue HT] AS
+    ([Measures].[Marge Brute HT], [Statut Commande].[Famille Statut].&[aboutie]),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Marge Brute] AS
+    IIF([Measures].[CA HT Reconnu] = 0, NULL, [Measures].[Marge Brute Reconnue HT] / [Measures].[CA HT Reconnu]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Panier Moyen TTC] AS
+    IIF([Measures].[Commandes Reconnues] = 0, NULL, [Measures].[CA Reconnu TTC] / [Measures].[Commandes Reconnues]),
+    FORMAT_STRING = "#,##0.00", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Articles Par Commande] AS
+    IIF([Measures].[Commandes Reconnues] = 0, NULL,
+        ([Measures].[Nb Articles], [Statut Commande].[Famille Statut].&[aboutie]) / [Measures].[Commandes Reconnues]),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Remise Produit] AS
+    IIF(([Measures].[Montant Brut TTC], [Statut Commande].[Famille Statut].&[aboutie]) = 0, NULL,
+        ([Measures].[Remise Promo TTC], [Statut Commande].[Famille Statut].&[aboutie])
+        / ([Measures].[Montant Brut TTC], [Statut Commande].[Famille Statut].&[aboutie])),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+-- Parts : numérateur = un canal / un mode ; dénominateur = tous les canaux / tous les modes
+CREATE MEMBER CURRENTCUBE.[Measures].[Part Application Mobile] AS
+    IIF(([Measures].[Nb Commandes], [Canal].[Canal].[All]) = 0, NULL,
+        ([Measures].[Nb Commandes], [Canal].[Canal].&[application_mobile])
+        / ([Measures].[Nb Commandes], [Canal].[Canal].[All])),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Part Paiement A La Livraison] AS
+    IIF(([Measures].[Nb Commandes], [Mode Paiement].[Mode Paiement].[All]) = 0, NULL,
+        ([Measures].[Nb Commandes], [Mode Paiement].[Mode Paiement].&[paiement_a_la_livraison])
+        / ([Measures].[Nb Commandes], [Mode Paiement].[Mode Paiement].[All])),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Ventes', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Annulation] AS
+    IIF(([Measures].[Nb Commandes], Root([Statut Commande])) = 0, NULL,
+        ([Measures].[Nb Commandes], [Statut Commande].[Statut].&[annulee])
+        / ([Measures].[Nb Commandes], Root([Statut Commande]))),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Operations', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Refus Colis] AS
+    IIF(([Measures].[Nb Commandes], [Statut Commande].[Famille Statut].&[aboutie])
+        + ([Measures].[Nb Commandes], [Statut Commande].[Statut].&[livraison_echouee]) = 0, NULL,
+        ([Measures].[Nb Commandes], [Statut Commande].[Statut].&[livraison_echouee])
+        / (([Measures].[Nb Commandes], [Statut Commande].[Famille Statut].&[aboutie])
+           + ([Measures].[Nb Commandes], [Statut Commande].[Statut].&[livraison_echouee]))),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Operations', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Echec Paiement] AS
+    IIF([Measures].[Nb Tentatives Paiement] = 0, NULL,
+        1 - [Measures].[Nb Paiements Reussis] / [Measures].[Nb Tentatives Paiement]),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'KPI\Operations', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Reconnu A-1] AS
+    ([Measures].[CA Reconnu TTC],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'KPI\Temps', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution CA Reconnu] AS
+    IIF(IsEmpty([Measures].[CA Reconnu TTC]) OR IsEmpty([Measures].[CA Reconnu A-1]) OR [Measures].[CA Reconnu A-1] = 0, NULL,
+        ([Measures].[CA Reconnu TTC] - [Measures].[CA Reconnu A-1]) / [Measures].[CA Reconnu A-1]),
+    FORMAT_STRING = "0.0%", DISPLAY_FOLDER = 'KPI\Temps', VISIBLE = 1;
+
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Reconnu Cumul Annuel] AS
+    Sum(PeriodsToDate([Date].[Calendrier].[Année], [Date].[Calendrier].CurrentMember),
+        [Measures].[CA Reconnu TTC]),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'KPI\Temps', VISIBLE = 1;
+
+/* =====================================================================
+   v2 (29/10/2026) — comparaison à l'année précédente et feux de tendance (même règle que le cube Direction)
+   A-1 : même KPI sur la période parallèle de l'année précédente (hiérarchie Calendrier).
+   Evolution : variation relative ; Ecart : différence en points de pourcentage (taux).
+   Statut : 1 favorable, 0 stable (|évolution| < 2 % ou |écart| < 0,5 point), -1 défavorable ; NULL sans année précédente.
+   Couleur : #1E7B4F, #5B6B7C, #B42318. Pas de feu pour les KPI sans sens favorable (volumes, parts, remises, valeur du stock).
+   ===================================================================== */
+
+/* ---------- Année précédente ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Commande TTC A-1] AS
+    ([Measures].[CA Commande TTC],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[CA Net TTC A-1] AS
+    ([Measures].[CA Net TTC],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Commandes Reconnues A-1] AS
+    ([Measures].[Commandes Reconnues],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Panier Moyen TTC A-1] AS
+    ([Measures].[Panier Moyen TTC],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.00", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Articles Par Commande A-1] AS
+    ([Measures].[Articles Par Commande],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[CA HT Reconnu A-1] AS
+    ([Measures].[CA HT Reconnu],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Marge Brute Reconnue HT A-1] AS
+    ([Measures].[Marge Brute Reconnue HT],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "#,##0.000", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Marge Brute A-1] AS
+    ([Measures].[Taux Marge Brute],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Remise Produit A-1] AS
+    ([Measures].[Taux Remise Produit],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Annulation A-1] AS
+    ([Measures].[Taux Annulation],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Refus Colis A-1] AS
+    ([Measures].[Taux Refus Colis],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Taux Echec Paiement A-1] AS
+    ([Measures].[Taux Echec Paiement],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Part Paiement A La Livraison A-1] AS
+    ([Measures].[Part Paiement A La Livraison],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Part Application Mobile A-1] AS
+    ([Measures].[Part Application Mobile],
+     ParallelPeriod([Date].[Calendrier].[Année], 1, [Date].[Calendrier].CurrentMember)),
+    FORMAT_STRING = "0.00%", DISPLAY_FOLDER = 'Comparaison\Année précédente', VISIBLE = 1;
+
+/* ---------- Évolutions et écarts ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution CA Commande TTC] AS
+    IIF(IsEmpty([Measures].[CA Commande TTC]) OR IsEmpty([Measures].[CA Commande TTC A-1]) OR [Measures].[CA Commande TTC A-1] = 0, NULL,
+        ([Measures].[CA Commande TTC] - [Measures].[CA Commande TTC A-1]) / [Measures].[CA Commande TTC A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution CA Net TTC] AS
+    IIF(IsEmpty([Measures].[CA Net TTC]) OR IsEmpty([Measures].[CA Net TTC A-1]) OR [Measures].[CA Net TTC A-1] = 0, NULL,
+        ([Measures].[CA Net TTC] - [Measures].[CA Net TTC A-1]) / [Measures].[CA Net TTC A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Commandes Reconnues] AS
+    IIF(IsEmpty([Measures].[Commandes Reconnues]) OR IsEmpty([Measures].[Commandes Reconnues A-1]) OR [Measures].[Commandes Reconnues A-1] = 0, NULL,
+        ([Measures].[Commandes Reconnues] - [Measures].[Commandes Reconnues A-1]) / [Measures].[Commandes Reconnues A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Panier Moyen] AS
+    IIF(IsEmpty([Measures].[Panier Moyen TTC]) OR IsEmpty([Measures].[Panier Moyen TTC A-1]) OR [Measures].[Panier Moyen TTC A-1] = 0, NULL,
+        ([Measures].[Panier Moyen TTC] - [Measures].[Panier Moyen TTC A-1]) / [Measures].[Panier Moyen TTC A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Articles Par Commande] AS
+    IIF(IsEmpty([Measures].[Articles Par Commande]) OR IsEmpty([Measures].[Articles Par Commande A-1]) OR [Measures].[Articles Par Commande A-1] = 0, NULL,
+        ([Measures].[Articles Par Commande] - [Measures].[Articles Par Commande A-1]) / [Measures].[Articles Par Commande A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution CA HT Reconnu] AS
+    IIF(IsEmpty([Measures].[CA HT Reconnu]) OR IsEmpty([Measures].[CA HT Reconnu A-1]) OR [Measures].[CA HT Reconnu A-1] = 0, NULL,
+        ([Measures].[CA HT Reconnu] - [Measures].[CA HT Reconnu A-1]) / [Measures].[CA HT Reconnu A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Evolution Marge Brute Reconnue HT] AS
+    IIF(IsEmpty([Measures].[Marge Brute Reconnue HT]) OR IsEmpty([Measures].[Marge Brute Reconnue HT A-1]) OR [Measures].[Marge Brute Reconnue HT A-1] = 0, NULL,
+        ([Measures].[Marge Brute Reconnue HT] - [Measures].[Marge Brute Reconnue HT A-1]) / [Measures].[Marge Brute Reconnue HT A-1]),
+    FORMAT_STRING = "+0.0%;-0.0%;0.0%", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Marge Brute] AS
+    IIF(IsEmpty([Measures].[Taux Marge Brute]) OR IsEmpty([Measures].[Taux Marge Brute A-1]), NULL,
+        ([Measures].[Taux Marge Brute] - [Measures].[Taux Marge Brute A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Remise Produit] AS
+    IIF(IsEmpty([Measures].[Taux Remise Produit]) OR IsEmpty([Measures].[Taux Remise Produit A-1]), NULL,
+        ([Measures].[Taux Remise Produit] - [Measures].[Taux Remise Produit A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Annulation] AS
+    IIF(IsEmpty([Measures].[Taux Annulation]) OR IsEmpty([Measures].[Taux Annulation A-1]), NULL,
+        ([Measures].[Taux Annulation] - [Measures].[Taux Annulation A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Refus Colis] AS
+    IIF(IsEmpty([Measures].[Taux Refus Colis]) OR IsEmpty([Measures].[Taux Refus Colis A-1]), NULL,
+        ([Measures].[Taux Refus Colis] - [Measures].[Taux Refus Colis A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Taux Echec Paiement] AS
+    IIF(IsEmpty([Measures].[Taux Echec Paiement]) OR IsEmpty([Measures].[Taux Echec Paiement A-1]), NULL,
+        ([Measures].[Taux Echec Paiement] - [Measures].[Taux Echec Paiement A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Part Paiement A La Livraison] AS
+    IIF(IsEmpty([Measures].[Part Paiement A La Livraison]) OR IsEmpty([Measures].[Part Paiement A La Livraison A-1]), NULL,
+        ([Measures].[Part Paiement A La Livraison] - [Measures].[Part Paiement A La Livraison A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Ecart Part Application Mobile] AS
+    IIF(IsEmpty([Measures].[Part Application Mobile]) OR IsEmpty([Measures].[Part Application Mobile A-1]), NULL,
+        ([Measures].[Part Application Mobile] - [Measures].[Part Application Mobile A-1]) * 100),
+    FORMAT_STRING = "+0.00;-0.00;0.00", DISPLAY_FOLDER = 'Comparaison\Evolutions', VISIBLE = 1;
+
+/* ---------- Feux de tendance ---------- */
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut CA Commande TTC] AS
+    IIF(IsEmpty([Measures].[Evolution CA Commande TTC]), NULL,
+        IIF([Measures].[Evolution CA Commande TTC] > 0.02, 1, IIF([Measures].[Evolution CA Commande TTC] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut CA Reconnu] AS
+    IIF(IsEmpty([Measures].[Evolution CA Reconnu]), NULL,
+        IIF([Measures].[Evolution CA Reconnu] > 0.02, 1, IIF([Measures].[Evolution CA Reconnu] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut CA Net TTC] AS
+    IIF(IsEmpty([Measures].[Evolution CA Net TTC]), NULL,
+        IIF([Measures].[Evolution CA Net TTC] > 0.02, 1, IIF([Measures].[Evolution CA Net TTC] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Commandes Reconnues] AS
+    IIF(IsEmpty([Measures].[Evolution Commandes Reconnues]), NULL,
+        IIF([Measures].[Evolution Commandes Reconnues] > 0.02, 1, IIF([Measures].[Evolution Commandes Reconnues] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Panier Moyen] AS
+    IIF(IsEmpty([Measures].[Evolution Panier Moyen]), NULL,
+        IIF([Measures].[Evolution Panier Moyen] > 0.02, 1, IIF([Measures].[Evolution Panier Moyen] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Articles Par Commande] AS
+    IIF(IsEmpty([Measures].[Evolution Articles Par Commande]), NULL,
+        IIF([Measures].[Evolution Articles Par Commande] > 0.02, 1, IIF([Measures].[Evolution Articles Par Commande] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut CA HT Reconnu] AS
+    IIF(IsEmpty([Measures].[Evolution CA HT Reconnu]), NULL,
+        IIF([Measures].[Evolution CA HT Reconnu] > 0.02, 1, IIF([Measures].[Evolution CA HT Reconnu] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Marge Brute Reconnue HT] AS
+    IIF(IsEmpty([Measures].[Evolution Marge Brute Reconnue HT]), NULL,
+        IIF([Measures].[Evolution Marge Brute Reconnue HT] > 0.02, 1, IIF([Measures].[Evolution Marge Brute Reconnue HT] < -0.02, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Marge Brute] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Marge Brute]), NULL,
+        IIF([Measures].[Ecart Taux Marge Brute] > 0.5, 1, IIF([Measures].[Ecart Taux Marge Brute] < -0.5, -1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Annulation] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Annulation]), NULL,
+        IIF([Measures].[Ecart Taux Annulation] > 0.5, -1, IIF([Measures].[Ecart Taux Annulation] < -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Refus Colis] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Refus Colis]), NULL,
+        IIF([Measures].[Ecart Taux Refus Colis] > 0.5, -1, IIF([Measures].[Ecart Taux Refus Colis] < -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Statut Taux Echec Paiement] AS
+    IIF(IsEmpty([Measures].[Ecart Taux Echec Paiement]), NULL,
+        IIF([Measures].[Ecart Taux Echec Paiement] > 0.5, -1, IIF([Measures].[Ecart Taux Echec Paiement] < -0.5, 1, 0))),
+    FORMAT_STRING = "0", DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur CA Commande TTC] AS
+    IIF(IsEmpty([Measures].[Statut CA Commande TTC]), "#5B6B7C",
+        IIF([Measures].[Statut CA Commande TTC] = 1, "#1E7B4F", IIF([Measures].[Statut CA Commande TTC] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur CA Reconnu] AS
+    IIF(IsEmpty([Measures].[Statut CA Reconnu]), "#5B6B7C",
+        IIF([Measures].[Statut CA Reconnu] = 1, "#1E7B4F", IIF([Measures].[Statut CA Reconnu] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur CA Net TTC] AS
+    IIF(IsEmpty([Measures].[Statut CA Net TTC]), "#5B6B7C",
+        IIF([Measures].[Statut CA Net TTC] = 1, "#1E7B4F", IIF([Measures].[Statut CA Net TTC] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Commandes Reconnues] AS
+    IIF(IsEmpty([Measures].[Statut Commandes Reconnues]), "#5B6B7C",
+        IIF([Measures].[Statut Commandes Reconnues] = 1, "#1E7B4F", IIF([Measures].[Statut Commandes Reconnues] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Panier Moyen] AS
+    IIF(IsEmpty([Measures].[Statut Panier Moyen]), "#5B6B7C",
+        IIF([Measures].[Statut Panier Moyen] = 1, "#1E7B4F", IIF([Measures].[Statut Panier Moyen] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Articles Par Commande] AS
+    IIF(IsEmpty([Measures].[Statut Articles Par Commande]), "#5B6B7C",
+        IIF([Measures].[Statut Articles Par Commande] = 1, "#1E7B4F", IIF([Measures].[Statut Articles Par Commande] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur CA HT Reconnu] AS
+    IIF(IsEmpty([Measures].[Statut CA HT Reconnu]), "#5B6B7C",
+        IIF([Measures].[Statut CA HT Reconnu] = 1, "#1E7B4F", IIF([Measures].[Statut CA HT Reconnu] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Marge Brute Reconnue HT] AS
+    IIF(IsEmpty([Measures].[Statut Marge Brute Reconnue HT]), "#5B6B7C",
+        IIF([Measures].[Statut Marge Brute Reconnue HT] = 1, "#1E7B4F", IIF([Measures].[Statut Marge Brute Reconnue HT] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Marge Brute] AS
+    IIF(IsEmpty([Measures].[Statut Taux Marge Brute]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Marge Brute] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Marge Brute] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Annulation] AS
+    IIF(IsEmpty([Measures].[Statut Taux Annulation]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Annulation] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Annulation] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Refus Colis] AS
+    IIF(IsEmpty([Measures].[Statut Taux Refus Colis]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Refus Colis] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Refus Colis] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;
+CREATE MEMBER CURRENTCUBE.[Measures].[Couleur Taux Echec Paiement] AS
+    IIF(IsEmpty([Measures].[Statut Taux Echec Paiement]), "#5B6B7C",
+        IIF([Measures].[Statut Taux Echec Paiement] = 1, "#1E7B4F", IIF([Measures].[Statut Taux Echec Paiement] = -1, "#B42318", "#5B6B7C"))),
+    DISPLAY_FOLDER = 'Comparaison\Feux', VISIBLE = 1;

@@ -1,0 +1,25 @@
+gouvernorat_id,gouvernorat,region,entrepot_rattachement_id,zone_livraison
+G01,Tunis,Grand Tunis,ENT01,Z1
+G02,Ariana,Grand Tunis,ENT01,Z1
+G03,Ben Arous,Grand Tunis,ENT01,Z1
+G04,Manouba,Grand Tunis,ENT01,Z1
+G05,Nabeul,Nord-Est,ENT01,Z2
+G06,Zaghouan,Nord-Est,ENT01,Z2
+G07,Bizerte,Nord-Est,ENT01,Z2
+G08,Béja,Nord-Ouest,ENT01,Z3
+G09,Jendouba,Nord-Ouest,ENT01,Z3
+G10,Le Kef,Nord-Ouest,ENT01,Z3
+G11,Siliana,Nord-Ouest,ENT01,Z3
+G12,Sousse,Centre-Est,ENT02,Z2
+G13,Monastir,Centre-Est,ENT02,Z2
+G14,Mahdia,Centre-Est,ENT02,Z2
+G15,Sfax,Centre-Est,ENT03,Z2
+G16,Kairouan,Centre-Ouest,ENT02,Z3
+G17,Kasserine,Centre-Ouest,ENT02,Z3
+G18,Sidi Bouzid,Centre-Ouest,ENT02,Z3
+G19,Gabès,Sud-Est,ENT03,Z3
+G20,Médenine,Sud-Est,ENT03,Z3
+G21,Tataouine,Sud-Est,ENT03,Z3
+G22,Gafsa,Sud-Ouest,ENT03,Z4
+G23,Tozeur,Sud-Ouest,ENT03,Z4
+G24,Kébili,Sud-Ouest,ENT03,Z4

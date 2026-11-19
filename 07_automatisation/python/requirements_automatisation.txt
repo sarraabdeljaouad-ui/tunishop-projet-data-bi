@@ -1,0 +1,4 @@
+# À installer dans le même environnement Python que tes notebooks (ton venv)
+papermill
+ipykernel
+pyodbc
