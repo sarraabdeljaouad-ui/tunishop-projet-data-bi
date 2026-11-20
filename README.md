@@ -14,6 +14,7 @@ l'entrepôt de données, les cubes OLAP, les tableaux de bord, l'analyse, le mac
 |---|---|
 | La plateforme de recherche vue 360 (en ligne) | [tunishopsarraapps.streamlit.app](https://tunishopsarraapps.streamlit.app) |
 | La même plateforme en site statique | [Voir le site](https://sarraabdeljaouad-ui.github.io/Tunishop-plateforme-360-web/) |
+| Le projet en une page (PDF à jour) | [`docs/TuniShop_Synthese.pdf`](docs/TuniShop_Synthese.pdf) |
 | Les résultats d'analyse et de ML | [`06_analyses_ml/04_Livrables/Phase_Analyse/Rapport_Final_Global_Phase_Analyse.pdf`](06_analyses_ml/04_Livrables/Phase_Analyse/Rapport_Final_Global_Phase_Analyse.pdf) |
 | Les tableaux de bord | [`05_tableaux_de_bord/validation/04_Captures`](05_tableaux_de_bord/validation/04_Captures) |
 | Le modèle de données | [`03_modele_decisionnel/schemas`](03_modele_decisionnel/schemas) |
@@ -48,7 +49,7 @@ flowchart LR
 | 3 | Modèle décisionnel : constellation, un schéma par fait | Conception | [`03_modele_decisionnel`](03_modele_decisionnel) |
 | 4 | Cubes OLAP : 6 cubes (Ventes, Stock, Achats, Livraisons, Marketing Clients, Direction) | SSAS multidimensionnel, MDX | [`04_cubes_ssas`](04_cubes_ssas) |
 | 5 | Tableaux de bord : 6 rapports Power BI, 2 tableaux de bord Tableau, comparaison N-1 | Power BI (PBIP, DAX), Tableau | [`05_tableaux_de_bord`](05_tableaux_de_bord) |
-| 6 | Analyses et ML : EDA, segmentation, text mining des avis, 4 modèles | Python, scikit-learn, Power BI | [`06_analyses_ml`](06_analyses_ml) |
+| 6 | Analyses et ML : EDA, segmentation, text mining des avis, 4 modèles, tableau de bord de synthèse | Python, scikit-learn, Power BI | [`06_analyses_ml`](06_analyses_ml) |
 | 7 | Automatisation de la chaîne complète | SQL Server Agent, Airflow, Docker | [`07_automatisation`](07_automatisation) |
 | 8 | Plateforme de recherche vue 360 (client, produit, fournisseur, commande, transporteur) | Streamlit, HTML/JS | [`08_plateforme_vue360`](08_plateforme_vue360) |
 
