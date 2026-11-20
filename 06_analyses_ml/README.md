@@ -1,6 +1,6 @@
 # TuniShop — Analyses & Machine Learning
 
-**Projet portfolio data / BI de bout en bout · Étape 6 · Sarra Abdeljaouad · version 1.5.1**
+**Projet portfolio data / BI de bout en bout · Étape 6 · Sarra Abdeljaouad · version 1.5.2**
 
 TuniShop est une enseigne e-commerce tunisienne **fictive** ; toutes les données sont **synthétiques**.
 Cette étape transforme l'entrepôt de données (TuniShop_DWH) en décisions mesurées : exploration, data mining,
@@ -66,7 +66,8 @@ Staging (3 bases) ──► TuniShop_DWH (23 vues bi, lecture seule)
 
 - `04_Livrables/Phase_Analyse/Rapport_Final_Global_Phase_Analyse.pdf` — la phase de bout en bout.
 - `04_Livrables/Exploitation/` — guide d'exploitation, fiches modèles, guide utilisateur du tableau de bord, note données personnelles et équité.
-- `CHANGELOG.md` — historique des versions, de la 1.0 à la 1.5.1 (modèle de retard sur 12 mois, seuil d'alerte recalculé et suivi historisé, 20/11/2026).
+- `CHANGELOG.md` — historique des versions, de la 1.0 à la 1.5.2 (modèle de retard sur 12 mois, seuil d'alerte recalculé, suivi historisé, vue `pbi.v_tm_avis` réécrite : 0,12 s au lieu de 157 s, 20/11/2026).
+- `04_Livrables/Phase_Analyse/PV_Final_Global_Phase_Analyse.pdf` — PV de clôture de la phase, versions 1.0 à 1.5.2.
 
 ## Compétences
 

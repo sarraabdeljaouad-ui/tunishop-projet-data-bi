@@ -7,31 +7,34 @@ Auteure : Sarra Abdeljaouad
 ```
 TuniShop_DWH (vues bi, lecture seule) ──► notebooks Python ──► fichiers (CSV / Parquet, comme avant)
         ▲                                          └────────► TuniShop_ANALYTICS
-        │                                                       ├── ana : 82 tables de résultats
-        └──── jointures (TuniShop_DWH.bi.v_...) ◄──────────────┤ pbi : 18 vues pour Power BI
+        │                                                       ├── ana : 88 tables de résultats
+        └──── jointures (TuniShop_DWH.bi.v_...) ◄──────────────┤ pbi : 24 vues pour Power BI
                                                                 └── ctl : journal, catalogue, contrôles
 TuniShop_ADMIN.audit.v_publication_analytics ──lit──► ctl.journal_publication   (facultatif)
 Job SQL Agent « TuniShop - Chaine complete » : … ► étape « Analyse et publication »  (facultatif)
 ```
 
-## Les 7 scripts (dossier `00_Commun/sql`)
+## Les 10 scripts (dossier `00_Commun/sql`)
 
 | N° | Script | Obligatoire ? | Rôle |
 |---|---|---|---|
 | 01 | `01_Creer_base_TuniShop_ANALYTICS.sql` | oui | base, schémas `ana` / `pbi` / `ctl`, journal, catalogue |
-| 02 | `02_Tables_ana.sql` | oui | les 82 tables de résultats + le catalogue (phase, notebook, fichier) |
-| 03 | `03_Vues_pbi_Power_BI.sql` | oui | 18 vues pour Power BI, liées au DWH |
+| 02 | `02_Tables_ana.sql` | oui | les 84 tables de résultats + le catalogue (phase, notebook, fichier) |
+| 03 | `03_Vues_pbi_Power_BI.sql` | oui | 20 vues pour Power BI, liées au DWH |
 | 04 | `04_Controles_TuniShop_ANALYTICS.sql` | oui | procédure `ctl.usp_controler_publication` (liens avec le DWH, lignes) |
 | 05 | `05_Droits_TuniShop_ANALYTICS.sql` | si un autre compte que le tien lance les notebooks ou lit Power BI | rôles et droits dans les 2 bases |
 | 06 | `06_Lien_TuniShop_ADMIN.sql` | non | vue de suivi dans TuniShop_ADMIN |
 | 07 | `07_Etape_job_Agent.sql` | non | ajoute l'analyse à la fin du job de nuit |
+| 08 | `08_Journal_execution_TuniShop_ANALYTICS.sql` | conseillé | journal des exécutions des notebooks (`ctl.journal_execution`), réussies ou non |
+| 09 | `09_Text_Mining_TuniShop_ANALYTICS.sql` | oui, après le notebook `05_Text_Mining_Avis` (v1.4) | 4 vues `pbi.v_tm_*`, catalogue, contrôles T1 à T6 |
+| 09b | `09b_Correctif_v_tm_avis.sql` | une fois, pour passer à la v1.5.2 | réécrit `pbi.v_tm_avis` et prouve que le résultat ne change pas (0,12 s au lieu de 157 s) |
 
 ## Étape 1 — Créer la base (SSMS, une fois)
 
 1. Ouvre SSMS et connecte-toi à `localhost` (le serveur du DWH) avec ton compte Windows.
 2. Fichier > Ouvrir > Fichier… > `00_Commun/sql/01_Creer_base_TuniShop_ANALYTICS.sql`, puis **F5**.
    Message attendu : « Étape 01 terminée ».
-3. Même chose avec `02_Tables_ana.sql` (« Étape 02 terminée : 82 tables… »).
+3. Même chose avec `02_Tables_ana.sql` (« Étape 02 terminée : 84 tables… »).
 4. Même chose avec `03_Vues_pbi_Power_BI.sql` (« Étape 03 terminée »).
 5. Même chose avec `04_Controles_TuniShop_ANALYTICS.sql`. À ce stade les tables sont **vides** : le
    résultat montre des lignes P1 en INFO (« jamais publiée ») ; c'est normal.
@@ -64,6 +67,8 @@ Dans SSMS : `EXEC TuniShop_ANALYTICS.ctl.usp_controler_publication;`
 | L5 | `livraison_id` des scores de retard présents dans `bi.v_fact_livraisons` | 0 orphelin |
 | L6 | `client_sk` des scores du jour (`ml_scores_churn_actuels`) présents dans `bi.v_dim_client` | 0 orphelin |
 | L7 | `livraison_id` des colis en transit (`ml_scores_retard_en_cours`) présents dans `bi.v_fact_livraisons` | 0 orphelin |
+| L8 | `produit_id` de la demande prévue (`ml_scores_demande`) présents dans `bi.v_dim_produit` (version courante) | 0 orphelin |
+| H1 | lignes de la dernière exécution de l'historique du suivi = lignes de `ana.ml_suivi` (v1.5) | 171 pour 171 |
 | N1 | lignes de chaque table = lignes notées au journal | OK partout |
 | P1 | chaque table du catalogue a été publiée | OK (INFO pour `ml_pred_ventes_2026`) |
 
@@ -113,5 +118,9 @@ ne peut pas être mélangée avec une autre source.
 | `pbi.v_ml_scores_retard` | **v1.2** : score des colis en transit (probabilité, alerte, transporteur, région) |
 | `pbi.v_ml_registre` | **v1.2** : registre des modèles (version, période, empreinte, seuil, mesures) |
 | `pbi.v_ml_suivi` | **v1.2** : suivi des modèles par période (indicateur, valeur, seuil, OK / ALERTE) |
+| `pbi.v_ml_scores_demande` | **v1.3** : demande prévue de l'année suivante par produit et mois, stock et rupture |
+| `pbi.v_ml_suivi_historique` | **v1.5** : suivi des modèles, une ligne par exécution, indicateur et période |
+| `pbi.v_tm_avis`, `pbi.v_tm_avis_themes` | **v1.4** : avis commentés et leurs thèmes, avec client et transporteur (vue réécrite en v1.5.2) |
+| `pbi.v_tm_produits`, `pbi.v_tm_verification_faits` | **v1.4** : synthèse du text mining par produit, confrontation des thèmes aux faits |
 
 Les autres tables `ana` (tableaux Q01…, DM01…, ML01…) restent lisibles directement si besoin.
