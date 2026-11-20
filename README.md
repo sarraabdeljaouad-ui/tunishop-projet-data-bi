@@ -1,6 +1,6 @@
 # TuniShop · Projet data et BI de bout en bout
 
-**Sarra Abdeljaouad** · Data / BI  · [Plateforme en ligne](https://tunishopsarraapps.streamlit.app)
+**Sarra Abdeljaouad** · Data / BI  · [LinkdeIN](https://www.linkedin.com/in/sarra-abdeljaouad-927282451/) · [Plateforme en ligne](https://tunishopsarraapps.streamlit.app)
 
 TuniShop est une enseigne e-commerce tunisienne **fictive**. Toutes les données sont **synthétiques**.
 Ce dépôt montre la chaîne complète : des fichiers bruts jusqu'aux décisions, en passant par le staging,
@@ -13,7 +13,7 @@ l'entrepôt de données, les cubes OLAP, les tableaux de bord, l'analyse, le mac
 | Ce que tu veux voir | Où |
 |---|---|
 | La plateforme de recherche vue 360 (en ligne) | [tunishopsarraapps.streamlit.app](https://tunishopsarraapps.streamlit.app) |
-| La même plateforme en site statique | [LIEN À COMPLÉTER APRÈS PUBLICATION](LIEN_A_COMPLETER) |
+| La même plateforme en site statique | (https://sarraabdeljaouad-ui.github.io/Tunishop-plateforme-360-web/) |
 | Les résultats d'analyse et de ML | [`06_analyses_ml/04_Livrables/Phase_Analyse/Rapport_Final_Global_Phase_Analyse.pdf`](06_analyses_ml/04_Livrables/Phase_Analyse/Rapport_Final_Global_Phase_Analyse.pdf) |
 | Les tableaux de bord | [`05_tableaux_de_bord/validation/04_Captures`](05_tableaux_de_bord/validation/04_Captures) |
 | Le modèle de données | [`03_modele_decisionnel/schemas`](03_modele_decisionnel/schemas) |

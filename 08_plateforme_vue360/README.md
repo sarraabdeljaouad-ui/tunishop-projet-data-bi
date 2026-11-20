@@ -8,7 +8,7 @@ Le code est dans deux dépôts séparés :
 | Version | En ligne | Code |
 |---|---|---|
 | Streamlit | [tunishopsarraapps.streamlit.app](https://tunishopsarraapps.streamlit.app) | [tunishop-plateforme-360](https://github.com/sarraabdeljaouad-ui/tunishop-plateforme-360) |
-| HTML statique | LIEN À COMPLÉTER | LIEN À COMPLÉTER |
+| HTML statique | (https://sarraabdeljaouad-ui.github.io/Tunishop-plateforme-360-web/) | [Tunishop-plateforme-360-web](https://github.com/sarraabdeljaouad-ui/) |
 
 ## Contenu de ce dossier
 
