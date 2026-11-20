@@ -1,0 +1,172 @@
+﻿date_donnees;calcule_le;cas;objet;periode;indicateur;valeur;seuil;statut
+2025-12-31;2026-11-20 12:19:51;churn;a_donne_avis;3 derniers mois au 2025-09-30;PSI;0,025953636246908475;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;anciennete_j;3 derniers mois au 2025-09-30;PSI;0,24591991649875977;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;canal_inscription;3 derniers mois au 2025-09-30;PSI;0,16350917205717644;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;cluster;3 derniers mois au 2025-09-30;PSI;0,03321472779326551;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;frequence;3 derniers mois au 2025-09-30;PSI;0,07819999059764116;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;genre;3 derniers mois au 2025-09-30;PSI;0,00013133610781329027;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;montant_reconnu_ttc;3 derniers mois au 2025-09-30;PSI;0,0454387303500928;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;nb_articles_moyen;3 derniers mois au 2025-09-30;PSI;0,02053551435392499;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;nb_avis;3 derniers mois au 2025-09-30;PSI;0,0735637046082426;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;nb_categories;3 derniers mois au 2025-09-30;PSI;0,0699694984203283;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;nb_commandes_90j;3 derniers mois au 2025-09-30;PSI;0,005051177016857848;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;nb_demandes_remboursement;3 derniers mois au 2025-09-30;PSI;0,07002772220167605;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;nb_livraisons;3 derniers mois au 2025-09-30;PSI;0,09013708714611766;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;note_moyenne;3 derniers mois au 2025-09-30;PSI;0,02412064579630681;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;panier_moyen_ttc;3 derniers mois au 2025-09-30;PSI;0,003923248283681658;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;part_coupon;3 derniers mois au 2025-09-30;PSI;0,0028708554324666127;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;part_livraisons_retard;3 derniers mois au 2025-09-30;PSI;0,07706064210427672;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;part_mobile;3 derniers mois au 2025-09-30;PSI;0,14329710154873343;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;part_paiement_livraison;3 derniers mois au 2025-09-30;PSI;0,03322335171585447;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;recence_j;3 derniers mois au 2025-09-30;PSI;0,06449936748406962;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;region;3 derniers mois au 2025-09-30;PSI;0,0023386624311959934;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;retard_max_j;3 derniers mois au 2025-09-30;PSI;0,15854409178134965;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;score_f;3 derniers mois au 2025-09-30;PSI;0,05440362872736291;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;score_m;3 derniers mois au 2025-09-30;PSI;0,03198692788133598;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;score_r;3 derniers mois au 2025-09-30;PSI;0,03526137190553087;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;segment_rfm;3 derniers mois au 2025-09-30;PSI;0,07082050339806159;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;taux_aboutie;3 derniers mois au 2025-09-30;PSI;0,0037857099554631964;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;taux_annulation;3 derniers mois au 2025-09-30;PSI;0,0006400274084215674;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;tous clients;2025-03-31;AUC;0,8285021223541953;0,75;OK
+2025-12-31;2026-11-20 12:19:51;churn;tous clients;2025-03-31;écart taux prévu - réel;-0,08121886360255193;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;churn;tous clients;2025-06-30;AUC;0,8118451148586358;0,75;OK
+2025-12-31;2026-11-20 12:19:51;churn;tous clients;2025-06-30;écart taux prévu - réel;0,03022056270931117;0,05;OK
+2025-12-31;2026-11-20 12:19:51;churn;tous clients;2025-09-30;AUC;0,827027215659446;0,75;OK
+2025-12-31;2026-11-20 12:19:51;churn;tous clients;2025-09-30;écart taux prévu - réel;-0,005883364281496939;0,05;OK
+2025-12-31;2026-11-20 12:19:51;churn;tranche_age;3 derniers mois au 2025-09-30;PSI;0,000950783887076541;0,25;OK
+2025-12-31;2026-11-20 12:19:51;churn;type_client;3 derniers mois au 2025-09-30;PSI;0,0005789435621178174;0,25;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-01;WAPE;0,5064640790638678;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-02;WAPE;0,4119212921529533;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-03;WAPE;0,5384322896017925;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-04;WAPE;0,5529183180923097;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-05;WAPE;0,5044025317880871;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-06;WAPE;0,4893258594181117;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-07;WAPE;0,47500762938028795;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-08;WAPE;0,4035734199446129;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-09;WAPE;0,4926126602403171;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-10;WAPE;0,49699620044288284;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-11;WAPE;0,40142547441355236;0,6;OK
+2025-12-31;2026-11-20 12:19:51;demande;produit x mois;2025-12;WAPE;0,464653567757234;0,6;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-01;écart taux prévu - réel;-0,011460160510334716;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-02;écart taux prévu - réel;-0,021074905991933762;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-03;écart taux prévu - réel;-0,038373738468015006;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-04;écart taux prévu - réel;-0,06927365357448294;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-05;écart taux prévu - réel;0,014957220754234127;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-06;écart taux prévu - réel;-0,02058783946274098;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-07;écart taux prévu - réel;0,02850477998619326;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-08;écart taux prévu - réel;0,03653308564648325;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-09;écart taux prévu - réel;-0,0003357081791703631;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-10;écart taux prévu - réel;0,007886627836209081;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-11;écart taux prévu - réel;0,006931899712317613;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Poste Colis Plus;2025-12;écart taux prévu - réel;0,03874098681517618;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-01;écart taux prévu - réel;0,003520077795181105;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-02;écart taux prévu - réel;-0,007288771088115979;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-03;écart taux prévu - réel;-0,04148056668851649;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-04;écart taux prévu - réel;-0,020477551901398695;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-05;écart taux prévu - réel;0,014294977956816727;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-06;écart taux prévu - réel;-0,015454421035430356;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-07;écart taux prévu - réel;0,004569245585004052;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-08;écart taux prévu - réel;0,019099468567965093;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-09;écart taux prévu - réel;-0,004081963106615273;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-10;écart taux prévu - réel;-0,0010696228350437348;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-11;écart taux prévu - réel;0,009561721337089768;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;Rapid Colis;2025-12;écart taux prévu - réel;0,028956283662478752;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-01;écart taux prévu - réel;-0,21471286412774976;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-02;écart taux prévu - réel;-0,18560432777112618;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-03;écart taux prévu - réel;-0,2829020382073385;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-04;écart taux prévu - réel;-0,24018564243709803;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-05;écart taux prévu - réel;-0,1821266171792741;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-06;écart taux prévu - réel;-0,2143039974119112;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-07;écart taux prévu - réel;-0,21772488917706895;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-08;écart taux prévu - réel;-0,14445343536518782;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-09;écart taux prévu - réel;-0,17063262914683264;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-10;écart taux prévu - réel;-0,14560085722768693;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-11;écart taux prévu - réel;-0,24365275318083018;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;SahelLog;2025-12;écart taux prévu - réel;-0,1661861114909703;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-01;écart taux prévu - réel;0,007491981731917698;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-02;écart taux prévu - réel;-0,0018749703872883126;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-03;écart taux prévu - réel;-0,052781703616032405;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-04;écart taux prévu - réel;-0,01436535018631794;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-05;écart taux prévu - réel;0,0014179259388625506;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-06;écart taux prévu - réel;-0,03941783306374792;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-07;écart taux prévu - réel;0,0004558510468576707;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-08;écart taux prévu - réel;0,019497241325886865;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-09;écart taux prévu - réel;0,003641858324220308;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-10;écart taux prévu - réel;-0,00016722162128657292;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-11;écart taux prévu - réel;0,02538639693567417;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;TunExpress;2025-12;écart taux prévu - réel;0,025939365661501707;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard;canal;3 derniers mois au 2025-12-30;PSI;0,061885861307518955;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;delai_preparation_h;3 derniers mois au 2025-12-30;PSI;0,009723730609913862;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;entrepot;3 derniers mois au 2025-12-30;PSI;9,738363997392402e-05;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;est_ramadan;3 derniers mois au 2025-12-30;PSI;0,7843867941017427;0,25;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;est_weekend;3 derniers mois au 2025-12-30;PSI;9,165871370418495e-05;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;jour_semaine;3 derniers mois au 2025-12-30;PSI;0,0032728073947859877;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;mode_paiement;3 derniers mois au 2025-12-30;PSI;0,013259705715326666;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;mois;3 derniers mois au 2025-12-30;PSI;6,007516680638195;0,25;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;montant_total_ttc;3 derniers mois au 2025-12-30;PSI;0,00573564962602704;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;nb_articles;3 derniers mois au 2025-12-30;PSI;0,0012794573181187073;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;periode_commerciale;3 derniers mois au 2025-12-30;PSI;3,316283430761569;0,25;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard;poids_kg;3 derniers mois au 2025-12-30;PSI;0,0021722496859405203;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;region;3 derniers mois au 2025-12-30;PSI;0,002183770414789157;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;transporteur;3 derniers mois au 2025-12-30;PSI;0,0008716893801720361;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard;zone_livraison;3 derniers mois au 2025-12-30;PSI;0,0013142059482455168;0,25;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-01;écart taux prévu - réel (réappris sur 12 mois);-0,024987062164873758;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-02;écart taux prévu - réel (réappris sur 12 mois);-0,03557311174760819;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-03;écart taux prévu - réel (réappris sur 12 mois);-0,0416864097766495;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-04;écart taux prévu - réel (réappris sur 12 mois);-0,07413480374784297;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-05;écart taux prévu - réel (réappris sur 12 mois);0,013382077214923044;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-06;écart taux prévu - réel (réappris sur 12 mois);-0,05033391018184921;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-07;écart taux prévu - réel (réappris sur 12 mois);0,03160480322776908;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-08;écart taux prévu - réel (réappris sur 12 mois);0,004475014341392913;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-09;écart taux prévu - réel (réappris sur 12 mois);-0,03975495366465398;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-10;écart taux prévu - réel (réappris sur 12 mois);-0,01206792361254215;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-11;écart taux prévu - réel (réappris sur 12 mois);-0,013745583253665983;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Poste Colis Plus;2025-12;écart taux prévu - réel (réappris sur 12 mois);0,0049266033289571964;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-01;écart taux prévu - réel (réappris sur 12 mois);-0,0029454606051879557;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-02;écart taux prévu - réel (réappris sur 12 mois);-0,015099583816334486;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-03;écart taux prévu - réel (réappris sur 12 mois);-0,04504775211269679;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-04;écart taux prévu - réel (réappris sur 12 mois);-0,021762204868605563;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-05;écart taux prévu - réel (réappris sur 12 mois);0,01338768638321684;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-06;écart taux prévu - réel (réappris sur 12 mois);-0,027875153266909293;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-07;écart taux prévu - réel (réappris sur 12 mois);0,0053278005812407575;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-08;écart taux prévu - réel (réappris sur 12 mois);0,007526512452899023;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-09;écart taux prévu - réel (réappris sur 12 mois);-0,019142642250019708;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-10;écart taux prévu - réel (réappris sur 12 mois);-0,007894544379663956;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-11;écart taux prévu - réel (réappris sur 12 mois);0,0025687745475173607;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;Rapid Colis;2025-12;écart taux prévu - réel (réappris sur 12 mois);0,013737290657965653;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-01;écart taux prévu - réel (réappris sur 12 mois);-0,1896901331675299;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-02;écart taux prévu - réel (réappris sur 12 mois);-0,1425602883545959;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-03;écart taux prévu - réel (réappris sur 12 mois);-0,16347308930742982;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-04;écart taux prévu - réel (réappris sur 12 mois);-0,13288791985494883;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-05;écart taux prévu - réel (réappris sur 12 mois);-0,020024874271146353;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-06;écart taux prévu - réel (réappris sur 12 mois);-0,040914325312895794;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-07;écart taux prévu - réel (réappris sur 12 mois);-0,0189086568645927;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-08;écart taux prévu - réel (réappris sur 12 mois);0,01521733682921339;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-09;écart taux prévu - réel (réappris sur 12 mois);-0,022565183474116624;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-10;écart taux prévu - réel (réappris sur 12 mois);0,016587298232976444;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-11;écart taux prévu - réel (réappris sur 12 mois);-0,030098835854923678;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;SahelLog;2025-12;écart taux prévu - réel (réappris sur 12 mois);0,012842584828117842;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-01;écart taux prévu - réel (réappris sur 12 mois);0,0033491096644611973;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-02;écart taux prévu - réel (réappris sur 12 mois);-0,0069312077793448335;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-03;écart taux prévu - réel (réappris sur 12 mois);-0,054605686857206626;0,05;ALERTE
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-04;écart taux prévu - réel (réappris sur 12 mois);-0,012692867952842326;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-05;écart taux prévu - réel (réappris sur 12 mois);0,0030687636726583756;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-06;écart taux prévu - réel (réappris sur 12 mois);-0,04455497341297916;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-07;écart taux prévu - réel (réappris sur 12 mois);0,0042150563801390956;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-08;écart taux prévu - réel (réappris sur 12 mois);0,014870521184790174;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-09;écart taux prévu - réel (réappris sur 12 mois);-0,003374247069052129;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-10;écart taux prévu - réel (réappris sur 12 mois);-0,0034481780491284197;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-11;écart taux prévu - réel (réappris sur 12 mois);0,02479166612207763;0,05;OK
+2025-12-31;2026-11-20 12:19:51;retard_production;TunExpress;2025-12;écart taux prévu - réel (réappris sur 12 mois);0,018949997978608107;0,05;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-01;erreur absolue (%);0,06167519233148328;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-02;erreur absolue (%);0,005075030558592653;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-03;erreur absolue (%);0,04911098913235421;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-04;erreur absolue (%);0,05441850180396322;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-05;erreur absolue (%);0,02732580794655086;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-06;erreur absolue (%);0,1701601003686887;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-07;erreur absolue (%);0,13226327900590512;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-08;erreur absolue (%);0,08117782340441383;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-09;erreur absolue (%);0,01869226901057723;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-10;erreur absolue (%);0,0738017461957542;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-11;erreur absolue (%);0,13298272936783065;0,2;OK
+2025-12-31;2026-11-20 12:19:51;ventes;total;2025-12;erreur absolue (%);0,3379819123292408;0,2;ALERTE

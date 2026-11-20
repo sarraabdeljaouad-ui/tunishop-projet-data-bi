@@ -9,6 +9,7 @@
    Ce que la procédure vérifie (statut OK attendu partout)
      L1-L8  liens avec le DWH : aucune clé des résultats absente du DWH (0 orpheline),
             comme le contrôle C08 de l'EDA (une clé étrangère entre deux bases est impossible)
+     H1     l'historique du suivi contient la dernière exécution (autant de lignes que ana.ml_suivi), v1.5
      N1     chaque table ana contient le nombre de lignes noté dans le journal à sa dernière publication
      P1     toutes les tables du catalogue ont été publiées au moins une fois
    ===================================================================================== */
@@ -65,6 +66,15 @@ BEGIN
     FROM ana.ml_scores_demande AS t
     WHERE NOT EXISTS (SELECT 1 FROM TuniShop_DWH.bi.v_dim_produit AS p
                       WHERE p.produit_id = t.produit_id AND p.est_courant = 1);
+
+    /* ---- H1 (v1.5) : la dernière exécution du suivi est bien dans l'historique ---- */
+    IF OBJECT_ID(N'ana.ml_suivi_historique', N'U') IS NOT NULL
+        INSERT INTO #resultats (controle, table_sql, verification, attendu, obtenu, statut)
+        SELECT N'H1', N'ana.ml_suivi_historique', N'lignes de la dernière exécution = lignes de ana.ml_suivi',
+               (SELECT COUNT_BIG(*) FROM ana.ml_suivi),
+               (SELECT COUNT_BIG(*) FROM ana.ml_suivi_historique
+                WHERE date_donnees = (SELECT MAX(date_donnees) FROM ana.ml_suivi_historique)),
+               N'';
 
     /* ---- N1 : lignes en base = lignes notées dans le journal (dernière publication) ----
        On construit une requête COUNT(*) par table (SQL dynamique) car la liste des tables évolue. */

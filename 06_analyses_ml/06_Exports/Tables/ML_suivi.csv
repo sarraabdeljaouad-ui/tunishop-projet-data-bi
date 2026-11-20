@@ -77,6 +77,54 @@ retard;Poste Colis Plus;2025-12;écart taux prévu - réel;0,03874098681517618;0
 retard;Rapid Colis;2025-12;écart taux prévu - réel;0,028956283662478752;0,05;OK
 retard;SahelLog;2025-12;écart taux prévu - réel;-0,1661861114909703;0,05;ALERTE
 retard;TunExpress;2025-12;écart taux prévu - réel;0,025939365661501707;0,05;OK
+retard_production;Poste Colis Plus;2025-01;écart taux prévu - réel (réappris sur 12 mois);-0,024987062164873758;0,05;OK
+retard_production;Rapid Colis;2025-01;écart taux prévu - réel (réappris sur 12 mois);-0,0029454606051879557;0,05;OK
+retard_production;SahelLog;2025-01;écart taux prévu - réel (réappris sur 12 mois);-0,1896901331675299;0,05;ALERTE
+retard_production;TunExpress;2025-01;écart taux prévu - réel (réappris sur 12 mois);0,0033491096644611973;0,05;OK
+retard_production;Poste Colis Plus;2025-02;écart taux prévu - réel (réappris sur 12 mois);-0,03557311174760819;0,05;OK
+retard_production;Rapid Colis;2025-02;écart taux prévu - réel (réappris sur 12 mois);-0,015099583816334486;0,05;OK
+retard_production;SahelLog;2025-02;écart taux prévu - réel (réappris sur 12 mois);-0,1425602883545959;0,05;ALERTE
+retard_production;TunExpress;2025-02;écart taux prévu - réel (réappris sur 12 mois);-0,0069312077793448335;0,05;OK
+retard_production;Poste Colis Plus;2025-03;écart taux prévu - réel (réappris sur 12 mois);-0,0416864097766495;0,05;OK
+retard_production;Rapid Colis;2025-03;écart taux prévu - réel (réappris sur 12 mois);-0,04504775211269679;0,05;OK
+retard_production;SahelLog;2025-03;écart taux prévu - réel (réappris sur 12 mois);-0,16347308930742982;0,05;ALERTE
+retard_production;TunExpress;2025-03;écart taux prévu - réel (réappris sur 12 mois);-0,054605686857206626;0,05;ALERTE
+retard_production;Poste Colis Plus;2025-04;écart taux prévu - réel (réappris sur 12 mois);-0,07413480374784297;0,05;ALERTE
+retard_production;Rapid Colis;2025-04;écart taux prévu - réel (réappris sur 12 mois);-0,021762204868605563;0,05;OK
+retard_production;SahelLog;2025-04;écart taux prévu - réel (réappris sur 12 mois);-0,13288791985494883;0,05;ALERTE
+retard_production;TunExpress;2025-04;écart taux prévu - réel (réappris sur 12 mois);-0,012692867952842326;0,05;OK
+retard_production;Poste Colis Plus;2025-05;écart taux prévu - réel (réappris sur 12 mois);0,013382077214923044;0,05;OK
+retard_production;Rapid Colis;2025-05;écart taux prévu - réel (réappris sur 12 mois);0,01338768638321684;0,05;OK
+retard_production;SahelLog;2025-05;écart taux prévu - réel (réappris sur 12 mois);-0,020024874271146353;0,05;OK
+retard_production;TunExpress;2025-05;écart taux prévu - réel (réappris sur 12 mois);0,0030687636726583756;0,05;OK
+retard_production;Poste Colis Plus;2025-06;écart taux prévu - réel (réappris sur 12 mois);-0,05033391018184921;0,05;ALERTE
+retard_production;Rapid Colis;2025-06;écart taux prévu - réel (réappris sur 12 mois);-0,027875153266909293;0,05;OK
+retard_production;SahelLog;2025-06;écart taux prévu - réel (réappris sur 12 mois);-0,040914325312895794;0,05;OK
+retard_production;TunExpress;2025-06;écart taux prévu - réel (réappris sur 12 mois);-0,04455497341297916;0,05;OK
+retard_production;Poste Colis Plus;2025-07;écart taux prévu - réel (réappris sur 12 mois);0,03160480322776908;0,05;OK
+retard_production;Rapid Colis;2025-07;écart taux prévu - réel (réappris sur 12 mois);0,0053278005812407575;0,05;OK
+retard_production;SahelLog;2025-07;écart taux prévu - réel (réappris sur 12 mois);-0,0189086568645927;0,05;OK
+retard_production;TunExpress;2025-07;écart taux prévu - réel (réappris sur 12 mois);0,0042150563801390956;0,05;OK
+retard_production;Poste Colis Plus;2025-08;écart taux prévu - réel (réappris sur 12 mois);0,004475014341392913;0,05;OK
+retard_production;Rapid Colis;2025-08;écart taux prévu - réel (réappris sur 12 mois);0,007526512452899023;0,05;OK
+retard_production;SahelLog;2025-08;écart taux prévu - réel (réappris sur 12 mois);0,01521733682921339;0,05;OK
+retard_production;TunExpress;2025-08;écart taux prévu - réel (réappris sur 12 mois);0,014870521184790174;0,05;OK
+retard_production;Poste Colis Plus;2025-09;écart taux prévu - réel (réappris sur 12 mois);-0,03975495366465398;0,05;OK
+retard_production;Rapid Colis;2025-09;écart taux prévu - réel (réappris sur 12 mois);-0,019142642250019708;0,05;OK
+retard_production;SahelLog;2025-09;écart taux prévu - réel (réappris sur 12 mois);-0,022565183474116624;0,05;OK
+retard_production;TunExpress;2025-09;écart taux prévu - réel (réappris sur 12 mois);-0,003374247069052129;0,05;OK
+retard_production;Poste Colis Plus;2025-10;écart taux prévu - réel (réappris sur 12 mois);-0,01206792361254215;0,05;OK
+retard_production;Rapid Colis;2025-10;écart taux prévu - réel (réappris sur 12 mois);-0,007894544379663956;0,05;OK
+retard_production;SahelLog;2025-10;écart taux prévu - réel (réappris sur 12 mois);0,016587298232976444;0,05;OK
+retard_production;TunExpress;2025-10;écart taux prévu - réel (réappris sur 12 mois);-0,0034481780491284197;0,05;OK
+retard_production;Poste Colis Plus;2025-11;écart taux prévu - réel (réappris sur 12 mois);-0,013745583253665983;0,05;OK
+retard_production;Rapid Colis;2025-11;écart taux prévu - réel (réappris sur 12 mois);0,0025687745475173607;0,05;OK
+retard_production;SahelLog;2025-11;écart taux prévu - réel (réappris sur 12 mois);-0,030098835854923678;0,05;OK
+retard_production;TunExpress;2025-11;écart taux prévu - réel (réappris sur 12 mois);0,02479166612207763;0,05;OK
+retard_production;Poste Colis Plus;2025-12;écart taux prévu - réel (réappris sur 12 mois);0,0049266033289571964;0,05;OK
+retard_production;Rapid Colis;2025-12;écart taux prévu - réel (réappris sur 12 mois);0,013737290657965653;0,05;OK
+retard_production;SahelLog;2025-12;écart taux prévu - réel (réappris sur 12 mois);0,012842584828117842;0,05;OK
+retard_production;TunExpress;2025-12;écart taux prévu - réel (réappris sur 12 mois);0,018949997978608107;0,05;OK
 churn;anciennete_j;3 derniers mois au 2025-09-30;PSI;0,24591991649875977;0,25;OK
 churn;canal_inscription;3 derniers mois au 2025-09-30;PSI;0,16350917205717644;0,25;OK
 churn;retard_max_j;3 derniers mois au 2025-09-30;PSI;0,15854409178134965;0,25;OK

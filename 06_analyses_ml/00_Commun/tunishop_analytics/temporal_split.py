@@ -34,6 +34,13 @@ DEBUT_TEST = pd.Timestamp("2025-01-01")
 FENETRE_ACTIVITE_J = 365
 HORIZON_CHURN_J = 90
 
+# --- Retard de livraison (cas ML n° 4), modèle de production (version 1.5)
+# Le modèle de production est réappris chaque mois sur les FENETRE_RETARD_PRODUCTION_MOIS derniers mois.
+# Choix fait sur le suivi (09_Suivi_Modeles) : rejouée mois par mois sur 2025, la fenêtre de 12 mois
+# donne 7 alertes de calibrage sur 48 (transporteur x mois), contre 14 pour tout l'historique, et
+# corrige la sous-estimation de SahelLog dès que sa rupture de juillet 2024 sort de la fenêtre.
+FENETRE_RETARD_PRODUCTION_MOIS = 12
+
 # Dates d'observation : une photo des clients à chaque fin de trimestre.
 # Condition : la fenêtre « avenir » (date + 90 jours) doit rester dans la même période,
 # sinon la cible d'apprentissage utiliserait des données de la période de test.

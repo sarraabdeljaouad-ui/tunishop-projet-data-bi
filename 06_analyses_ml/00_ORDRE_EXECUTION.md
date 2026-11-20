@@ -1,4 +1,4 @@
-# TuniShop — Étape 7 : ordre d'exécution complet (version 1.4)
+# TuniShop — Étape 7 : ordre d'exécution complet (version 1.5)
 
 Auteure : Sarra Abdeljaouad · Suis les numéros dans l'ordre. Chaque étape a besoin de la précédente.
 Ce qui change depuis la version 1.1 : voir `CHANGELOG.md` et la section G (mise à jour).
@@ -35,8 +35,8 @@ Ce qui change depuis la version 1.1 : voir `CHANGELOG.md` et la section G (mise 
 | 20 | `03_Machine_Learning` | `04_Prediction_Demande` | prévision de la demande (version 2 retenue) |
 | 21 | `03_Machine_Learning` | `06_Prediction_Retard_Livraison` | **avant le 05** : scores de retard (test 2025) |
 | 22 | `03_Machine_Learning` | `05_Evaluation_Modeles` | `Comparaison_Modeles.xlsx` (après 02, 03, 04 et 06) |
-| 23 | `03_Machine_Learning` | `08_Scoring_Actuel` | **nouveau** : modèles de production, scores des clients actifs et des colis en transit, registre des modèles |
-| 24 | `03_Machine_Learning` | `09_Suivi_Modeles` | **nouveau** : 123 indicateurs de suivi et alertes (`ana.ml_suivi`) |
+| 23 | `03_Machine_Learning` | `08_Scoring_Actuel` | modèles de production (**v1.5** : retard réappris sur les 12 derniers mois), scores des clients actifs et des colis en transit, registre des modèles |
+| 24 | `03_Machine_Learning` | `09_Suivi_Modeles` | 171 indicateurs de suivi et alertes (`ana.ml_suivi`) ; **v1.5** : modèle de retard de production rejoué mois par mois, historique des exécutions (`ana.ml_suivi_historique`) |
 | 25 | `03_Machine_Learning` | `07_Publication_Resultats` | toutes les tables `ana` remplies et contrôlées, lignage et dictionnaire mis à jour (en dernier) |
 
 Raccourci : les étapes 7 à 25 se lancent d'un coup dans le terminal avec
@@ -47,9 +47,9 @@ Ordre des notebooks ML : 01 → 02 → 03 → 04 → 06 → 05 → 08 → 09 →
 
 | N° | Où | Action | Résultat attendu |
 |---|---|---|---|
-| 26 | SSMS | `EXEC TuniShop_ANALYTICS.ctl.usp_controler_publication;` | OK partout, L6 et L7 compris (INFO seulement pour une table jamais publiée) |
+| 26 | SSMS | `EXEC TuniShop_ANALYTICS.ctl.usp_controler_publication;` | OK partout, L6, L7 et H1 compris (INFO seulement pour une table jamais publiée) |
 | 27 | Excel | `06_Exports/Journaux/journal_executions.csv` | toutes les lignes de l'exécution à « OK » |
-| 28 | Terminal | `pip install -r 00_Commun/requirements-dev.txt`, puis `python -m pytest -q tests` | 71 tests réussis (28 + 43 du text mining, v1.4) |
+| 28 | Terminal | `pip install -r 00_Commun/requirements-dev.txt`, puis `python -m pytest -q tests` | 80 tests réussis (28 + 43 du text mining, v1.4 + 9 du suivi, v1.5) |
 | 29 | Terminal | `python 00_Commun/figer_versions.py` | `00_Commun/requirements-lock.txt` écrit (versions exactes de ton poste) |
 
 ## D. Facultatif
@@ -93,3 +93,13 @@ tableau de bord, note données personnelles et équité).
 3. VS Code : exécuter `02_Data_Mining/05_Text_Mining_Avis` (« Exécuter tout ») : les 4 tables `ana.tm_*` sont créées et remplies.
 4. SSMS, F5 : `00_Commun/sql/09_Text_Mining_TuniShop_ANALYTICS.sql` (4 vues `pbi.v_tm_*`, catalogue, contrôles T1 à T5).
 5. Ensuite, le notebook fait partie de la chaîne : `executer_analyse.py` et le job de nuit le lancent avec le data mining.
+
+
+## I. Passer à la version 1.5 : modèle de retard sur 12 mois et suivi historisé (une fois)
+
+1. Copier les fichiers du kit v1.5 à leur place (voir `LISEZMOI_v1.5.md`).
+2. Terminal : `python -m pytest -q tests` → 80 tests réussis.
+3. SSMS, F5 : `02_Tables_ana.sql` (table `ana.ml_suivi_historique`), puis `03_Vues_pbi_Power_BI.sql` (vue `pbi.v_ml_suivi_historique`), puis `04_Controles_TuniShop_ANALYTICS.sql` (contrôle H1).
+4. VS Code, dans l'ordre : `08_Scoring_Actuel`, `09_Suivi_Modeles`, `07_Publication_Resultats` (« Exécuter tout »).
+5. SSMS : `EXEC TuniShop_ANALYTICS.ctl.usp_controler_publication;` → OK partout, H1 compris.
+6. Ensuite, la chaîne complète (`executer_analyse.py`, job de nuit) fait tout : chaque exécution sur de nouvelles données ajoute ses lignes à l'historique.

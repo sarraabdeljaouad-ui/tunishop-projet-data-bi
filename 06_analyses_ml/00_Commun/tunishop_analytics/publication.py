@@ -81,6 +81,7 @@ CLES = {
     "ml_scores_retard_en_cours": ["livraison_id"],
     "ml_scores_demande": ["produit_id", "mois"],
     "ml_registre_modeles": ["nom"],
+    "ml_suivi_historique": ["date_donnees", "cas", "objet", "periode", "indicateur"],   # 09_Suivi_Modeles (v1.5)
     # Text mining des avis (02_Data_Mining/05_Text_Mining_Avis, version 1.4)
     "tm_avis": ["avis_id"],
     "tm_avis_themes": ["avis_id", "theme"],

@@ -1,6 +1,6 @@
 # TuniShop — Analyses & Machine Learning
 
-**Projet portfolio data / BI de bout en bout · Étape 6 · Sarra Abdeljaouad · version 1.4**
+**Projet portfolio data / BI de bout en bout · Étape 6 · Sarra Abdeljaouad · version 1.5**
 
 TuniShop est une enseigne e-commerce tunisienne **fictive** ; toutes les données sont **synthétiques**.
 Cette étape transforme l'entrepôt de données (TuniShop_DWH) en décisions mesurées : exploration, data mining,
@@ -13,7 +13,7 @@ Staging (3 bases) ──► TuniShop_DWH (23 vues bi, lecture seule)
               19 notebooks Python (EDA ▸ data mining ▸ ML ▸ scores ▸ suivi)
                           │                    │
                           ▼                    ▼
-              fichiers CSV / Parquet     TuniShop_ANALYTICS (83 tables ana, 19 vues pbi, contrôles ctl)
+              fichiers CSV / Parquet     TuniShop_ANALYTICS (84 tables ana, 20 vues pbi, contrôles ctl)
                                                │
                                                ▼
                                    Power BI TuniShop_Analyse_ML (7 pages)
@@ -38,8 +38,9 @@ Staging (3 bases) ──► TuniShop_DWH (23 vues bi, lecture seule)
 
 - **Méthode** : apprentissage 2023-2024, choix sur une validation interne à 2024, test 2025 ; un modèle n'est retenu que s'il bat une référence simple d'au moins 1 %.
 - **Double sortie** : chaque résultat est écrit en fichier et dans une table SQL (une transaction), contrôlée par `ctl.usp_controler_publication`.
-- **Production** : scores du jour (clients actifs, colis en transit), registre des modèles versionné, suivi de 123 indicateurs (erreur, calibrage, PSI).
-- **Qualité** : 71 tests pytest, versions bornées et figées, journal d'exécution, Git + nbstripout, documentation pdoc.
+- **Production** : scores du jour (clients actifs, colis en transit), registre des modèles versionné ; le modèle de retard en production est réappris sur une fenêtre glissante de 12 mois et calibré par transporteur (v1.5).
+- **Suivi** : 171 indicateurs (erreur, calibrage, PSI), production rejouée mois par mois sur 2025 (12 mois, 26 alertes) et historique des exécutions dans `ana.ml_suivi_historique` (v1.5).
+- **Qualité** : 80 tests pytest, versions bornées et figées, journal d'exécution, Git + nbstripout, documentation pdoc.
 - **Sécurité** : aucun mot de passe dans le code (authentification Windows), lecture seule de l'entrepôt.
 
 ## Démarrer
@@ -65,7 +66,7 @@ Staging (3 bases) ──► TuniShop_DWH (23 vues bi, lecture seule)
 
 - `04_Livrables/Phase_Analyse/Rapport_Final_Global_Phase_Analyse.pdf` — la phase de bout en bout.
 - `04_Livrables/Exploitation/` — guide d'exploitation, fiches modèles, guide utilisateur du tableau de bord, note données personnelles et équité.
-- `CHANGELOG.md` — historique des versions (1.0 au 26/11/2026, 1.1 au 03/12/2026, 1.2 au 10/12/2026).
+- `CHANGELOG.md` — historique des versions, de la 1.0 à la 1.5 (modèle de retard sur 12 mois et suivi historisé, 19/11/2026).
 
 ## Compétences
 
@@ -74,5 +75,5 @@ tests et documentation · protection des données (loi tunisienne 2004-63).
 
 ## Limites connues
 
-Retard de SahelLog sous-estimé (recalibrage mensuel prévu) ; erreur forte sur les petits produits ; churn expliqué
+Retard de SahelLog : corrigé en v1.5 par la fenêtre glissante de 12 mois (37,3 % prévu pour 37,3 % réel) ; erreur forte sur les petits produits ; churn expliqué
 surtout par la récence. Détails dans le rapport final et les fiches modèles.

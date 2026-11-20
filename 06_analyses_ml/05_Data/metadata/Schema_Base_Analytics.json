@@ -43,7 +43,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm01_churn_par_segment": {
   "colonnes": [
@@ -74,7 +74,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm01_migrations": {
   "colonnes": [
@@ -135,7 +135,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm01_profil_segments": {
   "colonnes": [
@@ -191,7 +191,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm02_choix_k": {
   "colonnes": [
@@ -217,7 +217,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm02_profil_clusters": {
   "colonnes": [
@@ -288,7 +288,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm02_stabilite_clusters": {
   "colonnes": [
@@ -324,7 +324,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm03_evaluation_recommandation": {
   "colonnes": [
@@ -350,7 +350,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm03_lift_paires_categories": {
   "colonnes": [
@@ -411,7 +411,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm03_regles_retenues": {
   "colonnes": [
@@ -472,7 +472,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm03_taille_paniers": {
   "colonnes": [
@@ -503,7 +503,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm04_composition_paniers": {
   "colonnes": [
@@ -539,7 +539,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm04_coupon_fidelite": {
   "colonnes": [
@@ -575,7 +575,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm04_facteurs_rachat": {
   "colonnes": [
@@ -611,7 +611,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm_clusters_clients": {
   "colonnes": [
@@ -645,7 +645,7 @@
    "client_sk",
    "date_observation"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm_regles_association": {
   "colonnes": [
@@ -706,7 +706,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "dm_segments_rfm": {
   "colonnes": [
@@ -760,7 +760,7 @@
    "client_sk",
    "date_observation"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda00_coherence": {
   "colonnes": [
@@ -801,7 +801,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda00_extremes": {
   "colonnes": [
@@ -867,7 +867,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda00_integrite": {
   "colonnes": [
@@ -908,7 +908,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda00_inventaire": {
   "colonnes": [
@@ -954,7 +954,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda00_manquants": {
   "colonnes": [
@@ -1000,7 +1000,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda00_membres": {
   "colonnes": [
@@ -1041,7 +1041,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda00_synthese_qualite": {
   "colonnes": [
@@ -1087,7 +1087,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda00_unicite": {
   "colonnes": [
@@ -1123,7 +1123,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_g03_vue_ensemble_annuelle": {
   "colonnes": [
@@ -1174,7 +1174,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_g04_tables_variables": {
   "colonnes": [
@@ -1225,7 +1225,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_hypotheses": {
   "colonnes": [
@@ -1277,7 +1277,7 @@
   "cle": [
    "question"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q01_ventes_annuelles": {
   "colonnes": [
@@ -1318,7 +1318,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q01_ventes_mensuelles": {
   "colonnes": [
@@ -1344,7 +1344,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q02_ca_par_periode_commerciale": {
   "colonnes": [
@@ -1375,7 +1375,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q03_categories": {
   "colonnes": [
@@ -1416,7 +1416,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q04_gammes_prix": {
   "colonnes": [
@@ -1457,7 +1457,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q05_nouveaux_clients": {
   "colonnes": [
@@ -1488,7 +1488,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q06_valeur_par_canal_inscription": {
   "colonnes": [
@@ -1524,7 +1524,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q06_valeur_par_type": {
   "colonnes": [
@@ -1560,7 +1560,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q07_cohortes_retention": {
   "colonnes": [
@@ -1636,7 +1636,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q08_regions": {
   "colonnes": [
@@ -1672,7 +1672,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q09_echec_paiement": {
   "colonnes": [
@@ -1703,7 +1703,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q09_parts_canal": {
   "colonnes": [
@@ -1739,7 +1739,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q10_causes_echec": {
   "colonnes": [
@@ -1770,7 +1770,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q11_performance_canaux_media": {
   "colonnes": [
@@ -1821,7 +1821,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q11_roas_annuel": {
   "colonnes": [
@@ -1852,7 +1852,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q12_coupons_annuels": {
   "colonnes": [
@@ -1883,7 +1883,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q13_retard_transporteur_semestre": {
   "colonnes": [
@@ -1929,7 +1929,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q14_entrepots": {
   "colonnes": [
@@ -1970,7 +1970,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q15_note_selon_retard": {
   "colonnes": [
@@ -1996,7 +1996,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q16_retours_categorie": {
   "colonnes": [
@@ -2022,7 +2022,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q17_motifs_remboursement": {
   "colonnes": [
@@ -2063,7 +2063,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q19_stock_mensuel": {
   "colonnes": [
@@ -2094,7 +2094,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q21_fournisseurs": {
   "colonnes": [
@@ -2130,7 +2130,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "eda_q21_fournisseurs_pays": {
   "colonnes": [
@@ -2171,7 +2171,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml01_cibles": {
   "colonnes": [
@@ -2217,7 +2217,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml01_derive": {
   "colonnes": [
@@ -2253,7 +2253,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml01_fiche_jeux_de_donnees": {
   "colonnes": [
@@ -2309,7 +2309,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml01_fuites": {
   "colonnes": [
@@ -2340,7 +2340,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml01_valeurs_manquantes": {
   "colonnes": [
@@ -2376,7 +2376,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml02_choix_alpha": {
   "colonnes": [
@@ -2402,7 +2402,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml02_mape_categories": {
   "colonnes": [
@@ -2433,7 +2433,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml03_apport_data_mining": {
   "colonnes": [
@@ -2459,7 +2459,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml03_importance": {
   "colonnes": [
@@ -2480,7 +2480,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml03_validation": {
   "colonnes": [
@@ -2501,7 +2501,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml04_erreur_par_volume": {
   "colonnes": [
@@ -2532,7 +2532,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml04_validation": {
   "colonnes": [
@@ -2553,7 +2553,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml04_wape_categories": {
   "colonnes": [
@@ -2579,7 +2579,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml06_par_transporteur": {
   "colonnes": [
@@ -2615,7 +2615,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml06_validation": {
   "colonnes": [
@@ -2656,7 +2656,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml08_churn_par_segment": {
   "colonnes": [
@@ -2697,7 +2697,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml08_retard_en_cours": {
   "colonnes": [
@@ -2728,7 +2728,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_metriques_churn": {
   "colonnes": [
@@ -2819,7 +2819,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_metriques_demande": {
   "colonnes": [
@@ -2880,7 +2880,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_metriques_retard": {
   "colonnes": [
@@ -2976,7 +2976,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_metriques_ventes": {
   "colonnes": [
@@ -3037,7 +3037,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_pred_churn_2025": {
   "colonnes": [
@@ -3076,7 +3076,7 @@
    "client_sk",
    "date_observation"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_pred_demande_2025": {
   "colonnes": [
@@ -3140,7 +3140,7 @@
    "produit_id",
    "mois"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_pred_retard_2025": {
   "colonnes": [
@@ -3178,7 +3178,7 @@
   "cle": [
    "livraison_id"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_pred_ventes_2025": {
   "colonnes": [
@@ -3227,7 +3227,7 @@
    "categorie",
    "mois"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_pred_ventes_2026": {
   "colonnes": [
@@ -3256,7 +3256,7 @@
    "categorie",
    "mois"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_registre_modeles": {
   "colonnes": [
@@ -3394,7 +3394,7 @@
   "cle": [
    "nom"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_scores_churn_actuels": {
   "colonnes": [
@@ -3462,7 +3462,7 @@
   "cle": [
    "client_sk"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_scores_demande": {
   "colonnes": [
@@ -3521,7 +3521,7 @@
    "produit_id",
    "mois"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_scores_retard_en_cours": {
   "colonnes": [
@@ -3589,7 +3589,7 @@
   "cle": [
    "livraison_id"
   ],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
  },
  "ml_suivi": {
   "colonnes": [
@@ -3610,7 +3610,7 @@
    ],
    [
     "indicateur",
-    "NVARCHAR(50)",
+    "NVARCHAR(100)",
     true
    ],
    [
@@ -3629,13 +3629,75 @@
     true
    ]
   ],
-  "lignes": 123,
+  "lignes": 171,
   "sources": [
    "06_Exports/Tables/ML_suivi.csv"
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "13/11/2026 23:48"
+  "publie_le": "20/11/2026 12:20"
+ },
+ "ml_suivi_historique": {
+  "colonnes": [
+   [
+    "date_donnees",
+    "DATE",
+    false
+   ],
+   [
+    "calcule_le",
+    "NVARCHAR(50)",
+    true
+   ],
+   [
+    "cas",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "objet",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "periode",
+    "NVARCHAR(50)",
+    false
+   ],
+   [
+    "indicateur",
+    "NVARCHAR(100)",
+    false
+   ],
+   [
+    "valeur",
+    "FLOAT",
+    true
+   ],
+   [
+    "seuil",
+    "FLOAT",
+    true
+   ],
+   [
+    "statut",
+    "NVARCHAR(50)",
+    true
+   ]
+  ],
+  "lignes": 171,
+  "sources": [
+   "06_Exports/Tables/ML_suivi_historique.csv"
+  ],
+  "partage": null,
+  "cle": [
+   "date_donnees",
+   "cas",
+   "objet",
+   "periode",
+   "indicateur"
+  ],
+  "publie_le": "20/11/2026 12:20"
  },
  "tm_avis": {
   "colonnes": [
@@ -3723,7 +3785,7 @@
   "cle": [
    "avis_id"
   ],
-  "publie_le": "14/11/2026 15:26"
+  "publie_le": "20/11/2026 12:20"
  },
  "tm_avis_themes": {
   "colonnes": [
@@ -3757,7 +3819,7 @@
    "avis_id",
    "theme"
   ],
-  "publie_le": "14/11/2026 15:26"
+  "publie_le": "20/11/2026 12:20"
  },
  "tm_produits": {
   "colonnes": [
@@ -3820,7 +3882,7 @@
   "cle": [
    "produit_id"
   ],
-  "publie_le": "14/11/2026 15:26"
+  "publie_le": "20/11/2026 12:20"
  },
  "tm_verification_faits": {
   "colonnes": [
@@ -3866,6 +3928,6 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "14/11/2026 15:26"
+  "publie_le": "20/11/2026 12:20"
  }
 }

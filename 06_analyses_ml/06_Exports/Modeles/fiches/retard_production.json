@@ -2,12 +2,12 @@
  "nom": "retard_production",
  "cas": "retard",
  "role": "production",
- "version": "2026.11.13.2348",
- "appris_le": "2026-11-13 23:48:06",
- "periode_apprentissage": "expéditions du 2023-01-02 au 2025-12-30 (tout l'historique)",
- "lignes_apprentissage": 58776,
- "taux_cible": 0.1453144140465496,
- "empreinte_donnees": "44207687bf8a23e6",
+ "version": "2026.11.20.1218",
+ "appris_le": "2026-11-20 12:18:43",
+ "periode_apprentissage": "expéditions du 2024-12-31 au 2025-12-30 (12 derniers mois)",
+ "lignes_apprentissage": 26647,
+ "taux_cible": 0.1734529215296281,
+ "empreinte_donnees": "3d572495bf36ca89",
  "variables": [
   "poids_kg",
   "delai_preparation_h",
@@ -39,5 +39,5 @@
  },
  "source": "TuniShop_DWH",
  "fichier": "06_Exports/Modeles/retard_production.joblib",
- "notes": "modèle évalué : Régression logistique (tout l'historique) ; à réapprendre et recalibrer chaque mois"
+ "notes": "modèle évalué : Régression logistique (tout l'historique) ; production : réappris chaque mois sur les 12 derniers mois (v1.5)"
 }

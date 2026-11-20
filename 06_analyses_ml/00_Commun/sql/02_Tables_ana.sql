@@ -1073,10 +1073,27 @@ CREATE TABLE [ana].[ml_suivi] (
     [cas] NVARCHAR(50) NULL,
     [objet] NVARCHAR(50) NULL,
     [periode] NVARCHAR(50) NULL,
-    [indicateur] NVARCHAR(50) NULL,
+    [indicateur] NVARCHAR(100) NULL,             -- v1.5 : 100 (libellés du modèle de production)
     [valeur] FLOAT NULL,
     [seuil] FLOAT NULL,
     [statut] NVARCHAR(50) NULL
+);
+GO
+
+-- Historique du suivi des modèles (v1.5) : toutes les exécutions, repérées par la date des dernières données
+-- (source : 06_Exports/Tables/ML_suivi_historique.csv ; notebook 09_Suivi_Modeles)
+IF OBJECT_ID(N'ana.ml_suivi_historique', N'U') IS NULL
+CREATE TABLE [ana].[ml_suivi_historique] (
+    [date_donnees] DATE NOT NULL,
+    [calcule_le] NVARCHAR(50) NULL,
+    [cas] NVARCHAR(50) NOT NULL,
+    [objet] NVARCHAR(50) NOT NULL,
+    [periode] NVARCHAR(50) NOT NULL,
+    [indicateur] NVARCHAR(100) NOT NULL,
+    [valeur] FLOAT NULL,
+    [seuil] FLOAT NULL,
+    [statut] NVARCHAR(50) NULL,
+    CONSTRAINT [PK_ml_suivi_historique] PRIMARY KEY ([date_donnees], [cas], [objet], [periode], [indicateur])
 );
 GO
 
@@ -1168,7 +1185,8 @@ USING (VALUES
     (N'ana.ml_scores_churn_actuels', N'Machine learning', N'08_Scoring_Actuel', N'06_Exports/Predictions/churn_scores_actuels.parquet', N'client_sk', N'client_sk', N'Probabilité de churn des clients actifs à la date de scoring'),
     (N'ana.ml_scores_retard_en_cours', N'Machine learning', N'08_Scoring_Actuel', N'06_Exports/Predictions/retard_scores_en_cours.parquet', N'livraison_id', N'livraison_id', N'Probabilité de retard des colis en transit'),
     (N'ana.ml_scores_demande', N'Machine learning', N'08_Scoring_Actuel', N'06_Exports/Predictions/demande_scores_annee_suivante.parquet', N'produit_id, mois', N'produit_id, mois', N'Demande prévue par produit et par mois pour l''année suivante, stock de départ et alerte de rupture'),
-    (N'ana.ml_suivi', N'Machine learning', N'09_Suivi_Modeles', N'06_Exports/Tables/ML_suivi.csv', NULL, NULL, N'Suivi des modèles : indicateurs par période et alertes')
+    (N'ana.ml_suivi', N'Machine learning', N'09_Suivi_Modeles', N'06_Exports/Tables/ML_suivi.csv', NULL, NULL, N'Suivi des modèles : indicateurs par période et alertes (dernière exécution)'),
+    (N'ana.ml_suivi_historique', N'Machine learning', N'09_Suivi_Modeles', N'06_Exports/Tables/ML_suivi_historique.csv', N'date_donnees, cas, objet, periode, indicateur', NULL, N'Suivi des modèles : toutes les exécutions, repérées par la date des dernières données (v1.5)')
 ) AS source (table_sql, phase, notebook, source, cle, lien_dwh, description)
 ON cible.table_sql = source.table_sql
 WHEN MATCHED THEN UPDATE SET phase = source.phase, notebook = source.notebook, source = source.source,
@@ -1177,5 +1195,5 @@ WHEN NOT MATCHED THEN INSERT (table_sql, phase, notebook, source, cle, lien_dwh,
                       VALUES (source.table_sql, source.phase, source.notebook, source.source, source.cle, source.lien_dwh, source.description);
 GO
 
-PRINT N'Étape 02 terminée : 83 tables de résultats et le catalogue sont prêts.';
+PRINT N'Étape 02 terminée : 84 tables de résultats et le catalogue sont prêts.';
 GO

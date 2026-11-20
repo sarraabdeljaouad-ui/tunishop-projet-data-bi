@@ -235,6 +235,13 @@ SELECT s.cas, s.objet, s.periode, s.indicateur, s.valeur, s.seuil, s.statut
 FROM ana.ml_suivi AS s;
 GO
 
+-- Historique du suivi des modèles (v1.5) : une ligne par exécution, indicateur et période
+CREATE OR ALTER VIEW pbi.v_ml_suivi_historique
+AS
+SELECT h.date_donnees, h.calcule_le, h.cas, h.objet, h.periode, h.indicateur, h.valeur, h.seuil, h.statut
+FROM ana.ml_suivi_historique AS h;
+GO
+
 /* -------------------------------------------------------------------------------------
    6. Suivi des publications (page « Clôture » du tableau de bord)
    ------------------------------------------------------------------------------------- */

@@ -2,17 +2,48 @@
 
 Auteure : Sarra Abdeljaouad. Les dates sont celles du planning du projet.
 
-## Version 1.4 — 14/11/2026 · Text mining des avis
+## Version 1.5 — 19/11/2026 · Modèle de retard réappris sur 12 mois et suivi historisé
 
-Nouveau notebook `02_Data_Mining/05_Text_Mining_Avis.ipynb`, tracé par le PV complémentaire v1.4.
+Les résultats évalués de la phase (notebooks 02 à 06, `Comparaison_Modeles.xlsx`) ne changent pas. La version 1.5 change le **modèle de retard de production** et garde l'**historique du suivi**.
 
-| Fichier | Nouveau ou modifié | Ce qui change |
-|---|---|---|
-| `00_Commun/tunishop_analytics/texte.py` | Nouveau | Text mining par règles : nettoyage, derja, thèmes, polarité, cohérence note / texte |
-| `00_Commun/tunishop_analytics/publication.py` | Modifié | Clés uniques des tables `tm_avis`, `tm_avis_themes`, `tm_produits` |
-| `00_Commun/executer_analyse.py` | Modifié | Le notebook 05 ajouté au data mining (donc au job de nuit) |
-| `00_Commun/sql/09_Text_Mining_TuniShop_ANALYTICS.sql` | Nouveau | 4 vues `pbi.v_tm_*`, catalogue, contrôles T1 à T5 |
-| `tests/test_texte.py` | Nouveau | 43 tests du module `texte.py` (71 tests au total) |
+### Pourquoi
+- Le suivi v1.2 levait une alerte SahelLog presque chaque mois : le modèle de retard sous-estime SahelLog depuis sa rupture de juillet 2024.
+- Le modèle de production était réappris sur tout l'historique (2023-2025) : il mélange l'avant-rupture (7 % de retard) et l'après (37 %).
+- `ana.ml_suivi` était entièrement remplacée à chaque exécution : aucune évolution visible dans le temps.
+
+### Décision (prise sur le suivi, après l'évaluation)
+Rejoué mois par mois sur 2025, chaque mois réappris sur les données d'avant :
+
+| Modèle de production | Alertes de calibrage (48 transporteur × mois) | Écart moyen SahelLog | Alertes au S2 2025 | AUC moyenne |
+|---|---|---|---|---|
+| Tout l'historique (v1.2 à v1.4) | 14 | −16,0 pt | 6 | 0,814 |
+| **12 derniers mois, réappris chaque mois (retenu)** | **7** | −6,0 pt | **0** | **0,822** |
+| 6 derniers mois | 15 | −0,4 pt | 5 | 0,810 |
+
+La fenêtre de 12 mois est retenue : la meilleure au global et stable ; SahelLog est bien calibré dès que la rupture sort de la fenêtre (mai 2025). Ce choix s'appuie sur 2025 (période de test) : c'est une décision de production, pas une nouvelle évaluation.
+
+### Code
+- **Nouveau module `suivi.py`** : `rejouer_fenetre_glissante` (rejeu de la production mois par mois) et `historiser` (historique des exécutions, repérées par la date des dernières données ; relancer sur les mêmes données remplace, de nouvelles données ajoutent).
+- `temporal_split.FENETRE_RETARD_PRODUCTION_MOIS = 12`.
+- **`08_Scoring_Actuel`** : le modèle de retard de production est réappris sur les 12 derniers mois (26 647 expéditions au lieu de 58 776) ; sa fiche du registre le dit.
+- **`09_Suivi_Modeles`** :
+  - section 4 bis : 48 indicateurs du modèle de production rejoué (cas `retard_production`), figure `ML09_2_retard_production` ;
+  - historique `06_Exports/Tables/ML_suivi_historique.csv` → `ana.ml_suivi_historique`.
+  - Sur les données au 31/12/2025 : **171 indicateurs, 26 alertes** (123 et 19 en v1.4 ; les 7 nouvelles : SahelLog de janvier à avril 2025, plus 3 alertes isolées de Poste Colis Plus et TunExpress au 1er semestre ; aucune au 2nd semestre).
+- `publication.py` : clé de `ml_suivi_historique` (date_donnees, cas, objet, periode, indicateur).
+
+### Base TuniShop_ANALYTICS
+- `02_Tables_ana.sql` : table `ana.ml_suivi_historique` (clé primaire), ligne du catalogue (84 tables) ; `ana.ml_suivi.indicateur` passe à NVARCHAR(100). Sur une base existante, la publication recrée `ana.ml_suivi` d'elle-même (« structure modifiée »).
+- `03_Vues_pbi_Power_BI.sql` : vue `pbi.v_ml_suivi_historique`.
+- `04_Controles_TuniShop_ANALYTICS.sql` : contrôle **H1** (la dernière exécution est dans l'historique).
+
+### Tests
+- `tests/test_suivi.py` : 9 tests (historique, rejeu, publication avec clé). **80 tests** au total.
+
+### À faire après exécution sur SQL Server
+- Fiches modèles et guide d'exploitation : fenêtre de 12 mois du modèle de retard, historique du suivi.
+- PV complémentaire v1.5, avec les chiffres de l'exécution.
+- Plateforme vue 360 : la page Modèles affichera 171 indicateurs et 26 alertes après le prochain export ; elle peut lire l'historique (`pbi.v_ml_suivi_historique`) pour tracer le suivi dans le temps.
 
 ## Version 1.3 — 17/11/2026 · Demande de l'année suivante et clôture globale
 
