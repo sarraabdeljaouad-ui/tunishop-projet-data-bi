@@ -8,7 +8,7 @@ Le code est dans deux dépôts séparés :
 | Version | En ligne | Code |
 |---|---|---|
 | Streamlit | [tunishopsarraapps.streamlit.app](https://tunishopsarraapps.streamlit.app) | [tunishop-plateforme-360](https://github.com/sarraabdeljaouad-ui/tunishop-plateforme-360) |
-| HTML statique | (https://sarraabdeljaouad-ui.github.io/Tunishop-plateforme-360-web/) | [Tunishop-plateforme-360-web](https://github.com/sarraabdeljaouad-ui/) |
+| HTML statique | [Voir le site](https://sarraabdeljaouad-ui.github.io/Tunishop-plateforme-360-web/) | [Tunishop-plateforme-360-web]((https://github.com/sarraabdeljaouad-ui/Tunishop-plateforme-360-web)) |
 
 ## Contenu de ce dossier
 
@@ -16,6 +16,6 @@ Le code est dans deux dépôts séparés :
 |---|---|
 | `conception/` | Organisation générale (ce que chaque page affiche) |
 | `maquettes/` | Maquettes des 9 écrans et leur explication |
-| `inventaire_donnees/` | Sources utilisées (vues du DWH et de TuniShop_ANALYTICS) |
-| `validation_streamlit/` | Note de conception, cahier de recette, rapport de recette, PV, rapport de phase |
-| `captures_streamlit/` | Captures de la plateforme |
+| `Streamlit/` | Documents de la version Streamlit (captures, inventaires des données, validation) |
+| `Validation Plateforme/` | Rapport de la phase plateforme vue360 complet |
+| `HTML/` | Documents de la version HTML (captures, inventaires des données, validation) |
