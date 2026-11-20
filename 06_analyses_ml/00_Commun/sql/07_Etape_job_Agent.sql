@@ -1,4 +1,4 @@
-﻿/* =====================================================================================
+/* =====================================================================================
    TuniShop — 07. Ajouter l'analyse au job de nuit SQL Server Agent (FACULTATIF)
    =====================================================================================
    Auteure   : Sarra Abdeljaouad
@@ -43,11 +43,11 @@ GO
 DECLARE @nom_job SYSNAME       = N'TuniShop - Chaine complete';
 DECLARE @nom_etape SYSNAME     = N'Analyse et publication (notebooks)';
 -- >>> À ADAPTER
-DECLARE @python NVARCHAR(400)  = N'C:\Users\Abdeljaouad\AppData\Local\Programs\Python\Python313\python.exe';
-DECLARE @racine NVARCHAR(400)  = N'C:\Users\Abdeljaouad\Desktop\Projet TuniShop\3-Développement\4-Projet Final Complet\5-Analyse_ML\6-Projet Final Analyses et ML';
+DECLARE @python NVARCHAR(400)  = N'C:\chemin\vers\python.exe'   -- À ADAPTER : « where python » dans PowerShell;
+DECLARE @racine NVARCHAR(400)  = N'C:\chemin\vers\tunishop-projet-data-bi\06_analyses_ml'   -- À ADAPTER : dossier du projet;
 DECLARE @proxy SYSNAME         = N'Proxy_TuniShop';
 DECLARE @dossier_logs NVARCHAR(400) = N'C:\TuniShop\6-Automatisation\Logs_Agent';
-DECLARE @profil NVARCHAR(400)  = N'C:\Users\Abdeljaouad';   -- profil Windows du compte du proxy
+DECLARE @profil NVARCHAR(400)  = N'C:\Users\<ton_utilisateur>';   -- À ADAPTER : profil Windows du compte du proxy
 
 DECLARE @job_id UNIQUEIDENTIFIER = (SELECT job_id FROM dbo.sysjobs WHERE name = @nom_job);
 IF @job_id IS NULL

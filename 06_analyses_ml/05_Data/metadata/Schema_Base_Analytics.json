@@ -2697,7 +2697,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "20/11/2026 12:20"
+  "publie_le": "20/11/2026 14:02"
  },
  "ml08_retard_en_cours": {
   "colonnes": [
@@ -2728,7 +2728,7 @@
   ],
   "partage": null,
   "cle": [],
-  "publie_le": "20/11/2026 12:20"
+  "publie_le": "20/11/2026 14:03"
  },
  "ml_metriques_churn": {
   "colonnes": [
@@ -3332,7 +3332,7 @@
    ],
    [
     "notes",
-    "NVARCHAR(255)",
+    "NVARCHAR(500)",
     true
    ],
    [
@@ -3384,6 +3384,16 @@
     "mesure_capture_top_20_test_2025",
     "FLOAT",
     true
+   ],
+   [
+    "mesure_F1_production_rejouee",
+    "FLOAT",
+    true
+   ],
+   [
+    "mesure_seuil_modele_evalue",
+    "FLOAT",
+    true
    ]
   ],
   "lignes": 6,
@@ -3394,7 +3404,7 @@
   "cle": [
    "nom"
   ],
-  "publie_le": "20/11/2026 12:20"
+  "publie_le": "20/11/2026 14:03"
  },
  "ml_scores_churn_actuels": {
   "colonnes": [
@@ -3462,7 +3472,7 @@
   "cle": [
    "client_sk"
   ],
-  "publie_le": "20/11/2026 12:20"
+  "publie_le": "20/11/2026 14:02"
  },
  "ml_scores_demande": {
   "colonnes": [
@@ -3521,7 +3531,7 @@
    "produit_id",
    "mois"
   ],
-  "publie_le": "20/11/2026 12:20"
+  "publie_le": "20/11/2026 14:03"
  },
  "ml_scores_retard_en_cours": {
   "colonnes": [
@@ -3589,7 +3599,7 @@
   "cle": [
    "livraison_id"
   ],
-  "publie_le": "20/11/2026 12:20"
+  "publie_le": "20/11/2026 14:03"
  },
  "ml_suivi": {
   "colonnes": [

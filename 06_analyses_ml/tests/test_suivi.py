@@ -106,6 +106,19 @@ def test_mois_sans_historique_ignore_et_donnees_insuffisantes_refusees():
                                         "date_expedition")
 
 
+def test_predictions_glissantes_jamais_sur_des_lignes_vues():
+    """Chaque mois est prédit par un modèle appris uniquement sur les mois d'avant (v1.5.1 : seuil d'alerte)."""
+    t = _expeditions()
+    p = suivi.predictions_glissantes(t, _pipeline(), ["transporteur"], "en_retard", "date_expedition",
+                                     mois_fenetre=12, nb_mois=4)
+    assert sorted(p["mois_rejoue"].unique()) == ["2025-03", "2025-04", "2025-05", "2025-06"]
+    assert len(p) == 4 * 2 * 400 and p["proba"].between(0, 1).all()
+    assert (p["lignes_apprentissage"] == 12 * 2 * 400).all()                  # exactement les 12 mois d'avant
+    r = suivi.rejouer_fenetre_glissante(t, _pipeline(), ["transporteur"], "en_retard", "date_expedition",
+                                        mois_fenetre=12, nb_mois=4, predictions=p)
+    assert len(r) == 8 and list(r["mois"].unique()) == ["2025-03", "2025-04", "2025-05", "2025-06"]
+
+
 # ---------------------------------------------------------------- publication
 def test_historique_publie_avec_sa_cle(base_test):
     h = suivi.historiser(_suivi(), None, "2025-12-31", "2026-11-19 10:00:00")

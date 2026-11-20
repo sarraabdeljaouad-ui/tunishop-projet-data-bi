@@ -1,6 +1,6 @@
 # TuniShop — Analyses & Machine Learning
 
-**Projet portfolio data / BI de bout en bout · Étape 6 · Sarra Abdeljaouad · version 1.5**
+**Projet portfolio data / BI de bout en bout · Étape 6 · Sarra Abdeljaouad · version 1.5.1**
 
 TuniShop est une enseigne e-commerce tunisienne **fictive** ; toutes les données sont **synthétiques**.
 Cette étape transforme l'entrepôt de données (TuniShop_DWH) en décisions mesurées : exploration, data mining,
@@ -10,10 +10,10 @@ quatre modèles de machine learning, une base de résultats SQL Server et un tab
 Staging (3 bases) ──► TuniShop_DWH (23 vues bi, lecture seule)
                           │
                           ▼
-              19 notebooks Python (EDA ▸ data mining ▸ ML ▸ scores ▸ suivi)
+              20 notebooks Python (EDA ▸ data mining ▸ text mining ▸ ML ▸ scores ▸ suivi)
                           │                    │
                           ▼                    ▼
-              fichiers CSV / Parquet     TuniShop_ANALYTICS (84 tables ana, 20 vues pbi, contrôles ctl)
+              fichiers CSV / Parquet     TuniShop_ANALYTICS (88 tables ana, 24 vues pbi, contrôles ctl)
                                                │
                                                ▼
                                    Power BI TuniShop_Analyse_ML (7 pages)
@@ -38,9 +38,9 @@ Staging (3 bases) ──► TuniShop_DWH (23 vues bi, lecture seule)
 
 - **Méthode** : apprentissage 2023-2024, choix sur une validation interne à 2024, test 2025 ; un modèle n'est retenu que s'il bat une référence simple d'au moins 1 %.
 - **Double sortie** : chaque résultat est écrit en fichier et dans une table SQL (une transaction), contrôlée par `ctl.usp_controler_publication`.
-- **Production** : scores du jour (clients actifs, colis en transit), registre des modèles versionné ; le modèle de retard en production est réappris sur une fenêtre glissante de 12 mois et calibré par transporteur (v1.5).
+- **Production** : scores du jour (clients actifs, colis en transit), registre des modèles versionné ; le modèle de retard en production est réappris sur une fenêtre glissante de 12 mois, calibré par transporteur, avec un seuil d'alerte recalculé à chaque exécution sur la production rejouée (v1.5 et 1.5.1).
 - **Suivi** : 171 indicateurs (erreur, calibrage, PSI), production rejouée mois par mois sur 2025 (12 mois, 26 alertes) et historique des exécutions dans `ana.ml_suivi_historique` (v1.5).
-- **Qualité** : 80 tests pytest, versions bornées et figées, journal d'exécution, Git + nbstripout, documentation pdoc.
+- **Qualité** : 81 tests pytest, versions bornées et figées, journal d'exécution, Git + nbstripout, documentation pdoc.
 - **Sécurité** : aucun mot de passe dans le code (authentification Windows), lecture seule de l'entrepôt.
 
 ## Démarrer
@@ -55,7 +55,7 @@ Staging (3 bases) ──► TuniShop_DWH (23 vues bi, lecture seule)
 | Dossier | Contenu |
 |---|---|
 | `00_Commun` | module `tunishop_analytics`, scripts SQL, lanceur, versions, documentation technique |
-| `01_EDA`, `02_Data_Mining`, `03_Machine_Learning` | 19 notebooks |
+| `01_EDA`, `02_Data_Mining`, `03_Machine_Learning` | 20 notebooks |
 | `04_Livrables` | rapports par phase, rapport final global, recette du tableau de bord, documents d'exploitation |
 | `05_Data` | tables de variables, dictionnaire, lignage |
 | `06_Exports` | figures, tableaux, modèles et fiches, prédictions, journaux |
@@ -66,7 +66,7 @@ Staging (3 bases) ──► TuniShop_DWH (23 vues bi, lecture seule)
 
 - `04_Livrables/Phase_Analyse/Rapport_Final_Global_Phase_Analyse.pdf` — la phase de bout en bout.
 - `04_Livrables/Exploitation/` — guide d'exploitation, fiches modèles, guide utilisateur du tableau de bord, note données personnelles et équité.
-- `CHANGELOG.md` — historique des versions, de la 1.0 à la 1.5 (modèle de retard sur 12 mois et suivi historisé, 19/11/2026).
+- `CHANGELOG.md` — historique des versions, de la 1.0 à la 1.5.1 (modèle de retard sur 12 mois, seuil d'alerte recalculé et suivi historisé, 20/11/2026).
 
 ## Compétences
 

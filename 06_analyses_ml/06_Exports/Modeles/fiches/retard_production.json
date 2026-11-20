@@ -2,8 +2,8 @@
  "nom": "retard_production",
  "cas": "retard",
  "role": "production",
- "version": "2026.11.20.1218",
- "appris_le": "2026-11-20 12:18:43",
+ "version": "2026.11.20.1403",
+ "appris_le": "2026-11-20 14:03:05",
  "periode_apprentissage": "expéditions du 2024-12-31 au 2025-12-30 (12 derniers mois)",
  "lignes_apprentissage": 26647,
  "taux_cible": 0.1734529215296281,
@@ -27,10 +27,12 @@
  ],
  "nb_variables": 15,
  "reglages": "LogisticRegression(C=1.0, dual=False, fit_intercept=True, intercept_scaling=1, l1_ratio=0.0, max_iter=3000, penalty=deprecated, solver=lbfgs, tol=0.0001, verbose=0, warm_start=False)",
- "seuil": 0.13,
+ "seuil": 0.22,
  "mesures": {
   "AUC_test_2025": 0.8108152912865466,
-  "capture_top_20_test_2025": 0.5163809937079626
+  "capture_top_20_test_2025": 0.5163809937079626,
+  "F1_production_rejouee": 0.5244592963891209,
+  "seuil_modele_evalue": 0.13
  },
  "versions": {
   "python": "3.13.1",
@@ -39,5 +41,5 @@
  },
  "source": "TuniShop_DWH",
  "fichier": "06_Exports/Modeles/retard_production.joblib",
- "notes": "modèle évalué : Régression logistique (tout l'historique) ; production : réappris chaque mois sur les 12 derniers mois (v1.5)"
+ "notes": "modèle évalué : Régression logistique (tout l'historique) ; production : réappris chaque mois sur les 12 derniers mois (v1.5) ; seuil 0.22 choisi sur la production rejouée (F1 maximal, v1.5.1)"
 }

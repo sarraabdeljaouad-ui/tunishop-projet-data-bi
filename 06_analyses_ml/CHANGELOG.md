@@ -2,6 +2,25 @@
 
 Auteure : Sarra Abdeljaouad. Les dates sont celles du planning du projet.
 
+## Version 1.5.1 — 20/11/2026 · Seuil d'alerte du retard choisi sur la production
+
+### Pourquoi
+Le seuil 0,13 avait été choisi (F1 maximal sur la validation 2024) pour le modèle **évalué**, qui sous-estime le retard. Le modèle de production v1.5, mieux calibré, donne des probabilités plus hautes : à 0,13, il met en alerte plus d'un colis sur trois (tous les colis SahelLog en transit, 91 % de ceux de Poste Colis Plus).
+
+### Décision
+Même règle que dans `06` (F1 maximal), appliquée à la production **rejouée** des 12 derniers mois : chaque mois est prédit par un modèle appris sur les 12 mois d'avant, donc sur des colis qu'il n'a pas vus. Le seuil est recalculé à chaque exécution de `08_Scoring_Actuel`.
+
+| Seuil (production rejouée sur 2025) | F1 | Précision | Rappel | Colis en alerte |
+|---|---|---|---|---|
+| 0,13 (modèle évalué) | 0,503 | 37,4 % | 77,0 % | 35,7 % |
+| **0,22 (retenu, données au 31/12/2025)** | **0,524** | **45,8 %** | 61,3 % | **23,2 %** |
+
+### Code
+- `suivi.py` : nouvelle fonction `predictions_glissantes` (prédictions de la production rejouée, ligne par ligne) ; `rejouer_fenetre_glissante` s'appuie dessus (mêmes résultats).
+- `08_Scoring_Actuel` : seuil de production calculé sur le rejeu, tableau de comparaison avec le seuil du modèle évalué ; la fiche `retard_production` garde `seuil_modele_evalue` et `F1_production_rejouee` dans ses mesures.
+- `09_Suivi_Modeles` : la figure `ML09_1_suivi` ne trace plus que l'écart prévu − réel (elle mêlait les indicateurs de dérive PSI à la courbe du retard depuis la v1.2).
+- `tests/test_suivi.py` : 1 test de plus (prédictions jamais faites sur des lignes vues). **81 tests**.
+
 ## Version 1.5 — 19/11/2026 · Modèle de retard réappris sur 12 mois et suivi historisé
 
 Les résultats évalués de la phase (notebooks 02 à 06, `Comparaison_Modeles.xlsx`) ne changent pas. La version 1.5 change le **modèle de retard de production** et garde l'**historique du suivi**.
@@ -44,6 +63,35 @@ La fenêtre de 12 mois est retenue : la meilleure au global et stable ; SahelLog
 - Fiches modèles et guide d'exploitation : fenêtre de 12 mois du modèle de retard, historique du suivi.
 - PV complémentaire v1.5, avec les chiffres de l'exécution.
 - Plateforme vue 360 : la page Modèles affichera 171 indicateurs et 26 alertes après le prochain export ; elle peut lire l'historique (`pbi.v_ml_suivi_historique`) pour tracer le suivi dans le temps.
+
+## Version 1.4 — 19/11/2026 · Text mining des avis clients
+
+Les résultats évalués de la phase ne changent pas. La version 1.4 ajoute l'analyse des avis clients,
+intégrée à la chaîne (nouveau notebook `02_Data_Mining/05_Text_Mining_Avis`, étape 16 bis).
+
+### Code
+- **Nouveau module `texte.py`** : analyse par règles (dictionnaires de thèmes, lexique derja et arabizi),
+  sans modèle entraîné — un classifieur retrouverait la note (fuite de données). Nettoyage, langue,
+  thèmes, polarité, cohérence note / texte, confrontation aux faits.
+- `publication.py` : clés des tables `tm_avis`, `tm_avis_themes`, `tm_produits`.
+- `executer_analyse.py` : le notebook 05 rejoint le data mining, donc le job de nuit.
+
+### Base TuniShop_ANALYTICS
+- 4 tables `ana.tm_*` créées et remplies par le notebook (87 tables au total à ce stade).
+- Script `09_Text_Mining_TuniShop_ANALYTICS.sql` : 4 vues `pbi.v_tm_*` (23 vues au total à ce stade),
+  catalogue, contrôles **T1 à T5**.
+
+### Résultats (exécution du 14/11/2026 sur le DWH réel)
+- 9 314 avis dont 6 081 commentés (65 %, 21 % en derja) ; 8 thèmes, 10 034 couples avis × thème.
+- 4 591 avis positifs, 569 neutres, 921 négatifs ; cohérence note / texte : 6 075 cohérents, 6 non
+  évaluables (anomalie A14, acceptée), aucun incohérent.
+- Confrontation aux faits : les avis négatifs ont plus de retards et de retours, mais pas pour la raison
+  citée — le texte suit la note, pas l'expérience vécue.
+- Les vues `pbi.v_tm_*` alimentent la page « Voix du client » de la plateforme vue 360.
+
+### Tests et documents
+- `tests/test_texte.py` : 43 tests. **71 tests** au total.
+- Rapport_Text_Mining_Avis du 19/11/2026 ; contrôles v6.0 (critère CA15) ; PV complémentaire v1.4.
 
 ## Version 1.3 — 17/11/2026 · Demande de l'année suivante et clôture globale
 
