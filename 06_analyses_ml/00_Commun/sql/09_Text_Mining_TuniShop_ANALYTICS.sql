@@ -1,7 +1,11 @@
-/* =============================================================================
+﻿/* =============================================================================
    TuniShop — Étape 7, version 1.4 : text mining des avis
    Script 09 : vues pbi.v_tm_*, catalogue et contrôles
    Auteure : Sarra Abdeljaouad
+
+   Version 1.5.2 : pbi.v_tm_avis réécrite. Le transporteur de l'avis (celui de la 1re livraison de la commande)
+   était cherché avis par avis (OUTER APPLY ... TOP (1)) : 6 081 recherches dans les livraisons, 157 s à l'export
+   du 20/11/2026. Il est maintenant calculé en une passe (ROW_NUMBER), même règle, même résultat (script 09b).
 
    ORDRE : exécuter APRÈS le notebook 02_Data_Mining/05_Text_Mining_Avis.
    Le notebook crée et remplit les 4 tables ana.tm_* (via cfg.exporter_table) ;
@@ -25,17 +29,21 @@ GO
    ----------------------------------------------------------------------------- */
 CREATE OR ALTER VIEW pbi.v_tm_avis
 AS
+-- Transporteur de la 1re livraison de chaque commande (plus petit livraison_id dont le transporteur est connu),
+-- calculé une seule fois pour toutes les commandes, puis joint aux avis (v1.5.2 : remplace un OUTER APPLY ligne à ligne).
+WITH premiere_livraison AS (
+    SELECT l.commande_id, t.nom_transporteur,
+           ROW_NUMBER() OVER (PARTITION BY l.commande_id ORDER BY l.livraison_id) AS rang
+    FROM TuniShop_DWH.bi.v_fact_livraisons AS l
+    JOIN TuniShop_DWH.bi.v_dim_transporteur AS t ON t.transporteur_sk = l.transporteur_sk
+)
 SELECT a.avis_id, a.commande_id, a.client_sk, c.client_id, a.produit_id, a.categorie,
        a.date_avis, a.note, a.sentiment_dwh, a.langue, a.texte_nettoye, a.texte_fr,
        a.themes, a.nb_themes, a.polarite_globale, a.coherence,
        tr.nom_transporteur AS transporteur
 FROM ana.tm_avis AS a
 LEFT JOIN TuniShop_DWH.bi.v_dim_client AS c ON c.client_sk = a.client_sk
-OUTER APPLY (SELECT TOP (1) t.nom_transporteur
-             FROM TuniShop_DWH.bi.v_fact_livraisons AS l
-             JOIN TuniShop_DWH.bi.v_dim_transporteur AS t ON t.transporteur_sk = l.transporteur_sk
-             WHERE l.commande_id = a.commande_id
-             ORDER BY l.livraison_id) AS tr;
+LEFT JOIN premiere_livraison AS tr ON tr.commande_id = a.commande_id AND tr.rang = 1;
 GO
 
 /* -----------------------------------------------------------------------------
@@ -109,6 +117,12 @@ SELECT (SELECT COUNT(*) FROM pbi.v_tm_avis WHERE client_id IS NULL) AS clients_a
 -- T4. Répartition par langue et par polarité (à comparer au notebook, section 3)
 SELECT langue, polarite_globale, COUNT(*) AS avis
 FROM ana.tm_avis GROUP BY langue, polarite_globale ORDER BY langue, polarite_globale;
+
+-- T6. (v1.5.2) Durée de lecture des vues : quelques secondes au plus (157 s et 132 s avant la réécriture)
+DECLARE @t0 DATETIME2 = SYSDATETIME();
+SELECT COUNT(*) AS avis, COUNT(transporteur) AS avis_avec_transporteur FROM pbi.v_tm_avis;
+SELECT COUNT(*) AS themes FROM pbi.v_tm_avis_themes;
+SELECT DATEDIFF(MILLISECOND, @t0, SYSDATETIME()) / 1000.0 AS duree_s;
 
 -- T5. Les 4 tables sont publiées et tracées
 SELECT table_sql, lignes, publie_le

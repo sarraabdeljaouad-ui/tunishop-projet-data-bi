@@ -1,7 +1,7 @@
-# TuniShop — Étape 7 : ordre d'exécution complet (version 1.5.1)
+# TuniShop — Étape 7 : ordre d'exécution complet (version 1.5.2)
 
 Auteure : Sarra Abdeljaouad · Suis les numéros dans l'ordre. Chaque étape a besoin de la précédente.
-Ce qui change depuis la version 1.1 : voir `CHANGELOG.md` et les sections G à J (mises à jour).
+Ce qui change depuis la version 1.1 : voir `CHANGELOG.md` et la section G (mise à jour).
 
 ## A. Préparation — une seule fois
 
@@ -9,8 +9,8 @@ Ce qui change depuis la version 1.1 : voir `CHANGELOG.md` et les sections G à J
 |---|---|---|---|
 | 1 | Terminal VS Code | `pip install -r 00_Commun/requirements.txt` | bibliothèques installées |
 | 2 | SSMS (`localhost`), F5 | `00_Commun/sql/01_Creer_base_TuniShop_ANALYTICS.sql` | « Étape 01 terminée » |
-| 3 | SSMS, F5 | `00_Commun/sql/02_Tables_ana.sql` | « Étape 02 terminée : 84 tables… » |
-| 4 | SSMS, F5 | `00_Commun/sql/03_Vues_pbi_Power_BI.sql` | « Étape 03 terminée » (20 vues `pbi` ; les 4 vues `pbi.v_tm_*` viennent du script 09, v1.4) |
+| 3 | SSMS, F5 | `00_Commun/sql/02_Tables_ana.sql` | « Étape 02 terminée : 82 tables… » |
+| 4 | SSMS, F5 | `00_Commun/sql/03_Vues_pbi_Power_BI.sql` | « Étape 03 terminée » (18 vues `pbi`) |
 | 5 | SSMS, F5 | `00_Commun/sql/04_Controles_TuniShop_ANALYTICS.sql` | lignes P1 en INFO (tables encore vides : normal) |
 | 6 | SSMS, F5 | `00_Commun/sql/05_Droits_TuniShop_ANALYTICS.sql` | **seulement** si un autre compte que le tien lance les notebooks ou lit Power BI |
 
@@ -58,13 +58,13 @@ Ordre des notebooks ML : 01 → 02 → 03 → 04 → 06 → 05 → 08 → 09 →
 |---|---|---|---|
 | 30 | SSMS, F5 | `00_Commun/sql/06_Lien_TuniShop_ADMIN.sql` | pour suivre l'analyse dans TuniShop_ADMIN |
 | 31 | SSMS (instance avec SQL Server Agent), F5 | `00_Commun/sql/07_Etape_job_Agent.sql` | pour lancer l'analyse chaque nuit après les cubes (adapter `@python`, `@racine`, `@proxy`) |
-| 32 | Terminal | `git init`, `nbstripout --install --attributes .gitattributes`, `git add .`, `git commit`, `git tag v1.5.1` | pour versionner le projet (guide d'exploitation, section 8) |
+| 32 | Terminal | `git init`, `nbstripout --install --attributes .gitattributes`, `git add .`, `git commit`, `git tag v1.2` | pour versionner le projet (guide d'exploitation, section 8) |
 
 ## E. Résultat final : Power BI
 
 | N° | Où | Action |
 |---|---|---|
-| 33 | Power BI Desktop | Ouvrir `07_PowerBI/TuniShop_Analyse_ML.pbip`, puis Accueil > **Actualiser** (identifiants Windows) : 7 pages prêtes (page 6 « Scores du jour et suivi » ajoutée en v1.2, page 7 « Demande prévue et risque de rupture » en v1.3) |
+| 33 | Power BI Desktop | Ouvrir `07_PowerBI/TuniShop_Analyse_ML.pbip`, puis Accueil > **Actualiser** (identifiants Windows) : 6 pages prêtes (page 6 « Scores du jour et suivi » ajoutée en v1.2) |
 | 34 | Excel | Recette : `04_Livrables/Tableaux_de_bord/Recette_Tableau_de_bord_Analyse.xlsx` ; en version 1.2, la valeur attendue **V22 (WAPE de la demande) devient 47,5 %** |
 
 ## F. Cas particulier : prévision de l'année suivante
@@ -91,7 +91,7 @@ tableau de bord, note données personnelles et équité).
 1. Copier les fichiers du kit v1.4 à leur place (voir `LISEZMOI_v1.4.md`).
 2. Terminal : `python -m pytest -q tests` → 71 tests réussis.
 3. VS Code : exécuter `02_Data_Mining/05_Text_Mining_Avis` (« Exécuter tout ») : les 4 tables `ana.tm_*` sont créées et remplies.
-4. SSMS, F5 : `00_Commun/sql/09_Text_Mining_TuniShop_ANALYTICS.sql` (4 vues `pbi.v_tm_*`, catalogue, contrôles T1 à T5).
+4. SSMS, F5 : `00_Commun/sql/09_Text_Mining_TuniShop_ANALYTICS.sql` (4 vues `pbi.v_tm_*`, catalogue, contrôles T1 à T6 ; depuis la v1.5.2, T6 mesure la lecture des vues : moins d'une seconde).
 5. Ensuite, le notebook fait partie de la chaîne : `executer_analyse.py` et le job de nuit le lancent avec le data mining.
 
 
@@ -110,3 +110,9 @@ tableau de bord, note données personnelles et équité).
 2. Terminal : `python -m pytest -q tests` → 81 tests réussis.
 3. VS Code, « Exécuter tout » : `08_Scoring_Actuel` (attendu : « seuil de production … : 0.22 »), `09_Suivi_Modeles`, `07_Publication_Resultats`. Aucun script SQL à relancer.
 4. Plateforme vue 360 : `.\scripts\mettre_a_jour.ps1` depuis la version HTML.
+
+## K. Passer à la version 1.5.2 : vue du text mining réécrite (une fois)
+
+1. Copier `09_Text_Mining_TuniShop_ANALYTICS.sql` et `09b_Correctif_v_tm_avis.sql` dans `00_Commun/sql` (le premier remplace l'ancien).
+2. SSMS, F5 : `00_Commun/sql/09b_Correctif_v_tm_avis.sql`. Il lit l'ancienne vue (2 à 3 minutes), la remplace, puis compare. Attendu : C1 6 081 / 6 081, C2 et C3 à 0, C4 égaux, C5 et C6 sous la seconde.
+3. Aucun notebook à relancer. Plateforme vue 360 : `.\scripts\mettre_a_jour.ps1` (l'export des deux vues passe de près de 5 minutes à moins d'une seconde).
