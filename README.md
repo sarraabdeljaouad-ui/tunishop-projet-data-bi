@@ -1,6 +1,6 @@
 # TuniShop · Projet data et BI de bout en bout
 
-**Sarra Abdeljaouad** · Data / BI  · [LinkdeIn](https://www.linkedin.com/in/sarra-abdeljaouad-927282451/) · [Plateforme en ligne](https://tunishopsarraapps.streamlit.app)
+**Sarra Abdeljaouad** · Data / BI  · [LinkedIn](https://www.linkedin.com/in/sarra-abdeljaouad-927282451/) · [Plateforme en ligne](https://tunishopsarraapps.streamlit.app)
 
 TuniShop est une enseigne e-commerce tunisienne **fictive**. Toutes les données sont **synthétiques**.
 Ce dépôt montre la chaîne complète : des fichiers bruts jusqu'aux décisions, en passant par le staging,
