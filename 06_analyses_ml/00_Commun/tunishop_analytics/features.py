@@ -649,7 +649,7 @@ SORTIES_ML = [
     ("03_Machine_Learning/01_Preparation_Datasets_ML", "05_Data/features/ml_ventes|ml_churn|ml_demande|ml_retard.parquet", "jeux de données des 4 cas (colonne periode)", "notebooks 02, 03, 04, 06"),
     ("03_Machine_Learning/02_Prevision_Ventes", "06_Exports/Modeles/prevision_ventes_ridge*.joblib ; 06_Exports/Predictions/ventes_2025_test.parquet", "Ridge « calendrier » (retenu)", "05_Evaluation_Modeles, prévision 2026"),
     ("03_Machine_Learning/03_Prediction_Churn", "06_Exports/Modeles/churn_modele.joblib ; 06_Exports/Predictions/churn_2025_test.parquet", "gradient boosting + seuil (retenu)", "05_Evaluation_Modeles, ciblage fidélisation"),
-    ("03_Machine_Learning/04_Prediction_Demande", "06_Exports/Modeles/demande_modele.joblib ; 06_Exports/Predictions/demande_2025_test.parquet", "version 2 « catégorie × part produit » retenue (colonne prevision_retenue) ; meilleur gradient boosting enregistré", "05_Evaluation_Modeles, approvisionnement"),
+    ("03_Machine_Learning/04_Prediction_Demande", "06_Exports/Modeles/demande_modele.joblib ; 06_Exports/Predictions/demande_2025_test.parquet", "version retenue (v2 ou v3 corrigée, v1.6) dans la colonne prevision_retenue ; meilleur gradient boosting enregistré", "05_Evaluation_Modeles, approvisionnement"),
     ("03_Machine_Learning/06_Prediction_Retard_Livraison", "06_Exports/Modeles/retard_modele.joblib ; 06_Exports/Predictions/retard_2025_test.parquet", "régression logistique + seuil (retenue)", "05_Evaluation_Modeles, alertes livraison"),
     ("03_Machine_Learning/05_Evaluation_Modeles", "04_Livrables/Machine_Learning/Comparaison_Modeles.xlsx", "comparaison et robustesse des modèles", "Rapport_Modelisation"),
     ("03_Machine_Learning/08_Scoring_Actuel", "06_Exports/Modeles/churn_production.joblib, retard_production.joblib ; 06_Exports/Modeles/fiches/*.json", "modèles de production (réappris sur 2023-2025) et fiches d'identité", "scores du jour ; ana.ml_registre_modeles"),
@@ -739,8 +739,11 @@ CAS_ML = {
                        "taux_aboutie", "nb_commandes_90j", "nb_categories", "nb_livraisons", "part_livraisons_retard",
                        "retard_max_j", "nb_demandes_remboursement", "note_moyenne", "a_donne_avis", "nb_avis",
                        "score_r", "score_f", "score_m"],
-        "categorielles": ["region", "type_client", "tranche_age", "genre", "canal_inscription", "segment_rfm", "cluster"],
-        "ecartees": {**FUITES_CHURN, "client_sk / date_observation": "identifiants (pas des comportements)"},
+        # v1.6 : genre et tranche_age retirés (données personnelles sensibles, équité) ; gardés dans la table clients
+        #        pour mesurer l'équité du modèle (03_Prediction_Churn, section 3 bis)
+        "categorielles": ["region", "type_client", "canal_inscription", "segment_rfm", "cluster"],
+        "ecartees": {**FUITES_CHURN, "client_sk / date_observation": "identifiants (pas des comportements)",
+                     "genre / tranche_age": "données personnelles sensibles : retirées des variables en v1.6 (équité, INPDP)"},
     },
     "demande": {
         "titre": "Prédiction de la demande (quantité mensuelle par produit)", "type": "régression (comptage)",
@@ -761,6 +764,10 @@ CAS_ML = {
         "ecartees": {**FUITES_RETARD, "livraison_id / commande_id": "identifiants"},
     },
 }
+
+
+# v1.6 : variables personnelles retirées du churn, conservées pour les contrôles d'équité
+VARIABLES_SENSIBLES_CHURN = ["genre", "tranche_age"]
 
 
 def dataset_ventes(produits_mois: pd.DataFrame) -> pd.DataFrame:
@@ -835,6 +842,44 @@ def prevision_demande_v2(lignes: pd.DataFrame, produits_mois: pd.DataFrame) -> p
         base = pd.Series([cat_mois.get((c, m), np.nan) for c, m in zip(L["categorie"], mois_num)], index=idx)
         p = base * L["categorie"].map(croissance) * L["produit_id"].map(part)
         resultat.loc[idx] = p.fillna(L["moy_categorie_annee_prec"] * 0.5)
+    return resultat.clip(lower=0)
+
+
+BORNES_CORRECTION_DEMANDE = (0.8, 1.5)        # v1.6 : coefficient de correction borné (pas d'emballement)
+
+
+def coefficients_correction_demande(produits_mois: pd.DataFrame, annee: int) -> pd.Series:
+    """Coefficient de correction par catégorie pour prévoir l'année `annee` (version 3, v1.6).
+
+    coefficient = quantité RÉELLE de l'année A-1 / quantité PRÉVUE par la version 2 pour A-1
+    (prévue depuis A-2). On n'utilise donc que des années complètes déjà connues au 31/12 de A-1 :
+    pour le test 2025, le coefficient vient de 2024 (prévu depuis 2023), jamais de 2025.
+    Borné par BORNES_CORRECTION_DEMANDE. Série vide si A-1 ou A-2 manque (la v3 vaut alors la v2).
+    """
+    base = annee - 1
+    annees = produits_mois["mois"].dt.year
+    if not ((annees == base).any() and (annees == base - 1).any()):
+        return pd.Series(dtype=float)
+    d = dataset_demande(produits_mois)
+    L = d[d["mois"].dt.year == base]
+    agg = L.assign(prevu=prevision_demande_v2(L, produits_mois)).groupby("categorie")[["quantite", "prevu"]].sum()
+    return (agg["quantite"] / agg["prevu"]).clip(*BORNES_CORRECTION_DEMANDE).rename("coefficient")
+
+
+def prevision_demande_v3(lignes: pd.DataFrame, produits_mois: pd.DataFrame) -> pd.Series:
+    """Demande « version 3 » (v1.6) : version 2 multipliée par le coefficient de sa catégorie.
+
+    La version 2 sous-estime la croissance (biais de -23,5 % sur 2025) ; la version 3 corrige le niveau
+    de chaque catégorie avec l'écart observé l'année précédente (coefficients_correction_demande).
+    Sans coefficient disponible (catégorie ou année absente), la v3 vaut la v2.
+    """
+    v2 = prevision_demande_v2(lignes, produits_mois)
+    annees = lignes["mois"].dt.year if "mois" in lignes else lignes["annee"]
+    resultat = v2.copy()
+    for annee in sorted(annees.unique()):
+        idx = lignes.index[annees == annee]
+        coef = coefficients_correction_demande(produits_mois, int(annee))
+        resultat.loc[idx] = v2.loc[idx] * lignes.loc[idx, "categorie"].map(coef).fillna(1.0)
     return resultat.clip(lower=0)
 
 

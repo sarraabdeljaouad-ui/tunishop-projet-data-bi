@@ -1,8 +1,64 @@
-# Journal des versions — TuniShop, étape 7 : Analyses & ML
+# Journal des versions · TuniShop, étape 7 : Analyses & ML
 
-Auteure : Sarra Abdeljaouad. Les dates sont celles du planning du projet.
+Auteure : Sarra Abdeljaouad. Les dates des versions sont celles du planning du projet ; les dates d'exécution citées dans le texte (publications, exports, scripts SSMS) sont celles des traitements réels.
 
-## Version 1.5.2 — 20/11/2026 · Vue du text mining réécrite (pbi.v_tm_avis)
+## Version 1.6 · 26/12/2026 · Churn sans données personnelles, demande corrigée du biais
+
+Deux points de suivi du PV final sont traités. Les modèles retenus ne changent pas de famille : gradient boosting pour le churn, version 2 pour la demande.
+
+### Règles de décision, fixées avant l'exécution
+- **Churn** : le modèle sans genre ni tranche d'âge est gardé si ces deux variables apportent moins de 0,005 d'AUC sur 2025.
+- **Demande** : la version 3 remplace la version 2 si, sur 2025, son biais est plus proche de 0 **et** sa WAPE produit × mois n'est pas plus mauvaise. La v3 n'a pas de validation possible (son coefficient vient de 2024) : le test 2025 tranche, selon cette règle.
+
+### Churn : genre et tranche d'âge retirés des variables
+| Test 2025 | AUC | Précision | Rappel | F1 | Seuil |
+|---|---|---|---|---|---|
+| **Sans genre ni tranche d'âge (retenu)** | **0,8179** | 75,4 % | 89,4 % | 0,818 | 0,40 |
+| Avec genre et tranche d'âge (v1.5.3) | 0,8177 | 74,3 % | 91,3 % | 0,819 | 0,37 |
+
+- Gain d'AUC apporté par ces variables : -0,0002. Le modèle sans elles est confirmé.
+- Le seuil choisi sur la validation passe de 0,37 à 0,40 : un peu plus de précision, un peu moins de rappel, F1 stable.
+- Équité (test 2025) : AUC 0,817 (femmes) et 0,819 (hommes) ; de 0,804 (45-54 ans) à 0,829 (25-34 ans). Clients sans tranche d'âge (542 photos, surtout des professionnels) : rappel de 72 %, contre environ 90 % pour les autres, à suivre.
+- Importance des variables : la récence domine toujours (0,242 de perte d'AUC) ; 28 variables au lieu de 30.
+- Scores du jour au 31/12/2025 : 5 779 clients en alerte sur 7 377 (78,3 %), contre 5 950 en v1.5.3 (seuil 0,40 au lieu de 0,37).
+
+### Demande : version 3 testée, version 2 gardée
+| Test 2025 | WAPE produit × mois | WAPE catégorie × mois | Biais |
+|---|---|---|---|
+| **Version 2 (retenue)** | **47,5 %** | 27,4 % | -23,5 % |
+| Version 3 (v2 × coefficient par catégorie) | 48,0 % | **20,3 %** | **-6,8 %** |
+| Moyenne de l'année précédente (référence) | 47,7 % | 27,0 % | -20,9 % |
+
+- Coefficient = réel / prévu v2 de l'année précédente, borné entre 0,8 et 1,5. Pour 2025 (appris sur 2024) : de 0,96 (Électronique & High-Tech) à 1,40 (Mode) ; Fournitures & Livres à la borne de 1,5 (aussi pour 2026, comme Épicerie fine).
+- Une seule condition remplie : la **version 2 reste retenue**. La v3 corrige le niveau des catégories, pas l'erreur produit par produit.
+- Prévision 2026 inchangée : 74 702 unités, à lire comme un plancher ; la page 7 du tableau de bord ne change pas.
+
+### Code
+- `features.py` : `genre` et `tranche_age` retirés de `CAS_ML["churn"]` (« écartées » : données personnelles sensibles), gardés dans `VARIABLES_SENSIBLES_CHURN` ; nouvelles fonctions `coefficients_correction_demande` et `prevision_demande_v3`.
+- `03_Prediction_Churn` : genre et tranche d'âge relus depuis la table `clients` pour l'équité seulement ; section 3 bis (coût en performance, performance par groupe).
+- `04_Prediction_Demande` : candidat v3, règle de choix v1.6, coefficients publiés.
+- `08_Scoring_Actuel` : lit le modèle de demande retenu ; colonne `quantite_plancher` (v2) ; fiche `demande_v3` au registre si elle est retenue ; arrêt si le modèle de churn contient encore genre ou âge.
+- `09_Suivi_Modeles` : 169 indicateurs au lieu de 171 (2 variables du churn en moins dans la dérive PSI).
+- Tests : 81 sur 81.
+
+### Base TuniShop_ANALYTICS
+- `02_Tables_ana.sql` : tables `ana.ml03_cout_equite`, `ana.ml03_equite` et `ana.ml04_coefficients_v3` et leurs lignes du catalogue (**87 tables**) ; colonne v3 dans `ana.ml_pred_demande_2025` ; colonne `quantite_plancher` dans `ana.ml_scores_demande`. Sur une base existante, la publication recrée ces deux tables (« structure modifiée »).
+- `ctl.usp_controler_publication` : tout au statut OK, les 3 nouvelles tables comprises (P1).
+
+### Effet sur le tableau de bord
+- Page 7 : inchangée (v2 retenue).
+- Pages 2 et 6 : après actualisation, elles lisent le nouveau modèle de churn ; la carte « Clients en alerte (jour) » passe de 5 950 à 5 779.
+
+## Version 1.5.3 · 23/12/2026 · Affichage du tableau de bord corrigé
+
+Observations OB1 à OB3 de la recette v4.0 levées, aucune valeur ni mesure modifiée :
+- OB1 (page 6) : axe des déciles passé en type catégoriel, étiquettes 1 à 10 ; même correction sur la page 2.
+- OB2 (page 6) : colonne « Seuil » du registre visible sans ascenseur.
+- OB3 (page 7) : libellés des catégories affichés en entier.
+- Retouches : colonne Total du tableau k-means (page 2), tableau des produits épuisés aligné (page 7).
+- Recette v4.1 : captures P28, P43 et P46 remplacées.
+
+## Version 1.5.2 · 20/12/2026 · Vue du text mining réécrite (pbi.v_tm_avis)
 
 ### Pourquoi
 `pbi.v_tm_avis` cherchait le transporteur de chaque avis ligne à ligne (`OUTER APPLY … TOP (1)`) : 6 081 recherches dans les livraisons du DWH. L'export de démonstration du 20/11/2026 mesurait 157 s pour cette vue et 132 s pour `pbi.v_tm_avis_themes`, qui la lit. Point de suivi ouvert depuis la recette de la plateforme vue 360 (anomalie A15 de la version Streamlit).
@@ -25,7 +81,7 @@ Effet sur la plateforme : export de démonstration en 0,3 s pour chacune des deu
 - `00_Commun/sql/09_Text_Mining_TuniShop_ANALYTICS.sql` : nouvelle définition de la vue ; contrôle T6 (durée de lecture des vues).
 - `00_Commun/sql/09b_Correctif_v_tm_avis.sql` (nouveau) : applique le correctif une fois et compare l'ancien et le nouveau résultat.
 
-## Version 1.5.1 — 20/11/2026 · Seuil d'alerte du retard choisi sur la production
+## Version 1.5.1 · 20/12/2026 · Seuil d'alerte du retard choisi sur la production
 
 ### Pourquoi
 Le seuil 0,13 avait été choisi (F1 maximal sur la validation 2024) pour le modèle **évalué**, qui sous-estime le retard. Le modèle de production v1.5, mieux calibré, donne des probabilités plus hautes : à 0,13, il met en alerte plus d'un colis sur trois (tous les colis SahelLog en transit, 91 % de ceux de Poste Colis Plus).
@@ -44,7 +100,7 @@ Même règle que dans `06` (F1 maximal), appliquée à la production **rejouée*
 - `09_Suivi_Modeles` : la figure `ML09_1_suivi` ne trace plus que l'écart prévu − réel (elle mêlait les indicateurs de dérive PSI à la courbe du retard depuis la v1.2).
 - `tests/test_suivi.py` : 1 test de plus (prédictions jamais faites sur des lignes vues). **81 tests**.
 
-## Version 1.5 — 19/11/2026 · Modèle de retard réappris sur 12 mois et suivi historisé
+## Version 1.5 · 20/12/2026 · Modèle de retard réappris sur 12 mois et suivi historisé
 
 Les résultats évalués de la phase (notebooks 02 à 06, `Comparaison_Modeles.xlsx`) ne changent pas. La version 1.5 change le **modèle de retard de production** et garde l'**historique du suivi**.
 
@@ -87,7 +143,14 @@ La fenêtre de 12 mois est retenue : la meilleure au global et stable ; SahelLog
 - PV complémentaire v1.5, avec les chiffres de l'exécution.
 - Plateforme vue 360 : la page Modèles affichera 171 indicateurs et 26 alertes après le prochain export ; elle peut lire l'historique (`pbi.v_ml_suivi_historique`) pour tracer le suivi dans le temps.
 
-## Version 1.3 — 17/11/2026 · Demande de l'année suivante et clôture globale
+## Version 1.4 · 19/12/2026 · Text mining des avis clients
+
+- Notebook `02_Data_Mining/05_Text_Mining_Avis` et rapport `Rapport_Text_Mining_Avis`.
+- 9 314 avis, dont 6 081 commentés (65 %, 21 % en derja) ; 8 thèmes, 10 034 couples avis × thème.
+- Polarité : 4 591 avis positifs, 569 neutres, 921 négatifs ; cohérence note / texte : 6 075 cohérents, 6 non évaluables, aucun incohérent.
+- Analyse par règles, sans modèle entraîné ; contrôles T1 à T5 au statut OK.
+
+## Version 1.3 · 17/12/2026 · Demande de l'année suivante et clôture globale
 
 Les résultats validés de la phase ne changent pas. La version 1.3 prolonge la demande par produit vers l'année suivante.
 
@@ -108,7 +171,7 @@ Les résultats validés de la phase ne changent pas. La version 1.3 prolonge la 
 - Rapport final et rapport de validation v5.0 ; rapport final global v3.0 (50 captures) ; contrôles v5.0 ; guides et fiches modèles v1.1.
 - Addendum au rapport de modélisation : la demande v2 est retenue depuis la v1.2 (le rapport du 31/10/2026 décrivait la v1.1).
 
-## Version 1.2 — 10/12/2026 · Exploitation et documentation (après la clôture)
+## Version 1.2 · 10/12/2026 · Exploitation et documentation (après la clôture)
 
 Lot d'améliorations après le PV de clôture du 03/12/2026. Les résultats validés de la phase ne changent pas, **sauf la demande par produit** (voir ci-dessous).
 
@@ -139,7 +202,7 @@ Lot d'améliorations après le PV de clôture du 03/12/2026. Les résultats vali
   - `pbi.v_ml_demande` lit le modèle retenu.
 
 - **Power BI, page 6 « Scores du jour et suivi des modèles »** (projet .pbip v1.2) :
-  - 6 cartes (date de scoring, clients actifs scorés, clients en alerte, clients à cibler — déciles 4 à 7, colis en transit, alertes du suivi) ;
+  - 6 cartes (date de scoring, clients actifs scorés, clients en alerte, clients à cibler (déciles 4 à 7), colis en transit, alertes du suivi) ;
   - probabilité de churn par décile, clients en alerte par segment RFM, colis en transit et en alerte par transporteur ;
   - tableau du suivi (alertes en premier) et registre des modèles ;
   - 4 tables ajoutées au modèle (vues `pbi.v_ml_scores_churn`, `v_ml_scores_retard`, `v_ml_registre`, `v_ml_suivi`), 14 mesures DAX (53 au total) ;
@@ -161,12 +224,12 @@ Lot d'améliorations après le PV de clôture du 03/12/2026. Les résultats vali
 - Tableau de bord, page 3 : la WAPE de la demande passe de 47,7 % à **47,5 %**. La valeur attendue V22 de la recette devient 47,5 %.
 - Le rapport de modélisation et le rapport final global (03/12/2026) décrivent la version 1.1 : la demande y utilise la référence. La version 2 est documentée ici et dans les fiches modèles.
 
-## Version 1.1 — 03/12/2026 · Clôture
+## Version 1.1 · 03/12/2026 · Clôture
 - Rapport final global, rapport de validation v3.0, PV de clôture : **validé sans réserve**.
 - Tableau de bord Power BI v1.1 (anomalies de recette E1 à E7 corrigées), recette v2.0 sans réserve.
 - Texte de la prévision 2026 corrigé dans `02_Prevision_Ventes` (anomalie A10).
 
-## Version 1.0 — 26/11/2026 · Livraison des phases
+## Version 1.0 · 26/11/2026 · Livraison des phases
 - EDA (12/11/2026), data mining (19/11/2026), machine learning (26/11/2026).
 - Base TuniShop_ANALYTICS (scripts 01 à 07), publication des résultats, tableau de bord Power BI v1.0.
 - Réserves R1 (calendrier 2026) et R2 (exécution du ML sur le DWH réel), levées le 27/11/2026.

@@ -12,6 +12,11 @@
    la table : ce script sert à préparer la base et les vues Power BI dès le départ.
 
    Structure générée à partir des tables réellement publiées (05_Data/metadata/Schema_Base_Analytics.json).
+
+   Version 1.6 : 3 tables ajoutées (ana.ml03_cout_equite, ana.ml03_equite, ana.ml04_coefficients_v3),
+   1 colonne ajoutée à ana.ml_pred_demande_2025 (v3) et à ana.ml_scores_demande (quantite_plancher).
+   Sur une base existante, les notebooks ont déjà recréé ces tables : relancer ce script met à jour
+   le catalogue (MERGE) sans toucher aux tables présentes.
    ===================================================================================== */
 
 USE TuniShop_ANALYTICS;
@@ -753,6 +758,31 @@ CREATE TABLE [ana].[ml03_apport_data_mining] (
 );
 GO
 
+-- coût équité (v1.6)  (source : 06_Exports/Tables/ML03_cout_equite.csv ; notebook 03_Prediction_Churn)
+IF OBJECT_ID(N'ana.ml03_cout_equite', N'U') IS NULL
+CREATE TABLE [ana].[ml03_cout_equite] (
+    [cle] NVARCHAR(50) NULL,
+    [AUC] FLOAT NULL,
+    [precision] FLOAT NULL,
+    [rappel] FLOAT NULL,
+    [F1] FLOAT NULL,
+    [seuil] FLOAT NULL
+);
+GO
+
+-- équité (v1.6)  (source : 06_Exports/Tables/ML03_equite.csv ; notebook 03_Prediction_Churn)
+IF OBJECT_ID(N'ana.ml03_equite', N'U') IS NULL
+CREATE TABLE [ana].[ml03_equite] (
+    [variable] NVARCHAR(50) NULL,
+    [groupe] NVARCHAR(50) NULL,
+    [photos] INT NULL,
+    [taux_churn_reel] FLOAT NULL,
+    [AUC] FLOAT NULL,
+    [rappel] FLOAT NULL,
+    [precision] FLOAT NULL
+);
+GO
+
 -- importance  (source : 06_Exports/Tables/ML03_importance.csv ; notebook 03_Prediction_Churn)
 IF OBJECT_ID(N'ana.ml03_importance', N'U') IS NULL
 CREATE TABLE [ana].[ml03_importance] (
@@ -766,6 +796,15 @@ IF OBJECT_ID(N'ana.ml03_validation', N'U') IS NULL
 CREATE TABLE [ana].[ml03_validation] (
     [modele] NVARCHAR(50) NULL,
     [AUC validation] FLOAT NULL
+);
+GO
+
+-- coefficients v3 (v1.6)  (source : 06_Exports/Tables/ML04_coefficients_v3.csv ; notebook 04_Prediction_Demande)
+IF OBJECT_ID(N'ana.ml04_coefficients_v3', N'U') IS NULL
+CREATE TABLE [ana].[ml04_coefficients_v3] (
+    [categorie] NVARCHAR(50) NULL,
+    [pour 2025 (appris sur 2024)] FLOAT NULL,
+    [pour 2026 (appris sur 2025)] FLOAT NULL
 );
 GO
 
@@ -942,6 +981,7 @@ CREATE TABLE [ana].[ml_pred_demande_2025] (
     [Gradient boosting (Poisson)] FLOAT NULL,
     [Gradient boosting (quadratique)] FLOAT NULL,
     [Catégorie × part produit (v2)] FLOAT NULL,
+    [v2 corrigée du biais (v3)] FLOAT NULL,          -- v1.6
     [prevision_retenue] FLOAT NULL,
     CONSTRAINT [PK_ml_pred_demande_2025] PRIMARY KEY ([produit_id], [mois])
 );
@@ -1057,6 +1097,7 @@ CREATE TABLE [ana].[ml_scores_demande] (
     [produit_id] NVARCHAR(50) NOT NULL,
     [categorie] NVARCHAR(50) NULL,
     [mois] DATE NOT NULL,
+    [quantite_plancher] FLOAT NULL,                  -- v1.6 : version 2, toujours gardée
     [quantite_prevue] FLOAT NULL,
     [stock_depart] FLOAT NULL,
     [demande_cumulee] FLOAT NULL,
@@ -1163,8 +1204,11 @@ USING (VALUES
     (N'ana.ml02_choix_alpha', N'Machine learning', N'02_Prevision_Ventes', N'06_Exports/Tables/ML02_choix_alpha.csv', NULL, NULL, N'choix alpha'),
     (N'ana.ml02_mape_categories', N'Machine learning', N'02_Prevision_Ventes', N'06_Exports/Tables/ML02_mape_categories.csv', NULL, NULL, N'mape categories'),
     (N'ana.ml03_apport_data_mining', N'Machine learning', N'03_Prediction_Churn', N'06_Exports/Tables/ML03_apport_data_mining.csv', NULL, NULL, N'apport data mining'),
+    (N'ana.ml03_cout_equite', N'Machine learning', N'03_Prediction_Churn', N'06_Exports/Tables/ML03_cout_equite.csv', NULL, NULL, N'coût équité : modèle sans genre ni tranche d''âge comparé au même modèle avec (v1.6)'),
+    (N'ana.ml03_equite', N'Machine learning', N'03_Prediction_Churn', N'06_Exports/Tables/ML03_equite.csv', NULL, NULL, N'équité : performance du modèle de churn par genre et par tranche d''âge (v1.6)'),
     (N'ana.ml03_importance', N'Machine learning', N'03_Prediction_Churn', N'06_Exports/Tables/ML03_importance.csv', NULL, NULL, N'importance'),
     (N'ana.ml03_validation', N'Machine learning', N'03_Prediction_Churn', N'06_Exports/Tables/ML03_validation.csv', NULL, NULL, N'validation'),
+    (N'ana.ml04_coefficients_v3', N'Machine learning', N'04_Prediction_Demande', N'06_Exports/Tables/ML04_coefficients_v3.csv', NULL, NULL, N'coefficients v3 : correction de la demande par catégorie, réel / prévu de l''année précédente (v1.6)'),
     (N'ana.ml04_erreur_par_volume', N'Machine learning', N'04_Prediction_Demande', N'06_Exports/Tables/ML04_erreur_par_volume.csv', NULL, NULL, N'erreur par volume'),
     (N'ana.ml04_validation', N'Machine learning', N'04_Prediction_Demande', N'06_Exports/Tables/ML04_validation.csv', NULL, NULL, N'validation'),
     (N'ana.ml04_wape_categories', N'Machine learning', N'04_Prediction_Demande', N'06_Exports/Tables/ML04_wape_categories.csv', NULL, NULL, N'wape categories'),
@@ -1184,7 +1228,7 @@ USING (VALUES
     (N'ana.ml_registre_modeles', N'Machine learning', N'08_Scoring_Actuel', N'06_Exports/Tables/ML_registre_modeles.csv', N'nom', NULL, N'Registre des modèles : fiche d''identité de chaque modèle'),
     (N'ana.ml_scores_churn_actuels', N'Machine learning', N'08_Scoring_Actuel', N'06_Exports/Predictions/churn_scores_actuels.parquet', N'client_sk', N'client_sk', N'Probabilité de churn des clients actifs à la date de scoring'),
     (N'ana.ml_scores_retard_en_cours', N'Machine learning', N'08_Scoring_Actuel', N'06_Exports/Predictions/retard_scores_en_cours.parquet', N'livraison_id', N'livraison_id', N'Probabilité de retard des colis en transit'),
-    (N'ana.ml_scores_demande', N'Machine learning', N'08_Scoring_Actuel', N'06_Exports/Predictions/demande_scores_annee_suivante.parquet', N'produit_id, mois', N'produit_id, mois', N'Demande prévue par produit et par mois pour l''année suivante, stock de départ et alerte de rupture'),
+    (N'ana.ml_scores_demande', N'Machine learning', N'08_Scoring_Actuel', N'06_Exports/Predictions/demande_scores_annee_suivante.parquet', N'produit_id, mois', N'produit_id, mois', N'Demande prévue par produit et par mois pour l''année suivante (modèle retenu et plancher v2), stock de départ et alerte de rupture'),
     (N'ana.ml_suivi', N'Machine learning', N'09_Suivi_Modeles', N'06_Exports/Tables/ML_suivi.csv', NULL, NULL, N'Suivi des modèles : indicateurs par période et alertes (dernière exécution)'),
     (N'ana.ml_suivi_historique', N'Machine learning', N'09_Suivi_Modeles', N'06_Exports/Tables/ML_suivi_historique.csv', N'date_donnees, cas, objet, periode, indicateur', NULL, N'Suivi des modèles : toutes les exécutions, repérées par la date des dernières données (v1.5)')
 ) AS source (table_sql, phase, notebook, source, cle, lien_dwh, description)
@@ -1195,5 +1239,5 @@ WHEN NOT MATCHED THEN INSERT (table_sql, phase, notebook, source, cle, lien_dwh,
                       VALUES (source.table_sql, source.phase, source.notebook, source.source, source.cle, source.lien_dwh, source.description);
 GO
 
-PRINT N'Étape 02 terminée : 84 tables de résultats et le catalogue sont prêts.';
+PRINT N'Étape 02 terminée : 87 tables de résultats et le catalogue sont prêts (v1.6).';
 GO
